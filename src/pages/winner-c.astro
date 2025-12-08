@@ -1,0 +1,70 @@
+---
+import ChairProduct from '../components/ChairProduct.astro';
+import Layout from '../layouts/Layout.astro';
+
+const winnerC = {
+  heroBg: "/winner-c/hero.png",
+  name: "WINNER C",
+  description: "The WINNER C visitor's chair is perfectly designed to receive your team/visitors with an exceptional comfort and an optimal ergonomics. In a hall, a waiting room or in front of your desk, the WINNER C is the reference in visitor chairs!",
+  version: "WINNER C",
+  versionType: "Visitor Chair",
+  images: [
+    "/winner-c/1.jpg",
+    "/winner-c/2.jpg",
+    "/winner-c/1.jpg"
+  ],
+  featuresDiagram: "/winner-c/diagram.png",
+  standardFeatures: [
+    "Stainless steel or matte black galvanized steel frame",
+    "Fixed armrest",
+    "Anti-allergenic Aero Mesh backrest (Denmark)"
+  ],
+  options: [
+    "Adjustable headrest (3D)",
+    "High density injected seat foam 45 mm",
+    "Height adjustable upholstered backrest",
+    "3D Mesh backrest",
+    "Adjustable lumbar support",
+    "3D adjustable armrests"
+  ],
+  mechanisms: [],
+  gasLift: null,
+  materials: [
+    {
+      name: "Anti-allergenic Aero Mesh",
+      tag: "default",
+      image: "/winner-c/mesh.png",
+      features: [
+        "100% polyester, 330 g/m",
+        "Abrasion Rubs martindale 70,000 (EN ISO 12947-2)",
+        "Pilling resistance: 4-5 for 5,000 rubs (EN ISO 12945-2)",
+        "Light fastness scale 1-8, max. 8: 5-7 (EN ISO 105-B02)",
+        "Rubbing fastness scale 1-5, max. 5 - wet/dry: 4-5/4-5 (EN ISO 105x12)",
+        "Flammability - BS EN 1021 1&2 Cigarette and Match - CA TB 117-2013"
+      ],
+      colors: ["#1a1a1a", "#4a4a4a", "#6b7280", "#0f766e", "#1e40af", "#b91c1c", "#ca8a04", "#16a34a", "#7c3aed"],
+      madeIn: "MADE IN DENMARK"
+    },
+    {
+      name: "Anti-allergenic Aero Mesh 3D",
+      tag: "optional",
+      image: "/winner-c/mesh3d.png",
+      features: [
+        "Comfort feeling similar to upholstered foam backrest",
+        "100% polyester, 510 g/m",
+        "Martindale abrasion resistance: 70,000 (EN ISO 12947-2)",
+        "Pilling scale 1-5, max. 5: 5 (EN ISO 12945-2)",
+        "Light fastness scale 1-8, max. 8: 5-7 (EN ISO 105-B02)",
+        "Rubbing fastness scale 1-5, max. 5 - wet/dry: 4-5/4-5 (EN ISO 105x12)",
+        "Flammability - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette and Match - Class Uno UNI 9175 Class 1 CNBF"
+      ],
+      colors: ["#1a1a1a", "#3f3f46", "#78716c", "#0d9488", "#2563eb", "#dc2626", "#d97706", "#22c55e", "#a855f7", "#ec4899", "#06b6d4", "#84cc16"],
+      madeIn: "MADE IN DENMARK"
+    }
+  ]
+};
+---
+
+<Layout>
+    <ChairProduct {...winnerC} />
+</Layout>

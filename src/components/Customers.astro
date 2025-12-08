@@ -1,0 +1,113 @@
+---
+// Customers.astro
+interface Props {
+  title?: string;
+  logos?: string[];
+}
+
+const { 
+  title = "OUR SATISFIED CUSTOMERS",
+  logos = [
+    "/logos/l1.png",
+    "/logos/l2.png",
+    "/logos/l3.png",
+    "/logos/l4.png",
+    "/logos/l5.png",
+    "/logos/l6.png",
+    "/logos/l7.png",
+  ]
+} = Astro.props;
+---
+
+<section class="customers-section py-20 bg-white overflow-hidden">
+  <div class="max-w-6xl mx-auto px-8 lg:px-16">
+    
+    <h2 class="customers-title text-3xl lg:text-4xl font-bold text-stone-900 text-center mb-4">
+      {title}
+    </h2>
+    <div class="customers-line w-24 h-0.5 mx-auto mb-16" style="background-color: #8b8b4b;"></div>
+
+    <div class="logos-wrapper">
+      <div class="logos-track">
+        {[...logos, ...logos].map((logo, i) => (
+          <div class="logo-item flex-shrink-0 px-8">
+            <img src={logo} alt="Customer logo" class="h-12 lg:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .customers-title,
+  .customers-line {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .customers-line {
+    transition-delay: 100ms;
+  }
+
+  .customers-section.in-view .customers-title,
+  .customers-section.in-view .customers-line {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .logos-wrapper {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logos-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+  }
+
+  .logos-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .logo-item {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-item:hover {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  document.querySelectorAll('.customers-section').forEach((section) => {
+    observer.observe(section);
+  });
+</script>

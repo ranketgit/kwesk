@@ -1,0 +1,98 @@
+---
+// components/about/AboutNormes.astro
+interface Norme {
+  image: string;
+  alt: string;
+  year: string;
+}
+
+interface Props {
+  normes: Norme[];
+}
+
+const { normes } = Astro.props;
+---
+
+<section class="about-normes">
+  <div class="about-normes__container">
+    
+    <h2 class="about-normes__title">NORMES</h2>
+    <div class="about-normes__line"></div>
+    <p class="about-normes__subtitle">Tous les produits KWESK respectent les normes suivantes :</p>
+
+    <div class="about-normes__grid">
+      {normes.map((norme) => (
+        <div class="about-normes__item">
+          <img src={norme.image} alt={norme.alt} />
+          <p class="about-normes__year">{norme.year}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .about-normes {
+    padding: 120px 0;
+  }
+
+  .about-normes__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .about-normes__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+
+  .about-normes__line {
+    width: 80px;
+    height: 3px;
+    background-color: #8b8b4b;
+    margin-top: 25px;
+  }
+
+  .about-normes__subtitle {
+    color: #a8a29e;
+    margin-top: 30px;
+  }
+
+  .about-normes__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-top: 80px;
+  }
+
+  .about-normes__item {
+    text-align: center;
+    padding: 50px 30px;
+  }
+
+  .about-normes__item img {
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .about-normes__year {
+    font-size: 24px;
+    font-weight: 300;
+    color: #8b8b4b;
+    margin-top: 45px;
+  }
+
+  @media (max-width: 768px) {
+    .about-normes__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-normes__container {
+      padding: 0 30px;
+    }
+  }
+</style>

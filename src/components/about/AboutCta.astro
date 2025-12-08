@@ -1,0 +1,101 @@
+---
+// components/about/AboutCta.astro
+---
+
+<section class="about-cta">
+    <div class="about-cta__grid">
+      
+      <div class="about-cta__image">
+        <img src="/hero-chairs.png" alt="Chaises KWESK" />
+      </div>
+      
+      <div class="about-cta__content">
+        <div class="about-cta__inner">
+          <div class="about-cta__line"></div>
+          <h2 class="about-cta__title">OBTENEZ UN DEVIS GRATUIT</h2>
+          <p class="about-cta__text">
+            Nos consultants expérimentés seront ravis de vous conseiller et de vous proposer les chaises KWESK qui répondent le mieux à vos besoins.
+          </p>
+          <a href="/contact" class="about-cta__btn">Contactez-nous</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <style>
+    .about-cta__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .about-cta__image {
+      height: 550px;
+    }
+  
+    .about-cta__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .about-cta__content {
+      display: flex;
+      align-items: center;
+      padding: 80px 100px;
+    }
+  
+    .about-cta__line {
+      width: 80px;
+      height: 3px;
+      background-color: #8b8b4b;
+    }
+  
+    .about-cta__title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1c1917;
+      margin-top: 45px;
+    }
+  
+    .about-cta__text {
+      color: #a8a29e;
+      line-height: 1.8;
+      margin-top: 35px;
+    }
+  
+    .about-cta__btn {
+      display: inline-block;
+      padding: 18px 45px;
+      background-color: #8b8b4b;
+      color: white;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+      margin-top: 55px;
+      transition: opacity 0.3s ease;
+    }
+  
+    .about-cta__btn:hover {
+      opacity: 0.9;
+    }
+  
+    @media (max-width: 768px) {
+      .about-cta__grid {
+        grid-template-columns: 1fr;
+      }
+  
+      .about-cta__image {
+        height: 350px;
+      }
+  
+      .about-cta__content {
+        padding: 60px 30px;
+      }
+  
+      .about-cta__title {
+        font-size: 26px;
+      }
+    }
+  </style>

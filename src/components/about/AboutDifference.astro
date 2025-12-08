@@ -1,0 +1,57 @@
+---
+// components/about/AboutDifference.astro
+---
+
+<section class="about-diff">
+    <div class="about-diff__container">
+      <h2 class="about-diff__title">CE QUI NOUS DIFFÉRENCIE ?</h2>
+      <a href="/contact" class="about-diff__btn">Contactez-nous</a>
+    </div>
+  </section>
+  
+  <style>
+    .about-diff {
+      padding: 100px 0;
+      text-align: center;
+    }
+  
+    .about-diff__container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+  
+    .about-diff__title {
+      font-size: 32px;
+      font-weight: 300;
+      font-style: italic;
+      color: #1c1917;
+    }
+  
+    .about-diff__btn {
+      display: inline-block;
+      padding: 18px 45px;
+      background-color: #8b8b4b;
+      color: white;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+      margin-top: 45px;
+      transition: opacity 0.3s ease;
+    }
+  
+    .about-diff__btn:hover {
+      opacity: 0.9;
+    }
+  
+    @media (max-width: 768px) {
+      .about-diff__title {
+        font-size: 26px;
+      }
+  
+      .about-diff__container {
+        padding: 0 30px;
+      }
+    }
+  </style>

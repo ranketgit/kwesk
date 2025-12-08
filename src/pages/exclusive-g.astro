@@ -1,0 +1,114 @@
+---
+// pages/chaises/exclusive-g.astro
+import Layout from '../layouts/Layout.astro';
+import ChairProduct from '../components/ChairProduct.astro';
+
+const exclusiveG = {
+  heroBg: "/exclusive-g/hero.jpg",
+  name: "EXCLUSIVE G",
+  description: "Le fauteuil EXCLUSIVE G offre les mêmes fonctionnalités que le siège président EXCLUSIVE 500. Son repose-bras pivotant pour accueillir vos visiteurs VIP dans votre bureau et vos salles de réunion.",
+  version: "EXCLUSIVE G",
+  versionType: "Fauteuil Opérateur",
+  images: [
+    "/exclusive-g/1.jpg",
+    "/exclusive-g/2.jpg",
+    "/exclusive-g/3.jpg"
+  ],
+  featuresDiagram: "/exclusive-g/diagram.png",
+  standardFeatures: [
+    "Mécanisme synchrone encastré à câbles (Italie)",
+    "Tensionneur auto-gravité",
+    "Repose-bras articulés",
+    "Assise et dossier en mousse injectée haute densité",
+    "Assise et dossier tapissés en tissu 3D (Danemark)",
+    "Structure confort extrême",
+    "Repose-tête souple"
+  ],
+  options: [
+    "Revêtement en simili cuir",
+    "Cuir pleine fleur aniline 100% naturel",
+    "Repose-bras en aluminium noir ou poli",
+    "Base en aluminium noir ou poli",
+    "Repose-bras en cuir",
+    "Base en aluminium noir ou poli",
+    "Roulettes Premium"
+  ],
+  frame: {
+    image: "/exclusive-g/frame.png",
+    description: "Structure articulée légère, fine et robuste permettant d'augmenter les volumes de mousses injectée, de rajouter de larges points d'ancrage et de réguler avec la pression sur le dos."
+  },
+  ergonomy: {
+    image: "/exclusive-g/ergonomy.png",
+    features: [
+      "Inclinaison synchronisée du dossier 18° et de l'assise 11°",
+      "3 positions de blocage",
+      "Soutien optimal de l'épine dorsale",
+      "Soulage les maux de dos",
+      "Ajustement automatique de la tension du dossier",
+      "Repose-bras articulés et synchronisés"
+    ]
+  },
+  mechanisms: [
+    {
+      name: "Mécanisme synchrone encastré",
+      tag: "par défaut",
+      image: "/exclusive-g/mechanism.png",
+      features: [
+        "Manettes de commande à câbles encastrées dans l'assise"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    }
+  ],
+  gasLift: {
+    image: "/exclusive-g/gaslift.png",
+    description: "Le fauteuil EXCLUSIVE est équipé d'un vérin fabriqué en Allemagne par le leader mondial des amortisseurs. Il dispose d'un réglage en hauteur variable et absorbe en douceur le poids de l'occupant.",
+    madeIn: "FABRIQUÉ EN ALLEMAGNE"
+  },
+  doubleCylinder: {
+    image: "/exclusive-g/double-cylinder.png",
+    diagramImage: "/exclusive-g/double-cylinder-diagram.png",
+    description: "Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre des mouvements de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  materials: [
+    {
+      name: "Tissu 3D",
+      tag: "par défaut",
+      image: "/exclusive-g/fabric-3d.jpg",
+      sectionTitle: "REVÊTEMENT DOSSIER ET ASSISE EN TISSU 3D",
+      features: [
+        "Étirement multidirectionnel",
+        "100% polyester, 540 g/m",
+        "Résistance à l'abrasion Martindale : 65 000 (EN ISO 12947-2)",
+        "Résistance au boulochage échelle 1-5, max. 5 : 5 (EN ISO 12945-2)",
+        "Résistance à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Résistance au frottement échelle 1-5, max. 5 - humidité/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+      ],
+      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#1e3a5f", "#1e40af", "#7c2d12", "#b91c1c", "#dc2626", "#f59e0b", "#ca8a04", "#65a30d", "#16a34a", "#0d9488", "#0ea5e9", "#6366f1", "#7c3aed", "#a855f7", "#ec4899"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Simili cuir",
+      tag: "option",
+      image: "/exclusive-g/simili-cuir.jpg",
+      sectionTitle: "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN SIMILI CUIR",
+      features: [],
+      colors: ["#1a1a1a", "#3d3d3d", "#1e3a5f", "#1e40af", "#0f766e", "#065f46", "#166534", "#ca8a04", "#b45309", "#9a3412", "#b91c1c", "#7c2d12", "#78716c", "#0ea5e9", "#6366f1", "#7c3aed"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Cuir pleine fleur aniline 100% naturel",
+      tag: "option",
+      image: "/exclusive-g/leather.jpg",
+      sectionTitle: "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN CUIR",
+      features: [],
+      colors: ["#1a1a1a", "#78716c", "#1e3a5f", "#ca8a04", "#b45309", "#9a3412", "#065f46", "#7c2d12", "#dc2626", "#0d9488", "#1e40af", "#6366f1"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    }
+  ]
+};
+---
+
+<Layout title="EXCLUSIVE G - KWESK">
+  <ChairProduct {...exclusiveG} />
+</Layout>

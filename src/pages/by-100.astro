@@ -1,0 +1,103 @@
+---
+// pages/chaises/by-100.astro
+import Layout from '../layouts/Layout.astro';
+import ChairProduct from '../components/ChairProduct.astro';
+
+const by100 = {
+  heroBg: "/by-100/hero.jpg",
+  name: "BY 100",
+  description: "Avec son dossier haut asynchrone et son design innovant, le BY 100 équipera facilement vos bureaux exécutifs ou administratifs pour un coût réduit, un confort optimisé et une longue durée de vie.",
+  version: "BY 100",
+  versionType: "Chaise Président",
+  images: [
+    "/by100/by1.jpg",
+    "/by100/by2.jpg",
+    "/by100/by.jpg",
+    "/by100/by4.jpg",
+    "/by100/by5.jpg",
+  ],
+  featuresDiagram: "/by100/byfeatures.png",
+  standardFeatures: [
+    "Dossier haut",
+    "Mécanisme asynchrone A202 (Italie)",
+    "Accoudoirs fixes",
+    "Mousse injectée haute densité assise et dossier 50 mm (Maroc)",
+    "Assise et dossier tapissés en tissu 3D (Danemark)",
+    "Vérin à gaz double cylindre (Allemagne)"
+  ],
+  options: [
+    "Mécanisme asynchrone Ak300 (Italie)",
+    "Assise et dossier tapissés en cuir PU",
+    "Base en aluminium",
+    "Roulettes premium"
+  ],
+  frame: null,
+  ergonomy: null,
+  mechanisms: [
+    {
+      name: "A200",
+      tag: "défaut",
+      image: "/by100/a200.png",
+      features: [],
+      madeIn: ""
+    },
+    {
+      name: "Ax300",
+      tag: "optionnel",
+      image: "/by100/ax300.png",
+      features: [],
+      madeIn: ""
+    }
+  ],
+  gasLift: {
+    image: "/winner-125/gaslift.png",
+    description: "Le BY 100 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur.",
+    madeIn: "FABRIQUÉ EN ALLEMAGNE"
+  },
+  doubleCylinder: {
+    image: "/gamma/double-cylinder.png",
+    description: "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  materials: [
+    {
+      name: "Tissu 3D",
+      tag: "défaut",
+      sectionTitle: "ASSISE ET DOSSIER TAPISSÉS EN TISSU 3D",
+      image: "/gamma/fabric3d.png",
+      features: [
+        "Extensible multi-directionnel",
+        "100% polyester, 540 g/m",
+        "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+        "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+      ],
+      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#1e3a5f", "#1e40af", "#7c2d12", "#b91c1c", "#dc2626", "#f59e0b", "#ca8a04", "#65a30d", "#16a34a", "#0d9488", "#0ea5e9", "#6366f1", "#7c3aed", "#a855f7", "#ec4899"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Cuir PU",
+      tag: "optionnel",
+      sectionTitle: "ASSISE ET DOSSIER TAPISSÉS EN CUIR PU",
+      image: "/by100/leather.png",
+      features: [],
+      colors: ["#1a1a1a", "#3d3d3d", "#1e3a5f", "#1e40af", "#0f766e", "#065f46", "#166534", "#ca8a04", "#b45309", "#9a3412", "#b91c1c", "#7c2d12", "#78716c", "#0ea5e9", "#6366f1", "#7c3aed"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Cuir Aniline pleine fleur naturel",
+      tag: "optionnel",
+      sectionTitle: "ASSISE ET DOSSIER TAPISSÉS EN CUIR",
+      image: "/by100/aniline.png",
+      features: [],
+      colors: ["#1a1a1a", "#78716c", "#1e3a5f", "#ca8a04", "#b45309", "#9a3412", "#065f46", "#7c2d12", "#dc2626", "#0d9488", "#1e40af", "#6366f1"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    }
+  ]
+};
+---
+
+<Layout title="BY 100 - KWESK">
+  <ChairProduct {...by100} />
+</Layout>

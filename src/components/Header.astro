@@ -1,0 +1,549 @@
+---
+// components/Header.astro
+interface SubItem {
+  label: string;
+  href: string;
+}
+
+interface ChairCategory {
+  label: string;
+  href?: string;
+  children?: SubItem[];
+}
+
+const chairCategories: ChairCategory[] = [
+  { 
+    label: "WINNER",
+    children: [
+      { label: "WINNER 125", href: "/winner-125" },
+      { label: "WINNER C", href: "/winner-c" }
+    ]
+  },
+  { 
+    label: "GAMMA",
+    children: [
+      { label: "GAMMA 150", href: "/gamma" },
+      { label: "GAMMA C", href: "/gamma-c" }
+    ]
+  },
+  { 
+    label: "CORPO",
+    children: [
+      { label: "CORPO 100", href: "/corpo-100" }
+    ]
+  },
+  { 
+    label: "BY",
+    children: [
+      { label: "BY 100", href: "/by-100" },
+      { label: "BY G", href: "/by-g" }
+    ]
+  },
+  { 
+    label: "CHALLENGER",
+    href: "/challenger"
+  },
+  { 
+    label: "EXCLUSIVE",
+    children: [
+      { label: "EXCLUSIVE 500", href: "/exclusive" },
+      { label: "EXCLUSIVE G", href: "/exclusive-g" }
+    ]
+  },
+  { 
+    label: "CADDY",
+    href: "/caddy"
+  },
+];
+
+const navItems = [
+  { label: "Accueil", href: "/" },
+  { label: "Entreprise", href: "/a-propos" },
+  { label: "Nos Chaises", href: "/chaises", hasDropdown: true },
+  { label: "Contact", href: "/contact" },
+];
+---
+
+<header class="header">
+  <div class="header__container">
+    
+    <a href="/" class="header__logo">
+      <img src="/kwesk-logo.png" class="h-12" alt="KWESK">
+    </a>
+
+    <nav class="header__nav">
+      {navItems.map((item) => (
+        <div class={`header__nav-item ${item.hasDropdown ? 'header__nav-item--has-dropdown' : ''}`}>
+          {item.hasDropdown ? (
+            <>
+              <button class="header__nav-link">
+                {item.label}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="header__dropdown">
+                <div class="header__dropdown-main">
+                  {chairCategories.map((cat) => (
+                    <div class={`header__category ${cat.children ? 'header__category--has-sub' : ''}`}>
+                      {cat.href ? (
+                        <a href={cat.href} class="header__category-link">{cat.label}</a>
+                      ) : (
+                        <span class="header__category-link">
+                          {cat.label}
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </span>
+                      )}
+                      {cat.children && (
+                        <div class="header__submenu">
+                          {cat.children.map((child) => (
+                            <a href={child.href} class="header__submenu-link">{child.label}</a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </>
+          ) : (
+            <a href={item.href} class="header__nav-link">{item.label}</a>
+          )}
+        </div>
+      ))}
+    </nav>
+
+    <button class="header__burger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div class="header__mobile">
+    <nav class="header__mobile-nav">
+      {navItems.map((item) => (
+        <div class="header__mobile-item">
+          {item.hasDropdown ? (
+            <>
+              <button class="header__mobile-link header__mobile-link--dropdown">
+                {item.label}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="header__mobile-dropdown">
+                {chairCategories.map((cat) => (
+                  <div class="header__mobile-cat">
+                    {cat.href ? (
+                      <a href={cat.href} class="header__mobile-cat-link">{cat.label}</a>
+                    ) : (
+                      <>
+                        <button class="header__mobile-cat-link header__mobile-cat-link--expand">
+                          {cat.label}
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </button>
+                        <div class="header__mobile-sub">
+                          {cat.children?.map((child) => (
+                            <a href={child.href} class="header__mobile-sub-link">{child.label}</a>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <a href={item.href} class="header__mobile-link">{item.label}</a>
+          )}
+        </div>
+      ))}
+    </nav>
+  </div>
+
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #f5f5f4;
+  }
+
+  .header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    text-decoration: none;
+  }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header__nav-item {
+    position: relative;
+  }
+
+  .header__nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #57534e;
+    text-decoration: none;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .header__nav-link:hover {
+    color: #1c1917;
+  }
+
+  .header__nav-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .header__nav-item--has-dropdown:hover .header__nav-link svg {
+    transform: rotate(180deg);
+  }
+
+  /* Main Dropdown */
+  .header__dropdown {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    padding-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .header__nav-item--has-dropdown:hover .header__dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header__dropdown-main {
+    background-color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 12px 0;
+    min-width: 200px;
+  }
+
+  /* Category */
+  .header__category {
+    position: relative;
+  }
+
+  .header__category-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #57534e;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .header__category-link svg {
+    width: 16px;
+    height: 16px;
+    color: #a8a29e;
+  }
+
+  .header__category:hover > .header__category-link {
+    color: #8b8b4b;
+  }
+
+  /* Submenu */
+  .header__submenu {
+    position: absolute;
+    top: -12px;
+    left: 100%;
+    padding-left: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+  }
+
+  .header__category--has-sub:hover > .header__submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header__submenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+  }
+
+  .header__submenu-link {
+    display: block;
+    padding: 12px 24px;
+    font-size: 14px;
+    color: #57534e;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #8b8b4b;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    min-width: 160px;
+    transition: all 0.2s ease;
+  }
+
+  .header__submenu-link:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .header__submenu-link:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-bottom: 0;
+  }
+
+  .header__submenu-link:hover {
+    background-color: #fafaf9;
+    color: #1c1917;
+  }
+
+  /* Burger */
+  .header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .header__burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1c1917;
+    transition: all 0.3s ease;
+  }
+
+  .header__burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .header__burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Mobile */
+  .header__mobile {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 20px 30px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .header__mobile.active {
+    transform: translateX(0);
+  }
+
+  .header__mobile-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__mobile-item {
+    border-bottom: 1px solid #f5f5f4;
+  }
+
+  .header__mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 0;
+    font-size: 16px;
+    color: #1c1917;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .header__mobile-link svg {
+    width: 18px;
+    height: 18px;
+    color: #a8a29e;
+    transition: transform 0.3s ease;
+  }
+
+  .header__mobile-item.active > .header__mobile-link svg {
+    transform: rotate(180deg);
+  }
+
+  .header__mobile-dropdown {
+    display: none;
+    padding-bottom: 15px;
+  }
+
+  .header__mobile-item.active .header__mobile-dropdown {
+    display: block;
+  }
+
+  .header__mobile-cat {
+    margin-bottom: 5px;
+  }
+
+  .header__mobile-cat-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #57534e;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .header__mobile-cat-link svg {
+    width: 16px;
+    height: 16px;
+    color: #a8a29e;
+    transition: transform 0.3s ease;
+  }
+
+  .header__mobile-cat.active > .header__mobile-cat-link svg {
+    transform: rotate(180deg);
+  }
+
+  .header__mobile-sub {
+    display: none;
+    padding-left: 20px;
+  }
+
+  .header__mobile-cat.active .header__mobile-sub {
+    display: block;
+  }
+
+  .header__mobile-sub-link {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #78716c;
+    text-decoration: none;
+  }
+
+  .header__mobile-sub-link:hover {
+    color: #8b8b4b;
+  }
+
+  @media (max-width: 1024px) {
+    .header__nav {
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .header__container {
+      padding: 0 30px;
+    }
+
+    .header__nav {
+      display: none;
+    }
+
+    .header__burger {
+      display: flex;
+    }
+
+    .header__mobile {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  const burger = document.querySelector('.header__burger');
+  const mobileMenu = document.querySelector('.header__mobile');
+  const mobileDropdowns = document.querySelectorAll('.header__mobile-link--dropdown');
+  const mobileCatExpands = document.querySelectorAll('.header__mobile-cat-link--expand');
+
+  burger?.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    mobileMenu?.classList.toggle('active');
+    document.body.style.overflow = mobileMenu?.classList.contains('active') ? 'hidden' : '';
+  });
+
+  mobileDropdowns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.parentElement?.classList.toggle('active');
+    });
+  });
+
+  mobileCatExpands.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.parentElement?.classList.toggle('active');
+    });
+  });
+
+  const closeLinks = document.querySelectorAll('.header__mobile-link:not(.header__mobile-link--dropdown), .header__mobile-cat-link:not(.header__mobile-cat-link--expand), .header__mobile-sub-link');
+  closeLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      burger?.classList.remove('active');
+      mobileMenu?.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+</script>

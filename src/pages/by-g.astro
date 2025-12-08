@@ -1,0 +1,111 @@
+---
+// pages/chaises/by-g.astro
+import Layout from '../layouts/Layout.astro';
+import ChairProduct from '../components/ChairProduct.astro';
+
+const byG = {
+  heroBg: "/by-g/hero.jpg",
+  name: "BY G",
+  description: "Avec son dossier bas asynchrone, le BY G vient compléter notre fauteuil By 100 pour accueillir vos visiteurs dans votre bureau. Doté des mêmes fonctionnalités, il peut aussi équiper vos salles de réunion à moindre coût tout en offrant un confort appréciable sur quelques heures d'utilisation.",
+  version: "BY G",
+  versionType: "Fauteuil Opérateur",
+  images: [
+    "/by-g/1.jpg",
+    "/by-g/2.jpg",
+    "/by-g/3.jpg",
+    "/by-g/4.jpg"
+  ],
+  featuresDiagram: "/by-g/diagram.png",
+  standardFeatures: [
+    "Dossier bas",
+    "Mécanisme asynchrone A200 (Italie)",
+    "Repose-bras fixes",
+    "Assise et dossier en mousse injectée haute densité 50 mm (Maroc)",
+    "Assise et dossier tapissés en tissu 3D (Danemark)",
+    "Vérin à double cylindre (Allemagne)"
+  ],
+  options: [
+    "Mécanisme asynchrone AX300 (Italie)",
+    "Assise et dossier tapissés en simili cuir",
+    "Base en aluminium",
+    "Roulettes Premium"
+  ],
+  frame: null,
+  ergonomy: null,
+  mechanisms: [
+    {
+      name: "A200",
+      tag: "par défaut",
+      image: "/by-g/a200.png",
+      features: [
+        "Inclinaison dossier asynchrone 17°",
+        "1 position de blocage vertical",
+        "Ajustement manuel de la tension du dossier"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    },
+    {
+      name: "AX300",
+      tag: "optionnel",
+      image: "/by-g/ax300.png",
+      features: [
+        "Inclinaison dossier asynchrone 15°",
+        "4 positions de blocage",
+        "Ajustement manuel de la tension du dossier"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    }
+  ],
+  gasLift: {
+    image: "/by-g/gaslift.png",
+    description: "Le BY G est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur.",
+    madeIn: "FABRIQUÉ EN ALLEMAGNE"
+  },
+  doubleCylinder: {
+    image: "/by-g/double-cylinder.png",
+    diagramImage: "/by-g/double-cylinder-diagram.png",
+    description: "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  materials: [
+    {
+      name: "Tissu 3D",
+      tag: "par défaut",
+      sectionTitle: "REVÊTEMENT DOSSIER ET ASSISE EN TISSU 3D",
+      image: "/by-g/fabric-3d.jpg",
+      features: [
+        "Étirement multidirectionnel",
+        "100% polyester, 540 g/m",
+        "Résistance à l'abrasion Martindale : 65 000 (EN ISO 12947-2)",
+        "Résistance au boulochage échelle 1-5, max. 5 : 5 (EN ISO 12945-2)",
+        "Résistance à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Résistance au frottement échelle 1-5, max. 5 - humidité/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+      ],
+      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#1e3a5f", "#1e40af", "#7c2d12", "#b91c1c", "#dc2626", "#f59e0b", "#ca8a04", "#65a30d", "#16a34a", "#0d9488", "#0ea5e9", "#6366f1", "#7c3aed", "#a855f7", "#ec4899"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Simili cuir",
+      tag: "option",
+      sectionTitle: "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN SIMILI CUIR",
+      image: "/by-g/simili-cuir.jpg",
+      features: [],
+      colors: ["#1a1a1a", "#3d3d3d", "#1e3a5f", "#1e40af", "#0f766e", "#065f46", "#166534", "#ca8a04", "#b45309", "#9a3412", "#b91c1c", "#7c2d12", "#78716c", "#0ea5e9", "#6366f1", "#7c3aed"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Cuir pleine fleur aniline 100% naturel",
+      tag: "option",
+      sectionTitle: "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN CUIR",
+      image: "/by-g/leather.jpg",
+      features: [],
+      colors: ["#1a1a1a", "#78716c", "#1e3a5f", "#ca8a04", "#b45309", "#9a3412", "#065f46", "#7c2d12", "#dc2626", "#0d9488", "#1e40af", "#6366f1"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    }
+  ]
+};
+---
+
+<Layout title="BY G - KWESK">
+  <ChairProduct {...byG} />
+</Layout>

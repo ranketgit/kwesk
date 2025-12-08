@@ -1,0 +1,112 @@
+---
+import ChairProduct from '../components/ChairProduct.astro';
+import Layout from '../layouts/Layout.astro';
+
+const winner125 = {
+  heroBg: "/winner-125/winner125-hero.png",
+  name: "WINNER 125",
+  description: "The WINNER 125 chair is perfectly designed for an operator's office, sales consultant, agency or sales point... With its operator's chair equipped with an optimal comfort and ergonomics, you will be able to carry out your missions in all serenity!",
+  version: "WINNER 125",
+  versionType: "Operator Chair",
+  images: [
+    "/winner-125/winner-1.jpg",
+    "/winner-125/winner-2.jpg",
+    "/winner-125/winner-3.jpg",
+    "/winner-125/winner-4.jpg"
+  ],
+  featuresDiagram: "/winner-125/winner-diagram.png",
+  standardFeatures: [
+    "Synchronized B800 mechanism (Italy)",
+    "Fixed armrests",
+    "Double cylinder gas lift (Germany)",
+    "Anti-allergenic Aero Mesh backrest (Denmark)"
+  ],
+  options: [
+    "Flat synchronized L1520 mechanism (Italy)",
+    "Synchronized M1700 mechanism with Translation (Italy)",
+    "Seat depth adjustment",
+    "Adjustable headrest (3D)",
+    "High density injected seat foam 45 mm",
+    "Upholstered seat in 3D fabric",
+    "Height adjustable upholstered backrest",
+    "3D Mesh backrest",
+    "Adjustable lumbar support",
+    "3D adjustable armrests",
+    "Aluminium base",
+    "Premium casters"
+  ],
+  mechanisms: [
+    {
+      name: "B800",
+      tag: "default",
+      image: "/winner-125/b800.png",
+      features: [
+        "15° Backrest tilt synchronized with seat",
+        "One locking position only",
+        "Lower tension adjustment knob"
+      ],
+      madeIn: "MADE IN ITALY"
+    },
+    {
+      name: "L1520",
+      tag: "option",
+      image: "/winner-125/l1520.png",
+      features: [
+        "Flat design",
+        "14.5° Backrest tilt synchronized with seat",
+        "5 locking positions",
+        "Tension adjustment knob on the side"
+      ],
+      madeIn: "MADE IN ITALY"
+    },
+    {
+      name: "M1700",
+      tag: "option",
+      image: "/winner-125/m1700.png",
+      features: [
+        "25° Backrest tilt synchronized with seat",
+        "5 locking positions",
+        "Tension adjustment knob on the side",
+        "Seat depth adjustment 5 cm"
+      ],
+      madeIn: "MADE IN ITALY"
+    }
+  ],
+  gasLift: {
+    image: "/winner-125/gaslift.png",
+    description: "The WINNER 125 features a gas lift made in Germany by the world's leading shock absorber manufacturer. It has variable height adjustment and smoothly absorbs the user weight.",
+    madeIn: "MADE IN GERMANY"
+  },
+  materials: [
+    {
+      name: "Anti-allergenic Aero Mesh",
+      tag: "default",
+      image: "/winner-125/aero.png",
+      features: [
+        "100% polyester, 330 g/m",
+        "Abrasion Rubs martindale 70,000 (EN ISO 12947-2)",
+        "Pilling scale 1-5, max. 5 - 4-5 (EN ISO 12945-2)",
+        "Light fastness scale 1-8, max. 8: 5-7 (EN ISO 105-B02)"
+      ],
+      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#065f46", "#1e40af", "#7c2d12"],
+      madeIn: "MADE IN DENMARK"
+    },
+    {
+      name: "3D Fabric",
+      tag: "default",
+      image: "/winner-125/3d.png",
+      features: [
+        "Multi-directional stretch",
+        "100% polyester, 540 g/m",
+        "Abrasion Rubs martindale 65,000 (EN ISO 12947-2)",
+        "Pilling scale 1-5, max. 5: 4-5 (EN ISO 12945-2)"
+      ],
+      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#065f46", "#1e40af", "#7c2d12", "#dc2626", "#f59e0b", "#10b981"],
+      madeIn: "MADE IN MOROCCO"
+    }
+  ]
+};
+---
+<Layout title="Winner 125 | Chaise Bureau Mesh Accoudoirs - Kwesk Maroc" description="Le Winner 125 par Kwesk, usine chaise de bureau au Maroc. Fauteuil de bureau entreprise mesh avec accoudoirs fixes et base bois pour les professionnels.">
+  <ChairProduct {...winner125} />
+</Layout>

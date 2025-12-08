@@ -1,0 +1,375 @@
+---
+// ChairProduct.astro
+interface Mechanism {
+  name: string;
+  tag: string;
+  image: string;
+  features: string[];
+  madeIn: string;
+}
+
+interface Material {
+  name: string;
+  tag: string;
+  image: string;
+  features: string[];
+  colors?: string[];
+  madeIn: string;
+}
+
+interface Props {
+  heroBg: string;
+  name: string;
+  description: string;
+  version: string;
+  versionType: string;
+  images: string[];
+  featuresDiagram: string;
+  standardFeatures: string[];
+  options: string[];
+  mechanisms: Mechanism[];
+  gasLift?: {
+    image: string;
+    description: string;
+    madeIn: string;
+  } | null;
+  doubleCylinder?: {
+    image: string;
+    diagramImage: string;
+    description: string;
+  } | null;
+  frame?: {
+    image: string;
+    description: string;
+  } | null;
+  ergonomy?: {
+    image: string;
+    features: string[];
+  } | null;
+  materials: Material[];
+}
+
+const { 
+  heroBg,
+  name,
+  description,
+  version,
+  versionType,
+  images,
+  featuresDiagram,
+  standardFeatures,
+  options,
+  mechanisms,
+  gasLift,
+  doubleCylinder,
+  frame,
+  ergonomy,
+  materials
+} = Astro.props;
+---
+
+<main>
+  <!-- Hero -->
+  <section class="hero-section relative h-[50vh] bg-stone-800">
+    <img src={heroBg} alt={name} class="w-full h-full object-cover" />
+  </section>
+
+  <!-- Product Info -->
+  <section class="product-info relative bg-white z-10 py-16">
+    <div class="max-w-6xl mx-auto px-8 lg:px-16">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        
+        <!-- Gallery -->
+        <div class="space-y-6">
+          <div class="main-image relative">
+            <img id="mainImage" src={images[0]} alt={name} class="w-full max-w-md mx-auto" />
+            <button class="nav-btn left-0" onclick="prevImage()">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button class="nav-btn right-0" onclick="nextImage()">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex justify-center gap-4">
+            {images.map((img, i) => (
+              <button 
+                class="thumb-btn p-2 border border-stone-200 rounded hover:border-stone-400 transition-colors"
+                onclick={`setImage(${i})`}
+              >
+                <img src={img} alt={`${name} view ${i + 1}`} class="w-16 h-16 object-contain" />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="space-y-6">
+          <h1 class="text-4xl lg:text-5xl font-bold text-stone-900">{name}</h1>
+          <p class="text-stone-500 leading-relaxed">{description}</p>
+          
+          <div class="space-y-2">
+            <p class="text-stone-400 text-sm">Version</p>
+            <p class="text-stone-900">
+              <span class="font-semibold">{version}</span> {versionType}
+            </p>
+          </div>
+
+          <a 
+            href="#contact" 
+            class="inline-block px-8 py-3 text-white text-sm font-medium"
+            style="background-color: #8b8b4b;"
+          >
+            ACHETER
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Diagram -->
+  <section class="features-diagram py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-8 lg:px-16">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        
+        <div>
+          <img src={featuresDiagram} alt="Features" class="w-full max-w-md" />
+        </div>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-bold text-stone-900 mb-4">CARACTÉRISTIQUES STANDARD</h3>
+            <ul class="space-y-2">
+              {standardFeatures.map((f) => (
+                <li class="flex items-start gap-2 text-stone-600 text-sm">
+                  <span style="color: #8b8b4b;">✓</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {options.length > 0 && (
+            <div>
+              <h3 class="text-2xl font-bold text-stone-900 mb-4">OPTIONS</h3>
+              <ul class="space-y-2">
+                {options.map((o) => (
+                  <li class="flex items-start gap-2 text-stone-600 text-sm">
+                    <span style="color: #8b8b4b;">✓</span>
+                    {o}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Frame (if exists) -->
+  {frame && (
+    <section class="frame-section py-16 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">CADRE</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src={frame.image} alt="Cadre" class="w-full max-w-sm" />
+          </div>
+          <div>
+            <p class="text-stone-600 leading-relaxed">{frame.description}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Ergonomy (if exists) -->
+  {ergonomy && (
+    <section class="ergonomy-section py-16 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">ERGONOMIE</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src={ergonomy.image} alt="Ergonomie" class="w-full max-w-sm" />
+          </div>
+          <div>
+            <ul class="space-y-2">
+              {ergonomy.features.map((f) => (
+                <li class="flex items-start gap-2 text-stone-600 text-sm">
+                  <span style="color: #8b8b4b;">●</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Mechanisms -->
+  {mechanisms.length > 0 && (
+    <section class="mechanisms py-16 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">MÉCANISMES</h2>
+        
+        <div class="space-y-16">
+          {mechanisms.map((mech, i) => (
+            <div class={`grid lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div class={i % 2 === 1 ? 'order-1 lg:order-2' : ''}>
+                <img src={mech.image} alt={mech.name} class="w-full max-w-sm" />
+                <p class="text-xs text-stone-400 mt-2">{mech.madeIn}</p>
+              </div>
+              <div class={`space-y-4 ${i % 2 === 1 ? 'order-2 lg:order-1' : ''}`}>
+                <div class="flex items-center gap-3">
+                  <h3 class="text-2xl font-bold text-stone-900">{mech.name}</h3>
+                  <span class="text-xs text-stone-400">({mech.tag})</span>
+                </div>
+                <ul class="space-y-2">
+                  {mech.features.map((f) => (
+                    <li class="flex items-start gap-2 text-stone-600 text-sm">
+                      <span style="color: #8b8b4b;">●</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Gas Lift -->
+  {gasLift && (
+    <section class="gas-lift py-16 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">VÉRIN À GAZ</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src={gasLift.image} alt="Vérin à gaz" class="w-full max-w-sm" />
+            <p class="text-xs text-stone-400 mt-2">{gasLift.madeIn}</p>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-stone-900">Système de vérin à gaz</h3>
+            <span class="text-xs text-stone-400">(défaut)</span>
+            <p class="text-stone-600 leading-relaxed">{gasLift.description}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Double Cylinder -->
+  {doubleCylinder && (
+    <section class="double-cylinder py-16 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">Nouveau système breveté à double cylindre</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src={doubleCylinder.image} alt="Double cylindre" class="w-full max-w-sm" />
+          </div>
+          <div class="space-y-4">
+            <p class="text-stone-600 leading-relaxed">{doubleCylinder.description}</p>
+            <img src={doubleCylinder.diagramImage} alt="Diagramme" class="w-full max-w-md" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Materials -->
+  {materials.map((mat, i) => (
+    <section class="material py-16 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">{mat.name.toUpperCase()}</h2>
+        
+        <div class={`grid lg:grid-cols-2 gap-12 items-start ${i % 2 === 1 ? '' : ''}`}>
+          <div class={i % 2 === 1 ? 'order-1 lg:order-2' : ''}>
+            <img src={mat.image} alt={mat.name} class="w-full max-w-sm rounded-lg" />
+            {mat.colors && mat.colors.length > 0 && (
+              <div class="mt-4">
+                <p class="text-sm text-stone-500 mb-2">Couleurs disponibles</p>
+                <div class="flex flex-wrap gap-2">
+                  {mat.colors.map((color) => (
+                    <span 
+                      class="w-6 h-6 rounded-full border border-stone-200" 
+                      style={`background-color: ${color};`}
+                    ></span>
+                  ))}
+                </div>
+              </div>
+            )}
+            <p class="text-xs text-stone-400 mt-4">{mat.madeIn}</p>
+          </div>
+          <div class={`space-y-4 ${i % 2 === 1 ? 'order-2 lg:order-1' : ''}`}>
+            <div class="flex items-center gap-3">
+              <h3 class="text-2xl font-bold text-stone-900">{mat.name}</h3>
+              <span class="text-xs text-stone-400">({mat.tag})</span>
+            </div>
+            {mat.features.length > 0 && (
+              <ul class="space-y-2">
+                {mat.features.map((f) => (
+                  <li class="flex items-start gap-2 text-stone-600 text-sm">
+                    <span style="color: #8b8b4b;">●</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+</main>
+
+<style>
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    color: #78716c;
+    transition: color 0.2s;
+  }
+  .nav-btn:hover {
+    color: #1c1917;
+  }
+</style>
+
+<script define:vars={{ images }}>
+  let currentIndex = 0;
+  const allImages = images;
+
+  function setImage(index) {
+    currentIndex = index;
+    document.getElementById('mainImage').src = allImages[index];
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % allImages.length;
+    setImage(currentIndex);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+    setImage(currentIndex);
+  }
+
+  window.setImage = setImage;
+  window.nextImage = nextImage;
+  window.prevImage = prevImage;
+</script>

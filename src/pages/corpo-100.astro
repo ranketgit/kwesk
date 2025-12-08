@@ -1,0 +1,126 @@
+---
+// pages/chaises/corpo-100.astro
+import Layout from '../layouts/Layout.astro';
+import ChairProduct from '../components/ChairProduct.astro';
+
+const corpo100 = {
+  heroBg: "/corpo-100/hero.jpg",
+  name: "CORPO 100",
+  description: "Le CORPO 100 offre l'équilibre ultime entre confort et style, conçu pour vous garder productif toute la journée. Son design élégant et son ergonomie supérieure en font un incontournable pour tout espace de travail moderne.",
+  version: "CORPO 100",
+  versionType: "Chaise Opérateur",
+  images: [
+    "/corpo-100/cp1.jpg",
+    "/corpo-100/cp2.jpg",
+    "/corpo-100/cp3.jpg",
+    "/corpo-100/cp4.jpg",
+    "/corpo-100/cp5.jpg"
+  ],
+  featuresDiagram: "/corpo-100/features.png",
+  standardFeatures: [
+    "Mécanisme synchronisé plat L1520 (Italie)",
+    "Réglage de la profondeur d'assise",
+    "Mousse d'assise injectée haute densité 50 mm",
+    "Dossier Anti-allergénique Aero 3D Mesh (Danemark)",
+    "Vérin à gaz double cylindre (Allemagne)",
+    "Support lombaire ergonomique réglable",
+    "Accoudoirs réglables 3D"
+  ],
+  options: [
+    "Appui-tête réglable 3D",
+    "Assise rembourrée en tissu 3D",
+    "Dossier 3D Mesh",
+    "Base en aluminium",
+    "Roulettes premium"
+  ],
+  mechanisms: [
+    {
+      name: "L1520",
+      tag: "défaut",
+      image: "/winner-125/l1520.png",
+      features: [
+        "Design plat",
+        "Inclinaison du dossier 22° synchronisée avec l'assise",
+        "3 positions de blocage",
+        "Bouton de réglage de tension sur le côté"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    },
+    {
+      name: "P2000",
+      tag: "optionnel",
+      image: "/gamma/p2000.png",
+      features: [
+        "Leviers intégrés",
+        "Inclinaison du dossier 19.5° synchronisée avec l'inclinaison de l'assise 7.5°",
+        "5 positions de blocage",
+        "Mécanisme auto-pondéré : ajuste automatiquement la tension du dossier selon le poids de l'utilisateur",
+        "Réglage de la profondeur d'assise"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    }
+  ],
+  gasLift: {
+    image: "/winner-125/gaslift.png",
+    description: "Le CORPO 100 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur.",
+    madeIn: "FABRIQUÉ EN ALLEMAGNE"
+  },
+  doubleCylinder: {
+    image: "/gamma/double-cylinder.png",
+    description: "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  materials: [
+    {
+      name: "Anti-allergénique Aero Mesh",
+      tag: "défaut",
+      image: "/winner-c/mesh.png",
+      features: [
+        "100% polyester, 330 g/m",
+        "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+        "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
+        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
+      ],
+      colors: ["#1a1a1a", "#4b5563", "#6b7280", "#0f766e", "#1e40af", "#b91c1c", "#ca8a04", "#16a34a", "#0ea5e9", "#7c3aed"],
+      madeIn: "FABRIQUÉ AU DANEMARK"
+    },
+    {
+      name: "Anti-allergénique Aero Mesh 3D",
+      tag: "optionnel",
+      image: "/winner-c/mesh3d.png",
+      features: [
+        "Sensation de confort similaire à un dossier en mousse rembourrée",
+        "100% polyester, 510 g/m",
+        "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
+        "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
+        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
+      ],
+      colors: ["#1a1a1a", "#3f3f46", "#78716c", "#0d9488", "#2563eb", "#dc2626", "#d97706", "#22c55e", "#a855f7", "#ec4899", "#06b6d4", "#84cc16"],
+      madeIn: "FABRIQUÉ AU DANEMARK"
+    },
+    {
+      name: "Tissu 3D",
+      tag: "optionnel",
+      image: "/gamma/fabric3d.png",
+      features: [
+        "Extensible multi-directionnel",
+        "100% polyester, 540 g/m",
+        "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+        "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+      ],
+      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#1e3a5f", "#1e40af", "#7c2d12", "#b91c1c", "#dc2626", "#f59e0b", "#ca8a04", "#65a30d", "#16a34a", "#0d9488", "#0ea5e9", "#6366f1", "#7c3aed", "#a855f7", "#ec4899"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    }
+  ]
+};
+---
+
+<Layout title="CORPO 100 - KWESK">
+  <ChairProduct {...corpo100} />
+</Layout>

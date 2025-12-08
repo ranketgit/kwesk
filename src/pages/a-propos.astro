@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutHero from '../components/about/AboutHero.astro';
+import AboutSection from '../components/about/AboutSection.astro';
+import AboutStats from '../components/about/AboutStats.astro';
+import AboutDifference from '../components/about/AboutDifference.astro';
+import Features from '../components/Features.astro';
+import AboutNormes from '../components/about/AboutNormes.astro';
+import Customers from '../components/Customers.astro';
+import AboutCta from '../components/about/AboutCta.astro';
+---
+
+<Layout title="Kwesk | Usine de Fauteuil de Bureau au maroc" description="Kwesk, entreprise professionnelle qui fait des bureaux et chaises. Découvrez notre usine de mobilier de bureau en France, fabricant de fauteuils ergonomiques pour entreprises.">
+  <main>
+    <div class="sticky top-0 h-[70vh] w-full">
+      <img 
+        src="/about-hero.jpg" 
+        alt="Chaises KWESK" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="relative bg-white z-10">
+      <AboutHero />
+      <AboutSection 
+        label="Notre Entreprise"
+        title="KWESK est le premier fabricant de mobilier de bureau à concevoir des chaises destinées à une utilisation intensive dans les centres d'appels et particulièrement dans toute entreprise."
+        paragraphs={[
+          "À ce jour, plusieurs centaines de milliers d'entreprises font confiance à la marque KWESK principalement en raison de sa robustesse et du design raffiné de ses chaises et bureaux.",
+          "Les produits KWESK sont reconnus aujourd'hui comme des mobiliers indispensables pour les entreprises recherchant confort, style et surtout durabilité."
+        ]}
+      />
+      <AboutSection 
+        label="Notre Histoire"
+        title="L'histoire de KWESK a commencé en 2008 lorsque son fondateur Eric Burgan a décidé de mettre à profit son expérience dans les centres d'appels."
+        paragraphs={[
+          "Il a rassemblé des compétences chevronnées dans la conception de bureaux et de chaises afin de développer des produits innovants résistants à l'utilisation la plus intensive.",
+          "Après quelques années, l'équipe KWESK était fière d'annoncer que ses chaises et bureaux équipent des millions de postes de travail dans le monde."
+        ]}
+      />
+      <AboutStats 
+        stats={[
+          { value: "20000", label: "Chaises livrées par an" },
+          { value: "6", label: "Gammes" },
+          { value: "50", label: "Employés" },
+          { value: "12", label: "Pays" }
+        ]}
+      />
+      <AboutDifference />
+      <Features 
+        features={[
+          { icon: "quality", title: "Qualité", description: "Les chaises KWESK sont conformes BIFMA et EN1335-1-2-3." },
+          { icon: "shipping", title: "Livraison", description: "Livraison mondiale via notre réseau d'affiliés." },
+          { icon: "warranty", title: "Garantie", description: "Garantie minimum de 5 ans." },
+          { icon: "service", title: "SAV", description: "Réparation et maintenance via notre réseau." }
+        ]}
+      />
+      <AboutNormes 
+        normes={[
+          { image: "/bifma-about.png", alt: "BIFMA", year: "2011" },
+          { image: "/eu-about.png", alt: "EU EN 1335", year: "2016" }
+        ]}
+      />
+      <Customers title="NOS CLIENTS SATISFAITS" />
+      <AboutCta />
+    </div>
+  </main>
+</Layout>

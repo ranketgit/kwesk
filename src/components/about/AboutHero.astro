@@ -1,0 +1,143 @@
+---
+// components/about/AboutHero.astro
+---
+
+<section class="about-hero">
+    <div class="about-hero__container">
+      <div class="about-hero__grid">
+        
+        <div class="about-hero__image">
+          <img src="/chairs/exclusive-chair.jpg" alt="Chaise KWESK" />
+        </div>
+  
+        <div class="about-hero__content">
+          <span class="about-hero__label">Notre Entreprise</span>
+          
+          <h1 class="about-hero__title">
+            KWESK<br/>
+            LEADER DES<br/>
+            CHAISES<br/>
+            CORPORATE
+          </h1>
+          
+          <p class="about-hero__desc">
+            KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison.
+          </p>
+  
+          <div class="about-hero__quote">
+            <span class="about-hero__quote-mark">"</span>
+            <p class="about-hero__quote-text">
+              Au-delà de la robustesse unanime de tous les produits KWESK, nos ingénieurs concentrent leurs efforts sur l'innovation toujours dans le but d'offrir des mobiliers qui dépassent les attentes des entreprises.
+            </p>
+          </div>
+          
+          <div class="about-hero__author">
+            <p class="about-hero__author-name">Tarik Benjelloun</p>
+            <p class="about-hero__author-role">Fondateur, PDG de KWESK</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .about-hero {
+      padding: 120px 0;
+    }
+  
+    .about-hero__container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+  
+    .about-hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+  
+    .about-hero__image img {
+      width: 100%;
+      max-width: 320px;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .about-hero__label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #8b8b4b;
+    }
+  
+    .about-hero__title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #1c1917;
+      line-height: 1.1;
+      margin-top: 30px;
+    }
+  
+    .about-hero__desc {
+      color: #78716c;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-top: 40px;
+    }
+  
+    .about-hero__quote {
+      display: flex;
+      gap: 20px;
+      margin-top: 70px;
+    }
+  
+    .about-hero__quote-mark {
+      font-size: 50px;
+      line-height: 1;
+      color: #8b8b4b;
+    }
+  
+    .about-hero__quote-text {
+      color: #57534e;
+      text-align: justify;
+      line-height: 1.9;
+    }
+  
+    .about-hero__author {
+      text-align: right;
+      margin-top: 50px;
+    }
+  
+    .about-hero__author-name {
+      font-weight: 600;
+      color: #1c1917;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+  
+    .about-hero__author-role {
+      font-size: 13px;
+      color: #a8a29e;
+      margin-top: 8px;
+    }
+  
+    @media (max-width: 768px) {
+      .about-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+  
+      .about-hero__title {
+        font-size: 36px;
+      }
+  
+      .about-hero__container {
+        padding: 0 30px;
+      }
+    }
+  </style>

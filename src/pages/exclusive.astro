@@ -1,0 +1,111 @@
+---
+// pages/chaises/exclusive.astro
+import Layout from '../layouts/Layout.astro';
+import ChairProduct from '../components/ChairProduct.astro';
+
+const exclusive = {
+  heroBg: "/exclusive/hero.jpg",
+  name: "EXCLUSIVE 500",
+  description: "L'EXCLUSIVE 500 est la chaise exécutive ultime. Elle intègre de nombreuses innovations KWESK telles que le dossier et l'assise interconnectés et les multiples réglages combinés par des commandes ergonomiques et faciles d'accès.",
+  version: "EXCLUSIVE 500",
+  versionType: "Chaise Président",
+  images: [
+    "/exclusive/1.jpg",
+    "/exclusive/2.jpg",
+    "/exclusive/3.jpg",
+    "/exclusive/4.jpg"
+  ],
+  featuresDiagram: "/exclusive/diagram.png",
+  standardFeatures: [
+    "Mécanisme synchrone à câble intégré (Italie)",
+    "Réglage de tension auto-pondéré",
+    "Accoudoirs pivotants",
+    "Mousse injectée haute densité assise et dossier",
+    "Assise et dossier rembourrés en tissu 3D (Danemark)",
+    "Cadre haut confort",
+    "Appui-tête souple"
+  ],
+  options: [
+    "Rembourrage PU",
+    "Rembourrage cuir Aniline pleine fleur naturel",
+    "Accoudoirs aluminium noir ou poli",
+    "Base aluminium noir ou poli",
+    "Accoudoirs cuir",
+    "Roulettes premium"
+  ],
+  frame: {
+    image: "/exclusive/frame.png",
+    description: "Cadre pivotant léger, fin et robuste permettant d'augmenter l'épaisseur de la mousse injectée, d'ajouter de larges points d'ancrage et de réguler la pression sur le dos."
+  },
+  ergonomy: {
+    image: "/exclusive/ergonomy.png",
+    features: [
+      "Inclinaison synchronisée du dossier 18° et de l'assise 11°",
+      "3 positions de blocage",
+      "Support optimal de la colonne vertébrale",
+      "Soulage les douleurs dorsales",
+      "Mécanisme auto-pondéré : ajuste automatiquement la tension du dossier selon le poids de l'utilisateur",
+      "Accoudoirs pivotants synchronisés"
+    ]
+  },
+  mechanisms: [
+    {
+      name: "Mécanisme synchrone intégré",
+      tag: "défaut",
+      image: "/exclusive/mechanism.png",
+      features: [
+        "Leviers de commande du mécanisme synchrone à câble intégrés dans l'assise"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    }
+  ],
+  gasLift: {
+    image: "/exclusive/gaslift.png",
+    description: "L'EXCLUSIVE 500 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur.",
+    madeIn: "FABRIQUÉ EN ALLEMAGNE"
+  },
+  doubleCylinder: {
+    image: "/exclusive/double-cylinder.png",
+    diagramImage: "/exclusive/double-cylinder-diagram.png",
+    description: "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  materials: [
+    {
+      name: "Tissu 3D",
+      tag: "défaut",
+      image: "/exclusive/fabric-3d.jpg",
+      features: [
+        "Extensible multi-directionnel",
+        "100% polyester, 540 g/m",
+        "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+        "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+      ],
+      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#1e3a5f", "#1e40af", "#7c2d12", "#b91c1c", "#dc2626", "#f59e0b", "#ca8a04", "#65a30d", "#16a34a", "#0d9488", "#0ea5e9", "#6366f1", "#7c3aed", "#a855f7", "#ec4899"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Cuir PU",
+      tag: "optionnel",
+      image: "/exclusive/pu-leather.jpg",
+      features: [],
+      colors: ["#1a1a1a", "#3d3d3d", "#1e3a5f", "#1e40af", "#0f766e", "#065f46", "#166534", "#ca8a04", "#b45309", "#9a3412", "#b91c1c", "#7c2d12", "#78716c", "#0ea5e9", "#6366f1", "#7c3aed"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    },
+    {
+      name: "Cuir Aniline pleine fleur naturel",
+      tag: "optionnel",
+      image: "/exclusive/leather.jpg",
+      features: [],
+      colors: ["#1a1a1a", "#78716c", "#1e3a5f", "#ca8a04", "#b45309", "#9a3412"],
+      madeIn: "FABRIQUÉ AU MAROC"
+    }
+  ]
+};
+---
+
+<Layout title="EXCLUSIVE 500 - KWESK">
+  <ChairProduct {...exclusive} />
+</Layout>
