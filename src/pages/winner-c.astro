@@ -5,9 +5,9 @@ import Layout from '../layouts/Layout.astro';
 const winnerC = {
   heroBg: "/winner-c/hero.png",
   name: "WINNER C",
-  description: "The WINNER C visitor's chair is perfectly designed to receive your team/visitors with an exceptional comfort and an optimal ergonomics. In a hall, a waiting room or in front of your desk, the WINNER C is the reference in visitor chairs!",
+  description: "La chaise visiteur WINNER C est parfaitement conçue pour accueillir votre équipe/visiteurs avec un confort exceptionnel et une ergonomie optimale. Dans un hall, une salle d'attente ou devant votre bureau, la WINNER C est la référence des chaises visiteur !",
   version: "WINNER C",
-  versionType: "Visitor Chair",
+  versionType: "Chaise Visiteur",
   images: [
     "/winner-c/1.jpg",
     "/winner-c/2.jpg",
@@ -15,56 +15,56 @@ const winnerC = {
   ],
   featuresDiagram: "/winner-c/diagram.png",
   standardFeatures: [
-    "Stainless steel or matte black galvanized steel frame",
-    "Fixed armrest",
-    "Anti-allergenic Aero Mesh backrest (Denmark)"
+    "Structure en acier inoxydable ou acier galvanisé noir mat",
+    "Accoudoirs fixes",
+    "Dossier Anti-allergénique Aero Mesh (Danemark)"
   ],
   options: [
-    "Adjustable headrest (3D)",
-    "High density injected seat foam 45 mm",
-    "Height adjustable upholstered backrest",
-    "3D Mesh backrest",
-    "Adjustable lumbar support",
-    "3D adjustable armrests"
+    "Appui-tête réglable (3D)",
+    "Mousse d'assise injectée haute densité 45 mm",
+    "Dossier rembourré réglable en hauteur",
+    "Dossier 3D Mesh",
+    "Support lombaire réglable",
+    "Accoudoirs réglables 3D"
   ],
   mechanisms: [],
   gasLift: null,
   materials: [
     {
-      name: "Anti-allergenic Aero Mesh",
-      tag: "default",
+      name: "Anti-allergénique Aero Mesh",
+      tag: "défaut",
       image: "/winner-c/mesh.png",
       features: [
         "100% polyester, 330 g/m",
-        "Abrasion Rubs martindale 70,000 (EN ISO 12947-2)",
-        "Pilling resistance: 4-5 for 5,000 rubs (EN ISO 12945-2)",
-        "Light fastness scale 1-8, max. 8: 5-7 (EN ISO 105-B02)",
-        "Rubbing fastness scale 1-5, max. 5 - wet/dry: 4-5/4-5 (EN ISO 105x12)",
-        "Flammability - BS EN 1021 1&2 Cigarette and Match - CA TB 117-2013"
+        "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+        "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
+        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
       ],
       colors: ["#1a1a1a", "#4a4a4a", "#6b7280", "#0f766e", "#1e40af", "#b91c1c", "#ca8a04", "#16a34a", "#7c3aed"],
-      madeIn: "MADE IN DENMARK"
+      madeIn: "FABRIQUÉ AU DANEMARK"
     },
     {
-      name: "Anti-allergenic Aero Mesh 3D",
-      tag: "optional",
+      name: "Anti-allergénique Aero Mesh 3D",
+      tag: "optionnel",
       image: "/winner-c/mesh3d.png",
       features: [
-        "Comfort feeling similar to upholstered foam backrest",
+        "Sensation de confort similaire à un dossier en mousse rembourrée",
         "100% polyester, 510 g/m",
-        "Martindale abrasion resistance: 70,000 (EN ISO 12947-2)",
-        "Pilling scale 1-5, max. 5: 5 (EN ISO 12945-2)",
-        "Light fastness scale 1-8, max. 8: 5-7 (EN ISO 105-B02)",
-        "Rubbing fastness scale 1-5, max. 5 - wet/dry: 4-5/4-5 (EN ISO 105x12)",
-        "Flammability - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette and Match - Class Uno UNI 9175 Class 1 CNBF"
+        "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
+        "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
+        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
       ],
       colors: ["#1a1a1a", "#3f3f46", "#78716c", "#0d9488", "#2563eb", "#dc2626", "#d97706", "#22c55e", "#a855f7", "#ec4899", "#06b6d4", "#84cc16"],
-      madeIn: "MADE IN DENMARK"
+      madeIn: "FABRIQUÉ AU DANEMARK"
     }
   ]
 };
 ---
 
 <Layout title="Winner C | Chaise de Bureau Entreprise Ergonomique - Kwesk" description="Découvrez la Winner C par Kwesk, fabricant de sièges de bureau ergonomiques. Fauteuil professionnel idéal pour grande entreprise, conçu au Maroc pour un usage intensif.">
-    <ChairProduct {...winnerC} />
+  <ChairProduct {...winnerC} />
 </Layout>
