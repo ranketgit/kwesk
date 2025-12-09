@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import ChairProduct from '../components/ChairProduct.astro';
 
 const exclusive = {
-  heroBg: "/exclusive/hero.jpg",
+  heroBg: "/exclusive/exhero.jpg",
   name: "EXCLUSIVE 500",
   description: "L'EXCLUSIVE 500 est la chaise exécutive ultime. Elle intègre de nombreuses innovations KWESK telles que le dossier et l'assise interconnectés et les multiples réglages combinés par des commandes ergonomiques et faciles d'accès.",
   version: "EXCLUSIVE 500",
@@ -73,7 +73,7 @@ const exclusive = {
     {
       name: "Tissu 3D",
       tag: "défaut",
-      image: "/exclusive/fabric-3d.jpg",
+      image: "/exclusive/fabric-3d.png",
       features: [
         "Extensible multi-directionnel",
         "100% polyester, 540 g/m",
@@ -89,7 +89,7 @@ const exclusive = {
     {
       name: "Cuir PU",
       tag: "optionnel",
-      image: "/exclusive/pu-leather.jpg",
+      image: "/exclusive/pu-leather.png",
       features: [],
       colors: ["#1a1a1a", "#3d3d3d", "#1e3a5f", "#1e40af", "#0f766e", "#065f46", "#166534", "#ca8a04", "#b45309", "#9a3412", "#b91c1c", "#7c2d12", "#78716c", "#0ea5e9", "#6366f1", "#7c3aed"],
       madeIn: "FABRIQUÉ AU MAROC"
@@ -97,7 +97,7 @@ const exclusive = {
     {
       name: "Cuir Aniline pleine fleur naturel",
       tag: "optionnel",
-      image: "/exclusive/leather.jpg",
+      image: "/exclusive/leather.png",
       features: [],
       colors: ["#1a1a1a", "#78716c", "#1e3a5f", "#ca8a04", "#b45309", "#9a3412"],
       madeIn: "FABRIQUÉ AU MAROC"
@@ -106,6 +106,6 @@ const exclusive = {
 };
 ---
 
-<Layout title="EXCLUSIVE 500 - KWESK">
+<Layout title="Exclusive 500 | Fauteuil Ergonomique de Bureau - Kwesk Maroc" description="L'Exclusive 500 par Kwesk, fabricant de fauteuil de bureau au Maroc. Chaise bureau personnalisée en cuir avec accoudoirs aluminium pour grande entreprise.">
   <ChairProduct {...exclusive} />
 </Layout>
