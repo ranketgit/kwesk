@@ -1,0 +1,48 @@
+---
+import ChairCard from './ChairCard.astro';
+---
+
+<section class="bg-white py-20">
+  <h2 class="text-5xl lg:text-6xl text-center text-stone-900 mb-16">
+    NOS BUREAUX AU<br/>MAROC
+  </h2>
+
+  <ChairCard
+    title="DIRECTION"
+    description="Nos bureaux de direction allient prestige et fonctionnalité. Conçus avec des matériaux nobles et des finitions soignées, ils affirment le leadership tout en offrant une surface de travail généreuse et ergonomique. Chaque pièce est pensée pour refléter l'image de marque de votre entreprise tout en assurant un confort premium pour vos sessions de travail stratégiques."
+    image="/bureau.jpg"
+    versions={[{ name: "EXECUTIVE PRO", type: "Bureau de Direction" }]}
+    imagePosition="right"
+    href="/bureaux/direction"
+  />
+
+  <ChairCard
+    title="OPÉRATIF"
+    description="La gamme Opérative de KWESK est la solution idéale pour optimiser la productivité de vos collaborateurs. Ces bureaux robustes offrent un design épuré qui s'intègre parfaitement dans tout type d'espace. Grâce à une gestion intelligente des câbles et une structure renforcée, ils répondent aux exigences d'une utilisation quotidienne intensive au bureau."
+    image="/deskall.jpg"
+    versions={[{ name: "OPTIMA 140", type: "Bureau Opératif" }]}
+    imagePosition="left"
+    href="/bureaux/operatif"
+  />
+
+  <ChairCard
+    title="BENCH"
+    description="Favorisez la collaboration avec nos solutions Bench. Idéals pour les open spaces, ces bureaux partagés permettent de regrouper vos équipes tout en préservant l'espace individuel nécessaire à la concentration. Modulaires et évolutifs, ils s'adaptent à la croissance de votre entreprise et facilitent la communication entre les départements."
+    image="/bench.jpg"
+    versions={[
+      { name: "TEAM BENCH 2", type: "Poste Double" },
+      { name: "TEAM BENCH 4", type: "Poste Quadruple" }
+    ]}
+    imagePosition="right"
+    href="/bureaux/bench"
+  />
+
+  <ChairCard
+    title="RÉGLABLES"
+    description="Innovez avec nos bureaux réglables en hauteur. Passant de la position assise à debout en quelques secondes, ils favorisent le bien-être et réduisent la fatigue liée à la sédentarité. Une solution moderne pour les entreprises soucieuses de la santé de leurs employés et de l'ergonomie dynamique de leur espace de travail."
+    image="/reglable.jpg"
+    versions={[{ name: "ACTIVE DESK", type: "Bureau Assis-Debout" }]}
+    imagePosition="left"
+    href="/bureaux/reglables"
+  />
+</section>

@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryHeader from '../components/CategoryHeader.astro';
+import ProductCardSimple from '../components/ProductCardSimple.astro';
+
+const products = [
+  { name: "TABLE OVALE", type: "Table de Réunion", image: "/meeting/table-oval.jpg", href: "/reunion/table-ovale" },
+  { name: "MEETING CHAIR", type: "Assise Réunion", image: "/meeting/meeting-chair.jpg", href: "/reunion/chaise-reunion" },
+  { name: "TABLE MODULAIRE", type: "Espace Collaboratif", image: "/meeting/modular.jpg", href: "/reunion/table-modulaire" },
+  { name: "STATION MÉDIA", type: "Mobilier Multimédia", image: "/meeting/media.jpg", href: "/reunion/media" },
+];
+---
+
+<Layout title="Salles de Réunion | KWESK">
+  <CategoryHeader 
+    title="Salles de Réunion" 
+    description="Créez des espaces d'échange inspirants avec notre mobilier dédié à la collaboration."
+    image="/home-categories/reunion.jpg"
+  />
+
+  <section class="product-section">
+    <div class="product-container">
+      <div class="product-grid">
+        {products.map(p => <ProductCardSimple {...p} />)}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .product-section { padding: 80px 0; background: white; }
+  .product-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
+  .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 30px; }
+  @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px) { 
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .product-container { padding: 0 20px; }
+  }
+</style>

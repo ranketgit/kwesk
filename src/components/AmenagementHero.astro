@@ -1,0 +1,42 @@
+---
+---
+<section class="am-hero">
+    <div class="am-hero__container">
+      <div class="am-hero__content">
+        <span class="am-hero__badge">Expertise & Design au Maroc</span>
+        <h1 class="am-hero__title">Conception d'Espaces de Travail <span>Productifs</span></h1>
+        <p class="am-hero__text">
+          KWESK accompagne les entreprises marocaines dans la création de bureaux ergonomiques, 
+          optimisant le bien-être des collaborateurs et l'image de marque de votre institution.
+        </p>
+        <div class="am-hero__actions">
+          <a href="/contact" class="am-btn am-btn--gold">Obtenir une étude gratuite</a>
+          <a href="#solutions" class="am-btn am-btn--outline">Nos solutions</a>
+        </div>
+      </div>
+    </div>
+    <div class="am-hero__bg">
+      <img src="/amenagement/hero-v2.jpg" alt="Aménagement bureau professionnel Maroc" />
+      <div class="am-hero__overlay"></div>
+    </div>
+  </section>
+  
+  <style>
+    .am-hero { position: relative; height: 90vh; min-height: 600px; display: flex; align-items: center; overflow: hidden; background: #1c1917; }
+    .am-hero__container { max-width: 1400px; margin: 0 auto; padding: 0 60px; width: 100%; z-index: 2; }
+    .am-hero__content { max-width: 700px; }
+    .am-hero__badge { color: #8b8b4b; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 13px; margin-bottom: 20px; display: block; }
+    .am-hero__title { font-size: clamp(40px, 6vw, 72px); color: white; line-height: 1.1; font-weight: 800; margin-bottom: 25px; }
+    .am-hero__title span { color: #8b8b4b; }
+    .am-hero__text { color: rgba(255,255,255,0.7); font-size: 18px; line-height: 1.7; margin-bottom: 40px; max-width: 550px; }
+    .am-hero__actions { display: flex; gap: 20px; }
+    .am-btn { padding: 18px 35px; border-radius: 4px; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; transition: all 0.3s ease; }
+    .am-btn--gold { background: #8b8b4b; color: white; }
+    .am-btn--gold:hover { background: #a3a35c; transform: translateY(-3px); }
+    .am-btn--outline { border: 1px solid rgba(255,255,255,0.3); color: white; }
+    .am-btn--outline:hover { background: white; color: #1c1917; }
+    .am-hero__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; }
+    .am-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+    .am-hero__overlay { position: absolute; inset: 0; background: linear-gradient(90deg, #1c1917 20%, rgba(28,25,23,0.4) 100%); }
+    @media (max-width: 768px) { .am-hero__container { padding: 0 30px; } .am-hero__actions { flex-direction: column; } }
+  </style>

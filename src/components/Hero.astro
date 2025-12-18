@@ -1,64 +1,305 @@
 ---
-// Hero.astro
+const slides = [
+  {
+    image: "/hero-chairs.png",
+    title: "Aménagez Votre<br/>Espace de Travail",
+    subtitle: "Mobilier de bureau professionnel conçu au Maroc pour un confort optimal et une productivité maximale."
+  },
+  {
+    image: "/by100/by100hero.png",
+    title: "Chaises Ergonomiques<br/>Pour Entreprises",
+    subtitle: "Des sièges conçus pour une utilisation intensive, garantis 5 ans et conformes aux normes internationales."
+  },
+  {
+    image: "/corpo-100/corpohero.jpg",
+    title: "Design & Confort<br/>Au Quotidien",
+    subtitle: "Découvrez notre gamme de mobilier alliant esthétique moderne et ergonomie avancée."
+  },
+  {
+    image: "/deskhero.jpg",
+    title: "Solutions Sur Mesure<br/>Pour Votre Bureau",
+    subtitle: "Équipez vos espaces de travail avec du mobilier adapté à vos besoins et à votre budget."
+  }
+];
 ---
 
-<section class="relative">
-    <!-- Hero - sticky, half viewport -->
-    <div class="sticky top-0 h-[70vh] w-full">
-      <img 
-        src="/hero-chairs.png" 
-        alt="Chaises ergonomiques" 
-        class="w-full h-full object-cover"
-      />
+<section class="hero">
+  <div class="hero__slider">
+    {slides.map((slide, index) => (
+      <div class={`hero__slide ${index === 0 ? 'active' : ''}`} data-index={index}>
+        <img src={slide.image} alt={slide.title.replace(/<br\/?>/g, ' ')} />
+        <div class="hero__overlay"></div>
+      </div>
+    ))}
+  </div>
+
+  <div class="hero__content">
+    <div class="hero__container">
+      {slides.map((slide, index) => (
+        <div class={`hero__text ${index === 0 ? 'active' : ''}`} data-index={index}>
+          <h1 class="hero__title" set:html={slide.title}></h1>
+          <p class="hero__subtitle">{slide.subtitle}</p>
+        </div>
+      ))}
+      <div class="hero__buttons">
+        <a href="/contact" class="hero__btn hero__btn--primary">Devis gratuit</a>
+        <a href="/a-propos" class="hero__btn hero__btn--secondary">En savoir plus</a>
+      </div>
     </div>
-  
-    <!-- Second section - scrolls over the hero -->
-    <div class="relative bg-white z-10 min-h-screen">
-      <div class="max-w-7xl mx-auto px-8 lg:px-16 py-20">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          
-          <!-- Left - Chair image -->
-          <div>
-            <img 
-              src="/chairs/exclusive-chair.jpg" 
-              alt="Chaise de bureau" 
-              class="w-full max-w-md mx-auto"
-            />
-          </div>
-  
-          <!-- Right - Content -->
-          <div class="space-y-8">
-            <span class="text-sm uppercase tracking-widest" style="color: #8b8b4b;">
-              Notre Entreprise
-            </span>
-            
-            <h1 class="text-5xl lg:text-6xl font-bold text-stone-900 leading-tight">
-              MOBILIER DE<br/>
-              BUREAU AU<br/>
-              MAROC
-            </h1>
-            
-            <p class="text-stone-500 text-lg">
-              KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison.
-            </p>
-  
-            <!-- Quote -->
-            <div class="pt-8">
-              <div class="flex gap-4">
-                <span class="text-6xl leading-none" style="color: #8b8b4b;">"</span>
-                <blockquote class="text-stone-800 text-justify leading-relaxed">
-                  Au-delà de la robustesse unanime de tous les produits KWESK, nos ingénieurs concentrent leurs efforts sur l'innovation toujours dans le but d'offrir des mobiliers qui dépassent les attentes des entreprises. Par exemple, nous citons les structures renforcées avec un alliage à base d'acier, notre revêtement air-mesh anti-allergique, notre mousse haute densité et notre plastique antistatique et anti-poussière.
-                </blockquote>
-              </div>
-              
-              <div class="mt-6 text-right">
-                <p class="font-semibold text-stone-900 uppercase tracking-wide">Tarik Benjelloun</p>
-                <p class="text-sm text-stone-400">Fondateur, PDG de KWESK</p>
-              </div>
-            </div>
-          </div>
-  
+  </div>
+
+  <div class="hero__dots">
+    {slides.map((_, index) => (
+      <button 
+        class={`hero__dot ${index === 0 ? 'active' : ''}`} 
+        data-index={index}
+        aria-label={`Slide ${index + 1}`}
+      ></button>
+    ))}
+  </div>
+
+  <div class="hero__scroll">
+    <span>Défiler</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="intro__container">
+    <div class="intro__grid">
+      <div class="intro__image ">
+        <img src="/mobilier-bureau.jpg" class="rounded-4xl" alt="Chaise de bureau" />
+      </div>
+
+      <div class="intro__content">
+        <span class="intro__label">Notre Entreprise</span>
+        <h2 class="intro__title">
+          MOBILIER DE<br/>
+          BUREAU AU<br/>
+          MAROC
+        </h2>
+        <p class="intro__desc">
+          KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison.
+        </p>
+        <div class="intro__quote">
+          <span class="intro__quote-mark">"</span>
+          <blockquote class="intro__quote-text">
+            Au-delà de la robustesse unanime de tous les produits KWESK, nos ingénieurs concentrent leurs efforts sur l'innovation toujours dans le but d'offrir des mobiliers qui dépassent les attentes des entreprises. Par exemple, nous citons les structures renforcées avec un alliage à base d'acier, notre revêtement air-mesh anti-allergique, notre mousse haute densité et notre plastique antistatique et anti-poussière.
+          </blockquote>
+        </div>
+        <div class="intro__author">
+          <p class="intro__author-name">Tarik Benjelloun</p>
+          <p class="intro__author-role">Fondateur, PDG de KWESK</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero__slider {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+  }
+
+  .hero__slide {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .hero__slide.active { opacity: 1; }
+  .hero__slide img { width: 100%; height: 100%; object-fit: cover; }
+
+  .hero__overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 30px;
+    margin-top: -50px;
+  }
+
+  .hero__container { max-width: 900px; margin: 0 auto; }
+
+  .hero__text { display: none; }
+  .hero__text.active { display: block; animation: fadeInUp 0.8s ease; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero__title {
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 25px;
+  }
+
+  .hero__subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto 40px;
+  }
+
+  .hero__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero__btn {
+    display: inline-block;
+    padding: 16px 35px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .hero__btn--primary { background-color: white; color: #1c1917; }
+  .hero__btn--primary:hover { transform: scale(1.05); }
+
+  .hero__btn--secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .hero__btn--secondary:hover { background-color: rgba(255, 255, 255, 0.1); }
+
+  .hero__dots {
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+  }
+
+  .hero__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .hero__dot:hover { border-color: rgba(255, 255, 255, 0.8); }
+
+  .hero__dot.active {
+    border-color: #1c1917;
+    background-color: #1c1917;
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero__scroll span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero__scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, transparent 100%);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollLine {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.5); opacity: 0.5; }
+  }
+
+  .intro { padding: 120px 0; background-color: white; }
+  .intro__container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+  .intro__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+  .intro__image img { width: 100%; max-width: 450px; margin: 0 auto; display: block; }
+  .intro__label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: #8b8b4b; margin-bottom: 25px; }
+  .intro__title { font-size: 48px; font-weight: 700; color: #1c1917; line-height: 1.1; margin-bottom: 25px; }
+  .intro__desc { font-size: 16px; color: #78716c; line-height: 1.8; margin-bottom: 40px; }
+  .intro__quote { display: flex; gap: 15px; }
+  .intro__quote-mark { font-size: 60px; line-height: 1; color: #8b8b4b; }
+  .intro__quote-text { font-size: 15px; color: #57534e; line-height: 1.8; text-align: justify; }
+  .intro__author { text-align: right; margin-top: 30px; }
+  .intro__author-name { font-size: 14px; font-weight: 600; color: #1c1917; text-transform: uppercase; letter-spacing: 1px; }
+  .intro__author-role { font-size: 13px; color: #a8a29e; margin-top: 5px; }
+
+  @media (max-width: 768px) {
+    .hero__dots {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+</style>
+
+<script>
+  const slides = document.querySelectorAll('.hero__slide');
+  const texts = document.querySelectorAll('.hero__text');
+  const dots = document.querySelectorAll('.hero__dot');
+  let currentIndex = 0;
+  let interval: ReturnType<typeof setInterval>;
+
+  function goToSlide(index: number) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    texts.forEach(text => text.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    slides[index]?.classList.add('active');
+    texts[index]?.classList.add('active');
+    dots[index]?.classList.add('active');
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    const next = (currentIndex + 1) % slides.length;
+    goToSlide(next);
+  }
+
+  function startAutoplay() { interval = setInterval(nextSlide, 3000); }
+  function resetAutoplay() { clearInterval(interval); startAutoplay(); }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+      resetAutoplay();
+    });
+  });
+
+  startAutoplay();
+</script>

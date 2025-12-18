@@ -1,113 +1,107 @@
 ---
-// components/Header.astro
 interface SubItem {
   label: string;
   href: string;
 }
 
-interface ChairCategory {
-  label: string;
-  href?: string;
-  children?: SubItem[];
+interface MegaCategory {
+  category: string;
+  image: string;
+  items: {
+    label: string;
+    href?: string;
+    children?: SubItem[];
+  }[];
 }
 
-const chairCategories: ChairCategory[] = [
-  { 
-    label: "WINNER",
-    children: [
-      { label: "WINNER 125", href: "/winner-125" },
-      { label: "WINNER C", href: "/winner-c" }
+const megaMenuData: MegaCategory[] = [
+  {
+    category: "Bureaux",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=600",
+    items: [
+      { label: "Bureaux de Direction", href: "/bureaux/direction" },
+      { label: "Bureaux Opératifs", href: "/bureaux/operatif" },
+      { label: "Bureaux Réglables", href: "/bureaux/reglables" },
+      { label: "Bureaux Bench", href: "/bureaux/bench" }
     ]
   },
-  { 
-    label: "GAMMA",
-    children: [
-      { label: "GAMMA 150", href: "/gamma" },
-      { label: "GAMMA C", href: "/gamma-c" }
+  {
+    category: "Chaises",
+    image: "/hero-chairs.png",
+    items: [
+      { 
+        label: "WINNER", 
+        children: [
+          { label: "WINNER 125", href: "/winner-125" },
+          { label: "WINNER C", href: "/winner-c" }
+        ]
+      },
+      { 
+        label: "GAMMA", 
+        children: [
+          { label: "GAMMA 150", href: "/gamma" },
+          { label: "GAMMA C", href: "/gamma-c" }
+        ]
+      },
+      { 
+        label: "CORPO", 
+        children: [{ label: "CORPO 100", href: "/corpo-100" }]
+      },
+      { 
+        label: "BY", 
+        children: [
+          { label: "BY 100", href: "/by-100" },
+          { label: "BY G", href: "/by-g" }
+        ]
+      },
+      { label: "CHALLENGER", href: "/challenger" },
+      { 
+        label: "EXCLUSIVE", 
+        children: [
+          { label: "EXCLUSIVE 500", href: "/exclusive" },
+          { label: "EXCLUSIVE G", href: "/exclusive-g" }
+        ]
+      },
+      { label: "CADDY", href: "/caddy" }
     ]
   },
-  { 
-    label: "CORPO",
-    children: [
-      { label: "CORPO 100", href: "/corpo-100" }
+  {
+    category: "Salle de Réunion",
+    image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=600",
+    items: [
+      { label: "Tables de Réunion", href: "/reunion/tables" },
+      { label: "Chaises de Réunion", href: "/reunion/chaises" },
+      { label: "Écrans & Supports", href: "/reunion/media" },
+      { label: "Rangements Pro", href: "/reunion/rangement" }
     ]
-  },
-  { 
-    label: "BY",
-    children: [
-      { label: "BY 100", href: "/by-100" },
-      { label: "BY G", href: "/by-g" }
-    ]
-  },
-  { 
-    label: "CHALLENGER",
-    href: "/challenger"
-  },
-  { 
-    label: "EXCLUSIVE",
-    children: [
-      { label: "EXCLUSIVE 500", href: "/exclusive" },
-      { label: "EXCLUSIVE G", href: "/exclusive-g" }
-    ]
-  },
-  { 
-    label: "CADDY",
-    href: "/caddy"
-  },
+  }
 ];
 
 const navItems = [
   { label: "Accueil", href: "/" },
   { label: "Entreprise", href: "/a-propos" },
-  { label: "Nos Chaises", href: "/chaises", hasDropdown: true },
+  { label: "Aménagement", href: "/amenagement-de-bureau" },
+  { label: "Nos Produits", href: "#", isMegaTrigger: true },
   { label: "Contact", href: "/contact" },
 ];
 ---
 
 <header class="header">
   <div class="header__container">
-    
     <a href="/" class="header__logo">
-      <img src="/kwesk-logo.png" class="h-12" alt="KWESK">
+      <img src="/kwesk-logo.png" class="header__logo-img" alt="KWESK">
     </a>
 
-    <nav class="header__nav">
+    <nav class="header__nav ">
       {navItems.map((item) => (
-        <div class={`header__nav-item ${item.hasDropdown ? 'header__nav-item--has-dropdown' : ''}`}>
-          {item.hasDropdown ? (
-            <>
-              <button class="header__nav-link">
-                {item.label}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div class="header__dropdown">
-                <div class="header__dropdown-main">
-                  {chairCategories.map((cat) => (
-                    <div class={`header__category ${cat.children ? 'header__category--has-sub' : ''}`}>
-                      {cat.href ? (
-                        <a href={cat.href} class="header__category-link">{cat.label}</a>
-                      ) : (
-                        <span class="header__category-link">
-                          {cat.label}
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                          </svg>
-                        </span>
-                      )}
-                      {cat.children && (
-                        <div class="header__submenu">
-                          {cat.children.map((child) => (
-                            <a href={child.href} class="header__submenu-link">{child.label}</a>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </>
+        <div class="header__nav-item">
+          {item.isMegaTrigger ? (
+            <button class="header__nav-link mega-trigger">
+              {item.label}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
           ) : (
             <a href={item.href} class="header__nav-link">{item.label}</a>
           )}
@@ -115,46 +109,77 @@ const navItems = [
       ))}
     </nav>
 
-    <button class="header__burger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <a href="/contact" class="header__cta">Devis gratuit</a>
 
+    <button class="header__burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="header__mega-panel">
+    <div class="header__mega-content">
+      {megaMenuData.map((cat) => (
+        <div class="header__mega-column">
+          <div class="header__mega-image-wrap">
+            <img src={cat.image} alt={cat.category} class="header__mega-img" />
+            <div class="header__mega-overlay">
+              <h3 class="header__mega-title">{cat.category}</h3>
+            </div>
+          </div>
+          
+          <div class="header__items-list">
+            {cat.items.map((prod) => (
+              <div class="header__mega-item">
+                {prod.children ? (
+                  <>
+                    <span class="header__item-label">{prod.label}</span>
+                    <div class="header__sub-children">
+                      {prod.children.map((child) => (
+                        <a href={child.href} class="header__sub-child-link">{child.label}</a>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <a href={prod.href} class="header__item-label link">{prod.label}</a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 
   <div class="header__mobile">
     <nav class="header__mobile-nav">
       {navItems.map((item) => (
-        <div class="header__mobile-item">
-          {item.hasDropdown ? (
+        <div class="mobile-nav-block">
+          {item.isMegaTrigger ? (
             <>
-              <button class="header__mobile-link header__mobile-link--dropdown">
+              <button class="header__mobile-link mobile-trigger">
                 {item.label}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </button>
-              <div class="header__mobile-dropdown">
-                {chairCategories.map((cat) => (
-                  <div class="header__mobile-cat">
-                    {cat.href ? (
-                      <a href={cat.href} class="header__mobile-cat-link">{cat.label}</a>
-                    ) : (
-                      <>
-                        <button class="header__mobile-cat-link header__mobile-cat-link--expand">
-                          {cat.label}
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                          </svg>
-                        </button>
-                        <div class="header__mobile-sub">
-                          {cat.children?.map((child) => (
-                            <a href={child.href} class="header__mobile-sub-link">{child.label}</a>
-                          ))}
-                        </div>
-                      </>
-                    )}
+              <div class="mobile-accordion-content">
+                {megaMenuData.map((cat) => (
+                  <div class="mobile-cat-group">
+                    <span class="mobile-cat-title">{cat.category}</span>
+                    <div class="mobile-cat-links">
+                      {cat.items.map((prod) => (
+                        <>
+                          {prod.href ? (
+                            <a href={prod.href} class="mobile-sub-link">{prod.label}</a>
+                          ) : (
+                            <div class="mobile-prod-cluster">
+                              <span class="mobile-cluster-label">{prod.label}</span>
+                              <div class="mobile-cluster-subs">
+                                {prod.children?.map(c => <a href={c.href} class="mobile-sub-link">{c.label}</a>)}
+                              </div>
+                            </div>
+                          )}
+                        </>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -166,384 +191,107 @@ const navItems = [
       ))}
     </nav>
   </div>
-
 </header>
 
 <style>
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: white;
-    border-bottom: 1px solid #f5f5f4;
-  }
-
+  .header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
+  .header.scrolled { background-color: white; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); }
+  
   .header__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    max-width: 1400px; margin: 0 auto; padding: 0 60px; height: 100px;
+    display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1001;
   }
+  .header.scrolled .header__container { height: 75px; }
+  .header__logo-img { height: 40px; }
 
-  .header__logo {
-    text-decoration: none;
-  }
-
-  .header__nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .header__nav-item {
-    position: relative;
-  }
-
+  .header__nav { display: flex; align-items: center; gap: 40px; }
   .header__nav-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    color: #57534e;
-    text-decoration: none;
-    padding: 10px 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600;
+    color: white; text-decoration: none; padding: 15px 0; background: none; border: none; cursor: pointer; text-transform: uppercase;
   }
+  .header.scrolled .header__nav-link { color: #1c1917; }
+  .header__nav-link svg { width: 12px; transition: transform 0.3s; }
 
-  .header__nav-link:hover {
-    color: #1c1917;
+  .header__mega-panel {
+    position: absolute; top: 90px; left: 40px; right: 40px;
+    background: white; box-shadow: 0 40px 80px rgba(0,0,0,0.15); border-radius: 24px; border: 1px solid #f0f0f0;
+    opacity: 0; visibility: hidden; transform: translateY(15px); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
   }
+  .header.scrolled .header__mega-panel { top: 70px; }
+  .header:has(.mega-trigger:hover) .header__mega-panel, .header__mega-panel:hover { opacity: 1; visibility: visible; transform: translateY(0); }
 
-  .header__nav-link svg {
-    width: 14px;
-    height: 14px;
-    transition: transform 0.3s ease;
-  }
+  .header__mega-content { padding: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .header__mega-column { display: flex; flex-direction: column; gap: 24px; border-right: 1px solid #f5f5f4; padding-right: 15px; }
+  .header__mega-column:last-child { border-right: none; padding-right: 0; }
 
-  .header__nav-item--has-dropdown:hover .header__nav-link svg {
-    transform: rotate(180deg);
-  }
+  .header__mega-image-wrap { position: relative; width: 100%; height: 180px; border-radius: 12px; overflow: hidden; background: #eee; }
+  .header__mega-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .header__mega-column:hover .header__mega-img { transform: scale(1.08); }
 
-  /* Main Dropdown */
-  .header__dropdown {
-    position: absolute;
-    top: 100%;
-    left: -20px;
-    padding-top: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
+  .header__mega-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); }
+  .header__mega-title { color: white; font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0; }
 
-  .header__nav-item--has-dropdown:hover .header__dropdown {
-    opacity: 1;
-    visibility: visible;
-  }
+  .header__items-list { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 0 5px; }
+  .header__item-label { font-size: 14px; font-weight: 800; color: #1c1917; text-decoration: none; margin-bottom: 4px; display: block; }
+  .header__item-label.link:hover { color: #8b8b4b; }
 
-  .header__dropdown-main {
-    background-color: white;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    border-radius: 8px;
-    padding: 12px 0;
-    min-width: 200px;
-  }
+  .header__sub-children { display: flex; flex-wrap: wrap; gap: 8px; }
+  .header__sub-child-link { font-size: 12px; color: #78716c; text-decoration: none; font-weight: 500; padding: 2px 0; }
+  .header__sub-child-link:hover { color: #8b8b4b; }
 
-  /* Category */
-  .header__category {
-    position: relative;
-  }
+  .header__cta { padding: 10px 24px; background: #1c1917; color: white; border-radius: 50px; text-decoration: none; font-size: 13px; font-weight: 600; }
+  .header.scrolled .header__cta { background: #8b8b4b; }
 
-  .header__category-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #57534e;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.2s ease;
-  }
+  .header__burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+  .header__burger span { width: 25px; height: 2px; background: white; }
+  .header.scrolled .header__burger span { background: #1c1917; }
 
-  .header__category-link svg {
-    width: 16px;
-    height: 16px;
-    color: #a8a29e;
-  }
+  .header__mobile { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: white; z-index: 1100; padding: 100px 24px 40px; display: block; transform: translateX(100%); transition: transform 0.4s ease; overflow-y: auto; }
+  .header__mobile.active { transform: translateX(0); }
+  .header__mobile-link { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 18px 0; font-size: 18px; font-weight: 700; color: #1c1917; text-decoration: none; border-bottom: 1px solid #f0f0f0; background: none; border: none; }
+  .header__mobile-link svg { width: 16px; transition: transform 0.3s; }
+  .header__mobile-link.open svg { transform: rotate(180deg); }
 
-  .header__category:hover > .header__category-link {
-    color: #8b8b4b;
-  }
-
-  /* Submenu */
-  .header__submenu {
-    position: absolute;
-    top: -12px;
-    left: 100%;
-    padding-left: 8px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.2s ease;
-  }
-
-  .header__category--has-sub:hover > .header__submenu {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .header__submenu::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 100%;
-  }
-
-  .header__submenu-link {
-    display: block;
-    padding: 12px 24px;
-    font-size: 14px;
-    color: #57534e;
-    text-decoration: none;
-    background-color: white;
-    border: 1px solid #8b8b4b;
-    border-radius: 6px;
-    margin-bottom: 2px;
-    min-width: 160px;
-    transition: all 0.2s ease;
-  }
-
-  .header__submenu-link:first-child {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-  }
-
-  .header__submenu-link:last-child {
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    margin-bottom: 0;
-  }
-
-  .header__submenu-link:hover {
-    background-color: #fafaf9;
-    color: #1c1917;
-  }
-
-  /* Burger */
-  .header__burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  .header__burger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #1c1917;
-    transition: all 0.3s ease;
-  }
-
-  .header__burger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .header__burger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .header__burger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  /* Mobile */
-  .header__mobile {
-    display: none;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    padding: 20px 30px;
-    overflow-y: auto;
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
-  }
-
-  .header__mobile.active {
-    transform: translateX(0);
-  }
-
-  .header__mobile-nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header__mobile-item {
-    border-bottom: 1px solid #f5f5f4;
-  }
-
-  .header__mobile-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 18px 0;
-    font-size: 16px;
-    color: #1c1917;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-  }
-
-  .header__mobile-link svg {
-    width: 18px;
-    height: 18px;
-    color: #a8a29e;
-    transition: transform 0.3s ease;
-  }
-
-  .header__mobile-item.active > .header__mobile-link svg {
-    transform: rotate(180deg);
-  }
-
-  .header__mobile-dropdown {
-    display: none;
-    padding-bottom: 15px;
-  }
-
-  .header__mobile-item.active .header__mobile-dropdown {
-    display: block;
-  }
-
-  .header__mobile-cat {
-    margin-bottom: 5px;
-  }
-
-  .header__mobile-cat-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #57534e;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-  }
-
-  .header__mobile-cat-link svg {
-    width: 16px;
-    height: 16px;
-    color: #a8a29e;
-    transition: transform 0.3s ease;
-  }
-
-  .header__mobile-cat.active > .header__mobile-cat-link svg {
-    transform: rotate(180deg);
-  }
-
-  .header__mobile-sub {
-    display: none;
-    padding-left: 20px;
-  }
-
-  .header__mobile-cat.active .header__mobile-sub {
-    display: block;
-  }
-
-  .header__mobile-sub-link {
-    display: block;
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #78716c;
-    text-decoration: none;
-  }
-
-  .header__mobile-sub-link:hover {
-    color: #8b8b4b;
-  }
-
-  @media (max-width: 1024px) {
-    .header__nav {
-      gap: 30px;
-    }
-  }
+  .mobile-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
+  .mobile-accordion-content.open { max-height: 3000px; }
+  .mobile-cat-group { padding: 20px 0; border-bottom: 1px solid #f5f5f4; }
+  .mobile-cat-title { font-size: 11px; text-transform: uppercase; color: #8b8b4b; font-weight: 900; letter-spacing: 1.5px; }
+  .mobile-cat-links { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
+  .mobile-sub-link { font-size: 14px; color: #57534e; text-decoration: none; font-weight: 500; }
+  .mobile-prod-cluster { display: flex; flex-direction: column; gap: 8px; }
+  .mobile-cluster-label { font-size: 15px; font-weight: 700; color: #1c1917; }
+  .mobile-cluster-subs { display: flex; flex-wrap: wrap; gap: 10px; padding-left: 10px; border-left: 2px solid #f0f0f0; }
 
   @media (max-width: 900px) {
-    .header__container {
-      padding: 0 30px;
-    }
-
-    .header__nav {
-      display: none;
-    }
-
-    .header__burger {
-      display: flex;
-    }
-
-    .header__mobile {
-      display: block;
-    }
+    .header__nav, .header__cta { display: none; }
+    .header__burger { display: flex; position: relative; z-index: 1200; }
+    .header.scrolled .header__container { height: 75px; }
   }
 </style>
 
 <script>
+  const header = document.querySelector('.header');
   const burger = document.querySelector('.header__burger');
   const mobileMenu = document.querySelector('.header__mobile');
-  const mobileDropdowns = document.querySelectorAll('.header__mobile-link--dropdown');
-  const mobileCatExpands = document.querySelectorAll('.header__mobile-cat-link--expand');
+  const mobileTrigger = document.querySelector('.mobile-trigger');
+  const mobileAccordion = document.querySelector('.mobile-accordion-content');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
 
   burger?.addEventListener('click', () => {
-    burger.classList.toggle('active');
     mobileMenu?.classList.toggle('active');
     document.body.style.overflow = mobileMenu?.classList.contains('active') ? 'hidden' : '';
   });
 
-  mobileDropdowns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      btn.parentElement?.classList.toggle('active');
-    });
-  });
-
-  mobileCatExpands.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      btn.parentElement?.classList.toggle('active');
-    });
-  });
-
-  const closeLinks = document.querySelectorAll('.header__mobile-link:not(.header__mobile-link--dropdown), .header__mobile-cat-link:not(.header__mobile-cat-link--expand), .header__mobile-sub-link');
-  closeLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      burger?.classList.remove('active');
-      mobileMenu?.classList.remove('active');
-      document.body.style.overflow = '';
-    });
+  mobileTrigger?.addEventListener('click', () => {
+    mobileTrigger.classList.toggle('open');
+    mobileAccordion?.classList.toggle('open');
   });
 </script>

@@ -1,0 +1,27 @@
+---
+const expertises = [
+  { title: "Configuration Sur-Mesure", desc: "Adaptation des dimensions de nos bureaux selon vos plans de locaux." },
+  { title: "Fabrication Marocaine", desc: "Mobilier robuste conçu localement pour une durabilité de plus de 10 ans." },
+  { title: "Gestion de Câblage", desc: "Intégration de solutions pour un espace de travail ordonné et professionnel." }
+];
+---
+<section class="am-exp" id="expertises">
+  <div class="am-exp__wrapper">
+    <div class="am-exp__grid">
+      {expertises.map(item => (
+        <div class="am-exp__item">
+          <h3 class="am-exp__title">{item.title}</h3>
+          <p class="am-exp__desc">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .am-exp { padding: 100px 0; background: white; }
+  .am-exp__wrapper { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+  .am-exp__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .am-exp__title { font-size: 20px; font-weight: 700; color: #1c1917; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+  .am-exp__desc { color: #78716c; line-height: 1.6; font-size: 15px; }
+</style>
