@@ -1,0 +1,382 @@
+---
+// components/ProductSimple.astro
+interface Props {
+  heroBg: string;
+  name: string;
+  description: string;
+  category: string;
+  images: string[];
+  features: string[];
+  options?: string[];
+}
+
+const { 
+  heroBg,
+  name,
+  description,
+  category,
+  images,
+  features,
+  options = []
+} = Astro.props;
+---
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <img src={heroBg} alt={name} />
+  </section>
+
+  <!-- Product Info -->
+  <section class="product">
+    <div class="product__container">
+      <div class="product__grid">
+        
+        <!-- Gallery -->
+        <div class="product__gallery">
+          <div class="product__main">
+            <button class="product__arrow product__arrow--left" id="prevBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <img src={images[0]} alt={name} id="mainImage" />
+            <button class="product__arrow product__arrow--right" id="nextBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="product__thumbs">
+            {images.map((img, i) => (
+              <button 
+                class={`product__thumb ${i === 0 ? 'active' : ''}`}
+                data-index={i}
+              >
+                <img src={img} alt={`${name} vue ${i + 1}`} />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="product__info">
+          <span class="product__category">{category}</span>
+          <h1 class="product__title">{name}</h1>
+          <p class="product__desc">{description}</p>
+          <a href="/contact" class="product__btn">Demander un devis</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="features__container">
+      <div class="features__grid">
+        
+        <div class="features__col">
+          <h2 class="features__title">Caractéristiques</h2>
+          <ul class="features__list">
+            {features.map((f) => (
+              <li>
+                <span>✓</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {options.length > 0 && (
+          <div class="features__col">
+            <h2 class="features__title">Options</h2>
+            <ul class="features__list">
+              {options.map((o) => (
+                <li>
+                  <span>✓</span>
+                  {o}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  .hero {
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Product */
+  .product {
+    padding: 100px 0;
+  }
+
+  .product__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .product__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .product__gallery {
+    position: relative;
+  }
+
+  .product__main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fafaf9;
+  }
+
+  .product__main img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+  }
+
+  .product__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #78716c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .product__arrow:hover {
+    color: #1c1917;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+
+  .product__arrow--left {
+    left: 15px;
+  }
+
+  .product__arrow--right {
+    right: 15px;
+  }
+
+  .product__arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .product__thumbs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .product__thumb {
+    width: 70px;
+    height: 70px;
+    padding: 8px;
+    border: 2px solid #e7e5e4;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+
+  .product__thumb:hover,
+  .product__thumb.active {
+    border-color: #8b8b4b;
+  }
+
+  .product__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product__info {
+    padding-top: 20px;
+  }
+
+  .product__category {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b8b4b;
+    margin-bottom: 15px;
+  }
+
+  .product__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 20px;
+  }
+
+  .product__desc {
+    font-size: 16px;
+    color: #78716c;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .product__btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background-color: #8b8b4b;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .product__btn:hover {
+    opacity: 0.9;
+  }
+
+  /* Features */
+  .features {
+    padding: 80px 0;
+    background-color: #fafaf9;
+  }
+
+  .features__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .features__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .features__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 25px;
+  }
+
+  .features__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .features__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: #57534e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .features__list li span {
+    color: #8b8b4b;
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .product__container,
+    .features__container {
+      padding: 0 30px;
+    }
+
+    .product__grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .product {
+      padding: 60px 0;
+    }
+
+    .product__title {
+      font-size: 32px;
+    }
+
+    .product__thumbs {
+      gap: 8px;
+    }
+
+    .product__thumb {
+      width: 55px;
+      height: 55px;
+    }
+
+    .features__grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+</style>
+
+<script define:vars={{ images }}>
+  let currentIndex = 0;
+  const allImages = images;
+
+  const mainImage = document.getElementById('mainImage');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const thumbs = document.querySelectorAll('.product__thumb');
+
+  function updateImage(index) {
+    currentIndex = index;
+    if (mainImage) {
+      mainImage.src = allImages[index];
+    }
+    thumbs.forEach((thumb, i) => {
+      thumb.classList.toggle('active', i === index);
+    });
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === 0 ? allImages.length - 1 : currentIndex - 1;
+    updateImage(newIndex);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === allImages.length - 1 ? 0 : currentIndex + 1;
+    updateImage(newIndex);
+  });
+
+  thumbs.forEach((thumb, i) => {
+    thumb.addEventListener('click', () => {
+      updateImage(i);
+    });
+  });
+</script>

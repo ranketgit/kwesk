@@ -1,0 +1,35 @@
+---
+// pages/rangement/armoire-basse.astro
+import Layout from '../../layouts/Layout.astro';
+import ProductSimple from '../../components/ProductSimple.astro';
+
+const product = {
+  heroBg: "/reunion/r-hero.jpg",
+  name: "Armoire Basse",
+  category: "Rangement",
+  categoryHref: "/rangement",
+  description: "Armoire basse de rangement, parfaite pour un accès facile aux documents fréquemment utilisés. Peut servir de crédence ou de desserte.",
+  images: [
+    "/reunion/r1.jpg",
+    "/reunion/r2.jpg",
+    "/reunion/r3.jpg"
+  ],
+  features: [
+    "Structure en acier épaisseur 0.8mm",
+    "2 étagères réglables",
+    "Portes coulissantes",
+    "Serrure à clé",
+    "Dimensions: 120x45x75 cm",
+    "Garantie 5 ans"
+  ],
+  options: [
+    "Plateau en mélaminé",
+    "Portes battantes",
+    "Couleurs personnalisées"
+  ]
+};
+---
+
+<Layout title="Armoire Basse - KWESK">
+  <ProductSimple {...product} />
+</Layout>

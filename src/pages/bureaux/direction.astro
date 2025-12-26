@@ -1,0 +1,33 @@
+---
+// pages/bureaux/bureau-direction.astro
+import Layout from '../../layouts/Layout.astro';
+import ProductSimple from '../../components/ProductSimple.astro';
+
+const bureau = {
+  heroBg: "/bureaux/dr-hero.jpg",
+  name: "Bureau Direction",
+  category: "Bureaux",
+  description: "Bureau de direction élégant et fonctionnel, conçu pour les espaces exécutifs. Structure robuste en acier et plateau en mélaminé haute qualité.",
+  images: [
+    "/bureaux/dr1.jpg",
+    "/bureaux/dr2.jpg",
+    "/bureaux/dr3.jpg"
+  ],
+  features: [
+    "Plateau en mélaminé épaisseur 25mm",
+    "Structure en acier peint époxy",
+    "Passe-câbles intégré",
+    "Dimensions: 180x80x75 cm",
+    "Garantie 5 ans"
+  ],
+  options: [
+    "Caisson 3 tiroirs",
+    "Retour latéral",
+    "Plateau en verre trempé"
+  ]
+};
+---
+
+<Layout title="Bureau Direction - KWESK">
+  <ProductSimple {...bureau} />
+</Layout>

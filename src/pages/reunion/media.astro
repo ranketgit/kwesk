@@ -1,0 +1,34 @@
+---
+// pages/salles-reunion/table-reunion-ronde.astro
+import Layout from '../../layouts/Layout.astro';
+import ProductSimple from '../../components/ProductSimple.astro';
+
+const product = {
+  heroBg: "/reunion/ec-hero.jpg",
+  name: "Table de Réunion Ronde",
+  category: "Salles de Réunion",
+  categoryHref: "/salles-reunion",
+  description: "Table de réunion ronde favorisant les échanges égalitaires. Parfaite pour les réunions créatives et les brainstormings.",
+  images: [
+    "/reunion/ec1.jpg",
+    "/reunion/ec2.jpg",
+    "/reunion/ec3.jpg"
+  ],
+  features: [
+    "Plateau rond en mélaminé épaisseur 25mm",
+    "Pied central en acier",
+    "Diamètre: 120 cm (4-5 personnes)",
+    "Disponible en 100, 140 et 160 cm",
+    "Garantie 5 ans"
+  ],
+  options: [
+    "Plateau en verre",
+    "Prise électrique centrale",
+    "Couleurs personnalisées"
+  ]
+};
+---
+
+<Layout title="Table de Réunion Ronde - KWESK">
+  <ProductSimple {...product} />
+</Layout>

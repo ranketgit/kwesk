@@ -1,13 +1,13 @@
 ---
+// pages/salles-reunion.astro
 import Layout from '../layouts/Layout.astro';
 import CategoryHeader from '../components/CategoryHeader.astro';
 import ProductCardSimple from '../components/ProductCardSimple.astro';
 
 const products = [
-  { name: "TABLE OVALE", type: "Table de Réunion", image: "/meeting/table-oval.jpg", href: "/reunion/table-ovale" },
-  { name: "MEETING CHAIR", type: "Assise Réunion", image: "/meeting/meeting-chair.jpg", href: "/reunion/chaise-reunion" },
-  { name: "TABLE MODULAIRE", type: "Espace Collaboratif", image: "/meeting/modular.jpg", href: "/reunion/table-modulaire" },
-  { name: "STATION MÉDIA", type: "Mobilier Multimédia", image: "/meeting/media.jpg", href: "/reunion/media" },
+  { name: "TABLE RÉUNION", type: "Tables de Réunion", image: "/reunion/mt1.jpg", href: "/reunion/tables" },
+  { name: "STATION MÉDIA", type: "Écrans & Supports", image: "/reunion/ec2.jpg", href: "/reunion/media" },
+  { name: "ARMOIRE PRO", type: "Rangements Pro", image: "/reunion/r1.jpg", href: "/reunion/rangement" },
 ];
 ---
 
@@ -30,7 +30,7 @@ const products = [
 <style>
   .product-section { padding: 80px 0; background: white; }
   .product-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
-  .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 30px; }
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 30px; }
   @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 768px) { 
     .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }

@@ -1,0 +1,37 @@
+---
+// pages/bureaux/bureau-assis-debout.astro
+import Layout from '../../layouts/Layout.astro';
+import ProductSimple from '../../components/ProductSimple.astro';
+
+const bureau = {
+  heroBg: "/bureaux/rg-hero.jpg",
+  name: "Bureau Assis-Debout",
+  category: "Bureaux",
+  categoryHref: "/bureaux",
+  description: "Bureau réglable en hauteur électrique pour alterner entre position assise et debout. Favorise le bien-être et la productivité au travail.",
+  images: [
+    "/bureaux/rg1.jpg",
+    "/bureaux/rg2.jpg",
+    "/bureaux/rg3.jpg"
+  ],
+  features: [
+    "Réglage électrique en hauteur 65-130 cm",
+    "Plateau en mélaminé épaisseur 25mm",
+    "Moteur silencieux double colonne",
+    "Panneau de contrôle avec mémoire 4 positions",
+    "Dimensions: 160x80 cm",
+    "Capacité de charge: 120 kg",
+    "Garantie 5 ans"
+  ],
+  options: [
+    "Plateau en bambou",
+    "Passe-câbles vertical",
+    "Tapis anti-fatigue",
+    "Support moniteur"
+  ]
+};
+---
+
+<Layout title="Bureau Assis-Debout - KWESK">
+  <ProductSimple {...bureau} />
+</Layout>

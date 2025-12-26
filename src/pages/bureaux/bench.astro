@@ -1,0 +1,36 @@
+---
+// pages/bureaux/bureau-bench.astro
+import Layout from '../../layouts/Layout.astro';
+import ProductSimple from '../../components/ProductSimple.astro';
+
+const bureau = {
+  heroBg: "/bureaux/bn-hero.jpg",
+  name: "Bureau Bench",
+  category: "Bureaux",
+  categoryHref: "/bureaux",
+  description: "Bureau bench pour espaces collaboratifs, configuration 2 à 6 postes. Solution économique et modulable pour optimiser vos open spaces.",
+  images: [
+    "/bureaux/bn1.jpg",
+    "/bureaux/bn2.jpg",
+    "/bureaux/bn3.jpg"
+  ],
+  features: [
+    "Configuration 2, 4 ou 6 postes",
+    "Plateau en mélaminé épaisseur 25mm",
+    "Structure métallique partagée",
+    "Gestion des câbles centralisée",
+    "Dimensions par poste: 120x60x75 cm",
+    "Garantie 5 ans"
+  ],
+  options: [
+    "Écrans de séparation acoustiques",
+    "Caissons mobiles",
+    "Prises électriques intégrées",
+    "Éclairage LED individuel"
+  ]
+};
+---
+
+<Layout title="Bureau Bench - KWESK">
+  <ProductSimple {...bureau} />
+</Layout>

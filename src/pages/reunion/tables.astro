@@ -1,0 +1,35 @@
+---
+// pages/salles-reunion/table-reunion.astro
+import Layout from '../../layouts/Layout.astro';
+import ProductSimple from '../../components/ProductSimple.astro';
+
+const product = {
+  heroBg: "/reunion/mt-hero.jpg",
+  name: "Table de Réunion",
+  category: "Salles de Réunion",
+  categoryHref: "/salles-reunion",
+  description: "Table de réunion rectangulaire pour 6 à 12 personnes. Design professionnel et élégant pour vos espaces de collaboration.",
+  images: [
+    "/reunion/mt1.jpg",
+    "/reunion/mt2.jpg",
+    "/reunion/mt3.jpg"
+  ],
+  features: [
+    "Plateau en mélaminé épaisseur 25mm",
+    "Structure métallique robuste",
+    "Passe-câbles central intégré",
+    "Dimensions: 240x120x75 cm (8 personnes)",
+    "Disponible en 200, 280 et 320 cm",
+    "Garantie 5 ans"
+  ],
+  options: [
+    "Plateau en verre trempé",
+    "Boîtier de connectique",
+    "Pieds chromés"
+  ]
+};
+---
+
+<Layout title="Table de Réunion - KWESK">
+  <ProductSimple {...product} />
+</Layout>

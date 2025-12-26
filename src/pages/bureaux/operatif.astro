@@ -1,0 +1,35 @@
+---
+// pages/bureaux/operatif.astro
+import Layout from '../../layouts/Layout.astro';
+import ProductSimple from '../../components/ProductSimple.astro';
+
+const bureau = {
+  heroBg: "/bureaux/op-hero.jpg",
+  name: "Bureau Opératif",
+  category: "Bureaux",
+  categoryHref: "/bureaux",
+  description: "Bureau opératif moderne et pratique, idéal pour les open spaces et les espaces de travail collaboratifs. Design épuré et fonctionnel.",
+  images: [
+    "/bureaux/op1.jpg",
+    "/bureaux/op2.jpg",
+    "/bureaux/op3.jpg"
+  ],
+  features: [
+    "Plateau en mélaminé épaisseur 22mm",
+    "Structure métallique robuste",
+    "Passe-câbles intégré",
+    "Dimensions: 140x70x75 cm",
+    "Pieds réglables",
+    "Garantie 5 ans"
+  ],
+  options: [
+    "Caisson mobile 3 tiroirs",
+    "Écran de séparation",
+    "Support UC"
+  ]
+};
+---
+
+<Layout title="Bureau Opératif - KWESK" description="Bureau Opératif - KWESK" >
+  <ProductSimple {...bureau} />
+</Layout>

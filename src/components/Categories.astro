@@ -7,11 +7,6 @@ const categories = [
     href: "/chaises",
   },
   {
-    title: "Rangement",
-    image: "/home-categories/rangement.jpg",
-    href: "/rangement",
-  },
-  {
     title: "Salles de Réunion",
     image: "/home-categories/reunion.jpg",
     href: "/salles-reunion",
@@ -43,25 +38,14 @@ const categories = [
           </div>
         </a>
 
-        <div class="categories__bottom">
-          <a href={categories[2].href} class="categories__card rounded-4xl">
-            <img src={categories[2].image} alt={categories[2].title} />
-            <div class="categories__overlay"></div>
-            <div class="categories__card-content">
-              <h3 class="categories__card-title">{categories[2].title}</h3>
-              <span class="categories__card-link">Découvrir</span>
-            </div>
-          </a>
-
-          <a href={categories[3].href} class="categories__card rounded-4xl">
-            <img src={categories[3].image} alt={categories[3].title} />
-            <div class="categories__overlay"></div>
-            <div class="categories__card-content">
-              <h3 class="categories__card-title">{categories[3].title}</h3>
-              <span class="categories__card-link">Découvrir</span>
-            </div>
-          </a>
-        </div>
+        <a href={categories[2].href} class="categories__card rounded-4xl">
+          <img src={categories[2].image} alt={categories[2].title} />
+          <div class="categories__overlay"></div>
+          <div class="categories__card-content">
+            <h3 class="categories__card-title">{categories[2].title}</h3>
+            <span class="categories__card-link">Découvrir</span>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -79,16 +63,6 @@ const categories = [
     padding: 0 60px;
   }
 
-  .categories__title {
-    font-size: 14px;
-    font-weight: 800;
-    color: #8b8b4b;
-    text-align: center;
-    margin-bottom: 60px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-  }
-
   .categories__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -99,13 +73,6 @@ const categories = [
     display: flex;
     flex-direction: column;
     gap: 24px;
-  }
-
-  .categories__bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    flex: 1;
   }
 
   .categories__card {
@@ -120,11 +87,7 @@ const categories = [
     height: 600px;
   }
 
-  .categories__right .categories__card:first-child {
-    height: 288px;
-  }
-
-  .categories__bottom .categories__card {
+  .categories__right .categories__card {
     height: 288px;
   }
 
@@ -198,21 +161,35 @@ const categories = [
   }
 
   @media (max-width: 1024px) {
-    .categories__card--large, 
-    .categories__right .categories__card:first-child,
-    .categories__bottom .categories__card {
-      height: 400px;
+    .categories__card--large {
+      height: 500px;
     }
-    .categories__card-title { font-size: 22px; }
+    
+    .categories__right .categories__card {
+      height: 238px;
+    }
+    
+    .categories__card-title { 
+      font-size: 22px; 
+    }
   }
 
   @media (max-width: 768px) {
-    .categories__container { padding: 0 24px; }
-    .categories__grid { grid-template-columns: 1fr; }
-    .categories__card-content { bottom: 24px; left: 24px; }
-    .categories__card--large, 
-    .categories__right .categories__card:first-child,
-    .categories__bottom .categories__card {
+    .categories__container { 
+      padding: 0 24px; 
+    }
+    
+    .categories__grid { 
+      grid-template-columns: 1fr; 
+    }
+    
+    .categories__card-content { 
+      bottom: 24px; 
+      left: 24px; 
+    }
+    
+    .categories__card--large,
+    .categories__right .categories__card {
       height: 320px;
     }
   }
