@@ -73,6 +73,15 @@ const megaMenuData: MegaCategory[] = [
       { label: "Écrans & Supports", href: "/reunion/media" },
       { label: "Rangements Pro", href: "/reunion/rangement" }
     ]
+  },
+  {
+    category: "Mobilier Industriel",
+    image: "/industrie/header.jpg",
+    items: [
+      { label: "Tables pour Cantine", href: "/industrie/tables-cantine" },
+      { label: "Casiers Vestiaire", href: "/industrie/casiers-vestiaire" },
+      { label: "Armoires Outils & Rangement", href: "/industrie/armoires-rangement" }
+    ]
   }
 ];
 
@@ -220,7 +229,7 @@ const navItems = [
   .header.scrolled .header__mega-panel { top: 70px; }
   .header:has(.mega-trigger:hover) .header__mega-panel, .header__mega-panel:hover { opacity: 1; visibility: visible; transform: translateY(0); }
 
-  .header__mega-content { padding: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .header__mega-content { padding: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
   .header__mega-column { display: flex; flex-direction: column; gap: 24px; border-right: 1px solid #f5f5f4; padding-right: 15px; }
   .header__mega-column:last-child { border-right: none; padding-right: 0; }
 

@@ -1,0 +1,39 @@
+---
+import ChairCard from './ChairCard.astro';
+---
+
+<section class="bg-white py-20">
+  <h2 class="text-5xl lg:text-6xl text-center text-stone-900 mb-16">
+    MOBILIER<br/>INDUSTRIEL
+  </h2>
+
+  <ChairCard
+    title="TABLES CANTINE"
+    description="Équipez vos espaces de restauration collective avec nos tables de cantine robustes et fonctionnelles. Conçues pour un usage intensif, elles allient durabilité et facilité d'entretien. Disponibles avec bancs intégrés ou séparés, nos solutions s'adaptent à toutes les configurations d'espace et garantissent un confort optimal pour vos collaborateurs lors de leurs pauses repas."
+    image="/industrie/tables-cantine/1.jpg"
+    versions={[{ name: "CANTINE PRO", type: "Table avec Bancs" }]}
+    imagePosition="right"
+    href="/industrie/tables-cantine"
+  />
+
+  <ChairCard
+    title="CASIERS VESTIAIRE"
+    description="Offrez à vos employés un espace de rangement personnel sécurisé avec nos casiers vestiaires métalliques. Robustes et ventilés, ils sont parfaits pour les environnements industriels, les salles de sport ou les vestiaires d'entreprise. Disponibles en plusieurs configurations, ils s'adaptent à vos besoins en termes de nombre de compartiments et de dimensions."
+    image="/industrie/casiers-vestiaire/1.webp"
+    versions={[
+      { name: "LOCKER 2", type: "Casier Double" },
+      { name: "LOCKER 4", type: "Casier Quadruple" }
+    ]}
+    imagePosition="left"
+    href="/industrie/casiers-vestiaire"
+  />
+
+  <ChairCard
+    title="ARMOIRES & RANGEMENT"
+    description="Optimisez l'organisation de votre atelier avec nos armoires à outils professionnelles. Dotées de fonds perforés pour accrocher vos équipements, de tiroirs compartimentés et d'étagères réglables, elles permettent un accès rapide et ordonné à tous vos outils. Leur construction en acier renforcé garantit une durabilité exceptionnelle même dans les environnements les plus exigeants."
+    image="/industrie/casiers-vestiaire/11.webp"
+    versions={[{ name: "ATELIER PRO", type: "Armoire à Outils" }]}
+    imagePosition="right"
+    href="/industrie/armoires-rangement"
+  />
+</section>
