@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AmExpertise from '../components/AmExpertise.astro';
+import AmQuote from '../components/AmQuote.astro';
+import AmCTA from '../components/AmCTA.astro';
+import ChairCard from '../components/ChairCard.astro';
+import citiesData from '../data/city-pages/data.json';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return citiesData.map((item) => ({
+    params: { city: item.slug },
+    props: { cityData: item },
+  }));
+}
+
+interface CityData {
+  city: string;
+  slug: string;
+  seo: {
+    title: string;
+    metaDescription: string;
+  };
+  content: {
+    h1: string;
+    longDescription: string;
+  };
+}
+
+const { cityData } = Astro.props as { cityData: CityData };
+---
+
+<Layout title={cityData.seo.title} description={cityData.seo.metaDescription}>
+  
+  <!-- Hero -->
+  <section class="relative min-h-[80vh] flex items-center">
+    <img 
+      src="/amenagement-hero.jpg" 
+      alt={cityData.content.h1}
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
+        {cityData.content.h1}
+      </h1>
+      <div class="text-white/90 text-lg leading-relaxed max-w-4xl mx-auto hero-content" set:html={cityData.content.longDescription} />
+    </div>
+  </section>
+
+  <section class="seo-bar bg-stone-900 py-4">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-stone-400 text-xs uppercase tracking-[0.2em] text-center">
+        Leader du <strong>Mobilier de Bureau à {cityData.city}</strong> — Livraison et Installation Professionnelle
+      </p>
+    </div>
+  </section>
+
+  <AmExpertise />
+
+  <!-- Why Choose KWESK in This City -->
+  <section class="py-16 bg-stone-50 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-stone-900 mb-8 uppercase tracking-tight text-center">
+        Pourquoi Choisir KWESK à {cityData.city} ?
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 border border-stone-200">
+          <div class="w-12 h-12 bg-[#8b8b4b]/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-[#8b8b4b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-900 mb-2 uppercase text-sm">Expertise Locale</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Notre équipe connaît parfaitement les besoins des entreprises à {cityData.city} et vous accompagne dans chaque étape de votre projet d'aménagement.
+          </p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200">
+          <div class="w-12 h-12 bg-[#8b8b4b]/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-[#8b8b4b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-900 mb-2 uppercase text-sm">Livraison Rapide</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Livraison et installation professionnelle à {cityData.city} et ses environs. Nos équipes assurent un montage soigné de votre mobilier.
+          </p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200">
+          <div class="w-12 h-12 bg-[#8b8b4b]/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-[#8b8b4b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-900 mb-2 uppercase text-sm">Devis Gratuit</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Obtenez un devis personnalisé pour votre projet d'aménagement de bureau à {cityData.city}. Nos conseillers sont à votre écoute.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="solutions-list">
+   
+    <div class="seo-break bg-stone-50 py-12 border-y border-stone-200">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-xl font-bold text-stone-800 mb-2">Solutions Complètes pour Entreprises à {cityData.city}</h3>
+        <p class="text-stone-500 text-sm">KWESK : La référence du <strong>mobilier de bureau professionnel à {cityData.city}</strong> pour tous types d'espaces.</p>
+      </div>
+    </div>
+
+    <ChairCard
+      title="BUREAUX DE DIRECTION"
+      description={`Équipez vos dirigeants à ${cityData.city} avec nos bureaux de direction haut de gamme. Design contemporain, finitions premium et fonctionnalités pensées pour le management moderne. Imposez votre image de marque.`}
+      image="/hautgamme.webp"
+      versions={[{ name: "Elite Executive", type: "Direction" }]}
+      imagePosition="left"
+      href="/bureaux"
+    />
+
+    <ChairCard
+      title="POSTES DE TRAVAIL OPÉRATIFS"
+      description={`Optimisez vos open-spaces à ${cityData.city} avec nos solutions bench et postes de travail modulables. Configurations flexibles pour s'adapter à l'évolution de vos équipes et maximiser l'espace disponible.`}
+      image="/bureau-bench.webp"
+      versions={[{ name: "Multi-postes", type: "Opératif" }]}
+      imagePosition="right"
+      href="/bureaux"
+    />
+
+    <ChairCard
+      title="BUREAUX ASSIS-DEBOUT"
+      description={`Adoptez le bien-être au travail à ${cityData.city} avec nos bureaux réglables en hauteur. Favorisez le mouvement, réduisez les troubles musculo-squelettiques et boostez la productivité de vos collaborateurs.`}
+      image="/debout.png"
+      versions={[{ name: "Active Desk", type: "Ergonomie" }]}
+      imagePosition="left"
+      href="/bureaux"
+    />
+
+    <ChairCard
+      title="RANGEMENTS PROFESSIONNELS"
+      description={`Complétez votre aménagement de bureau à ${cityData.city} avec nos solutions de rangement. Armoires, caissons et bibliothèques conçus pour s'intégrer harmonieusement à votre espace de travail.`}
+      image="/biblio.jpg"
+      versions={[{ name: "Cargo Series", type: "Stockage" }]}
+      imagePosition="right"
+      href="/rangement"
+    />
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-stone-900 mb-12 uppercase tracking-tight text-center">
+        Nos Services à {cityData.city}
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-[#8b8b4b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-900 mb-2 text-sm uppercase">Étude & Conseil</h3>
+          <p class="text-stone-500 text-xs">Analyse de vos besoins et recommandations personnalisées</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-[#8b8b4b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-900 mb-2 text-sm uppercase">Space Planning</h3>
+          <p class="text-stone-500 text-xs">Conception et optimisation de vos espaces</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-[#8b8b4b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-900 mb-2 text-sm uppercase">Livraison</h3>
+          <p class="text-stone-500 text-xs">Livraison professionnelle à {cityData.city}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-[#8b8b4b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-900 mb-2 text-sm uppercase">Installation</h3>
+          <p class="text-stone-500 text-xs">Montage et mise en place par nos experts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer SEO Content -->
+  <section class="seo-footer-content py-20 bg-stone-50 border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <h4 class="font-bold text-stone-900 mb-4 uppercase text-sm">Qualité Certifiée</h4>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Notre <strong>mobilier de bureau à {cityData.city}</strong> répond aux normes internationales BIFMA et EN 1335. Garantie 5 ans sur toutes nos structures.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-stone-900 mb-4 uppercase text-sm">Accompagnement Expert</h4>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Nos conseillers spécialisés vous accompagnent dans votre <strong>projet d'aménagement à {cityData.city}</strong> pour optimiser chaque mètre carré.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-stone-900 mb-4 uppercase text-sm">Service Après-Vente</h4>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Une équipe dédiée à {cityData.city} pour assurer le suivi et la maintenance de votre <strong>mobilier professionnel</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AmQuote />
+
+  <AmCTA />
+
+</Layout>
+
+<style>
+  .solutions-list { background-color: white; }
+  strong { color: #1c1917; font-weight: 700; }
+  .hero-content strong { color: white; font-weight: 700; }
+  .hero-content p { margin-bottom: 1rem; }
+</style>

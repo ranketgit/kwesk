@@ -5,6 +5,7 @@ import AmExpertise from '../components/AmExpertise.astro';
 import AmQuote from '../components/AmQuote.astro';
 import AmCTA from '../components/AmCTA.astro';
 import ChairCard from '../components/ChairCard.astro';
+import citiesData from '../data/city-pages/data.json';
 ---
 
 <Layout title="Aménagement de Bureau Professionnel au Maroc | Kwesk" description="Projets d'aménagement de bureau clés en main. Mobilier de bureaux complet : chaises, fauteuils, plateaux. Agencement professionnel pour entreprises - Kwesk.">
@@ -34,6 +35,55 @@ import ChairCard from '../components/ChairCard.astro';
       <p class="text-stone-600 leading-relaxed">
         Que vous créiez une nouvelle start-up à Casablanca ou que vous rénoviez un siège social à Rabat, notre expertise en <strong>mobilier de bureau au Maroc</strong> vous garantit un espace optimisé, esthétique et durable.
       </p>
+    </div>
+  </section>
+
+  <!-- Cities Section -->
+  <section class="py-16 bg-stone-50 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-stone-900 mb-4 uppercase tracking-tight text-center">
+        Mobilier de Bureau dans Votre Ville
+      </h2>
+      <p class="text-stone-500 text-center mb-12 max-w-2xl mx-auto">
+        KWESK livre et installe votre mobilier de bureau professionnel partout au Maroc
+      </p>
+      
+      <div id="cities-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {citiesData.map((city, index) => (
+          <a 
+            href={`/mobilier-de-bureau-professionnel-a-${city.slug}`}
+            class:list={[
+              "city-card bg-white p-6 border border-stone-200 hover:border-[#8b8b4b] transition-colors group",
+              { "hidden-city": index >= 4 }
+            ]}
+          >
+            <h3 class="font-bold text-stone-900 mb-2 group-hover:text-[#8b8b4b] transition-colors">
+              {city.city}
+            </h3>
+            <p class="text-stone-500 text-sm line-clamp-2">
+              Mobilier de bureau professionnel à {city.city}
+            </p>
+            <span class="inline-flex items-center gap-1 text-[#8b8b4b] text-sm mt-4">
+              Découvrir
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center mt-8">
+        <button 
+          id="show-more-cities" 
+          class="inline-flex items-center gap-2 px-6 py-3 bg-stone-900 text-white text-sm uppercase tracking-wider hover:bg-[#8b8b4b] transition-colors"
+        >
+          Voir toutes les villes
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -110,4 +160,39 @@ import ChairCard from '../components/ChairCard.astro';
 <style>
   .solutions-list { background-color: white; }
   strong { color: #1c1917; font-weight: 700; }
+  
+  /* Hidden cities - visually hidden but crawlable */
+  .hidden-city {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* When expanded, show all */
+  .cities-expanded .hidden-city {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 1.5rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
 </style>
+
+<script>
+  const button = document.getElementById('show-more-cities');
+  const grid = document.getElementById('cities-grid');
+  
+  button?.addEventListener('click', () => {
+    grid?.classList.add('cities-expanded');
+    button.style.display = 'none';
+  });
+</script>
