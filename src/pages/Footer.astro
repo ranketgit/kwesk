@@ -1,7 +1,7 @@
 ---
 // components/Footer.astro
 const currentYear = new Date().getFullYear();
-23
+
 const chairLinks = [
   { label: "Challenger 175", href: "/challenger" },
   { label: "Gamma 150", href: "/gamma" },
@@ -115,6 +115,8 @@ const companyLinks = [
       </p>
       <div class="footer__legal">
         <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+        <span class="footer__legal-separator">|</span>
+        <a href="/conditions-utilisation">Conditions d'utilisation</a>
       </div>
     </div>
 
@@ -258,7 +260,8 @@ const companyLinks = [
 
   .footer__legal {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 15px;
   }
 
   .footer__legal a {
@@ -270,6 +273,10 @@ const companyLinks = [
 
   .footer__legal a:hover {
     color: #8b8b4b;
+  }
+
+  .footer__legal-separator {
+    color: #78716c;
   }
 
   /* Responsive */
@@ -311,7 +318,11 @@ const companyLinks = [
 
     .footer__legal {
       flex-direction: column;
-      gap: 15px;
+      gap: 10px;
+    }
+
+    .footer__legal-separator {
+      display: none;
     }
   }
 </style>
