@@ -1,242 +1,242 @@
 [
-    {
-      "city": "Casablanca",
-      "slug": "casablanca",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Casablanca | KWESK",
-        "metaDescription": "Spécialiste en mobilier de bureau professionnel à Casablanca. Fauteuils ergonomiques, bureaux et aménagement sur mesure. Livraison et installation."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Casablanca",
-        "longDescription": "<p>À Casablanca, découvrez notre expertise en <strong>mobilier de bureau professionnel</strong> avec une gamme complète adaptée aux entreprises modernes. Nous proposons des solutions d'<strong>agencement de bureaux</strong> personnalisées incluant des <strong>bureaux ergonomiques</strong> et du <strong>mobilier</strong> de qualité supérieure.</p><p>Notre collection de <strong>fauteuils de bureau</strong> et <strong>chaises ergonomiques</strong> combine confort et design pour améliorer la productivité de vos équipes. Que vous planifiez un projet d'aménagement complet ou le <strong>remplacement de fauteuils</strong> existants, nos experts à Casablanca vous accompagnent dans la création d'espaces de travail fonctionnels et inspirants.</p><p>Nous comprenons les besoins spécifiques des professionnels marocains et offrons des solutions sur mesure pour optimiser votre environnement de travail.</p>"
-      }
+  {
+    "city": "Casablanca",
+    "slug": "casablanca",
+    "seo": {
+      "title": "Aménagement de Bureau Casablanca | Mobilier de Bureaux",
+      "metaDescription": "Spécialiste en aménagement de bureau à Casablanca. Mobilier professionnel, fauteuils et chaises de bureau. Projets d'agencement sur mesure."
     },
-    {
-      "city": "Rabat",
-      "slug": "rabat",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Rabat | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à Rabat. Fauteuils ergonomiques, bureaux et solutions d'aménagement complètes pour entreprises."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Rabat",
-        "longDescription": "<p>Transformez vos espaces professionnels à Rabat avec nos solutions de <strong>mobilier de bureau professionnel</strong> haut de gamme. Notre sélection répond aux exigences des entreprises en quête d'excellence.</p><p>Des <strong>fauteuils ergonomiques</strong> aux <strong>bureaux modulables</strong>, nous proposons des solutions complètes pour équiper vos locaux. Notre service inclut également le <strong>remplacement de fauteuils</strong> pour moderniser rapidement votre parc mobilier existant.</p><p>Faites confiance à notre expertise pour créer des environnements de travail inspirants à Rabat.</p>"
-      }
-    },
-    {
-      "city": "Fès",
-      "slug": "fes",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Fès | KWESK",
-        "metaDescription": "Solutions de mobilier de bureau professionnel à Fès. Large choix de fauteuils ergonomiques, bureaux et agencement sur mesure."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Fès",
-        "longDescription": "<p>À Fès, optez pour l'excellence en matière de <strong>mobilier de bureau professionnel</strong> avec notre gamme premium. Nous accompagnons les entreprises dans leurs <strong>projets d'aménagement</strong> avec des solutions complètes adaptées à chaque secteur d'activité.</p><p>Notre expertise locale nous permet de proposer des <strong>chaises de bureau</strong> et <strong>fauteuils professionnels</strong> parfaitement adaptés aux besoins des entreprises de Fès et sa région.</p>"
-      }
-    },
-    {
-      "city": "Marrakech",
-      "slug": "marrakech",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Marrakech | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à Marrakech. Fauteuils design, bureaux confortables et aménagement pour espaces modernes."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Marrakech",
-        "longDescription": "<p>Créez des espaces de travail exceptionnels à Marrakech avec nos solutions de <strong>mobilier de bureau professionnel</strong> innovantes. Notre expertise en <strong>agencement de bureaux</strong> permet de concevoir des environnements qui reflètent l'identité de votre entreprise.</p><p>Du <strong>mobilier design</strong> aux <strong>fauteuils ergonomiques</strong>, nous vous proposons une gamme complète pour équiper vos locaux marrakchis avec style et fonctionnalité.</p>"
-      }
-    },
-    {
-      "city": "Tanger",
-      "slug": "tanger",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Tanger | KWESK",
-        "metaDescription": "Expert en mobilier de bureau professionnel à Tanger. Fauteuils ergonomiques de qualité et solutions d'agencement complètes."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Tanger",
-        "longDescription": "<p>Révolutionnez votre environnement professionnel à Tanger avec nos prestations de <strong>mobilier de bureau professionnel</strong> sur mesure. Notre vaste sélection s'adresse aux entreprises exigeantes recherchant qualité et fonctionnalité.</p><p>Profitez de notre expertise pour équiper vos locaux tangérois avec des <strong>fauteuils de bureau</strong> certifiés et des <strong>bureaux</strong> de qualité professionnelle.</p>"
-      }
-    },
-    {
-      "city": "Agadir",
-      "slug": "agadir",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Agadir | KWESK",
-        "metaDescription": "Mobilier de bureau premium à Agadir. Fauteuils professionnels, chaises ergonomiques et aménagement complet pour vos locaux."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Agadir",
-        "longDescription": "<p>Valorisez vos espaces professionnels à Agadir grâce à notre expertise en <strong>mobilier de bureau professionnel</strong>. Nous proposons une gamme complète alliant design contemporain et durabilité.</p><p>Nos <strong>fauteuils professionnels</strong> et <strong>chaises ergonomiques</strong> sont spécialement sélectionnés pour répondre aux exigences climatiques et professionnelles de la région d'Agadir.</p>"
-      }
-    },
-    {
-      "city": "Meknès",
-      "slug": "meknes",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Meknès | KWESK",
-        "metaDescription": "Spécialiste mobilier de bureau professionnel à Meknès. Large gamme de fauteuils design et bureaux modulables."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Meknès",
-        "longDescription": "<p>Bénéficiez à Meknès de solutions professionnelles de <strong>mobilier de bureau</strong> parfaitement adaptées aux besoins actuels des entreprises. Notre gamme combine innovation et qualité.</p><p>Nous accompagnons les entreprises meknassi dans leurs projets d'équipement avec des <strong>fauteuils design</strong> et des <strong>bureaux modulables</strong> de haute qualité.</p>"
-      }
-    },
-    {
-      "city": "Oujda",
-      "slug": "oujda",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Oujda | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à Oujda. Fauteuils ergonomiques confortables et solutions d'agencement innovantes."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Oujda",
-        "longDescription": "<p>Transformez radicalement vos locaux professionnels à Oujda avec nos prestations de <strong>mobilier de bureau professionnel</strong> reconnues pour leur excellence.</p><p>Notre gamme de <strong>mobilier ergonomique</strong> et de <strong>fauteuils confortables</strong> répond aux besoins des entreprises de l'Oriental, avec un service de livraison et d'installation dédié.</p>"
-      }
-    },
-    {
-      "city": "Kénitra",
-      "slug": "kenitra",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Kénitra | KWESK",
-        "metaDescription": "Solutions de mobilier de bureau professionnel à Kénitra. Fauteuils ergonomiques et chaises design pour entreprises."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Kénitra",
-        "longDescription": "<p>Excellez dans l'optimisation de vos espaces à Kénitra avec notre savoir-faire en <strong>mobilier de bureau professionnel</strong>. Nous mettons à votre disposition une gamme soigneusement sélectionnée.</p><p>Profitez de notre proximité avec Rabat pour bénéficier d'un service rapide et de <strong>fauteuils ergonomiques</strong> de qualité professionnelle.</p>"
-      }
-    },
-    {
-      "city": "Tétouan",
-      "slug": "tetouan",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Tétouan | KWESK",
-        "metaDescription": "Expert mobilier de bureau professionnel à Tétouan. Fauteuils design et bureaux de qualité supérieure."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Tétouan",
-        "longDescription": "<p>Révélez le potentiel de vos espaces professionnels à Tétouan avec nos solutions de <strong>mobilier de bureau professionnel</strong> innovantes et personnalisées.</p><p>Notre expertise dans le nord du Maroc nous permet de proposer des <strong>fauteuils professionnels</strong> et du <strong>mobilier design</strong> adaptés aux entreprises de Tétouan et sa région.</p>"
-      }
-    },
-    {
-      "city": "Témara",
-      "slug": "temara",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Témara | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à Témara. Large choix de fauteuils ergonomiques et solutions d'agencement sur mesure."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Témara",
-        "longDescription": "<p>Optimisez vos environnements de travail à Témara grâce à notre expertise reconnue en <strong>mobilier de bureau professionnel</strong>. Notre gamme complète associe fonctionnalité et esthétique.</p><p>Bénéficiez de notre proximité avec Rabat pour un service de livraison et d'installation rapide de vos <strong>fauteuils ergonomiques</strong>.</p>"
-      }
-    },
-    {
-      "city": "Safi",
-      "slug": "safi",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Safi | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à Safi. Fauteuils confortables, chaises design et aménagement complet pour entreprises."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Safi",
-        "longDescription": "<p>Métamorphosez vos espaces de travail à Safi avec nos prestations de <strong>mobilier de bureau professionnel</strong> de premier ordre.</p><p>Notre sélection de <strong>fauteuils confortables</strong> et <strong>chaises design</strong> répond aux besoins des entreprises safiotes souhaitant créer des environnements de travail modernes et productifs.</p>"
-      }
-    },
-    {
-      "city": "Mohammedia",
-      "slug": "mohammedia",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Mohammedia | KWESK",
-        "metaDescription": "Spécialiste en mobilier de bureau professionnel à Mohammedia. Fauteuils ergonomiques et bureaux modulables."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Mohammedia",
-        "longDescription": "<p>Donnez une nouvelle dimension à vos locaux à Mohammedia avec nos solutions de <strong>mobilier de bureau professionnel</strong> adaptées aux entreprises contemporaines.</p><p>Notre proximité avec Casablanca nous permet de proposer un service rapide et efficace pour l'installation de votre <strong>mobilier ergonomique</strong> et <strong>fauteuils professionnels</strong>.</p>"
-      }
-    },
-    {
-      "city": "Khouribga",
-      "slug": "khouribga",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Khouribga | KWESK",
-        "metaDescription": "Solutions de mobilier de bureau professionnel à Khouribga. Fauteuils ergonomiques et agencement innovant."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Khouribga",
-        "longDescription": "<p>Réinventez vos espaces professionnels à Khouribga avec notre expertise pointue en <strong>mobilier de bureau professionnel</strong>.</p><p>Nous proposons des solutions de <strong>mobilier de qualité</strong> et de <strong>fauteuils ergonomiques</strong> adaptées aux entreprises du bassin minier et industriel de Khouribga.</p>"
-      }
-    },
-    {
-      "city": "El Jadida",
-      "slug": "el-jadida",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à El Jadida | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à El Jadida. Large gamme de fauteuils design et chaises ergonomiques pour bureaux."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à El Jadida",
-        "longDescription": "<p>Sublimez vos environnements de travail à El Jadida grâce à nos prestations de <strong>mobilier de bureau professionnel</strong> reconnues pour leur excellence et leur innovation.</p><p>Notre gamme de <strong>mobilier professionnel</strong> et de <strong>fauteuils design</strong> s'adapte parfaitement aux besoins des entreprises jdidies.</p>"
-      }
-    },
-    {
-      "city": "Béni Mellal",
-      "slug": "beni-mellal",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Béni Mellal | KWESK",
-        "metaDescription": "Expert en mobilier de bureau professionnel à Béni Mellal. Fauteuils confortables et bureaux premium."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Béni Mellal",
-        "longDescription": "<p>Propulsez vos espaces de travail vers l'excellence à Béni Mellal avec nos solutions de <strong>mobilier de bureau professionnel</strong> sur mesure.</p><p>Notre expertise couvre toute la région Béni Mellal-Khénifra avec des <strong>fauteuils confortables</strong> et du <strong>mobilier design</strong> de qualité professionnelle.</p>"
-      }
-    },
-    {
-      "city": "Aït Melloul",
-      "slug": "ait-melloul",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Aït Melloul | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à Aït Melloul. Fauteuils ergonomiques et solutions d'aménagement complètes."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Aït Melloul",
-        "longDescription": "<p>Valorisez votre patrimoine immobilier professionnel à Aït Melloul avec nos prestations de <strong>mobilier de bureau professionnel</strong> de haute qualité.</p><p>Notre proximité avec Agadir nous permet de proposer un service complet incluant <strong>fauteuils ergonomiques</strong> et <strong>chaises design</strong> pour les entreprises de la zone industrielle.</p>"
-      }
-    },
-    {
-      "city": "Nador",
-      "slug": "nador",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Nador | KWESK",
-        "metaDescription": "Spécialiste mobilier de bureau professionnel à Nador. Fauteuils ergonomiques premium et bureaux modulables."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Nador",
-        "longDescription": "<p>Transformez vos locaux professionnels à Nador avec notre savoir-faire reconnu en <strong>mobilier de bureau professionnel</strong>.</p><p>Nous desservons toute la région de l'Oriental avec des solutions de <strong>mobilier professionnel premium</strong> et de <strong>fauteuils ergonomiques</strong> adaptées aux entreprises nadoris.</p>"
-      }
-    },
-    {
-      "city": "Taza",
-      "slug": "taza",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Taza | KWESK",
-        "metaDescription": "Mobilier de bureau professionnel à Taza. Fauteuils design et chaises ergonomiques pour entreprises."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Taza",
-        "longDescription": "<p>Révolutionnez vos espaces de travail à Taza avec nos solutions de <strong>mobilier de bureau professionnel</strong> pensées pour les entreprises ambitieuses.</p><p>Bénéficiez de notre expertise pour équiper vos locaux avec des <strong>fauteuils design</strong> et des <strong>chaises ergonomiques</strong> de qualité professionnelle.</p>"
-      }
-    },
-    {
-      "city": "Essaouira",
-      "slug": "essaouira",
-      "seo": {
-        "title": "Mobilier de Bureau Professionnel à Essaouira | KWESK",
-        "metaDescription": "Expert mobilier de bureau professionnel à Essaouira. Fauteuils confortables et agencement sur mesure."
-      },
-      "content": {
-        "h1": "Mobilier de Bureau Professionnel à Essaouira",
-        "longDescription": "<p>Excellez dans l'optimisation de vos espaces professionnels à Essaouira grâce à notre expertise en <strong>mobilier de bureau professionnel</strong>.</p><p>Nous proposons des solutions de <strong>mobilier professionnel</strong> et de <strong>fauteuils confortables</strong> parfaitement adaptées aux entreprises touristiques et artisanales d'Essaouira.</p>"
-      }
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Casablanca",
+      "longDescription": "<p>À Casablanca, découvrez notre expertise en <strong>aménagement de bureau professionnel</strong> avec une gamme complète de <strong>mobilier de bureaux</strong> adaptée aux entreprises modernes. Nous proposons des solutions d'<strong>agencement de bureaux</strong> personnalisées incluant des <strong>plateaux de bureaux</strong> ergonomiques et du <strong>mobilier industriel</strong> de qualité supérieure.</p><p>Notre collection de <strong>fauteuils de bureau</strong> et <strong>chaises de bureau</strong> combine confort et design pour améliorer la productivité de vos équipes. Que vous planifiez un projet d'aménagement complet ou le <strong>remplacement de fauteuils</strong> existants, nos experts à Casablanca vous accompagnent dans la création d'espaces de travail fonctionnels et inspirants.</p><p>Nous comprenons les besoins spécifiques des professionnels marocains et offrons des solutions sur mesure pour optimiser votre environnement de travail.</p>"
     }
-  ]
+  },
+  {
+    "city": "Rabat",
+    "slug": "rabat",
+    "seo": {
+      "title": "Aménagement de Bureau Rabat | Mobilier de Bureaux",
+      "metaDescription": "Mobilier de bureaux professionnel à Rabat. Fauteuils ergonomiques, plateaux de bureaux et solutions d'aménagement complètes pour entreprises."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Rabat",
+      "longDescription": "<p>Transformez vos espaces professionnels à Rabat avec nos solutions d'<strong>aménagement bureau professionnel</strong> haut de gamme. Notre sélection de <strong>mobilier de bureaux</strong> répond aux exigences des entreprises en quête d'excellence.</p><p>Des <strong>fauteuils ergonomiques</strong> aux <strong>plateaux de bureaux modulables</strong>, nous proposons des solutions complètes pour équiper vos locaux. Notre service inclut également le <strong>remplacement de fauteuils</strong> pour moderniser rapidement votre parc mobilier existant.</p><p>Faites confiance à notre expertise pour créer des environnements de travail inspirants à Rabat.</p>"
+    }
+  },
+  {
+    "city": "Fès",
+    "slug": "fes",
+    "seo": {
+      "title": "Aménagement de Bureau Fès | Mobilier de Bureaux",
+      "metaDescription": "Solutions d'aménagement de bureau à Fès. Large choix de mobilier professionnel, fauteuils ergonomiques et agencement sur mesure."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Fès",
+      "longDescription": "<p>À Fès, optez pour l'excellence en matière d'<strong>aménagement de bureau</strong> avec notre gamme premium de <strong>mobilier de bureaux</strong>. Nous accompagnons les entreprises dans leurs <strong>projets d'aménagement</strong> avec des solutions complètes d'<strong>agencement de bureaux</strong> adaptées à chaque secteur d'activité.</p><p>Notre expertise locale nous permet de proposer des <strong>chaises de bureau</strong> et <strong>fauteuils professionnels</strong> parfaitement adaptés aux besoins des entreprises de Fès et sa région.</p>"
+    }
+  },
+  {
+    "city": "Marrakech",
+    "slug": "marrakech",
+    "seo": {
+      "title": "Aménagement de Bureau Marrakech | Mobilier de Bureaux",
+      "metaDescription": "Aménagement bureau professionnel à Marrakech. Mobilier design, fauteuils confortables et plateaux de bureaux pour espaces modernes."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Marrakech",
+      "longDescription": "<p>Créez des espaces de travail exceptionnels à Marrakech avec nos solutions d'<strong>aménagement bureau professionnel</strong> innovantes. Notre expertise en <strong>agencement de bureaux</strong> permet de concevoir des environnements qui reflètent l'identité de votre entreprise.</p><p>Du <strong>mobilier de bureaux design</strong> aux <strong>fauteuils ergonomiques</strong>, nous vous proposons une gamme complète pour équiper vos locaux marrakchis avec style et fonctionnalité.</p>"
+    }
+  },
+  {
+    "city": "Tanger",
+    "slug": "tanger",
+    "seo": {
+      "title": "Aménagement de Bureau Tanger | Mobilier de Bureaux",
+      "metaDescription": "Expert en aménagement de bureau à Tanger. Mobilier professionnel de qualité, fauteuils ergonomiques et solutions d'agencement complètes."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Tanger",
+      "longDescription": "<p>Révolutionnez votre environnement professionnel à Tanger avec nos prestations d'<strong>aménagement de bureau</strong> sur mesure. Notre vaste sélection de <strong>mobilier de bureaux</strong> s'adresse aux entreprises exigeantes recherchant qualité et fonctionnalité.</p><p>Profitez de notre expertise pour équiper vos locaux tangérois avec des <strong>fauteuils de bureau</strong> certifiés et des <strong>plateaux de bureaux</strong> de qualité professionnelle.</p>"
+    }
+  },
+  {
+    "city": "Agadir",
+    "slug": "agadir",
+    "seo": {
+      "title": "Aménagement de Bureau Agadir | Mobilier de Bureaux",
+      "metaDescription": "Mobilier de bureaux premium à Agadir. Fauteuils professionnels, chaises ergonomiques et aménagement complet pour vos locaux."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Agadir",
+      "longDescription": "<p>Valorisez vos espaces professionnels à Agadir grâce à notre expertise en <strong>aménagement bureau professionnel</strong>. Nous proposons une gamme complète de <strong>mobilier de bureaux</strong> alliant design contemporain et durabilité.</p><p>Nos <strong>fauteuils professionnels</strong> et <strong>chaises ergonomiques</strong> sont spécialement sélectionnés pour répondre aux exigences climatiques et professionnelles de la région d'Agadir.</p>"
+    }
+  },
+  {
+    "city": "Meknès",
+    "slug": "meknes",
+    "seo": {
+      "title": "Aménagement de Bureau Meknès | Mobilier de Bureaux",
+      "metaDescription": "Spécialiste aménagement de bureau à Meknès. Large gamme de mobilier professionnel, fauteuils design et plateaux de bureaux modulables."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Meknès",
+      "longDescription": "<p>Bénéficiez à Meknès de solutions professionnelles d'<strong>aménagement de bureau</strong> parfaitement adaptées aux besoins actuels des entreprises. Notre <strong>mobilier de bureaux</strong> combine innovation et qualité.</p><p>Nous accompagnons les entreprises meknassi dans leurs projets d'équipement avec des <strong>fauteuils design</strong> et des <strong>plateaux de bureaux modulables</strong> de haute qualité.</p>"
+    }
+  },
+  {
+    "city": "Oujda",
+    "slug": "oujda",
+    "seo": {
+      "title": "Aménagement de Bureau Oujda | Mobilier de Bureaux",
+      "metaDescription": "Aménagement bureau professionnel à Oujda. Mobilier ergonomique, fauteuils confortables et solutions d'agencement innovantes."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Oujda",
+      "longDescription": "<p>Transformez radicalement vos locaux professionnels à Oujda avec nos prestations d'<strong>aménagement bureau professionnel</strong> reconnues pour leur excellence.</p><p>Notre gamme de <strong>mobilier ergonomique</strong> et de <strong>fauteuils confortables</strong> répond aux besoins des entreprises de l'Oriental, avec un service de livraison et d'installation dédié.</p>"
+    }
+  },
+  {
+    "city": "Kénitra",
+    "slug": "kenitra",
+    "seo": {
+      "title": "Aménagement de Bureau Kénitra | Mobilier de Bureaux",
+      "metaDescription": "Solutions d'aménagement de bureau à Kénitra. Mobilier professionnel, fauteuils ergonomiques et chaises design pour entreprises."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Kénitra",
+      "longDescription": "<p>Excellez dans l'optimisation de vos espaces à Kénitra avec notre savoir-faire en <strong>aménagement de bureau</strong>. Nous mettons à votre disposition un <strong>mobilier de bureaux</strong> soigneusement sélectionné.</p><p>Profitez de notre proximité avec Rabat pour bénéficier d'un service rapide et de <strong>fauteuils ergonomiques</strong> de qualité professionnelle.</p>"
+    }
+  },
+  {
+    "city": "Tétouan",
+    "slug": "tetouan",
+    "seo": {
+      "title": "Aménagement de Bureau Tétouan | Mobilier de Bureaux",
+      "metaDescription": "Expert aménagement de bureau à Tétouan. Mobilier design, fauteuils professionnels et plateaux de bureaux de qualité supérieure."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Tétouan",
+      "longDescription": "<p>Révélez le potentiel de vos espaces professionnels à Tétouan avec nos solutions d'<strong>aménagement bureau professionnel</strong> innovantes et personnalisées.</p><p>Notre expertise dans le nord du Maroc nous permet de proposer des <strong>fauteuils professionnels</strong> et du <strong>mobilier design</strong> adaptés aux entreprises de Tétouan et sa région.</p>"
+    }
+  },
+  {
+    "city": "Témara",
+    "slug": "temara",
+    "seo": {
+      "title": "Aménagement de Bureau Témara | Mobilier de Bureaux",
+      "metaDescription": "Aménagement bureau professionnel à Témara. Large choix de mobilier, fauteuils ergonomiques et solutions d'agencement sur mesure."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Témara",
+      "longDescription": "<p>Optimisez vos environnements de travail à Témara grâce à notre expertise reconnue en <strong>aménagement de bureau</strong>. Notre gamme complète de <strong>mobilier de bureaux</strong> associe fonctionnalité et esthétique.</p><p>Bénéficiez de notre proximité avec Rabat pour un service de livraison et d'installation rapide de vos <strong>fauteuils ergonomiques</strong>.</p>"
+    }
+  },
+  {
+    "city": "Safi",
+    "slug": "safi",
+    "seo": {
+      "title": "Aménagement de Bureau Safi | Mobilier de Bureaux",
+      "metaDescription": "Mobilier de bureaux professionnel à Safi. Fauteuils confortables, chaises design et aménagement complet pour entreprises."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Safi",
+      "longDescription": "<p>Métamorphosez vos espaces de travail à Safi avec nos prestations d'<strong>aménagement bureau professionnel</strong> de premier ordre.</p><p>Notre sélection de <strong>fauteuils confortables</strong> et <strong>chaises design</strong> répond aux besoins des entreprises safiotes souhaitant créer des environnements de travail modernes et productifs.</p>"
+    }
+  },
+  {
+    "city": "Mohammedia",
+    "slug": "mohammedia",
+    "seo": {
+      "title": "Aménagement de Bureau Mohammedia | Mobilier de Bureaux",
+      "metaDescription": "Spécialiste en aménagement de bureau à Mohammedia. Mobilier ergonomique, fauteuils professionnels et plateaux de bureaux modulables."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Mohammedia",
+      "longDescription": "<p>Donnez une nouvelle dimension à vos locaux à Mohammedia avec nos solutions d'<strong>aménagement de bureau</strong> adaptées aux entreprises contemporaines.</p><p>Notre proximité avec Casablanca nous permet de proposer un service rapide et efficace pour l'installation de votre <strong>mobilier ergonomique</strong> et <strong>fauteuils professionnels</strong>.</p>"
+    }
+  },
+  {
+    "city": "Khouribga",
+    "slug": "khouribga",
+    "seo": {
+      "title": "Aménagement de Bureau Khouribga | Mobilier de Bureaux",
+      "metaDescription": "Solutions d'aménagement bureau professionnel à Khouribga. Mobilier de qualité, fauteuils ergonomiques et agencement innovant."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Khouribga",
+      "longDescription": "<p>Réinventez vos espaces professionnels à Khouribga avec notre expertise pointue en <strong>aménagement bureau professionnel</strong>.</p><p>Nous proposons des solutions de <strong>mobilier de qualité</strong> et de <strong>fauteuils ergonomiques</strong> adaptées aux entreprises du bassin minier et industriel de Khouribga.</p>"
+    }
+  },
+  {
+    "city": "El Jadida",
+    "slug": "el-jadida",
+    "seo": {
+      "title": "Aménagement de Bureau El Jadida | Mobilier de Bureaux",
+      "metaDescription": "Aménagement de bureau à El Jadida. Large gamme de mobilier professionnel, fauteuils design et chaises ergonomiques pour bureaux."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel El Jadida",
+      "longDescription": "<p>Sublimez vos environnements de travail à El Jadida grâce à nos prestations d'<strong>aménagement de bureau</strong> reconnues pour leur excellence et leur innovation.</p><p>Notre gamme de <strong>mobilier professionnel</strong> et de <strong>fauteuils design</strong> s'adapte parfaitement aux besoins des entreprises jdidies.</p>"
+    }
+  },
+  {
+    "city": "Béni Mellal",
+    "slug": "beni-mellal",
+    "seo": {
+      "title": "Aménagement de Bureau Béni Mellal | Mobilier de Bureaux",
+      "metaDescription": "Expert en aménagement bureau professionnel à Béni Mellal. Mobilier design, fauteuils confortables et plateaux de bureaux premium."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Béni Mellal",
+      "longDescription": "<p>Propulsez vos espaces de travail vers l'excellence à Béni Mellal avec nos solutions d'<strong>aménagement bureau professionnel</strong> sur mesure.</p><p>Notre expertise couvre toute la région Béni Mellal-Khénifra avec des <strong>fauteuils confortables</strong> et du <strong>mobilier design</strong> de qualité professionnelle.</p>"
+    }
+  },
+  {
+    "city": "Aït Melloul",
+    "slug": "ait-melloul",
+    "seo": {
+      "title": "Aménagement de Bureau Aït Melloul | Mobilier de Bureaux",
+      "metaDescription": "Mobilier de bureaux à Aït Melloul. Fauteuils ergonomiques professionnels, chaises design et solutions d'aménagement complètes."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Aït Melloul",
+      "longDescription": "<p>Valorisez votre patrimoine immobilier professionnel à Aït Melloul avec nos prestations d'<strong>aménagement de bureau</strong> de haute qualité.</p><p>Notre proximité avec Agadir nous permet de proposer un service complet incluant <strong>fauteuils ergonomiques</strong> et <strong>chaises design</strong> pour les entreprises de la zone industrielle.</p>"
+    }
+  },
+  {
+    "city": "Nador",
+    "slug": "nador",
+    "seo": {
+      "title": "Aménagement de Bureau Nador | Mobilier de Bureaux",
+      "metaDescription": "Spécialiste aménagement de bureau à Nador. Mobilier professionnel premium, fauteuils ergonomiques et plateaux de bureaux modulables."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Nador",
+      "longDescription": "<p>Transformez vos locaux professionnels à Nador avec notre savoir-faire reconnu en <strong>aménagement bureau professionnel</strong>.</p><p>Nous desservons toute la région de l'Oriental avec des solutions de <strong>mobilier professionnel premium</strong> et de <strong>fauteuils ergonomiques</strong> adaptées aux entreprises nadoris.</p>"
+    }
+  },
+  {
+    "city": "Taza",
+    "slug": "taza",
+    "seo": {
+      "title": "Aménagement de Bureau Taza | Mobilier de Bureaux",
+      "metaDescription": "Aménagement bureau professionnel à Taza. Solutions complètes de mobilier, fauteuils design et chaises ergonomiques pour entreprises."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Taza",
+      "longDescription": "<p>Révolutionnez vos espaces de travail à Taza avec nos solutions d'<strong>aménagement de bureau</strong> pensées pour les entreprises ambitieuses.</p><p>Bénéficiez de notre expertise pour équiper vos locaux avec des <strong>fauteuils design</strong> et des <strong>chaises ergonomiques</strong> de qualité professionnelle.</p>"
+    }
+  },
+  {
+    "city": "Essaouira",
+    "slug": "essaouira",
+    "seo": {
+      "title": "Aménagement de Bureau Essaouira | Mobilier de Bureaux",
+      "metaDescription": "Expert aménagement de bureau à Essaouira. Mobilier professionnel de qualité, fauteuils confortables et agencement sur mesure."
+    },
+    "content": {
+      "h1": "Aménagement Bureau Professionnel Essaouira",
+      "longDescription": "<p>Excellez dans l'optimisation de vos espaces professionnels à Essaouira grâce à notre expertise en <strong>aménagement bureau professionnel</strong>.</p><p>Nous proposons des solutions de <strong>mobilier professionnel</strong> et de <strong>fauteuils confortables</strong> parfaitement adaptées aux entreprises touristiques et artisanales d'Essaouira.</p>"
+    }
+  }
+]
