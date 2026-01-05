@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Merci | KWESK" description="Merci pour votre message">
+  <main class="thankyou">
+    <div class="thankyou__container">
+      <div class="thankyou__icon">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h1 class="thankyou__title">Merci</h1>
+      <p class="thankyou__message">
+        Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.
+      </p>
+      <a href="/" class="thankyou__button">
+        Retour à l'accueil
+      </a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .thankyou {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafaf9;
+    padding: 100px 20px 40px;
+  }
+
+  .thankyou__container {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .thankyou__icon {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(139, 139, 75, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 32px;
+  }
+
+  .thankyou__icon svg {
+    width: 32px;
+    height: 32px;
+    color: #8b8b4b;
+  }
+
+  .thankyou__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1c1917;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+  }
+
+  .thankyou__message {
+    color: #78716c;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .thankyou__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #1c1917;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .thankyou__button:hover {
+    background-color: #8b8b4b;
+  }
+</style>

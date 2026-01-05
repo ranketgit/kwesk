@@ -6,7 +6,6 @@ const chairLinks = [
   { label: "Challenger 175", href: "/challenger" },
   { label: "Gamma 150", href: "/gamma" },
   { label: "Gamma C", href: "/gamma-c" },
-
   { label: "Corpo 100", href: "/corpo-100" },
   { label: "Exclusive 500", href: "/exclusive" },
   { label: "Exclusive G", href: "/exclusive-g" },
@@ -93,14 +92,17 @@ const companyLinks = [
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
             </svg>
-            <p>+212 5 20 24 16 37</p>
+            <div class="footer__contact-phones">
+              <a href="tel:+212520241637">+212 5 20 24 16 37</a>
+              <a href="tel:+212661481616">+212 6 61 48 16 16</a>
+            </div>
           </div>
           <div class="footer__contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
-            <p>contact@kwesk.com</p>
+            <a href="mailto:contact@kwesk.com" class="footer__contact-email">contact@kwesk.com</a>
           </div>
         </div>
       </div>
@@ -242,6 +244,25 @@ const companyLinks = [
     font-size: 14px;
     color: #a8a29e;
     line-height: 1.6;
+  }
+
+  .footer__contact-phones {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer__contact-phones a,
+  .footer__contact-email {
+    font-size: 14px;
+    color: #a8a29e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer__contact-phones a:hover,
+  .footer__contact-email:hover {
+    color: #8b8b4b;
   }
 
   /* Bottom */
