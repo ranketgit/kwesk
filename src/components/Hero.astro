@@ -2,22 +2,22 @@
 const slides = [
   {
     image: "/hero-chairs.png",
-    title: "Aménagez Votre<br/>Espace de Travail",
+    title: "Aménagez Votre<br/> Espace de Travail",
     subtitle: "Mobilier de bureau professionnel conçu au Maroc pour un confort optimal et une productivité maximale."
   },
   {
     image: "/by100/by100hero.png",
-    title: "Chaises Ergonomiques<br/>Pour Entreprises",
+    title: "Chaises Ergonomiques<br/> Pour Entreprises",
     subtitle: "Des sièges conçus pour une utilisation intensive, garantis 5 ans et conformes aux normes internationales."
   },
   {
     image: "/corpo-100/corpohero.jpg",
-    title: "Design & Confort<br/>Au Quotidien",
+    title: "Design & Confort<br/> Au Quotidien",
     subtitle: "Découvrez notre gamme de mobilier alliant esthétique moderne et ergonomie avancée."
   },
   {
     image: "/deskhero.jpg",
-    title: "Solutions Sur Mesure<br/>Pour Votre Bureau",
+    title: "Solutions Sur Mesure<br/> Pour Votre Bureau",
     subtitle: "Équipez vos espaces de travail avec du mobilier adapté à vos besoins et à votre budget."
   }
 ];
@@ -37,7 +37,11 @@ const slides = [
     <div class="hero__container">
       {slides.map((slide, index) => (
         <div class={`hero__text ${index === 0 ? 'active' : ''}`} data-index={index}>
-          <h1 class="hero__title" set:html={slide.title}></h1>
+          {index === 0 ? (
+            <h1 class="hero__title" set:html={slide.title}></h1>
+          ) : (
+            <h2 class="hero__title" set:html={slide.title}></h2>
+          )}
           <p class="hero__subtitle">{slide.subtitle}</p>
         </div>
       ))}

@@ -301,14 +301,7 @@ const {
             {mat.colors && mat.colors.length > 0 && (
               <div class="mt-4">
                 <p class="text-sm text-stone-500 mb-2">Couleurs disponibles</p>
-                <div class="flex flex-wrap gap-2">
-                  {mat.colors.map((color) => (
-                    <span 
-                      class="w-6 h-6 rounded-full border border-stone-200" 
-                      style={`background-color: ${color};`}
-                    ></span>
-                  ))}
-                </div>
+               
               </div>
             )}
             <p class="text-xs text-stone-400 mt-4">{mat.madeIn}</p>
