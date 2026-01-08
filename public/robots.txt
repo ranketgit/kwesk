@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /
-Disallow: /merci
+Disallow:
 
 Sitemap: https://kwesk.ma/sitemap-0.xml
