@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryHeader from '../components/CategoryHeader.astro';
+import ProductCardSimple from '../components/ProductCardSimple.astro';
+
+const products = [
+  { 
+    name: "CASIERS VESTIAIRE", 
+    type: "Vestiaires Métalliques", 
+    image: "/industrie/casiers-vestiaire/1.webp", 
+    href: "/industrie/casiers-vestiaire" 
+  },
+  { 
+    name: "ARMOIRES OUTILS & RANGEMENT", 
+    type: "Armoires d'Atelier", 
+    image: "/industrie/casiers-vestiaire/11.webp", 
+    href: "/industrie/armoires-outils" 
+  },
+  { 
+    name: "TABLES CANTINE", 
+    type: "Mobilier de Restauration", 
+    image: "/industrie/tables-cantine/1.jpg", 
+    href: "/industrie/tables-cantine" 
+  },
+];
+---
+
+<Layout title="Mobilier Industriel Professionnel au Maroc | Kwesk" description="Mobilier industriel professionnel : vestiaires métalliques, armoires d'atelier, tables de cantine. Solutions robustes pour entreprises et collectivités au Maroc - Kwesk.">
+  <CategoryHeader 
+    title="Mobilier Industriel" 
+    description="Des solutions robustes et durables pour vos espaces industriels, ateliers et collectivités."
+    image="/industrie/casiers-vestiaire/1.webp"
+  />
+
+  <section class="product-section">
+    <div class="product-container">
+      <div class="product-grid">
+        {products.map(p => <ProductCardSimple {...p} />)}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .product-section { padding: 80px 0; background: white; }
+  .product-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 30px; }
+  
+  @media (max-width: 900px) { 
+    .product-grid { grid-template-columns: repeat(2, 1fr); } 
+  }
+  
+  @media (max-width: 768px) { 
+    .product-section { padding: 60px 0; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .product-container { padding: 0 20px; }
+  }
+  
+  @media (max-width: 480px) { 
+    .product-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+</style>
