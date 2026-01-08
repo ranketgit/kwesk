@@ -19,9 +19,75 @@ const expertises = [
 </section>
 
 <style>
-  .am-exp { padding: 100px 0; background: white; }
-  .am-exp__wrapper { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
-  .am-exp__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-  .am-exp__title { font-size: 20px; font-weight: 700; color: #1c1917; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-  .am-exp__desc { color: #78716c; line-height: 1.6; font-size: 15px; }
+  .am-exp { 
+    padding: 60px 0; 
+    background: white; 
+  }
+  
+  .am-exp__wrapper { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 24px; 
+  }
+  
+  .am-exp__grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 32px; 
+  }
+  
+  .am-exp__item {
+    text-align: center;
+  }
+  
+  .am-exp__title { 
+    font-size: 18px; 
+    font-weight: 700; 
+    color: #1c1917; 
+    margin-bottom: 12px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+  }
+  
+  .am-exp__desc { 
+    color: #78716c; 
+    line-height: 1.6; 
+    font-size: 15px; 
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) {
+    .am-exp { 
+      padding: 80px 0; 
+    }
+    
+    .am-exp__wrapper { 
+      padding: 0 40px; 
+    }
+    
+    .am-exp__grid { 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 40px; 
+    }
+    
+    .am-exp__item {
+      text-align: left;
+    }
+    
+    .am-exp__title { 
+      font-size: 20px; 
+      margin-bottom: 15px; 
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .am-exp { 
+      padding: 100px 0; 
+    }
+    
+    .am-exp__wrapper { 
+      padding: 0 60px; 
+    }
+  }
 </style>
