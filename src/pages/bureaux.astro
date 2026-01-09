@@ -3,6 +3,7 @@
 import Layout from '../layouts/Layout.astro';
 import CategoryHeader from '../components/CategoryHeader.astro';
 import ProductCardSimple from '../components/ProductCardSimple.astro';
+import AmCTA from '../components/AmCTA.astro';
 
 const products = [
   { name: "EXECUTIVE PRO", type: "Bureau de Direction", image: "/bureaux/dr1.jpg", href: "/bureaux/direction" },
@@ -12,13 +13,17 @@ const products = [
 ];
 ---
 
-<Layout title="Bureaux Professionnels | Kwesk Maroc" description="Mobilier de bureaux professionnel : bureaux direction, opératifs, bench et réglables. Plateaux de bureaux qualité pour aménagement entreprise - Kwesk Maroc.">
+<Layout 
+  title="Bureau Entreprise Maroc | Solutions Complètes | Kwesk" 
+  description="Découvrez notre collection de bureau entreprise au Maroc : direction, opératif, réglable, bench. Solutions complètes d'aménagement. Devis gratuit !"
+>
   <CategoryHeader 
-    title="Bureaux" 
-    description="Des solutions de travail ergonomiques et esthétiques, conçues pour s'adapter à toutes les configurations d'espace."
+    title="Bureau Entreprise au Maroc : Solutions Professionnelles et Ergonomiques" 
+    description="Vous recherchez un bureau entreprise adapté aux besoins de vos équipes au Maroc ? Kwesk, expert en mobilier professionnel depuis 2008, vous propose une gamme complète de solutions pour l'aménagement de bureau de votre entreprise."
     image="/home-categories/desk.jpg"
   />
 
+  <!-- Products Grid -->
   <section class="product-section">
     <div class="product-container">
       <div class="product-grid">
@@ -26,15 +31,513 @@ const products = [
       </div>
     </div>
   </section>
+
+  <!-- Introduction -->
+  <section class="content-section">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">KWESK MAROC</span>
+          <h2 class="content-title">Notre Expertise Bureau Entreprise</h2>
+        </div>
+        <div class="content-right">
+          <p>Que vous équipiez des espaces de direction, des open spaces collaboratifs ou des postes de travail ergonomiques, notre collection de bureau professionnel répond aux exigences les plus strictes en termes de qualité, de confort et de design. Basés à Casablanca, nous accompagnons les entreprises marocaines dans leurs projets d'aménagement bureau entreprise avec des produits certifiés BIFMA 2011 et EN 1335 2016.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection Complète -->
+  <section class="content-section bg-stone">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">NOTRE GAMME</span>
+          <h2 class="content-title">Notre Collection Complète de Bureau Entreprise</h2>
+        </div>
+        <div class="content-right">
+          <p>Kwesk vous offre quatre catégories de bureau pour entreprise soigneusement conçues pour répondre aux différents besoins organisationnels et budgétaires. Chaque gamme a été développée en tenant compte des spécificités du marché marocain et des standards internationaux de qualité. Notre expertise en bureau maroc nous permet de proposer des solutions qui allient esthétique contemporaine, fonctionnalité optimale et durabilité exceptionnelle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bureaux de Direction -->
+  <section class="content-section">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">DIRECTION</span>
+          <h3 class="content-title">Bureaux de Direction : Prestige et Fonctionnalité</h3>
+        </div>
+        <div class="content-right">
+          <p>Les bureaux de direction incarnent l'excellence et le professionnalisme. Conçus pour les cadres dirigeants et les espaces de management, ces bureaux entreprise offrent des plateaux spacieux de 180 à 220 cm avec des finitions premium. Leur design soigné reflète le standing de votre organisation tout en intégrant des solutions de rangement et de gestion des câbles pour un environnement de travail impeccable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bureaux Opératifs -->
+  <section class="content-section bg-stone">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">OPÉRATIF</span>
+          <h3 class="content-title">Bureaux Opératifs : Performance au Quotidien</h3>
+        </div>
+        <div class="content-right">
+          <p>Les bureaux opératifs constituent le cœur de votre agencement bureau entreprise. Robustes et fonctionnels, ces postes de travail de 120 à 160 cm sont parfaits pour équiper vos équipes administratives et commerciales. Leur excellent rapport qualité-prix en fait la solution idéale pour les projets d'aménagement à grande échelle dans les entreprises marocaines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bureaux Réglables -->
+  <section class="content-section">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">RÉGLABLE</span>
+          <h3 class="content-title">Bureaux Réglables : Innovation Ergonomique</h3>
+        </div>
+        <div class="content-right">
+          <p>Les bureaux réglables représentent l'avenir du bureau de travail entreprise. Ces postes assis-debout favorisent la santé et la productivité de vos collaborateurs grâce à leur mécanisme électrique ou manuel permettant d'alterner les positions tout au long de la journée. Un investissement stratégique pour les entreprises soucieuses du bien-être de leurs équipes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bureaux Bench -->
+  <section class="content-section bg-stone">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">BENCH</span>
+          <h3 class="content-title">Bureaux Bench : Optimisation des Espaces</h3>
+        </div>
+        <div class="content-right">
+          <p>Les bureaux bench ou Team Bench optimisent l'espace en regroupant 2 à 8 postes de travail sur une structure modulaire. Parfaits pour les centres d'appels, les équipes commerciales ou les startups au Maroc, ces configurations favorisent la collaboration tout en réduisant les coûts d'aménagement bureau entreprise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Complètes -->
+  <section class="content-section">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">AMÉNAGEMENT</span>
+          <h2 class="content-title">Solutions Complètes pour Votre Aménagement Bureau Entreprise</h2>
+        </div>
+        <div class="content-right">
+          <p>Au-delà du simple bureau professionnel, Kwesk vous propose un écosystème complet pour créer des environnements de travail performants et confortables. Notre approche globale de l'aménagement de bureau intègre tous les éléments essentiels à la productivité de vos équipes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Cards -->
+  <section class="services-section">
+    <div class="content-container">
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Sièges et Chaises Professionnelles</h4>
+          <p>Chaque bureau entreprise nécessite un siège ergonomique adapté. Notre gamme de chaises professionnelles certifiées EN 1335 2016 garantit un confort optimal pendant les longues journées de travail. Des modèles opératifs aux fauteuils de direction, nous offrons des solutions pour chaque poste et chaque budget.</p>
+        </div>
+        <div class="service-card">
+          <h4>Espaces de Collaboration et Réunion</h4>
+          <p>Complétez votre bureau maroc avec nos salles de réunion équipées. Nous proposons des tables de réunion modulaires, des solutions média pour vos présentations et des rangements adaptés pour créer des espaces collaboratifs inspirants.</p>
+        </div>
+        <div class="service-card">
+          <h4>Mobilier Complémentaire pour Entreprises</h4>
+          <p>Pour les environnements industriels et les espaces communs, découvrez notre mobilier industriel incluant des tables de cantine, des casiers vestiaire et des armoires de rangement robustes et durables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi Choisir Kwesk -->
+  <section class="content-section bg-dark">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label light">KWESK</span>
+          <h2 class="content-title light">Pourquoi Choisir Kwesk pour Votre Bureau Entreprise au Maroc</h2>
+        </div>
+        <div class="content-right">
+          <p class="light">Depuis 2008, Kwesk est un acteur majeur du bureau professionnel au Maroc. Notre connaissance approfondie du marché marocain, combinée à notre respect des normes internationales les plus strictes (BIFMA 2011 et EN 1335 2016), nous permet de proposer des produits parfaitement adaptés aux besoins locaux avec une qualité mondiale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages -->
+  <section class="advantages-section">
+    <div class="content-container">
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h4>Showroom à Casablanca</h4>
+          <p>Visitez notre showroom situé à Anfa Place, Tour Ouest, Niveau 1, à Casablanca pour découvrir notre collection complète de bureau entreprise. Nos experts vous accueillent pour vous conseiller sur votre projet d'aménagement bureau entreprise et vous permettre de tester nos produits avant de prendre votre décision.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4>Accompagnement de A à Z</h4>
+          <p>Notre service ne s'arrête pas à la vente. Nous vous accompagnons depuis l'audit de vos besoins jusqu'à l'installation finale de votre bureau pour entreprise, en passant par la conception des plans d'aménagement. Notre équipe assure également le service après-vente pour garantir votre satisfaction à long terme.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h4>Personnalisation et Solutions Sur Mesure</h4>
+          <p>Chaque entreprise a des besoins spécifiques. Nos solutions de bureau de travail entreprise peuvent être personnalisées en termes de dimensions, de finitions et de configurations pour s'adapter parfaitement à vos espaces et à votre image de marque.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tendances -->
+  <section class="content-section">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">TENDANCES</span>
+          <h2 class="content-title">Tendances et Meilleures Pratiques en Aménagement Bureau Entreprise</h2>
+        </div>
+        <div class="content-right">
+          <div class="tendances-list">
+            <div class="tendance-item">
+              <h4>L'Ergonomie au Cœur de la Productivité</h4>
+              <p>L'ergonomie n'est plus une option mais une nécessité pour tout bureau entreprise moderne. Les bureaux réglables et les chaises professionnelles certifiées réduisent les troubles musculo-squelettiques et augmentent la concentration. Nos produits respectent les recommandations ergonomiques internationales pour garantir le bien-être de vos collaborateurs au Maroc.</p>
+            </div>
+            <div class="tendance-item">
+              <h4>Flexibilité et Modularité</h4>
+              <p>Les espaces de travail évoluent constamment. Nos bureaux bench modulaires et nos solutions d'aménagement de bureau permettent de reconfigurer facilement vos espaces selon vos besoins changeants. Cette flexibilité représente un avantage économique majeur pour les entreprises en croissance.</p>
+            </div>
+            <div class="tendance-item">
+              <h4>Optimisation de l'Espace</h4>
+              <p>Dans un contexte où l'immobilier professionnel coûte cher, notamment à Casablanca, l'optimisation de chaque mètre carré devient cruciale. Les bureaux opératifs compacts et les configurations bench maximisent votre capacité d'accueil sans compromettre le confort.</p>
+            </div>
+            <div class="tendance-item">
+              <h4>Design et Image d'Entreprise</h4>
+              <p>Votre bureau professionnel reflète votre culture d'entreprise. Nos bureaux de direction aux finitions soignées et nos gammes contemporaines contribuent à créer une image professionnelle forte auprès de vos clients et partenaires.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications par Secteur -->
+  <section class="content-section bg-stone">
+    <div class="content-container">
+      <div class="content-grid">
+        <div class="content-left">
+          <span class="content-label">SECTEURS</span>
+          <h2 class="content-title">Applications par Secteur d'Activité</h2>
+        </div>
+        <div class="content-right">
+          <div class="secteurs-list">
+            <div class="secteur-item">
+              <h4>Bureaux pour Secteur Tertiaire et Administratif</h4>
+              <p>Les entreprises de services, cabinets d'avocats, sociétés de consulting et administrations trouvent dans nos bureaux opératifs et bureaux de direction les solutions idéales pour créer des environnements professionnels élégants et fonctionnels.</p>
+            </div>
+            <div class="secteur-item">
+              <h4>Solutions pour Centres d'Appels et Back Offices</h4>
+              <p>Les centres de contact et services clients au Maroc bénéficient de nos configurations bureaux bench permettant de concentrer de nombreux postes dans un espace optimisé, avec une excellente gestion des câbles et une acoustique étudiée.</p>
+            </div>
+            <div class="secteur-item">
+              <h4>Aménagement pour Startups et Espaces de Coworking</h4>
+              <p>Les jeunes entreprises et espaces collaboratifs privilégient nos solutions modulaires combinant bureaux bench, bureaux réglables et tables de réunion flexibles pour créer des environnements dynamiques et évolutifs.</p>
+            </div>
+            <div class="secteur-item">
+              <h4>Mobilier pour Industries et Ateliers</h4>
+              <p>Au-delà du bureau entreprise classique, nos solutions de mobilier industriel, casiers vestiaire et armoires de rangement équipent les zones administratives et espaces communs des sites industriels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="content-container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="content-label">CONTACT</span>
+          <h2 class="content-title">Demandez Votre Devis Gratuit pour Votre Bureau Entreprise</h2>
+          <p>Vous avez un projet d'aménagement bureau entreprise au Maroc ? Kwesk vous accompagne avec une approche personnalisée et professionnelle. Contactez-nous dès aujourd'hui pour recevoir votre devis gratuit et bénéficier des conseils de nos experts.</p>
+        </div>
+        <div class="contact-right">
+          <div class="contact-info-card">
+            <h4>Nos Coordonnées</h4>
+            <ul>
+              <li><strong>Showroom :</strong> Anfa Place, Tour Ouest, Niveau 1, Casablanca</li>
+              <li><strong>Téléphone :</strong> <a href="tel:+212520241637">+212 5 20 24 16 37</a></li>
+              <li><strong>Mobile :</strong> <a href="tel:+212661481616">+212 6 61 48 16 16</a></li>
+              <li><strong>Email :</strong> <a href="mailto:contact@kwesk.com">contact@kwesk.com</a></li>
+            </ul>
+            <p class="contact-note">Notre équipe est à votre disposition pour étudier vos besoins, vous présenter nos gammes de bureau professionnel et élaborer une proposition adaptée à votre budget et vos contraintes. Visitez notre showroom à Casablanca pour découvrir la qualité de nos produits et imaginer votre futur environnement de travail.</p>
+            <a href="/contact" class="contact-cta">Demander un Devis</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="content-container">
+      <div class="faq-header">
+        <span class="content-label">FAQ</span>
+        <h2 class="content-title">Questions Fréquentes sur les Bureau Entreprise</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Quels sont les délais de livraison pour un bureau entreprise au Maroc ?</h4>
+          <p>Les délais varient selon le modèle et la quantité. Pour nos produits en stock (bureaux opératifs et bureaux bench), comptez 5 à 10 jours ouvrables. Les modèles sur commande comme certains bureaux de direction nécessitent 3 à 6 semaines. Contactez-nous pour un délai précis selon votre projet.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Puis-je personnaliser mon bureau entreprise selon mes besoins spécifiques ?</h4>
+          <p>Absolument. Kwesk propose des options de personnalisation pour la plupart de nos gammes de bureau professionnel. Vous pouvez choisir les dimensions, les finitions (bois, stratifié, couleurs), les accessoires (caissons, retours, écrans) et les configurations. Notre équipe d'aménagement de bureau étudie chaque demande pour créer des solutions sur mesure.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Quelle garantie offrez-vous sur vos bureaux entreprise ?</h4>
+          <p>Tous nos produits certifiés BIFMA 2011 et EN 1335 2016 bénéficient d'une garantie constructeur. La durée varie selon les gammes : 3 ans pour les bureaux opératifs, 5 ans pour les bureaux de direction et bureaux réglables. Notre service après-vente assure un suivi complet.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Proposez-vous des solutions de financement pour les projets d'aménagement bureau entreprise ?</h4>
+          <p>Oui, nous travaillons avec plusieurs partenaires financiers pour faciliter l'acquisition de bureau entreprise et d'équipements complets. Nous pouvons vous proposer des solutions de leasing, de crédit professionnel ou de paiement échelonné adaptées aux entreprises marocaines. Contactez notre équipe commerciale pour étudier les options disponibles.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Dois-je acheter séparément les chaises et autres accessoires pour mon bureau professionnel ?</h4>
+          <p>Kwesk propose des packages complets pour votre agencement bureau entreprise. Nous pouvons vous fournir une solution clé en main incluant bureaux, chaises professionnelles, rangements, tables de réunion et tous les accessoires nécessaires. Cette approche globale garantit une cohérence esthétique et souvent de meilleurs tarifs.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Peut-on visiter votre showroom pour voir les bureaux avant de commander ?</h4>
+          <p>Nous vous encourageons vivement à visiter notre showroom à Anfa Place à Casablanca pour découvrir notre collection de bureau maroc. Vous pourrez tester le confort de nos produits, visualiser les finitions disponibles et recevoir des conseils personnalisés de nos experts. Prenez rendez-vous au <a href="tel:+212520241637">+212 5 20 24 16 37</a> pour bénéficier d'un accueil dédié.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Assurez-vous l'installation des bureaux entreprise ?</h4>
+          <p>Oui, Kwesk offre un service d'installation professionnel pour tous les projets d'aménagement bureau entreprise au Maroc. Notre équipe technique assure le montage, l'installation et la mise en service de tous les équipements. Nous veillons à minimiser les perturbations de votre activité en programmant les interventions selon vos contraintes opérationnelles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AmCTA />
 </Layout>
 
 <style>
+  /* Product Section */
   .product-section { padding: 80px 0; background: white; }
   .product-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
   .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 30px; }
-  @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  /* Content Sections */
+  .content-section { padding: 80px 0; }
+  .content-section.bg-stone { background: #fafaf9; }
+  .content-section.bg-dark { background: #1c1917; }
+  .content-container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+  
+  .content-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
+  .content-left { position: sticky; top: 120px; }
+  
+  .content-label { 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    color: #8b8b4b; 
+    display: block; 
+    margin-bottom: 16px; 
+  }
+  .content-label.light { color: #8b8b4b; }
+  
+  .content-title { 
+    font-size: 28px; 
+    font-weight: 700; 
+    color: #1c1917; 
+    line-height: 1.3; 
+  }
+  .content-title.light { color: white; }
+  
+  .content-right p { 
+    font-size: 15px; 
+    line-height: 1.8; 
+    color: #57534e; 
+  }
+  .content-right p.light { color: #a8a29e; }
+
+  /* Services Section */
+  .services-section { padding: 80px 0; background: #fafaf9; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .service-card { 
+    background: white; 
+    padding: 40px; 
+    border: 1px solid #e7e5e4; 
+  }
+  .service-card h4 { 
+    font-size: 18px; 
+    font-weight: 700; 
+    color: #1c1917; 
+    margin-bottom: 16px; 
+  }
+  .service-card p { 
+    font-size: 14px; 
+    line-height: 1.8; 
+    color: #57534e; 
+  }
+
+  /* Advantages Section */
+  .advantages-section { padding: 80px 0; background: white; }
+  .advantages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .advantage-card { padding: 40px; border: 1px solid #e7e5e4; }
+  .advantage-icon { 
+    width: 50px; 
+    height: 50px; 
+    color: #8b8b4b; 
+    margin-bottom: 24px; 
+  }
+  .advantage-icon svg { width: 100%; height: 100%; }
+  .advantage-card h4 { 
+    font-size: 18px; 
+    font-weight: 700; 
+    color: #1c1917; 
+    margin-bottom: 16px; 
+  }
+  .advantage-card p { 
+    font-size: 14px; 
+    line-height: 1.8; 
+    color: #57534e; 
+  }
+
+  /* Tendances & Secteurs */
+  .tendances-list, .secteurs-list { display: flex; flex-direction: column; gap: 32px; }
+  .tendance-item, .secteur-item { padding-bottom: 32px; border-bottom: 1px solid #e7e5e4; }
+  .tendance-item:last-child, .secteur-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .tendance-item h4, .secteur-item h4 { 
+    font-size: 18px; 
+    font-weight: 700; 
+    color: #1c1917; 
+    margin-bottom: 12px; 
+  }
+  .tendance-item p, .secteur-item p { 
+    font-size: 15px; 
+    line-height: 1.8; 
+    color: #57534e; 
+  }
+
+  /* Contact Section */
+  .contact-section { padding: 80px 0; background: white; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .contact-left p { 
+    font-size: 15px; 
+    line-height: 1.8; 
+    color: #57534e; 
+    margin-top: 20px; 
+  }
+  .contact-info-card { 
+    background: #fafaf9; 
+    padding: 40px; 
+    border: 1px solid #e7e5e4; 
+  }
+  .contact-info-card h4 { 
+    font-size: 20px; 
+    font-weight: 700; 
+    color: #1c1917; 
+    margin-bottom: 20px; 
+  }
+  .contact-info-card ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0 0 20px 0; 
+  }
+  .contact-info-card li { 
+    font-size: 14px; 
+    color: #57534e; 
+    padding: 8px 0; 
+    border-bottom: 1px solid #e7e5e4; 
+  }
+  .contact-info-card li:last-child { border-bottom: none; }
+  .contact-info-card a { 
+    color: #8b8b4b; 
+    text-decoration: none; 
+  }
+  .contact-info-card a:hover { text-decoration: underline; }
+  .contact-note { 
+    font-size: 13px; 
+    line-height: 1.7; 
+    color: #78716c; 
+    margin-bottom: 24px; 
+  }
+  .contact-cta { 
+    display: inline-block; 
+    padding: 14px 32px; 
+    background: #8b8b4b; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 13px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: background 0.3s; 
+  }
+  .contact-cta:hover { background: #1c1917; }
+
+  /* FAQ Section */
+  .faq-section { padding: 80px 0; background: #fafaf9; }
+  .faq-header { text-align: center; margin-bottom: 60px; }
+  .faq-header .content-title { max-width: 600px; margin: 0 auto; }
+  .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .faq-item { 
+    background: white; 
+    padding: 32px; 
+    border: 1px solid #e7e5e4; 
+  }
+  .faq-item h4 { 
+    font-size: 16px; 
+    font-weight: 700; 
+    color: #1c1917; 
+    margin-bottom: 12px; 
+    line-height: 1.4; 
+  }
+  .faq-item p { 
+    font-size: 14px; 
+    line-height: 1.7; 
+    color: #57534e; 
+  }
+  .faq-item a { color: #8b8b4b; }
+
+  /* Responsive */
+  @media (max-width: 1100px) { 
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .services-grid, .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+    .faq-grid { grid-template-columns: 1fr; }
+  }
+  
+  @media (max-width: 900px) {
+    .content-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .content-left { position: static; }
+  }
+  
   @media (max-width: 768px) { 
     .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .product-container { padding: 0 20px; }
+    .product-container, .content-container { padding: 0 20px; }
+    .content-section, .services-section, .advantages-section, .contact-section, .faq-section { padding: 60px 0; }
+    .services-grid, .advantages-grid { grid-template-columns: 1fr; }
+    .content-title { font-size: 24px; }
   }
 </style>
