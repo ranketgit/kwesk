@@ -6,6 +6,7 @@ interface SubItem {
 
 interface MegaCategory {
   category: string;
+  href: string;
   image: string;
   items: {
     label: string;
@@ -17,6 +18,7 @@ interface MegaCategory {
 const megaMenuData: MegaCategory[] = [
   {
     category: "Bureaux",
+    href: "/bureaux",
     image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=600",
     items: [
       { label: "Bureaux de Direction", href: "/bureaux/direction" },
@@ -27,9 +29,9 @@ const megaMenuData: MegaCategory[] = [
   },
   {
     category: "Chaises",
+    href: "/chaises",
     image: "/hero-chairs.png",
     items: [
-     
       { 
         label: "GAMMA", 
         children: [
@@ -61,6 +63,7 @@ const megaMenuData: MegaCategory[] = [
   },
   {
     category: "Salle de Réunion",
+    href: "/salles-reunion",
     image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=600",
     items: [
       { label: "Tables de Réunion", href: "/reunion/tables" },
@@ -70,6 +73,7 @@ const megaMenuData: MegaCategory[] = [
   },
   {
     category: "Mobilier Industriel",
+    href: "/mobilier-industriel",
     image: "/industrie/header.jpg",
     items: [
       { label: "Tables pour Cantine", href: "/industrie/tables-cantine" },
@@ -122,12 +126,12 @@ const navItems = [
     <div class="header__mega-content">
       {megaMenuData.map((cat) => (
         <div class="header__mega-column">
-          <div class="header__mega-image-wrap">
+          <a href={cat.href} class="header__mega-image-wrap">
             <img src={cat.image} alt={cat.category} class="header__mega-img" />
             <div class="header__mega-overlay">
               <p class="header__mega-title">{cat.category}</p>
             </div>
-          </div>
+          </a>
           
           <div class="header__items-list">
             {cat.items.map((prod) => (
@@ -165,7 +169,7 @@ const navItems = [
               <div class="mobile-accordion-content">
                 {megaMenuData.map((cat) => (
                   <div class="mobile-cat-group">
-                    <span class="mobile-cat-title">{cat.category}</span>
+                    <a href={cat.href} class="mobile-cat-title">{cat.category}</a>
                     <div class="mobile-cat-links">
                       {cat.items.map((prod) => (
                         <>
@@ -227,7 +231,7 @@ const navItems = [
   .header__mega-column { display: flex; flex-direction: column; gap: 24px; border-right: 1px solid #f5f5f4; padding-right: 15px; }
   .header__mega-column:last-child { border-right: none; padding-right: 0; }
 
-  .header__mega-image-wrap { position: relative; width: 100%; height: 180px; border-radius: 12px; overflow: hidden; background: #eee; }
+  .header__mega-image-wrap { position: relative; width: 100%; height: 180px; border-radius: 12px; overflow: hidden; background: #eee; display: block; text-decoration: none; }
   .header__mega-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
   .header__mega-column:hover .header__mega-img { transform: scale(1.08); }
 
@@ -258,7 +262,8 @@ const navItems = [
   .mobile-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
   .mobile-accordion-content.open { max-height: 3000px; }
   .mobile-cat-group { padding: 20px 0; border-bottom: 1px solid #f5f5f4; }
-  .mobile-cat-title { font-size: 11px; text-transform: uppercase; color: #8b8b4b; font-weight: 900; letter-spacing: 1.5px; }
+  .mobile-cat-title { font-size: 11px; text-transform: uppercase; color: #8b8b4b; font-weight: 900; letter-spacing: 1.5px; text-decoration: none; display: block; }
+  .mobile-cat-title:hover { color: #1c1917; }
   .mobile-cat-links { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
   .mobile-sub-link { font-size: 14px; color: #57534e; text-decoration: none; font-weight: 500; }
   .mobile-prod-cluster { display: flex; flex-direction: column; gap: 8px; }
