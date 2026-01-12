@@ -1,216 +1,250 @@
 ---
 // pages/bureaux/bureau-direction.astro
 import Layout from '../../layouts/Layout.astro';
-import ProductSimple from '../../components/ProductSimple.astro';
 import AmCTA from '../../components/AmCTA.astro';
-
-const bureau = {
-  heroBg: "/bureaux/dr-hero.jpg",
-  name: "Bureau de Direction : Élégance et Fonctionnalité pour Espaces Exécutifs",
-  category: "Bureaux",
-  categoryHref: "/bureaux",
-  description: "Le bureau de direction constitue la pièce maîtresse de tout espace exécutif. Bien plus qu'un simple meuble de travail, il projette l'autorité, reflète le professionnalisme et incarne les valeurs de l'entreprise. Chez Kwesk, nous proposons une collection complète de bureaux professionnels conçue pour répondre aux exigences des dirigeants et cadres supérieurs au Maroc. Notre gamme de bureaux de direction allie design sophistiqué, matériaux premium et fonctionnalité irréprochable, offrant des solutions sur-mesure pour les espaces exécutifs de prestige à Casablanca et à travers tout le Maroc. Depuis 2008, nous accompagnons les entreprises dans la création d'environnements de travail qui inspirent confiance et favorisent la performance. Découvrez comment nos bureaux de direction luxe peuvent transformer votre espace professionnel en un lieu de pouvoir et d'efficacité.",
-  images: [
-    "/bureaux/dr1.jpg",
-    "/bureaux/dr2.jpg",
-    "/bureaux/dr3.jpg"
-  ],
-  features: [
-    "Plateau en mélaminé épaisseur 25mm",
-    "Structure en acier peint époxy",
-    "Passe-câbles intégré",
-    "Dimensions: 180x80x75 cm",
-    "Garantie 5 ans"
-  ],
-  options: [
-    "Caisson 3 tiroirs",
-    "Retour latéral",
-    "Plateau en verre trempé"
-  ]
-};
 ---
 
 <Layout 
   title="Bureau de Direction Luxe Maroc | Qualité Premium Kwesk" 
   description="Bureau de direction haut de gamme au Maroc. Finitions premium, sur-mesure, design exécutif. Showroom Casablanca. Devis personnalisé. Garantie 5 ans. Kwesk depuis 2008."
 >
-  <ProductSimple {...bureau} />
-
-  <!-- Pourquoi Investir -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">INVESTISSEMENT</span>
-          <h2 class="content-title">Pourquoi Investir dans un Bureau de Direction Premium</h2>
-        </div>
-        <div class="content-right">
-          <p>Le choix d'un bureau de direction de qualité supérieure représente un investissement stratégique pour toute organisation. L'espace de travail du dirigeant sert de vitrine à l'entreprise lors des réunions avec clients, partenaires et collaborateurs clés. Un bureau de directeur premium communique instantanément le sérieux, la réussite et la pérennité de l'organisation.</p>
-          
-          <div class="sub-section">
-            <h3>L'Impact sur l'Image Professionnelle</h3>
-            <p>La première impression compte énormément dans le monde des affaires. Un bureau de direction élégant et bien conçu établit immédiatement le ton professionnel et inspire confiance. Les clients et partenaires qui entrent dans un bureau exécutif évaluent inconsciemment la crédibilité de l'entreprise à travers son mobilier bureau direction. Un bureau de qualité inférieure peut nuire à la perception de votre entreprise, tandis qu'un bureau de direction luxe renforce votre positionnement et votre autorité.</p>
-          </div>
-
-          <div class="sub-section">
-            <h3>Productivité et Bien-Être au Travail</h3>
-            <p>Au-delà de l'esthétique, un bureau de direction bien conçu améliore significativement la productivité quotidienne. Les dirigeants passent de longues heures à leur bureau, nécessitant un espace de travail généreux pour gérer simultanément plusieurs dossiers, accueillir des écrans multiples et organiser efficacement leurs documents. Notre mobilier bureau direction intègre des solutions de rangement sécurisées, une gestion optimale des câbles et un confort ergonomique adapté aux longues journées de travail. L'investissement dans la qualité se traduit par une meilleure concentration et une efficacité accrue.</p>
-          </div>
-
-          <div class="sub-section">
-            <h3>Durabilité et Valeur à Long Terme</h3>
-            <p>Un bureau de direction de qualité professionnelle constitue un investissement durable. Contrairement au mobilier standard qui nécessite un remplacement fréquent, nos bureaux exécutifs sont construits pour durer des décennies. Les matériaux premium résistent à l'usure quotidienne, les finitions conservent leur éclat et les mécanismes fonctionnent parfaitement année après année. Notre garantie structurelle de 5 ans témoigne de notre confiance dans la qualité de fabrication. Cette durabilité exceptionnelle, combinée à un design intemporel, fait du bureau de direction premium un choix économique sur le long terme.</p>
-          </div>
+  <!-- Hero Section -->
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/bureaux/dr-hero.jpg" alt="Bureau de Direction Luxe Maroc" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-2xl">
+        <a href="/bureaux" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+          ← Retour aux Bureaux
+        </a>
+        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">PRESTIGE & EXCELLENCE</span>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Bureau de Direction : Élégance et Fonctionnalité pour Espaces Exécutifs</h1>
+        <p class="text-lg text-stone-300 leading-relaxed mb-8">Le bureau de direction constitue la pièce maîtresse de tout espace exécutif. Chez Kwesk, nous proposons une <a href="/bureaux" class="text-[#8b8b4b] hover:underline">collection complète de bureaux professionnels</a> conçue pour répondre aux exigences des dirigeants au Maroc.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis</a>
+          <a href="#collection" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Découvrir</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Design et Esthétique -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">DESIGN</span>
-          <h2 class="content-title">Design et Esthétique : Styles pour Chaque Vision</h2>
+  <!-- Quick Features -->
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">180-220cm</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Dimensions</span>
         </div>
-        <div class="content-right">
-          <p>Le bureau de direction doit refléter la personnalité du dirigeant tout en s'harmonisant avec l'identité de l'entreprise. Chez Kwesk, nous proposons une gamme variée de styles pour répondre à toutes les préférences esthétiques, du contemporain minimaliste au classique prestigieux.</p>
-          
-          <div class="styles-list">
-            <div class="style-item">
-              <h3>Style Contemporain et Moderne</h3>
-              <p>Les bureaux de direction contemporains séduisent par leurs lignes épurées et leur esthétique minimaliste. Ces modèles privilégient les combinaisons de verre et métal, créant une apparence sophistiquée et actuelle. Les finitions en laque brillante noire ou blanche, associées à des piétements en acier chromé ou inox poli, confèrent une présence moderne et élégante. Ce style convient particulièrement aux entreprises technologiques, cabinets de conseil et organisations innovantes cherchant à projeter une image progressive. La simplicité apparente cache une fonctionnalité réfléchie, avec intégration discrète de la technologie et optimisation de l'espace de travail.</p>
-            </div>
-
-            <div class="style-item">
-              <h3>Style Classique et Traditionnel</h3>
-              <p>Le bureau de direction classique incarne l'autorité et le prestige intemporel. Fabriqués avec des placages de bois naturel comme le noyer, le chêne ou le wengé, ces bureaux exécutifs présentent des finitions chaleureuses et raffinées. Les détails subtils, la qualité des matériaux et la richesse des teintes créent une atmosphère de confiance et de pérennité. Ce style est privilégié par les cabinets d'avocats, institutions bancaires, entreprises établies et organisations valorisant la tradition et la stabilité. Un bureau direction classique bien choisi traverse les modes et conserve sa pertinence esthétique pendant des décennies.</p>
-            </div>
-
-            <div class="style-item">
-              <h3>Luxe Exécutif et Design d'Exception</h3>
-              <p>Pour les espaces de direction les plus prestigieux, notre gamme bureau de direction luxe propose des pièces d'exception. Ces bureaux intègrent des matériaux premium comme les plateaux en verre trempé, les inserts en cuir pour l'écriture, les essences de bois rares et les finitions métalliques haut de gamme. Chaque détail est pensé pour créer une présence commandante et impressionner immédiatement. Ces pièces maîtresses conviennent aux bureaux de CEO, présidents directeurs généraux et espaces exécutifs où l'impact visuel et le prestige sont primordiaux. Elles font une déclaration forte sur le statut et la réussite de l'organisation.</p>
-            </div>
-
-            <div class="style-item">
-              <h3>Minimalisme Professionnel et Efficacité</h3>
-              <p>Le bureau exécutif minimaliste privilégie la fonctionnalité sans sacrifier l'élégance. Ces designs épurés éliminent le superflu pour se concentrer sur l'essentiel : un espace de travail généreux, une organisation optimale et une esthétique apaisante. Les lignes simples, les surfaces claires et la discrétion des rangements créent un environnement propice à la concentration. Ce style séduit les dirigeants modernes qui valorisent l'efficacité, la clarté mentale et une approche contemporaine du leadership.</p>
-            </div>
-          </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Premium</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Finitions</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">5 ans</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Garantie</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Sur-Mesure</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Personnalisation</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Dimensions et Configurations -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">DIMENSIONS</span>
-          <h2 class="content-title">Dimensions et Configurations : Trouver la Taille Idéale</h2>
+  <!-- Product Gallery -->
+  <section class="py-20 bg-white" id="collection">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">GALERIE</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Notre Collection Bureau de Direction</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="md:col-span-2 md:row-span-2">
+          <img src="/bureaux/dr1.jpg" alt="Bureau de Direction Premium" class="w-full h-full object-cover" />
         </div>
-        <div class="content-right">
-          <p>Le choix des dimensions de votre bureau de direction dépend de plusieurs facteurs : la superficie de votre bureau privé, vos besoins en espace de travail et l'impression de présence souhaitée. Nous proposons trois gammes de tailles standards, toutes personnalisables selon vos besoins spécifiques.</p>
-          
-          <div class="dimensions-list">
-            <div class="dimension-item">
-              <h3>180 cm - Bureau Direction Compact</h3>
-              <p class="dimension-size">180 x 80 x 75 cm</p>
-              <p>Le bureau de direction de 180 x 80 x 75 cm représente notre option exécutive compacte. Idéal pour les bureaux privés de taille moyenne ou les directeurs de service, ce format offre un espace de travail généreux sans monopoliser la pièce. Malgré ses dimensions plus contenues, ce bureau de directeur maintient une présence professionnelle et offre suffisamment d'espace pour deux écrans, une zone de signature et un espace de réunion informel face au bureau. Cette taille convient particulièrement bien aux bureaux dans les tours de bureaux modernes où l'optimisation de l'espace est essentielle.</p>
-            </div>
-
-            <div class="dimension-item">
-              <h3>200 cm - Bureau Exécutif Standard</h3>
-              <p class="dimension-size">200 x 90 x 75 cm</p>
-              <p>Notre bureau de direction de 200 x 90 x 75 cm constitue le choix le plus populaire et représente l'équilibre optimal entre présence imposante et praticité. Cette dimension standard pour les espaces exécutifs offre un plateau suffisamment généreux pour organiser plusieurs zones de travail : espace informatique avec doubles écrans, zone de signature, espace pour recevoir des visiteurs de l'autre côté du bureau. La profondeur de 90 cm permet d'éloigner confortablement les écrans tout en conservant un espace de circulation approprié derrière le bureau. Ce format convient à la majorité des directeurs généraux, directeurs de département et cadres supérieurs au Maroc.</p>
-            </div>
-
-            <div class="dimension-item">
-              <h3>220 cm - Bureau de Prestige CEO</h3>
-              <p class="dimension-size">220 x 100 x 75 cm</p>
-              <p>Le bureau de direction de 220 x 100 x 75 cm représente notre offre premium pour les bureaux de direction les plus spacieux. Cette dimension imposante crée une présence commandante et fournit un espace de travail exceptionnel. La longueur de 220 cm permet d'accueillir des configurations multi-écrans complètes tout en conservant des zones dégagées pour les documents et objets personnels. La profondeur de 100 cm offre une distance confortable entre le dirigeant et ses interlocuteurs, renforçant la position d'autorité. Ce bureau direction convient aux CEO, présidents et espaces de direction de grande superficie où l'impact visuel et la fonctionnalité maximale sont requis.</p>
-            </div>
-
-            <div class="dimension-item">
-              <h3>Configurations avec Extension</h3>
-              <p>Au-delà du bureau de direction simple, nous proposons plusieurs configurations pour maximiser votre espace de travail. Le bureau avec retour latéral crée une configuration en L particulièrement pratique, offrant une zone secondaire pour l'informatique ou les réunions en petit comité. L'ajout d'une crédence assortie triple votre espace de rangement et de présentation. Pour les bureaux exécutifs les plus complets, nous pouvons créer des ensembles intégrés incluant le bureau de direction principal, des meubles de rangement coordonnés et même une petite table de réunion pour les discussions confidentielles en bureau.</p>
-            </div>
-          </div>
+        <div>
+          <img src="/bureaux/dr2.jpg" alt="Bureau Direction Détail" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <img src="/bureaux/dr3.jpg" alt="Bureau Exécutif Finitions" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Matériaux et Finitions -->
-  <section class="content-section bg-dark">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label light">MATÉRIAUX</span>
-          <h2 class="content-title light">Matériaux et Finitions : La Qualité dans les Détails</h2>
+  <!-- Pourquoi Investir - Image Left -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="relative overflow-hidden">
+      <img src="/bureaux/dr1.jpg" alt="Bureau de Direction Premium" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-stone-50">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">INVESTISSEMENT</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Pourquoi Investir dans un Bureau de Direction Premium</h2>
+      <p class="text-stone-600 leading-relaxed mb-6">Le choix d'un bureau de direction de qualité supérieure représente un investissement stratégique pour toute organisation. L'espace de travail du dirigeant sert de vitrine à l'entreprise lors des réunions avec clients, partenaires et collaborateurs clés.</p>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">L'Impact sur l'Image Professionnelle</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Un bureau de direction élégant et bien conçu établit immédiatement le ton professionnel et inspire confiance. Un bureau de direction luxe renforce votre positionnement et votre autorité.</p>
         </div>
-        <div class="content-right">
-          <p class="light">La différence entre un bureau de direction ordinaire et un meuble exécutif d'exception réside principalement dans la qualité des matériaux et l'excellence des finitions. Chez Kwesk, nous sélectionnons rigoureusement chaque composant pour garantir durabilité, esthétique et prestige.</p>
-          
-          <div class="materials-list">
-            <div class="material-item">
-              <h3 class="light">Plateaux de Travail Premium</h3>
-              <p class="light">Le plateau constitue l'élément le plus visible et utilisé de votre bureau de direction. Nous proposons plusieurs options adaptées à différents besoins et esthétiques. Le mélaminé haute qualité d'épaisseur 25 à 35 mm offre une excellente résistance aux rayures, à l'humidité et à l'usure quotidienne, avec un rapport qualité-prix optimal. Pour une touche plus raffinée, nos placages en bois naturel — chêne, noyer ou wengé — apportent la chaleur et la noblesse du bois véritable avec une durabilité supérieure. Les finitions laquées brillantes ou mates, disponibles en noir, blanc ou couleurs personnalisées, créent une surface parfaitement lisse et élégante. Pour un luxe absolu, les plateaux en verre trempé offrent une transparence sophistiquée et une résistance exceptionnelle. Enfin, l'option des inserts en cuir pour l'écriture transforme la zone centrale du bureau en une surface de signature luxueuse.</p>
-            </div>
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Productivité et Bien-Être</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Notre mobilier bureau direction intègre des solutions de rangement sécurisées, une gestion optimale des câbles et un confort ergonomique adapté aux longues journées de travail.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Durabilité et Valeur</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Nos bureaux exécutifs sont construits pour durer des décennies. Notre garantie structurelle de 5 ans témoigne de notre confiance dans la qualité de fabrication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="material-item">
-              <h3 class="light">Structure et Piétement</h3>
-              <p class="light">La robustesse d'un bureau de direction dépend fondamentalement de sa structure. Tous nos bureaux exécutifs reposent sur une ossature en acier à finition époxy, garantissant une stabilité irréprochable et une longévité exceptionnelle. Cette construction industrielle supporte sans fléchir le poids des équipements informatiques multiples et l'usage quotidien intensif. Les piétements métalliques adoptent diverses formes design selon le style choisi : lignes épurées pour les modèles contemporains, structures plus classiques pour les bureaux traditionnels. Les finitions chrome ou inox poli, disponibles en option premium, ajoutent une touche d'élégance et de modernité tout en offrant une résistance optimale à la corrosion.</p>
-            </div>
+  <!-- Design et Esthétique - Image Right -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white order-2 lg:order-1">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">DESIGN</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Design et Esthétique : Styles pour Chaque Vision</h2>
+      <p class="text-stone-600 leading-relaxed mb-8">Le bureau de direction doit refléter la personnalité du dirigeant tout en s'harmonisant avec l'identité de l'entreprise.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-stone-50 p-6">
+          <h3 class="font-bold text-stone-900 mb-2">Contemporain</h3>
+          <p class="text-sm text-stone-600">Lignes épurées, verre et métal, finitions laquées. Idéal pour les entreprises innovantes.</p>
+        </div>
+        <div class="bg-stone-50 p-6">
+          <h3 class="font-bold text-stone-900 mb-2">Classique</h3>
+          <p class="text-sm text-stone-600">Placages bois naturel, noyer ou chêne. Pour cabinets et institutions.</p>
+        </div>
+        <div class="bg-stone-50 p-6">
+          <h3 class="font-bold text-stone-900 mb-2">Luxe Exécutif</h3>
+          <p class="text-sm text-stone-600">Verre trempé, inserts cuir, bois rares. Pour bureaux de CEO.</p>
+        </div>
+        <div class="bg-stone-50 p-6">
+          <h3 class="font-bold text-stone-900 mb-2">Minimaliste</h3>
+          <p class="text-sm text-stone-600">Fonctionnalité sans superflu. Pour dirigeants modernes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative overflow-hidden order-1 lg:order-2">
+      <img src="/bureaux/dr2.jpg" alt="Styles Bureau Direction" class="w-full h-full object-cover" />
+    </div>
+  </section>
 
-            <div class="material-item">
-              <h3 class="light">Rangements et Caissons</h3>
-              <p class="light">Un bureau de direction fonctionnel intègre des solutions de rangement adaptées aux besoins des dirigeants. Les caissons mobiles à trois tiroirs se glissent sous le plateau et suivent vos déplacements, offrant un accès immédiat aux documents fréquemment consultés. Le tiroir supérieur avec serrure sécurise les documents confidentiels. Les caissons fixes latéraux, intégrés à la structure du bureau, fournissent une capacité de rangement supérieure pour les dossiers suspendus. Les crédences basses, positionnées contre le mur derrière le bureau, multiplient l'espace de rangement tout en créant une surface supplémentaire pour exposer des objets ou poser des équipements. Pour les besoins de rangement plus importants, nous proposons des bibliothèques et armoires de rangement assorties qui complètent harmonieusement votre mobilier bureau direction.</p>
-            </div>
+  <!-- Dimensions - Full Width Cards -->
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">DIMENSIONS</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Trouver la Taille Idéale</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">Nous proposons trois gammes de tailles standards, toutes personnalisables selon vos besoins spécifiques.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-stone-800 p-8 hover:bg-stone-700 transition-all group">
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Compact</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-1">180 cm</h3>
+          <p class="text-stone-500 text-sm mb-4">180 x 80 x 75 cm</p>
+          <p class="text-stone-400 text-sm leading-relaxed mb-6">Idéal pour les bureaux privés de taille moyenne ou les directeurs de service. Espace suffisant pour deux écrans et zone de réunion informelle.</p>
+          <ul class="space-y-2">
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">✓</span> Bureaux 15-20 m²</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">✓</span> Directeurs de service</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">✓</span> Tours de bureaux modernes</li>
+          </ul>
+        </div>
 
-            <div class="material-item">
-              <h3 class="light">Intégration Technologique Sophistiquée</h3>
-              <p class="light">Le bureau de direction moderne doit intégrer discrètement la technologie omniprésente. Nos modèles incluent des passe-câbles intégrés qui acheminent élégamment les fils d'alimentation et de données, maintenant la surface de travail parfaitement dégagée. Les prises électriques encastrées dans le plateau ou les caissons latéraux offrent un accès facile à l'alimentation sans câbles apparents. Les ports USB intégrés permettent de recharger smartphones et tablettes directement depuis le bureau. Pour les configurations avancées, nous pouvons intégrer des systèmes d'éclairage LED, des supports de moniteurs articulés et même des solutions de conférence vidéo escamotables. Cette intégration réfléchie de la technologie préserve l'esthétique épurée du bureau exécutif tout en fournissant toute la connectivité nécessaire.</p>
-            </div>
-          </div>
+        <div class="bg-[#8b8b4b] p-8 relative">
+          <span class="absolute top-4 right-4 bg-white text-stone-900 text-xs font-bold px-3 py-1 uppercase">Populaire</span>
+          <span class="text-white/70 text-sm font-semibold uppercase tracking-wider">Standard</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-1">200 cm</h3>
+          <p class="text-white/60 text-sm mb-4">200 x 90 x 75 cm</p>
+          <p class="text-white/80 text-sm leading-relaxed mb-6">Le choix le plus populaire. Équilibre optimal entre présence imposante et praticité. Profondeur de 90 cm pour doubles écrans.</p>
+          <ul class="space-y-2">
+            <li class="text-white/80 text-sm flex items-center gap-2"><span class="text-white">✓</span> Bureaux 20-30 m²</li>
+            <li class="text-white/80 text-sm flex items-center gap-2"><span class="text-white">✓</span> Directeurs généraux</li>
+            <li class="text-white/80 text-sm flex items-center gap-2"><span class="text-white">✓</span> Cadres supérieurs</li>
+          </ul>
+        </div>
+
+        <div class="bg-stone-800 p-8 hover:bg-stone-700 transition-all group">
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Prestige CEO</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-1">220 cm</h3>
+          <p class="text-stone-500 text-sm mb-4">220 x 100 x 75 cm</p>
+          <p class="text-stone-400 text-sm leading-relaxed mb-6">Notre offre premium pour les bureaux les plus spacieux. Dimension imposante créant une présence commandante.</p>
+          <ul class="space-y-2">
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">✓</span> Bureaux 30+ m²</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">✓</span> CEO & Présidents</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">✓</span> Impact visuel maximal</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-stone-800 p-8">
+        <h3 class="text-xl font-bold text-white mb-4">Configurations avec Extension</h3>
+        <p class="text-stone-400 leading-relaxed">Au-delà du bureau de direction simple, nous proposons le bureau avec retour latéral (configuration en L), l'ajout d'une crédence assortie, et des ensembles intégrés incluant une petite <a href="/reunion/tables" class="text-[#8b8b4b] hover:underline">table de réunion</a> pour les discussions confidentielles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Matériaux - Image Left -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
+    <div class="relative overflow-hidden">
+      <img src="/bureaux/dr3.jpg" alt="Matériaux Premium Bureau Direction" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-stone-50">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">MATÉRIAUX</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">La Qualité dans les Détails</h2>
+      <p class="text-stone-600 leading-relaxed mb-8">La différence entre un bureau de direction ordinaire et un meuble exécutif d'exception réside dans la qualité des matériaux et l'excellence des finitions.</p>
+      
+      <div class="space-y-6">
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Plateaux Premium</h3>
+          <p class="text-sm text-stone-600">Mélaminé haute qualité 25-35mm, placages bois naturel (chêne, noyer, wengé), finitions laquées, verre trempé, inserts cuir.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Structure Robuste</h3>
+          <p class="text-sm text-stone-600">Ossature en acier finition époxy. Piétements chrome ou inox poli disponibles en option premium.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Rangements Intégrés</h3>
+          <p class="text-sm text-stone-600">Caissons mobiles 3 tiroirs, caissons fixes latéraux, crédences basses. <a href="/industrie/armoires-rangement" class="text-[#8b8b4b] hover:underline">Armoires de rangement</a> assorties disponibles.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Technologie Intégrée</h3>
+          <p class="text-sm text-stone-600">Passe-câbles, prises encastrées, ports USB, supports moniteurs articulés, solutions vidéo escamotables.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Personnalisation -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">SUR-MESURE</span>
-          <h2 class="content-title">Personnalisation et Options Sur-Mesure</h2>
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div class="lg:sticky lg:top-32 lg:self-start">
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">SUR-MESURE</span>
+          <h2 class="text-3xl font-bold text-stone-900 mb-6">Personnalisation et Options Sur-Mesure</h2>
+          <p class="text-stone-600 leading-relaxed">Chaque dirigeant et chaque espace de direction possède des besoins uniques. Notre service transforme votre bureau en une pièce parfaitement adaptée.</p>
         </div>
-        <div class="content-right">
-          <p>Chez Kwesk, nous comprenons que chaque dirigeant et chaque espace de direction possède des besoins uniques. Notre service de personnalisation transforme votre bureau de direction en une pièce parfaitement adaptée à vos exigences spécifiques.</p>
-          
-          <div class="custom-list">
-            <div class="custom-item">
-              <h3>Dimensions Personnalisées</h3>
-              <p>Si les dimensions standard ne correspondent pas exactement à votre espace ou à vos préférences, nous fabriquons des bureaux de direction aux dimensions sur-mesure. Besoin d'un bureau de 195 cm pour s'adapter parfaitement entre deux fenêtres ? D'une profondeur de 85 cm pour optimiser la circulation ? Nos ateliers peuvent réaliser n'importe quelle configuration dans les limites structurelles raisonnables. Cette flexibilité garantit une intégration parfaite dans votre bureau privé et une optimisation maximale de l'espace disponible.</p>
-            </div>
-
-            <div class="custom-item">
-              <h3>Finitions et Couleurs Personnalisées</h3>
-              <p>Au-delà des finitions standard, notre vente bureau direction inclut la possibilité de personnaliser entièrement les couleurs et textures. Vous pouvez sélectionner des teintes de laque spécifiques pour correspondre exactement à votre charte graphique d'entreprise. Les placages de bois peuvent être teintés selon vos préférences, du chêne naturel clair au wengé profond. Les éléments métalliques peuvent recevoir différentes finitions : noir mat, blanc, gris métallisé ou couleurs RAL personnalisées. Cette personnalisation assure une cohérence esthétique parfaite avec le reste de votre aménagement de bureau.</p>
-            </div>
-
-            <div class="custom-item">
-              <h3>Configuration Fonctionnelle Adaptée</h3>
-              <p>Chaque dirigeant travaille différemment. Certains privilégient l'espace de signature et les réunions en face-à-face, d'autres nécessitent plusieurs écrans et une configuration informatique avancée. Nous adaptons la configuration de votre bureau de direction à votre méthode de travail : positionnement personnalisé des passe-câbles, ajout de prises électriques supplémentaires, intégration de tiroirs spécifiques pour imprimantes ou équipements particuliers, création de compartiments sur-mesure pour vos besoins de rangement spécifiques. Cette approche consultative garantit que votre bureau exécutif soutient parfaitement votre productivité quotidienne.</p>
-            </div>
-
-            <div class="custom-item">
-              <h3>Projets Bespoke Exceptionnels</h3>
-              <p>Pour les projets de direction les plus prestigieux, notre équipe peut développer des bureaux de direction entièrement bespoke, conçus de A à Z selon votre cahier des charges. Ces créations uniques peuvent incorporer des matériaux exceptionnels, des fonctionnalités innovantes et un design exclusif. Du concept initial à l'installation finale, nos experts vous accompagnent dans la création d'une pièce maîtresse véritablement distinctive qui reflète votre vision et votre statut.</p>
-            </div>
+        
+        <div class="lg:col-span-2 space-y-8">
+          <div class="border-b border-stone-200 pb-8">
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Dimensions Personnalisées</h3>
+            <p class="text-stone-600 leading-relaxed">Besoin d'un bureau de 195 cm pour s'adapter parfaitement entre deux fenêtres ? D'une profondeur de 85 cm ? Nos ateliers peuvent réaliser n'importe quelle configuration dans les limites structurelles raisonnables.</p>
+          </div>
+          <div class="border-b border-stone-200 pb-8">
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Finitions et Couleurs</h3>
+            <p class="text-stone-600 leading-relaxed">Teintes de laque spécifiques pour votre charte graphique, placages teintés selon vos préférences, éléments métalliques en couleurs RAL personnalisées. Cohérence parfaite avec votre <a href="/amenagement-de-bureau" class="text-[#8b8b4b] hover:underline">aménagement de bureau</a>.</p>
+          </div>
+          <div class="border-b border-stone-200 pb-8">
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Configuration Fonctionnelle</h3>
+            <p class="text-stone-600 leading-relaxed">Positionnement personnalisé des passe-câbles, ajout de prises électriques supplémentaires, intégration de tiroirs spécifiques, création de compartiments sur-mesure pour vos besoins.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Projets Bespoke</h3>
+            <p class="text-stone-600 leading-relaxed">Pour les projets les plus prestigieux, notre équipe développe des bureaux entièrement bespoke, conçus de A à Z selon votre cahier des charges avec matériaux exceptionnels et design exclusif.</p>
           </div>
         </div>
       </div>
@@ -218,77 +252,94 @@ const bureau = {
   </section>
 
   <!-- L'Espace Exécutif Complet -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">AMÉNAGEMENT</span>
-          <h2 class="content-title">L'Espace Exécutif Complet : Au-Delà du Bureau</h2>
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">AMÉNAGEMENT</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">L'Espace Exécutif Complet</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">Un bureau de direction exceptionnel ne suffit pas. L'aménagement cohérent de l'ensemble contribue à créer un environnement professionnel optimal.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/chaises" class="group bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Fauteuil de Direction</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Le complément indispensable. Nos modèles Exclusive 500 ou Gamma 150 combinent confort exceptionnel et esthétique prestigieuse.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les chaises →</span>
+        </a>
+
+        <a href="/reunion/tables" class="group bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Zone de Réunion</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Une table de réunion ronde ou ovale pour 4 à 6 personnes transforme votre bureau en espace polyvalent.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les tables →</span>
+        </a>
+
+        <a href="/reunion/rangement" class="group bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Rangements Exécutifs</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Bibliothèques murales, crédences basses, armoires à portes pour maintenir documents et équipements organisés.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les rangements →</span>
+        </a>
+
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Sièges Visiteurs</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Deux fauteuils visiteurs confortables face à votre bureau accueillent les invités avec professionnalisme.</p>
         </div>
-        <div class="content-right">
-          <p>Un bureau de direction exceptionnel ne suffit pas à créer un espace exécutif complet. L'aménagement cohérent de l'ensemble du bureau privé contribue à créer un environnement professionnel optimal et impressionnant.</p>
-          
-          <div class="space-list">
-            <div class="space-item">
-              <h3>Le Fauteuil de Direction : Partenaire Essentiel</h3>
-              <p>Le complément indispensable de votre bureau de direction est un fauteuil de direction de qualité équivalente. Après tout, vous passerez probablement plus de temps dans votre fauteuil qu'à toute autre pièce de mobilier. Un fauteuil exécutif premium doit offrir un soutien ergonomique irréprochable pour les longues journées de travail, tout en projetant l'autorité et le statut appropriés. Nos modèles comme l'Exclusive 500 ou le Gamma 150 combinent confort exceptionnel, ajustabilité complète et esthétique prestigieuse. L'harmonie entre votre bureau de directeur et votre fauteuil crée une cohérence visuelle qui renforce l'impression professionnelle de votre espace.</p>
-            </div>
 
-            <div class="space-item">
-              <h3>Zone de Réunion Intégrée</h3>
-              <p>De nombreux dirigeants accueillent régulièrement des réunions confidentielles ou des discussions en petit comité directement dans leur bureau. L'intégration d'une petite zone de réunion transforme votre bureau privé en espace polyvalent. Une table de réunion ronde ou ovale pour 4 à 6 personnes, positionnée dans un coin du bureau, offre un cadre moins formel que votre bureau de direction principal. Cette configuration facilite les discussions collaboratives tout en maintenant la séparation entre votre espace de travail personnel et la zone de réception. Découvrez nos options de tables de réunion adaptées aux bureaux privés.</p>
-            </div>
-
-            <div class="space-item">
-              <h3>Solutions de Rangement Exécutif</h3>
-              <p>L'organisation visuelle contribue significativement à l'impression professionnelle de votre bureau. Des rangements exécutifs bien conçus — bibliothèques murales, crédences basses, armoires à portes — maintiennent les documents et équipements organisés hors de vue. Ces meubles de rangement assortis à votre bureau de direction créent une cohérence esthétique tout en maximisant la fonctionnalité. Les vitrines permettent d'exposer récompenses, publications ou objets significatifs qui renforcent votre crédibilité. Un bureau exécutif bien organisé communique compétence et contrôle.</p>
-            </div>
-
-            <div class="space-item">
-              <h3>Sièges Visiteurs et Mobilier Complémentaire</h3>
-              <p>Deux fauteuils visiteurs confortables positionnés face à votre bureau de direction accueillent les invités avec professionnalisme. Le style et la qualité de ces sièges doivent s'harmoniser avec votre bureau pour créer un ensemble cohérent. Des tables d'appoint peuvent accueillir rafraîchissements ou documents. Un meuble bar discret dans les bureaux de direction plus spacieux facilite l'hospitalité professionnelle. Chaque élément contribue à l'atmosphère générale de prestige et de professionnalisme.</p>
-            </div>
-
-            <div class="space-item">
-              <h3>Planification d'Espace et Aménagement</h3>
-              <p>L'agencement optimal de votre bureau de direction dans la pièce influence fortement l'impression créée et votre confort au quotidien. Positionnez le bureau pour bénéficier de la lumière naturelle sans éblouissement sur les écrans. L'orientation face à la porte projette autorité et contrôle, permettant de voir qui entre. Assurez un espace de circulation suffisant derrière le bureau (minimum 120 cm) et devant (minimum 150 cm) pour le confort et l'accessibilité. Notre service d'aménagement de bureau peut vous accompagner dans la planification optimale de votre espace exécutif, tenant compte de l'acoustique, de l'éclairage, de la circulation et de l'impression visuelle.</p>
-            </div>
-          </div>
-        </div>
+        <a href="/amenagement-de-bureau" class="group bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1 md:col-span-2 lg:col-span-2">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Planification d'Espace</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Positionnement optimal face à la porte, lumière naturelle sans éblouissement, circulation suffisante (120 cm derrière, 150 cm devant). Notre service d'aménagement vous accompagne.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Découvrir nos services →</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Kwesk Expertise -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">KWESK</span>
-          <h2 class="content-title">Kwesk : Expertise et Excellence depuis 2008</h2>
-        </div>
-        <div class="content-right">
-          <p>Le choix de votre fournisseur de mobilier bureau direction est aussi important que le choix du mobilier lui-même. Kwesk s'est établi comme référence au Maroc pour le mobilier professionnel de qualité supérieure, combinant expertise internationale et compréhension approfondie du marché local.</p>
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">KWESK</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Expertise et Excellence depuis 2008</h2>
+          <p class="text-stone-400 leading-relaxed mb-8">Kwesk s'est établi comme référence au Maroc pour le mobilier professionnel de qualité supérieure, combinant expertise internationale et compréhension approfondie du marché local.</p>
           
-          <div class="expertise-list">
-            <div class="expertise-item">
-              <h3>Savoir-Faire et Qualité Certifiée</h3>
-              <p>Depuis 2008, nous fournissons aux entreprises marocaines des solutions de mobilier professionnel qui allient design, fonctionnalité et durabilité. Notre engagement envers la qualité se reflète dans nos certifications internationales BIFMA 2011 et EN 1335 2016, garantissant que nos bureaux de direction respectent les normes les plus exigeantes en matière de sécurité, durabilité et performance. Chaque meuble subit des tests rigoureux avant livraison, et notre garantie structurelle de 5 ans témoigne de notre confiance absolue dans la qualité de fabrication.</p>
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <div class="text-3xl font-bold text-[#8b8b4b] mb-2">BIFMA</div>
+              <p class="text-stone-500 text-sm">Certification internationale 2011</p>
             </div>
-
-            <div class="expertise-item">
-              <h3>Showroom Premium à Casablanca</h3>
-              <p>Contrairement à l'achat en ligne où vous devez imaginer le résultat final, notre showroom à Anfa Place vous permet d'expérimenter physiquement nos bureaux de direction avant toute décision. Touchez les matériaux, évaluez les finitions, testez les mécanismes et visualisez les différentes options. Notre équipe d'experts vous accueille sur rendez-vous pour des consultations personnalisées sans pression commerciale. Cette approche consultative garantit que vous sélectionnez le bureau exécutif parfaitement adapté à vos besoins, votre esthétique et votre budget.</p>
+            <div>
+              <div class="text-3xl font-bold text-[#8b8b4b] mb-2">EN 1335</div>
+              <p class="text-stone-500 text-sm">Norme européenne 2016</p>
             </div>
-
-            <div class="expertise-item">
-              <h3>Service Complet et Accompagnement</h3>
-              <p>Notre relation avec vous ne se termine pas à la vente. Nous gérons l'ensemble du processus, de la consultation initiale à l'installation finale. Notre service inclut la planification d'espace professionnelle, les mesures sur site, la coordination avec vos architectes ou designers si nécessaire, la fabrication selon vos spécifications, la livraison soignée et l'installation professionnelle. Pour les bureaux de direction sur-mesure, nous assurons des points de validation réguliers pour garantir votre satisfaction totale. Notre service après-vente réactif intervient rapidement en cas de besoin pendant toute la durée de garantie.</p>
+          </div>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="bg-stone-800 p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold text-[#8b8b4b]">01</span>
+              <div>
+                <h3 class="text-lg font-bold text-white mb-2">Showroom Premium à Casablanca</h3>
+                <p class="text-stone-400 text-sm">Expérimentez physiquement nos bureaux à Anfa Place. Touchez les matériaux, testez les mécanismes.</p>
+              </div>
             </div>
-
-            <div class="expertise-item">
-              <h3>Compréhension du Marché Marocain</h3>
-              <p>Opérant au Maroc depuis près de deux décennies, nous comprenons les besoins spécifiques des entreprises locales. Nous connaissons les attentes en matière de prestige professionnel, les contraintes budgétaires et temporelles, les défis logistiques et les préférences esthétiques du marché marocain. Cette expertise locale, combinée à notre accès aux tendances et innovations internationales, nous positionne idéalement pour fournir des bureaux de direction qui répondent parfaitement aux attentes des dirigeants au Maroc. De Casablanca à Rabat, Marrakech et au-delà, nous équipons les bureaux exécutifs des entreprises les plus prestigieuses du royaume.</p>
+          </div>
+          <div class="bg-stone-800 p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold text-[#8b8b4b]">02</span>
+              <div>
+                <h3 class="text-lg font-bold text-white mb-2">Service Complet</h3>
+                <p class="text-stone-400 text-sm">De la consultation à l'installation finale. Planification d'espace, mesures sur site, coordination avec architectes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-stone-800 p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold text-[#8b8b4b]">03</span>
+              <div>
+                <h3 class="text-lg font-bold text-white mb-2">Expertise Locale</h3>
+                <p class="text-stone-400 text-sm">Près de deux décennies au Maroc. De Casablanca à Rabat, Marrakech et au-delà.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -296,131 +347,97 @@ const bureau = {
     </div>
   </section>
 
-  <!-- Investissement -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">VALEUR</span>
-          <h2 class="content-title">Investissement et Rapport Qualité-Prix</h2>
-        </div>
-        <div class="content-right">
-          <p>L'acquisition d'un bureau de direction premium représente un investissement significatif qui mérite une réflexion approfondie sur la valeur à long terme plutôt qu'une simple comparaison de prix.</p>
-          
-          <div class="value-list">
-            <div class="value-item">
-              <h3>Coût Total de Possession</h3>
-              <p>Un bureau de direction de qualité inférieure peut sembler économique à l'achat, mais son coût réel sur 10 ou 15 ans dépasse souvent celui d'un modèle premium. Les finitions bon marché se dégradent rapidement, les surfaces se rayent et se décolorent, les mécanismes se bloquent, la structure se déforme. Le remplacement devient nécessaire après quelques années, multipliant les coûts et les désagréments. Notre mobilier bureau direction est conçu pour durer des décennies. Les matériaux premium résistent à l'usage quotidien, les finitions conservent leur apparence, les structures maintiennent leur stabilité. Cette durabilité exceptionnelle, combinée à un design intemporel qui ne se démode pas, fait du bureau de direction Kwesk un investissement économiquement judicieux sur le long terme.</p>
-            </div>
-
-            <div class="value-item">
-              <h3>Valeur Immatérielle et Impact</h3>
-              <p>Au-delà des considérations purement financières, un bureau de direction de prestige génère une valeur difficile à quantifier mais très réelle. L'impression créée auprès des clients, partenaires et collaborateurs influence les relations d'affaires et peut contribuer à des décisions favorables. Le message de sérieux, de réussite et de pérennité communiqué par un bureau exécutif de qualité renforce la confiance. Pour le dirigeant lui-même, travailler quotidiennement dans un environnement élégant et fonctionnel améliore le moral, la fierté professionnelle et potentiellement la performance. Ces bénéfices intangibles mais significatifs justifient amplement l'investissement dans la qualité.</p>
-            </div>
-
-            <div class="value-item">
-              <h3>Options de Financement et Budget</h3>
-              <p>Nous comprenons que l'équipement d'espaces exécutifs représente un investissement important, particulièrement lors d'aménagements complets ou de rénovations. Notre équipe commerciale peut discuter des options adaptées à votre situation budgétaire et temporelle. Pour les projets d'envergure impliquant plusieurs bureaux de direction ou l'aménagement complet d'étages exécutifs, nous proposons des conditions spéciales. Contactez-nous pour obtenir un devis personnalisé détaillé incluant toutes les spécifications, options et services.</p>
-            </div>
+  <!-- Contact CTA -->
+  <section class="py-20 bg-[#8b8b4b]">
+    <div class="max-w-5xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Demandez Votre Consultation Personnalisée</h2>
+      <p class="text-xl text-white/80 mb-12">Prêt à transformer votre espace exécutif avec un bureau de direction qui reflète votre statut ?</p>
+      
+      <div class="bg-white p-8 lg:p-12 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="font-bold text-stone-900 text-lg mb-4">Visitez Notre Showroom</h3>
+            <p class="text-stone-600 mb-2">Anfa Place, Tour Ouest, Niveau 1</p>
+            <p class="text-stone-600 mb-6">Casablanca, Maroc</p>
+            <p class="text-stone-500 text-sm italic">Sur rendez-vous pour une consultation personnalisée sans engagement</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-stone-900 text-lg mb-4">Contactez-Nous</h3>
+            <p class="text-stone-600 mb-2"><strong>Téléphone :</strong> <a href="tel:+212520241637" class="text-[#8b8b4b] hover:underline">+212 5 20 24 16 37</a></p>
+            <p class="text-stone-600 mb-2"><strong>Mobile :</strong> <a href="tel:+212661481616" class="text-[#8b8b4b] hover:underline">+212 6 61 48 16 16</a></p>
+            <p class="text-stone-600"><strong>Email :</strong> <a href="mailto:contact@kwesk.com" class="text-[#8b8b4b] hover:underline">contact@kwesk.com</a></p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="content-container">
-      <div class="contact-grid">
-        <div class="contact-left">
-          <span class="content-label">CONSULTATION</span>
-          <h2 class="content-title">Demandez Votre Consultation Personnalisée</h2>
-          <p>Prêt à transformer votre espace exécutif avec un bureau de direction qui reflète votre statut et soutient votre performance ? Notre équipe d'experts attend de vous accompagner dans ce projet important.</p>
-        </div>
-        <div class="contact-right">
-          <div class="contact-info-card">
-            <h4>Visitez Notre Showroom</h4>
-            <p class="showroom-address">Anfa Place, Tour Ouest, Niveau 1<br>Casablanca, Maroc</p>
-            <p class="showroom-note">Sur rendez-vous pour une consultation personnalisée sans engagement</p>
-            
-            <h4>Contactez-Nous</h4>
-            <ul>
-              <li><strong>Téléphone :</strong> <a href="tel:+212520241637">+212 5 20 24 16 37</a></li>
-              <li><strong>Mobile :</strong> <a href="tel:+212661481616">+212 6 61 48 16 16</a></li>
-              <li><strong>Email :</strong> <a href="mailto:contact@kwesk.com">contact@kwesk.com</a></li>
-            </ul>
-
-            <h4>Nos Services Incluent</h4>
-            <ul class="services-list">
-              <li>✓ Consultation gratuite avec nos experts en aménagement</li>
-              <li>✓ Planification d'espace professionnelle</li>
-              <li>✓ Options sur-mesure et personnalisation complète</li>
-              <li>✓ Devis détaillé et transparent</li>
-              <li>✓ Livraison et installation professionnelle</li>
-              <li>✓ Garantie 5 ans sur structure</li>
-              <li>✓ Service après-vente réactif</li>
-            </ul>
-
-            <a href="/contact" class="contact-cta">Demander un Devis</a>
+        
+        <div class="mt-8 pt-8 border-t border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-4">Nos Services Incluent</h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-stone-600">
+            <span>✓ Consultation gratuite</span>
+            <span>✓ Planification d'espace</span>
+            <span>✓ Options sur-mesure</span>
+            <span>✓ Devis transparent</span>
+            <span>✓ Livraison & installation</span>
+            <span>✓ Garantie 5 ans</span>
+            <span>✓ SAV réactif</span>
+            <span>✓ Financement possible</span>
           </div>
+        </div>
+        
+        <div class="mt-8 text-center">
+          <a href="/contact" class="inline-block px-10 py-4 bg-stone-900 text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all">Demander un Devis Gratuit</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Autres Produits -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="other-products">
-        <p>Que vous aménagez un nouveau bureau de direction, rénovez un espace existant ou équipez plusieurs étages exécutifs, notre expertise et notre gamme complète de bureaux de direction vous garantissent une solution parfaitement adaptée à vos besoins, votre budget et votre vision.</p>
-        <p>Découvrez également nos <a href="/bureaux/operatif">bureaux opératifs</a> pour les espaces collaboratifs, nos <a href="/bureaux/reglables">bureaux réglables</a> pour les environnements modernes et nos <a href="/bureaux/bench">bureaux bench</a> pour les open spaces. Pour des projets d'aménagement complets, explorez nos <a href="/salles-reunion">salles de réunion</a> et nos solutions média pour créer des environnements professionnels cohérents et fonctionnels.</p>
-      </div>
+  <section class="py-16 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-16 text-center">
+      <p class="text-stone-600 leading-relaxed mb-4">Découvrez également nos <a href="/bureaux/operatif" class="text-[#8b8b4b] hover:underline font-medium">bureaux opératifs</a> pour les espaces collaboratifs, nos <a href="/bureaux/reglables" class="text-[#8b8b4b] hover:underline font-medium">bureaux réglables</a> pour les environnements modernes et nos <a href="/bureaux/bench" class="text-[#8b8b4b] hover:underline font-medium">bureaux bench</a> pour les open spaces.</p>
+      <p class="text-stone-600 leading-relaxed">Pour des projets d'aménagement complets, explorez nos <a href="/salles-reunion" class="text-[#8b8b4b] hover:underline font-medium">salles de réunion</a> et nos <a href="/reunion/media" class="text-[#8b8b4b] hover:underline font-medium">solutions média</a> pour créer des environnements professionnels cohérents.</p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq-section">
-    <div class="content-container">
-      <div class="faq-header">
-        <span class="content-label">FAQ</span>
-        <h2 class="content-title">Questions Fréquentes sur les Bureaux de Direction</h2>
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Questions Fréquentes</h2>
       </div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h4>Quelle taille de bureau de direction devrais-je choisir pour mon espace ?</h4>
-          <p>Le choix de la dimension de votre bureau de direction dépend principalement de la superficie de votre bureau privé et de vos besoins en espace de travail. Pour un bureau de 15-20 m², un modèle de 180 cm convient parfaitement. Les espaces de 20-30 m² accueillent idéalement un bureau de direction de 200 cm, notre taille la plus populaire. Pour les bureaux exécutifs de plus de 30 m², le modèle de 220 cm crée une présence imposante. Visitez notre showroom à Casablanca pour visualiser chaque dimension et recevoir des conseils personnalisés en fonction de votre espace spécifique.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quelle taille choisir pour mon espace ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">15-20 m² : 180 cm. 20-30 m² : 200 cm (le plus populaire). 30+ m² : 220 cm. Visitez notre showroom pour visualiser chaque dimension.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quels matériaux sont disponibles pour les bureaux de direction ?</h4>
-          <p>Notre gamme de mobilier bureau direction propose plusieurs options de matériaux adaptées à différents budgets et esthétiques. Les plateaux sont disponibles en mélaminé haute qualité (excellent rapport qualité-prix), placage bois naturel comme le chêne ou le noyer (chaleur et prestige), finitions laquées brillantes ou mates dans diverses couleurs, verre trempé (luxe et modernité), ou avec inserts cuir pour une touche exceptionnelle. Toutes les structures utilisent de l'acier robuste avec finitions époxy, chrome ou inox selon le modèle. Nos experts peuvent vous guider vers les matériaux optimaux selon votre usage, votre budget et l'image souhaitée.</p>
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quels matériaux disponibles ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Mélaminé haute qualité, placage bois (chêne, noyer), finitions laquées, verre trempé, inserts cuir. Structures en acier époxy, chrome ou inox.</p>
         </div>
-        <div class="faq-item">
-          <h4>Puis-je personnaliser mon bureau de direction selon mes besoins spécifiques ?</h4>
-          <p>Absolument. Chez Kwesk, nous comprenons que chaque bureau de direction doit répondre à des exigences uniques. Nous proposons des personnalisations complètes : dimensions sur-mesure pour s'adapter parfaitement à votre espace, finitions et couleurs personnalisées selon votre charte graphique, configuration des rangements adaptée à vos besoins, positionnement spécifique des passe-câbles et prises électriques, et intégration de fonctionnalités particulières. Pour les projets les plus ambitieux, nous créons des bureaux de direction entièrement bespoke conçus exclusivement pour vous. Contactez-nous pour discuter de votre projet de bureau de direction luxe personnalisé.</p>
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Puis-je personnaliser mon bureau ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Absolument. Dimensions sur-mesure, finitions personnalisées, configurations adaptées. Nous créons même des bureaux entièrement bespoke.</p>
         </div>
-        <div class="faq-item">
-          <h4>Qu'est-ce qui est inclus dans le prix d'un bureau de direction ?</h4>
-          <p>Le prix de votre bureau de direction inclut la fabrication selon les spécifications choisies, la livraison professionnelle à votre adresse au Maroc, et l'installation complète par notre équipe technique. Nous assurons également le retrait et l'évacuation de votre ancien mobilier si nécessaire. La garantie structurelle de 5 ans et la garantie de 2 ans sur les mécanismes sont incluses. Pour les configurations personnalisées ou les options premium comme les plateaux en verre trempé ou les inserts cuir, des suppléments s'appliquent. Notre devis détaillé précise clairement tous les éléments et coûts pour une transparence totale.</p>
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Qu'est-ce qui est inclus dans le prix ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Fabrication, livraison professionnelle au Maroc, installation complète, retrait ancien mobilier, garantie 5 ans structure + 2 ans mécanismes.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quel est le délai de livraison pour un bureau de direction ?</h4>
-          <p>Les délais varient selon la configuration choisie. Pour nos modèles standards en stock, la livraison peut être effectuée sous 5 à 10 jours ouvrables à Casablanca et environs. Les bureaux de direction avec finitions personnalisées ou dimensions sur-mesure nécessitent généralement 4 à 6 semaines de fabrication avant livraison. Pour les projets bespoke complexes, comptez 8 à 12 semaines selon la complexité. Nous vous fournissons un calendrier précis lors de la confirmation de commande et vous tenons informé régulièrement de l'avancement de la fabrication de votre bureau exécutif.</p>
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quel est le délai de livraison ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Stock : 5-10 jours. Personnalisé : 4-6 semaines. Bespoke complexe : 8-12 semaines. Calendrier précis à la confirmation.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quelle garantie est fournie sur les bureaux de direction ?</h4>
-          <p>Tous nos bureaux de direction bénéficient d'une garantie structurelle de 5 ans couvrant le plateau, le piétement et la structure principale contre tout défaut de fabrication ou vice matériel. Les mécanismes, tiroirs, serrures et accessoires sont garantis 2 ans. Cette garantie étendue témoigne de notre confiance absolue dans la qualité de notre mobilier bureau direction. En cas de problème pendant la période de garantie, notre service après-vente intervient rapidement pour réparer ou remplacer les éléments défectueux. Cette tranquillité d'esprit fait partie intégrante de votre investissement dans la qualité Kwesk.</p>
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Proposez-vous la planification d'espace ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Oui, notre service d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] hover:underline">aménagement de bureau</a> inclut mesures sur site, évaluation éclairage, propositions d'agencement. Consultation initiale gratuite.</p>
         </div>
-        <div class="faq-item">
-          <h4>Proposez-vous des services de planification d'espace pour bureaux exécutifs ?</h4>
-          <p>Oui, notre service d'aménagement de bureau inclut la planification professionnelle d'espaces exécutifs. Nos experts se déplacent sur site pour mesurer votre bureau, évaluer l'éclairage naturel, analyser la circulation et comprendre vos besoins spécifiques. Nous créons ensuite des propositions d'agencement optimisant le positionnement de votre bureau de direction, la zone de réunion, les rangements et le mobilier complémentaire. Ce service garantit que votre investissement dans un bureau exécutif premium se traduit par un espace à la fois impressionnant visuellement et parfaitement fonctionnel au quotidien. La consultation initiale est gratuite et sans engagement.</p>
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Puis-je voir les bureaux avant de commander ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Vivement encouragé. Notre showroom à Anfa Place présente plusieurs modèles. Prenez rendez-vous pour une visite sans pression commerciale.</p>
         </div>
-        <div class="faq-item">
-          <h4>Puis-je voir les bureaux de direction avant de commander ?</h4>
-          <p>Absolument, et nous vous y encourageons vivement. Notre showroom à Anfa Place à Casablanca présente plusieurs modèles de bureaux de direction dans différents styles, finitions et dimensions. Vous pouvez toucher les matériaux, apprécier la qualité de fabrication, tester les mécanismes et visualiser les différentes options. Cette expérience physique est incomparable pour une décision éclairée sur un investissement aussi important. Prenez rendez-vous avec nos experts pour une visite sans pression commerciale où nous pourrons discuter de vos besoins spécifiques et vous présenter les options les mieux adaptées à votre projet de bureau de direction.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Quelle est la différence entre un bureau de direction et un bureau opératif ?</h4>
-          <p>Le bureau de direction se distingue du bureau opératif par plusieurs aspects fondamentaux. Les bureaux de direction offrent des dimensions plus généreuses (180-220 cm contre 120-160 cm pour les opératifs), des matériaux premium et des finitions plus raffinées, une construction plus robuste et prestigieuse, des fonctionnalités exécutives comme rangements sécurisés et intégration technologique avancée, et surtout une esthétique conçue pour impressionner et projeter autorité. Les bureaux opératifs privilégient la fonctionnalité et l'optimisation de l'espace pour les environnements collaboratifs, tandis que les bureaux de direction équilibrent fonctionnalité et représentation du statut pour les espaces privés exécutifs.</p>
+        <div class="bg-stone-50 p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Différence avec un bureau opératif ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Le bureau de direction offre dimensions généreuses (180-220 cm vs 120-160 cm), matériaux premium, finitions raffinées, fonctionnalités exécutives et esthétique conçue pour projeter autorité. <a href="/bureaux/operatif" class="text-[#8b8b4b] hover:underline">Voir bureaux opératifs</a>.</p>
         </div>
       </div>
     </div>
@@ -428,145 +445,3 @@ const bureau = {
 
   <AmCTA />
 </Layout>
-
-<style>
-  /* Content Sections */
-  .content-section { padding: 80px 0; }
-  .content-section.bg-stone { background: #fafaf9; }
-  .content-section.bg-dark { background: #1c1917; }
-  .content-container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
-  
-  .content-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
-  .content-left { position: sticky; top: 120px; }
-  
-  .content-label { 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    letter-spacing: 3px; 
-    color: #8b8b4b; 
-    display: block; 
-    margin-bottom: 16px; 
-  }
-  .content-label.light { color: #8b8b4b; }
-  
-  .content-title { 
-    font-size: 28px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    line-height: 1.3; 
-  }
-  .content-title.light { color: white; }
-  
-  .content-right p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
-    margin-bottom: 20px;
-  }
-  .content-right p.light { color: #a8a29e; }
-  .content-right p:last-child { margin-bottom: 0; }
-
-  /* Sub Sections */
-  .sub-section { margin-top: 32px; padding-top: 32px; border-top: 1px solid #e7e5e4; }
-  .sub-section h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-
-  /* Generic Lists */
-  .styles-list, .dimensions-list, .materials-list, .custom-list, .space-list, .expertise-list, .value-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 32px; 
-    margin-top: 32px;
-  }
-  .style-item, .dimension-item, .material-item, .custom-item, .space-item, .expertise-item, .value-item { 
-    padding-bottom: 32px; 
-    border-bottom: 1px solid #e7e5e4; 
-  }
-  .style-item:last-child, .dimension-item:last-child, .material-item:last-child, .custom-item:last-child, .space-item:last-child, .expertise-item:last-child, .value-item:last-child { 
-    border-bottom: none; 
-    padding-bottom: 0; 
-  }
-  .style-item h3, .dimension-item h3, .custom-item h3, .space-item h3, .expertise-item h3, .value-item h3 { 
-    font-size: 18px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    margin-bottom: 12px; 
-  }
-  .material-item h3 { font-size: 18px; font-weight: 700; color: white; margin-bottom: 12px; }
-  .material-item h3.light { color: white; }
-  .style-item p, .dimension-item p, .custom-item p, .space-item p, .expertise-item p, .value-item p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
-    margin: 0; 
-  }
-  .material-item p { font-size: 15px; line-height: 1.8; color: #a8a29e; margin: 0; }
-  .material-item p.light { color: #a8a29e; }
-  .material-item { border-bottom-color: #292524; }
-
-  .dimension-size { 
-    font-size: 14px !important; 
-    color: #8b8b4b !important; 
-    font-weight: 600; 
-    margin-bottom: 12px !important; 
-  }
-
-  /* Contact Section */
-  .contact-section { padding: 80px 0; background: white; }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-  .contact-left p { font-size: 15px; line-height: 1.8; color: #57534e; margin-top: 20px; }
-  .contact-info-card { background: #fafaf9; padding: 40px; border: 1px solid #e7e5e4; }
-  .contact-info-card h4 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 16px; margin-top: 24px; }
-  .contact-info-card h4:first-child { margin-top: 0; }
-  .contact-info-card ul { list-style: none; padding: 0; margin: 0; }
-  .contact-info-card li { font-size: 14px; color: #57534e; padding: 8px 0; border-bottom: 1px solid #e7e5e4; }
-  .contact-info-card li:last-child { border-bottom: none; }
-  .contact-info-card a { color: #8b8b4b; text-decoration: none; }
-  .contact-info-card a:hover { text-decoration: underline; }
-  .showroom-address { font-size: 15px; color: #1c1917; font-weight: 500; margin-bottom: 8px; }
-  .showroom-note { font-size: 13px; color: #78716c; font-style: italic; }
-  .services-list li { border-bottom: none !important; padding: 4px 0 !important; color: #57534e; }
-  .contact-cta { 
-    display: inline-block; 
-    padding: 14px 32px; 
-    background: #8b8b4b; 
-    color: white; 
-    text-decoration: none; 
-    font-size: 13px; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    transition: background 0.3s; 
-    margin-top: 24px;
-  }
-  .contact-cta:hover { background: #1c1917; }
-
-  /* Other Products */
-  .other-products { max-width: 800px; margin: 0 auto; text-align: center; }
-  .other-products p { font-size: 15px; line-height: 1.8; color: #57534e; margin-bottom: 16px; }
-  .other-products a { color: #8b8b4b; }
-
-  /* FAQ Section */
-  .faq-section { padding: 80px 0; background: white; }
-  .faq-header { text-align: center; margin-bottom: 60px; }
-  .faq-header .content-title { max-width: 600px; margin: 0 auto; }
-  .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .faq-item { background: #fafaf9; padding: 32px; border: 1px solid #e7e5e4; }
-  .faq-item h4 { font-size: 16px; font-weight: 700; color: #1c1917; margin-bottom: 12px; line-height: 1.4; }
-  .faq-item p { font-size: 14px; line-height: 1.7; color: #57534e; margin: 0; }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .faq-grid { grid-template-columns: 1fr; }
-  }
-  
-  @media (max-width: 900px) {
-    .content-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-    .content-left { position: static; }
-  }
-  
-  @media (max-width: 768px) { 
-    .content-container { padding: 0 20px; }
-    .content-section, .contact-section, .faq-section { padding: 60px 0; }
-    .content-title { font-size: 24px; }
-  }
-</style>
