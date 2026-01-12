@@ -1,379 +1,422 @@
 ---
 // pages/bureaux/bureau-bench.astro
 import Layout from '../../layouts/Layout.astro';
-import ProductSimple from '../../components/ProductSimple.astro';
 import AmCTA from '../../components/AmCTA.astro';
-
-const bureau = {
-  heroBg: "/bureaux/bn-hero.jpg",
-  name: "Bureau Bench : Solution Modulaire pour Espaces Collaboratifs au Maroc",
-  category: "Bureaux",
-  categoryHref: "/bureaux",
-  description: "Le Bureau Bench représente la solution idéale pour les entreprises marocaines qui cherchent à optimiser leur espace de travail tout en favorisant la collaboration. Faisant partie de notre collection de bureaux professionnels, l'Ensemble bureau bench permet d'équiper plusieurs postes de travail avec une structure partagée, offrant ainsi un excellent rapport qualité-prix. Que vous dirigiez une startup en pleine croissance, un call center, ou que vous aménagez un espace de coworking à Casablanca, le Bureau Bench combine économie d'espace, efficacité budgétaire et design moderne pour créer un environnement de travail optimal.",
-  images: [
-    "/bureaux/bn1.jpg",
-    "/bureaux/bn2.jpg",
-    "/bureaux/bn3.jpg"
-  ],
-  features: [
-    "Configuration 2, 4 ou 6 postes",
-    "Plateau en mélaminé épaisseur 25mm",
-    "Structure métallique partagée",
-    "Gestion des câbles centralisée",
-    "Dimensions par poste: 120x60x75 cm",
-    "Garantie 5 ans"
-  ],
-  options: [
-    "Écrans de séparation acoustiques",
-    "Caissons mobiles",
-    "Prises électriques intégrées",
-    "Éclairage LED individuel"
-  ]
-};
 ---
 
 <Layout 
   title="Bureau Bench Maroc | Postes Collaboratifs | Kwesk" 
   description="Bureau Bench modulable 2 à 6 postes pour open space. Solution économique et collaborative avec gestion de câbles. Devis gratuit - Kwesk Casablanca."
 >
-  <ProductSimple {...bureau} />
-
-  <!-- Qu'est-ce qu'un Bureau Bench -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">DÉFINITION</span>
-          <h2 class="content-title">Qu'est-ce qu'un Bureau Bench ?</h2>
+  <!-- Hero Section -->
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/bureaux/bn-hero.jpg" alt="Bureau Bench Maroc" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-2xl">
+        <a href="/bureaux" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+          ← Retour aux Bureaux
+        </a>
+        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">COLLABORATION & EFFICACITÉ</span>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Bureau Bench : Solution Modulaire pour Espaces Collaboratifs au Maroc</h1>
+        <p class="text-lg text-stone-300 leading-relaxed mb-8">Le Bureau Bench représente la solution idéale pour les entreprises marocaines. Faisant partie de notre <a href="/bureaux" class="text-[#8b8b4b] hover:underline">collection de bureaux professionnels</a>, il combine économie d'espace, efficacité budgétaire et design moderne.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis</a>
+          <a href="#configurations" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Voir les Configurations</a>
         </div>
-        <div class="content-right">
-          <p>Le Bureau Bench est un système de postes de travail partagés qui relie plusieurs espaces de travail individuels sur une structure commune. Contrairement aux bureaux opératifs traditionnels qui sont des meubles indépendants, l'ensemble bureau bench utilise un cadre métallique partagé et une gestion centralisée des câbles pour créer une solution intégrée et cohérente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">2-6</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Postes par Config</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">30-40%</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Économie</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">5 ans</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Garantie Structure</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">120x60</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">cm par Poste</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Gallery -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">GALERIE</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Nos Configurations Bureau Bench</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="md:col-span-2 md:row-span-2">
+          <img src="/bureaux/bn1.jpg" alt="Bureau Bench Configuration" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <img src="/bureaux/bn2.jpg" alt="Bureau Bench Détail" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <img src="/bureaux/bn3.jpg" alt="Bureau Bench Open Space" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qu'est-ce qu'un Bureau Bench - Image Left -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="relative overflow-hidden">
+      <img src="/bureaux/bn1.jpg" alt="Bureau Bench Concept" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-stone-50">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">DÉFINITION</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Qu'est-ce qu'un Bureau Bench ?</h2>
+      <p class="text-stone-600 leading-relaxed mb-6">Le Bureau Bench est un système de postes de travail partagés qui relie plusieurs espaces individuels sur une structure commune. Contrairement aux <a href="/bureaux/operatif" class="text-[#8b8b4b] hover:underline">bureaux opératifs</a> traditionnels qui sont indépendants, l'ensemble bureau bench utilise un cadre métallique partagé et une gestion centralisée des câbles.</p>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Principe du Poste Partagé</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Ce concept maximise l'efficacité en éliminant les structures redondantes. Chaque collaborateur dispose de son espace de 120 x 60 cm, mais l'infrastructure est mutualisée.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Différence avec les Bureaux Traditionnels</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Alors que les <a href="/bureaux/direction" class="text-[#8b8b4b] hover:underline">bureaux de direction</a> sont conçus pour des espaces privés, le Bureau Bench est pensé pour les environnements collaboratifs et les open spaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages - Cards Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">BÉNÉFICES</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Avantages du Bureau Bench</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <div class="text-4xl font-bold text-[#8b8b4b] mb-4">30-40%</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Économie Substantielle</h3>
+          <p class="text-stone-600 leading-relaxed">Le meilleur coût par poste du marché marocain. En partageant la structure métallique et le système de gestion des câbles, vous réduisez vos investissements par rapport à des bureaux opératifs individuels.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <div class="text-4xl font-bold text-[#8b8b4b] mb-4">30%</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Optimisation de l'Espace</h3>
+          <p class="text-stone-600 leading-relaxed">Les configurations linéaires permettent d'utiliser jusqu'à 30% d'espace en moins. Particulièrement précieux à Casablanca où les mètres carrés sont coûteux.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Collaboration Renforcée</h3>
+          <p class="text-stone-600 leading-relaxed">Le Bureau Bench facilite naturellement les échanges entre collaborateurs. Configuration face à face ou dos à dos, vos équipes peuvent communiquer instantanément et travailler ensemble.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Flexibilité et Modularité</h3>
+          <p class="text-stone-600 leading-relaxed">Votre entreprise grandit ? L'ensemble bureau bench évolue avec vous. Ajoutez simplement des postes supplémentaires sans remplacer l'ensemble du mobilier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Configurations - Dark Section -->
+  <section class="py-20 bg-stone-900" id="configurations">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">CONFIGURATIONS</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Configurations Disponibles</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">Trois configurations principales pour s'adapter à tous les besoins. Chaque poste individuel mesure 120 x 60 cm.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-stone-800 p-8 hover:bg-stone-700 transition-all group">
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Compact</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-1">2 Postes</h3>
+          <p class="text-stone-500 text-sm mb-4">240 x 120 cm</p>
+          <p class="text-stone-400 text-sm leading-relaxed mb-6">Idéal pour les petites équipes, bureaux satellites ou espaces restreints. Parfait pour les startups marocaines qui débutent.</p>
+          <h4 class="text-white text-sm font-semibold mb-3">Applications :</h4>
+          <ul class="space-y-2">
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Duo sur projet commun</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Petits espaces à optimiser</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Complément <a href="/amenagement-de-bureau" class="text-[#8b8b4b] hover:underline">aménagement</a></li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Zones temporaires</li>
+          </ul>
+        </div>
+
+        <div class="bg-[#8b8b4b] p-8 relative">
+          <span class="absolute top-4 right-4 bg-white text-stone-900 text-xs font-bold px-3 py-1 uppercase">Populaire</span>
+          <span class="text-white/70 text-sm font-semibold uppercase tracking-wider">Standard</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-1">4 Postes</h3>
+          <p class="text-white/60 text-sm mb-4">480 x 120 cm</p>
+          <p class="text-white/80 text-sm leading-relaxed mb-6">Le meilleur équilibre entre efficacité spatiale et dynamique d'équipe. Notre configuration la plus populaire au Maroc.</p>
+          <h4 class="text-white text-sm font-semibold mb-3">Applications :</h4>
+          <ul class="space-y-2">
+            <li class="text-white/80 text-sm flex items-center gap-2"><span class="text-white">→</span> Équipes projet de 4</li>
+            <li class="text-white/80 text-sm flex items-center gap-2"><span class="text-white">→</span> Départements administratifs</li>
+            <li class="text-white/80 text-sm flex items-center gap-2"><span class="text-white">→</span> Pods dans open spaces</li>
+            <li class="text-white/80 text-sm flex items-center gap-2"><span class="text-white">→</span> Call centers standard</li>
+          </ul>
+        </div>
+
+        <div class="bg-stone-800 p-8 hover:bg-stone-700 transition-all group">
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Grande Équipe</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-1">6 Postes</h3>
+          <p class="text-stone-500 text-sm mb-4">720 x 120 cm</p>
+          <p class="text-stone-400 text-sm leading-relaxed mb-6">Maximise l'efficacité spatiale pour les grandes équipes. Environnement de travail unifié idéal pour communication constante.</p>
+          <h4 class="text-white text-sm font-semibold mb-3">Applications :</h4>
+          <ul class="space-y-2">
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Call centers</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Coworking haute densité</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Équipes développement</li>
+            <li class="text-stone-400 text-sm flex items-center gap-2"><span class="text-[#8b8b4b]">→</span> Service client</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Caractéristiques Techniques - Image Right -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white order-2 lg:order-1">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">TECHNIQUE</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Caractéristiques Techniques</h2>
+      
+      <div class="space-y-6">
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Structure et Matériaux</h3>
+          <ul class="text-sm text-stone-600 space-y-1">
+            <li>• Plateau mélaminé haute qualité 25mm</li>
+            <li>• Cadre métallique partagé, stabilité optimale</li>
+            <li>• Piètement acier thermolaqué anticorrosion</li>
+            <li>• Dimensions par poste : 120 x 60 x 75 cm</li>
+            <li>• Garantie 5 ans structure métallique</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Finitions Disponibles</h3>
+          <ul class="text-sm text-stone-600 space-y-1">
+            <li>• Plateaux : Chêne clair, Noyer, Blanc, Gris, Noir</li>
+            <li>• Structure : Blanc, Gris aluminium, Noir mat</li>
+            <li>• Options bicolores pour espaces dynamiques</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Gestion des Câbles</h3>
+          <ul class="text-sm text-stone-600 space-y-1">
+            <li>• Passage vertical dans les pieds</li>
+            <li>• Goulottes horizontales sous plateau</li>
+            <li>• Trappes d'accès pour branchements</li>
+            <li>• Environnement ordonné et professionnel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="relative overflow-hidden order-1 lg:order-2">
+      <img src="/bureaux/bn2.jpg" alt="Bureau Bench Technique" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <!-- Accessoires -->
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">ACCESSOIRES</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Accessoires et Options</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-lg font-bold text-stone-900 mb-4">Écrans Acoustiques</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Privacy pour vos postes partagés. Tissu absorbant ou plexi transparent.</p>
+          <ul class="text-xs text-stone-500 space-y-1">
+            <li>• Frontaux 40 ou 60 cm</li>
+            <li>• Latéraux entre postes</li>
+            <li>• 12 couleurs tissu</li>
+            <li>• Transparents disponibles</li>
+          </ul>
+        </div>
+
+        <a href="/reunion/rangement" class="group bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-lg font-bold text-stone-900 mb-4 group-hover:text-[#8b8b4b]">Solutions Rangement</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Complétez avec des <span class="text-[#8b8b4b]">caissons mobiles et rangements</span> adaptés.</p>
+          <ul class="text-xs text-stone-500 space-y-1">
+            <li>• Caissons 3 tiroirs roulettes</li>
+            <li>• Caissons fixes sous bureau</li>
+            <li>• Étagères suspendues</li>
+            <li>• Casiers sécurisés</li>
+          </ul>
+        </a>
+
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-lg font-bold text-stone-900 mb-4">Électrification</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Poste de travail totalement équipé.</p>
+          <ul class="text-xs text-stone-500 space-y-1">
+            <li>• Prises intégrées (2 ou 4)</li>
+            <li>• Ports USB chargement</li>
+            <li>• Goulottes accès facilité</li>
+            <li>• Normes marocaines</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-lg font-bold text-stone-900 mb-4">Éclairage LED</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Lampes individuelles réglables en intensité et température.</p>
+          <ul class="text-xs text-stone-500 space-y-1">
+            <li>• Bras articulé</li>
+            <li>• Intensité réglable</li>
+            <li>• Température couleur</li>
+            <li>• Éclairage personnalisé</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secteurs - Image Left -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
+    <div class="relative overflow-hidden">
+      <img src="/bureaux/bn3.jpg" alt="Bureau Bench Applications" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">SECTEURS</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-8">Applications et Secteurs Idéaux</h2>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="font-bold text-stone-900 mb-2">Startups et Entreprises Tech</h3>
+          <p class="text-sm text-stone-600">Flexibilité et efficacité budgétaire. Votre équipe passe de 5 à 15 personnes ? Ajoutez simplement des configurations supplémentaires.</p>
+        </div>
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="font-bold text-stone-900 mb-2">Call Centers</h3>
+          <p class="text-sm text-stone-600">Solution standard pour les call centers à Casablanca. Standardisation facilitant formation, supervision et maintenance.</p>
+        </div>
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="font-bold text-stone-900 mb-2">Espaces de Coworking</h3>
+          <p class="text-sm text-stone-600">Excellent rapport densité/confort. Combinez avec nos <a href="/reunion/tables" class="text-[#8b8b4b] hover:underline">tables de réunion</a> et nos <a href="/salles-reunion" class="text-[#8b8b4b] hover:underline">salles de réunion</a> pour une offre complète.</p>
+        </div>
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="font-bold text-stone-900 mb-2">PME et Départements Administratifs</h3>
+          <p class="text-sm text-stone-600">Solution idéale pour équiper départements administratifs, comptables ou commerciaux. Budget maîtrisé et évolutivité garantie.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-stone-900 mb-2">Agences Créatives</h3>
+          <p class="text-sm text-stone-600">Flexibilité pour créer des configurations adaptées à chaque projet. Reconfiguration rapide selon les besoins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparatif -->
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">COMPARATIF</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Comparaison avec Autres Types de Bureaux</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- vs Opératif -->
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-6">Bureau Bench vs <a href="/bureaux/operatif" class="text-[#8b8b4b] hover:underline">Bureau Opératif</a></h3>
           
-          <div class="sub-section">
-            <h3>Principe du Poste de Travail Partagé</h3>
-            <p>Ce concept de poste de travail partagé maximise l'efficacité de l'espace en éliminant les structures redondantes. Chaque collaborateur dispose de son espace personnel de 120 x 60 cm, mais l'infrastructure est mutualisée, ce qui réduit considérablement les coûts d'installation et d'aménagement.</p>
-          </div>
-
-          <div class="sub-section">
-            <h3>Différence avec les Bureaux Traditionnels</h3>
-            <p>Alors que les bureaux de direction sont conçus pour des espaces privés et individuels, le Bureau Bench est pensé pour les environnements collaboratifs et les open spaces. Cette approche favorise la communication d'équipe et crée une dynamique de travail plus interactive.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Avantages -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">BÉNÉFICES</span>
-          <h2 class="content-title">Avantages du Bureau Bench</h2>
-        </div>
-        <div class="content-right">
-          <div class="advantages-list">
-            <div class="advantage-item">
-              <h3>Économie Substantielle</h3>
-              <p>Le Bureau Bench offre le meilleur coût par poste de travail du marché marocain. En partageant la structure métallique, le système de gestion des câbles et certains accessoires, vous réduisez vos investissements en mobilier de bureau de 30 à 40% par rapport à des bureaux opératifs individuels.</p>
-            </div>
-            <div class="advantage-item">
-              <h3>Optimisation de l'Espace</h3>
-              <p>Les configurations linéaires de l'ensemble bureau bench permettent d'utiliser jusqu'à 30% d'espace en moins comparé aux bureaux individuels. Cette efficacité spatiale est particulièrement précieuse dans les centres urbains comme Casablanca où les mètres carrés sont coûteux.</p>
-            </div>
-            <div class="advantage-item">
-              <h3>Collaboration Renforcée</h3>
-              <p>Le Bureau Bench facilite naturellement les échanges entre collaborateurs. Que vous optiez pour une configuration face à face ou dos à dos, vos équipes peuvent communiquer instantanément, partager des informations et travailler ensemble sur des projets communs.</p>
-            </div>
-            <div class="advantage-item">
-              <h3>Flexibilité et Modularité</h3>
-              <p>Votre entreprise grandit ? L'ensemble bureau bench évolue avec vous. Ajoutez simplement des postes supplémentaires à votre configuration existante sans devoir remplacer l'ensemble du mobilier. Cette modularité représente un investissement intelligent pour les entreprises en croissance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Configurations Disponibles -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">CONFIGURATIONS</span>
-          <h2 class="content-title">Configurations Disponibles</h2>
-        </div>
-        <div class="content-right">
-          <div class="config-list">
-            <div class="config-item">
-              <h3>Bureau Bench 2 Postes</h3>
-              <p class="config-dimensions">Dimensions : 240 x 120 cm (120 cm par personne)</p>
-              <p>Le Bureau Bench 2 postes est idéal pour les petites équipes, les bureaux satellites ou les espaces restreints. Cette configuration compacte offre une solution professionnelle sans compromettre le confort de travail. Parfait pour les startups marocaines qui débutent ou pour créer des zones de travail dédiées à des projets spécifiques.</p>
-              <div class="applications">
-                <h4>Applications recommandées :</h4>
-                <ul>
-                  <li>Duo de collaborateurs sur projet commun</li>
-                  <li>Petits espaces nécessitant optimisation</li>
-                  <li>Complément à un projet d'aménagement de bureau plus large</li>
-                  <li>Zones de travail temporaires</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="config-item">
-              <h3>Bureau Bench 4 Postes</h3>
-              <p class="config-dimensions">Dimensions : 480 x 120 cm (120 cm par personne)</p>
-              <p>La configuration 4 postes représente le meilleur équilibre entre efficacité spatiale et dynamique d'équipe. C'est notre bureau ensemble le plus populaire au Maroc, particulièrement apprécié des PME et des départements de taille moyenne.</p>
-              <div class="applications">
-                <h4>Applications recommandées :</h4>
-                <ul>
-                  <li>Équipes projet de 4 personnes</li>
-                  <li>Départements administratifs</li>
-                  <li>Pods de travail dans les open spaces</li>
-                  <li>Configuration standard pour call centers</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="config-item">
-              <h3>Bureau Bench 6 Postes</h3>
-              <p class="config-dimensions">Dimensions : 720 x 120 cm (120 cm par personne)</p>
-              <p>Le Bureau Bench 6 postes maximise l'efficacité spatiale pour les grandes équipes. Cette configuration crée un véritable environnement de travail unifié, idéal pour les équipes qui nécessitent une communication constante et un esprit d'équipe fort.</p>
-              <div class="applications">
-                <h4>Applications recommandées :</h4>
-                <ul>
-                  <li>Call centers et plateformes téléphoniques</li>
-                  <li>Espaces de coworking à haute densité</li>
-                  <li>Grandes équipes de développement</li>
-                  <li>Départements commerciaux ou de service client</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Caractéristiques Techniques -->
-  <section class="content-section bg-dark">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label light">TECHNIQUE</span>
-          <h2 class="content-title light">Caractéristiques Techniques</h2>
-        </div>
-        <div class="content-right">
-          <div class="tech-section">
-            <h3 class="light">Structure et Matériaux</h3>
-            <p class="light">Le Bureau Bench de Kwesk est construit selon des standards professionnels rigoureux :</p>
-            <ul class="tech-list">
-              <li>Plateau : Mélaminé haute qualité, épaisseur 25 mm, résistant aux rayures et aux taches</li>
-              <li>Structure : Cadre métallique partagé pour stabilité optimale et longévité</li>
-              <li>Piètement : Acier thermolaqué avec traitement anticorrosion</li>
-              <li>Dimensions par poste : 120 x 60 x 75 cm (hauteur standard de bureau)</li>
-              <li>Garantie : 5 ans sur la structure métallique</li>
-            </ul>
-          </div>
-
-          <div class="tech-section">
-            <h3 class="light">Finitions et Personnalisation</h3>
-            <p class="light">Notre ensemble bureau bench est disponible dans une gamme complète de finitions pour s'harmoniser avec votre identité visuelle :</p>
-            <ul class="tech-list">
-              <li>Plateaux : Chêne clair, Noyer, Blanc, Gris, Noir</li>
-              <li>Structure métallique : Blanc, Gris aluminium, Noir mat</li>
-              <li>Options bicolores pour créer des espaces dynamiques</li>
-            </ul>
-          </div>
-
-          <div class="tech-section">
-            <h3 class="light">Gestion des Câbles</h3>
-            <p class="light">Système centralisé de gestion des câbles intégré à la structure du Bureau Bench, permettant :</p>
-            <ul class="tech-list">
-              <li>Passage vertical des câbles dans les pieds</li>
-              <li>Goulottes horizontales sous plateau</li>
-              <li>Trappe d'accès pour faciliter les branchements</li>
-              <li>Environnement de travail ordonné et professionnel</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Accessoires et Options -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">ACCESSOIRES</span>
-          <h2 class="content-title">Accessoires et Options</h2>
-        </div>
-        <div class="content-right">
-          <div class="accessories-grid">
-            <div class="accessory-card">
-              <h3>Écrans de Séparation Acoustiques</h3>
-              <p>Ajoutez de la privacy à vos postes de travail partagés avec nos écrans acoustiques. Disponibles en tissu absorbant le son ou en plexi transparent, ces séparations créent des espaces semi-privés tout en maintenant les avantages collaboratifs du Bureau Bench.</p>
-              <ul>
-                <li>Écrans frontaux (hauteur 40 cm ou 60 cm)</li>
-                <li>Écrans latéraux pour séparation entre postes</li>
-                <li>Finitions tissu dans 12 couleurs</li>
-                <li>Écrans transparents pour lumière naturelle</li>
+          <div class="space-y-4 mb-6">
+            <div>
+              <h4 class="text-sm font-bold text-[#8b8b4b] mb-2">Bureau Bench :</h4>
+              <ul class="text-sm text-stone-600 space-y-1">
+                <li>✓ Structure partagée, économie 30-40%</li>
+                <li>✓ Gestion centralisée câbles</li>
+                <li>✓ Configuration collaborative</li>
+                <li>✓ Idéal équipes 2-6 personnes</li>
               </ul>
             </div>
-
-            <div class="accessory-card">
-              <h3>Solutions de Rangement</h3>
-              <p>Complétez votre ensemble bureau bench avec des caissons mobiles et rangements adaptés :</p>
-              <ul>
-                <li>Caissons mobiles 3 tiroirs sur roulettes</li>
-                <li>Caissons fixes sous bureau</li>
-                <li>Étagères suspendues personnelles</li>
-                <li>Casiers sécurisés pour effets personnels</li>
+            <div>
+              <h4 class="text-sm font-bold text-stone-500 mb-2">Bureau Opératif :</h4>
+              <ul class="text-sm text-stone-500 space-y-1">
+                <li>• Bureaux individuels indépendants</li>
+                <li>• Plus de flexibilité disposition</li>
+                <li>• Privacy accrue</li>
+                <li>• Idéal espaces non-linéaires</li>
               </ul>
             </div>
+          </div>
+          
+          <div class="bg-stone-50 p-4 border-l-4 border-[#8b8b4b]">
+            <p class="text-sm text-stone-700"><strong>Choisissez Bench si :</strong> Priorité optimisation budgétaire, espaces linéaires, culture collaborative.</p>
+          </div>
+        </div>
 
-            <div class="accessory-card">
-              <h3>Électrification et Connectivité</h3>
-              <p>Transformez votre Bureau Bench en poste de travail totalement équipé :</p>
-              <ul>
-                <li>Prises électriques intégrées au plateau (blocs de 2 ou 4 prises)</li>
-                <li>Ports USB pour chargement d'appareils</li>
-                <li>Goulottes avec accès facilité</li>
-                <li>Solutions conformes aux normes électriques marocaines</li>
+        <!-- vs Direction -->
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-6">Bureau Bench vs <a href="/bureaux/direction" class="text-[#8b8b4b] hover:underline">Bureau de Direction</a></h3>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <h4 class="text-sm font-bold text-[#8b8b4b] mb-2">Bureau Bench :</h4>
+              <ul class="text-sm text-stone-600 space-y-1">
+                <li>✓ Multiples utilisateurs</li>
+                <li>✓ Open space et collaboration</li>
+                <li>✓ Solution économique</li>
+                <li>✓ Design fonctionnel</li>
               </ul>
             </div>
-
-            <div class="accessory-card">
-              <h3>Éclairage Individuel</h3>
-              <p>Lampes LED individuelles réglables en intensité et température de couleur, montées sur bras articulé pour éclairage personnalisé de chaque poste.</p>
+            <div>
+              <h4 class="text-sm font-bold text-stone-500 mb-2">Bureau de Direction :</h4>
+              <ul class="text-sm text-stone-500 space-y-1">
+                <li>• Utilisateur unique</li>
+                <li>• Bureau privé ou semi-privé</li>
+                <li>• Présence exécutive</li>
+                <li>• Design premium</li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Applications et Secteurs -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">SECTEURS</span>
-          <h2 class="content-title">Applications et Secteurs Idéaux</h2>
-        </div>
-        <div class="content-right">
-          <div class="sectors-list">
-            <div class="sector-item">
-              <h3>Startups et Entreprises Tech au Maroc</h3>
-              <p>Les jeunes entreprises marocaines choisissent le Bureau Bench pour sa flexibilité et son efficacité budgétaire. Votre équipe passe de 5 à 15 personnes ? Ajoutez simplement des configurations supplémentaires sans réinvestissement majeur. L'ambiance collaborative du bureau ensemble reflète parfaitement la culture startup.</p>
-            </div>
-            <div class="sector-item">
-              <h3>Call Centers et Plateformes Téléphoniques</h3>
-              <p>Avec ses configurations 4 ou 6 postes, le Bureau Bench est la solution standard pour les call centers à Casablanca et dans tout le Maroc. La standardisation des postes facilite la formation, la supervision et la maintenance, tout en optimisant vos coûts au mètre carré.</p>
-            </div>
-            <div class="sector-item">
-              <h3>Espaces de Coworking</h3>
-              <p>Les gestionnaires d'espaces de coworking apprécient le Bureau Bench pour son excellent rapport densité/confort. Maximisez vos revenus par mètre carré tout en offrant des postes professionnels et confortables à vos membres. Combinez avec nos tables de réunion et nos salles de réunion pour une offre complète.</p>
-            </div>
-            <div class="sector-item">
-              <h3>PME et Départements Administratifs</h3>
-              <p>Les petites et moyennes entreprises marocaines trouvent dans l'ensemble bureau bench la solution idéale pour équiper leurs départements administratifs, comptables ou commerciaux. Budget maîtrisé, qualité professionnelle et évolutivité garantie.</p>
-            </div>
-            <div class="sector-item">
-              <h3>Agences de Design et Créatives</h3>
-              <p>Les équipes créatives apprécient la flexibilité du Bureau Bench pour créer des configurations adaptées à chaque projet. La possibilité de reconfigurer rapidement les espaces selon les besoins des projets en fait un choix intelligent pour les agences dynamiques.</p>
-            </div>
+          
+          <div class="bg-stone-50 p-4 border-l-4 border-[#8b8b4b]">
+            <p class="text-sm text-stone-700"><strong>Choisissez Bench si :</strong> Équipes opérationnelles, pas des bureaux d'executives.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Comparaison -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">COMPARATIF</span>
-          <h2 class="content-title">Comparaison avec Autres Types de Bureaux</h2>
-        </div>
-        <div class="content-right">
-          <div class="comparison-list">
-            <div class="comparison-item">
-              <h3>Bureau Bench vs Bureau Opératif</h3>
-              <div class="comparison-grid">
-                <div class="comparison-col">
-                  <h4>Bureau Bench :</h4>
-                  <ul>
-                    <li>Structure partagée, économie de 30-40%</li>
-                    <li>Gestion centralisée des câbles</li>
-                    <li>Configuration collaborative</li>
-                    <li>Idéal pour équipes de 2 à 6 personnes</li>
-                  </ul>
-                </div>
-                <div class="comparison-col">
-                  <h4>Bureau Opératif :</h4>
-                  <ul>
-                    <li>Bureaux individuels indépendants</li>
-                    <li>Plus de flexibilité de disposition</li>
-                    <li>Privacy accrue</li>
-                    <li>Idéal pour espaces non-linéaires</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="comparison-verdict">Choisissez le Bureau Bench si : Votre priorité est l'optimisation budgétaire, vous avez des espaces linéaires, et votre culture d'entreprise valorise la collaboration.</p>
+        <!-- vs Réglable -->
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-6">Bureau Bench vs <a href="/bureaux/reglables" class="text-[#8b8b4b] hover:underline">Bureau Réglable</a></h3>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <h4 class="text-sm font-bold text-[#8b8b4b] mb-2">Bureau Bench :</h4>
+              <ul class="text-sm text-stone-600 space-y-1">
+                <li>✓ Hauteur fixe standard (75 cm)</li>
+                <li>✓ Configuration collaborative</li>
+                <li>✓ Prix optimisé</li>
+                <li>✓ Installation stable</li>
+              </ul>
             </div>
-
-            <div class="comparison-item">
-              <h3>Bureau Bench vs Bureau de Direction</h3>
-              <div class="comparison-grid">
-                <div class="comparison-col">
-                  <h4>Bureau Bench :</h4>
-                  <ul>
-                    <li>Multiples utilisateurs</li>
-                    <li>Open space et collaboration</li>
-                    <li>Solution économique</li>
-                    <li>Design fonctionnel</li>
-                  </ul>
-                </div>
-                <div class="comparison-col">
-                  <h4>Bureau de Direction :</h4>
-                  <ul>
-                    <li>Utilisateur unique</li>
-                    <li>Bureau privé ou semi-privé</li>
-                    <li>Présence exécutive</li>
-                    <li>Design premium</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="comparison-verdict">Choisissez le Bureau Bench si : Vous équipez des équipes opérationnelles, pas des bureaux de direction ou d'executives.</p>
+            <div>
+              <h4 class="text-sm font-bold text-stone-500 mb-2">Bureau Réglable :</h4>
+              <ul class="text-sm text-stone-500 space-y-1">
+                <li>• Hauteur ajustable (assis-debout)</li>
+                <li>• Ergonomie premium individuelle</li>
+                <li>• Investissement supérieur</li>
+                <li>• Bénéfices santé long terme</li>
+              </ul>
             </div>
-
-            <div class="comparison-item">
-              <h3>Bureau Bench vs Bureau Réglable</h3>
-              <div class="comparison-grid">
-                <div class="comparison-col">
-                  <h4>Bureau Bench :</h4>
-                  <ul>
-                    <li>Hauteur fixe standard (75 cm)</li>
-                    <li>Configuration collaborative</li>
-                    <li>Prix optimisé</li>
-                    <li>Installation stable</li>
-                  </ul>
-                </div>
-                <div class="comparison-col">
-                  <h4>Bureau Réglable :</h4>
-                  <ul>
-                    <li>Hauteur ajustable (assis-debout)</li>
-                    <li>Ergonomie premium individuelle</li>
-                    <li>Investissement supérieur</li>
-                    <li>Bénéfices santé long terme</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="comparison-verdict">Choisissez le Bureau Bench si : Votre budget est limité, vous priorisez la collaboration, et l'ajustabilité en hauteur n'est pas une exigence.</p>
-            </div>
+          </div>
+          
+          <div class="bg-stone-50 p-4 border-l-4 border-[#8b8b4b]">
+            <p class="text-sm text-stone-700"><strong>Choisissez Bench si :</strong> Budget limité, collaboration priorité, ajustabilité non requise.</p>
           </div>
         </div>
       </div>
@@ -381,389 +424,180 @@ const bureau = {
   </section>
 
   <!-- Solution Complète -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">AMÉNAGEMENT</span>
-          <h2 class="content-title">Solution Complète d'Aménagement</h2>
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">AMÉNAGEMENT</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Solution Complète d'Aménagement</h2>
+          <p class="text-stone-400 leading-relaxed mb-8">Le Bureau Bench s'intègre parfaitement dans un <a href="/amenagement-de-bureau" class="text-[#8b8b4b] hover:underline">projet d'aménagement de bureau</a> complet. Nos experts Kwesk vous accompagnent dans la conception globale de vos espaces.</p>
         </div>
-        <div class="content-right">
-          <p>Le Bureau Bench s'intègre parfaitement dans un projet d'aménagement de bureau complet. Nos experts Kwesk peuvent vous accompagner dans la conception globale de vos espaces :</p>
-          
-          <div class="solution-section">
-            <h3>Mobilier Complémentaire</h3>
-            <ul>
-              <li>Chaises ergonomiques adaptées au travail prolongé</li>
-              <li>Solutions média pour visioconférences</li>
-              <li>Tables de cantine pour espaces de pause</li>
-              <li>Casiers vestiaire pour effets personnels</li>
-              <li>Armoires de rangement pour archives</li>
-            </ul>
-          </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="/chaises" class="group bg-stone-800 p-6 hover:bg-stone-700 transition-all">
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-[#8b8b4b]">Chaises Ergonomiques</h3>
+            <p class="text-sm text-stone-400">Adaptées au travail prolongé</p>
+          </a>
+          <a href="/reunion/media" class="group bg-stone-800 p-6 hover:bg-stone-700 transition-all">
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-[#8b8b4b]">Solutions Média</h3>
+            <p class="text-sm text-stone-400">Pour visioconférences</p>
+          </a>
+          <a href="/industrie/tables-cantine" class="group bg-stone-800 p-6 hover:bg-stone-700 transition-all">
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-[#8b8b4b]">Tables de Cantine</h3>
+            <p class="text-sm text-stone-400">Espaces de pause</p>
+          </a>
+          <a href="/industrie/casiers-vestiaire" class="group bg-stone-800 p-6 hover:bg-stone-700 transition-all">
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-[#8b8b4b]">Casiers Vestiaire</h3>
+            <p class="text-sm text-stone-400">Effets personnels</p>
+          </a>
+          <a href="/industrie/armoires-rangement" class="group bg-stone-800 p-6 hover:bg-stone-700 transition-all sm:col-span-2">
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-[#8b8b4b]">Armoires de Rangement</h3>
+            <p class="text-sm text-stone-400">Pour archives et documents</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="solution-section">
-            <h3>Services d'Aménagement</h3>
-            <ul>
-              <li>Plans d'aménagement 2D et 3D</li>
-              <li>Calculs de densité optimale</li>
-              <li>Conseils sur configurations face à face ou dos à dos</li>
-              <li>Coordination avec vos contraintes électriques et réseaux</li>
-            </ul>
+  <!-- Pourquoi Kwesk -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div class="lg:sticky lg:top-32 lg:self-start">
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">KWESK</span>
+          <h2 class="text-3xl font-bold text-stone-900 mb-6">Pourquoi Choisir Kwesk ?</h2>
+          <p class="text-stone-600 leading-relaxed">Plus de 15 ans d'expérience dans l'aménagement d'espaces professionnels au Maroc.</p>
+        </div>
+        
+        <div class="lg:col-span-2 space-y-8">
+          <div class="border-b border-stone-200 pb-8">
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Expertise Marocaine depuis 2008</h3>
+            <p class="text-stone-600 leading-relaxed">Kwesk comprend les spécificités du marché local : contraintes budgétaires des PME, optimisation des espaces urbains coûteux, et besoins de flexibilité des entreprises en croissance.</p>
+          </div>
+          <div class="border-b border-stone-200 pb-8">
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Qualité et Certifications</h3>
+            <p class="text-stone-600 leading-relaxed">Notre ensemble bureau bench respecte les normes internationales. Nos <a href="/chaises" class="text-[#8b8b4b] hover:underline">chaises ergonomiques</a> complémentaires sont certifiées BIFMA et EN 1335.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Service Complet</h3>
+            <div class="grid grid-cols-2 gap-4 text-sm text-stone-600">
+              <span>✓ Conseils personnalisés</span>
+              <span>✓ Devis gratuit sous 24h</span>
+              <span>✓ Livraison tout le Maroc</span>
+              <span>✓ Installation professionnelle</span>
+              <span>✓ Garantie 5 ans structure</span>
+              <span>✓ SAV réactif</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pourquoi Choisir Kwesk -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">KWESK</span>
-          <h2 class="content-title">Pourquoi Choisir Kwesk pour Votre Bureau Bench ?</h2>
-        </div>
-        <div class="content-right">
-          <div class="why-list">
-            <div class="why-item">
-              <h3>Expertise Marocaine depuis 2008</h3>
-              <p>Avec plus de 15 ans d'expérience dans l'aménagement d'espaces professionnels au Maroc, Kwesk comprend les spécificités du marché local : contraintes budgétaires des PME, optimisation des espaces urbains coûteux, et besoins de flexibilité des entreprises en croissance.</p>
-            </div>
-            <div class="why-item">
-              <h3>Qualité et Certifications</h3>
-              <p>Notre ensemble bureau bench respecte les normes internationales de qualité. Nos chaises ergonomiques complémentaires sont certifiées BIFMA et EN 1335, garantissant le confort et la santé de vos collaborateurs.</p>
-            </div>
-            <div class="why-item">
-              <h3>Service Complet</h3>
-              <ul>
-                <li>Conseils personnalisés en showroom ou sur site</li>
-                <li>Devis gratuit sous 24h</li>
-                <li>Livraison dans tout le Maroc</li>
-                <li>Installation professionnelle</li>
-                <li>Garantie 5 ans structure</li>
-                <li>Service après-vente réactif</li>
-              </ul>
-            </div>
+  <!-- CTA Contact -->
+  <section class="py-20 bg-[#8b8b4b]">
+    <div class="max-w-5xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Configurez Votre Bureau Bench Idéal</h2>
+      <p class="text-xl text-white/80 mb-12">Chaque projet est unique. Nos experts vous aident à définir la configuration optimale.</p>
+      
+      <div class="bg-white p-8 lg:p-12 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+          <div>
+            <h3 class="font-bold text-stone-900 text-lg mb-4">Notre Processus</h3>
+            <ol class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-[#8b8b4b] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+                <span class="text-stone-600 text-sm"><strong>Évaluation</strong> : Nombre de postes, espace, budget</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-[#8b8b4b] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+                <span class="text-stone-600 text-sm"><strong>Proposition</strong> : Configurations avec plans 2D</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-[#8b8b4b] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+                <span class="text-stone-600 text-sm"><strong>Options</strong> : Écrans, rangements, électrification</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-[#8b8b4b] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+                <span class="text-stone-600 text-sm"><strong>Installation</strong> : Montage par nos équipes</span>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="font-bold text-stone-900 text-lg mb-4">Showroom Casablanca</h3>
+            <p class="text-stone-600 mb-2">Anfa Place, Tour Ouest, Niveau 1</p>
+            <p class="text-stone-600 mb-4">Casablanca, Maroc</p>
+            <p class="text-stone-600 mb-2"><strong>Tél :</strong> <a href="tel:+212520241637" class="text-[#8b8b4b] hover:underline">+212 5 20 24 16 37</a></p>
+            <p class="text-stone-600 mb-2"><strong>Mobile :</strong> <a href="tel:+212661481616" class="text-[#8b8b4b] hover:underline">+212 6 61 48 16 16</a></p>
+            <p class="text-stone-600"><strong>Email :</strong> <a href="mailto:contact@kwesk.com" class="text-[#8b8b4b] hover:underline">contact@kwesk.com</a></p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="content-container">
-      <div class="contact-grid">
-        <div class="contact-left">
-          <span class="content-label">SHOWROOM</span>
-          <h2 class="content-title">Showroom à Casablanca</h2>
-          <p>Visitez notre espace d'exposition pour voir et tester nos configurations de Bureau Bench.</p>
-        </div>
-        <div class="contact-right">
-          <div class="contact-info-card">
-            <h4>Nos Coordonnées</h4>
-            <ul>
-              <li><strong>Adresse :</strong> Anfa Place, Tour Ouest, Niveau 1, Casablanca</li>
-              <li><strong>Téléphone :</strong> <a href="tel:+212520241637">+212 5 20 24 16 37</a></li>
-              <li><strong>Mobile :</strong> <a href="tel:+212661481616">+212 6 61 48 16 16</a></li>
-              <li><strong>Email :</strong> <a href="mailto:contact@kwesk.com">contact@kwesk.com</a></li>
-            </ul>
-            <a href="/contact" class="contact-cta">Demander un Devis Gratuit</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Configurez Votre Bureau Bench -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">CONFIGURATION</span>
-          <h2 class="content-title">Configurez Votre Bureau Bench Idéal</h2>
-        </div>
-        <div class="content-right">
-          <p>Chaque projet est unique. Nos experts vous aident à définir la configuration optimale :</p>
-          <ol class="config-steps">
-            <li><strong>Évaluation de vos besoins :</strong> Nombre de postes, espace disponible, budget</li>
-            <li><strong>Proposition personnalisée :</strong> Configurations adaptées avec plans 2D</li>
-            <li><strong>Sélection des options :</strong> Écrans, rangements, électrification</li>
-            <li><strong>Installation professionnelle :</strong> Montage et mise en place par nos équipes</li>
-          </ol>
+        
+        <div class="text-center">
+          <a href="/contact" class="inline-block px-10 py-4 bg-stone-900 text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all">Demander un Devis Gratuit</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq-section">
-    <div class="content-container">
-      <div class="faq-header">
-        <span class="content-label">FAQ</span>
-        <h2 class="content-title">Questions Fréquentes sur le Bureau Bench</h2>
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Questions Fréquentes</h2>
       </div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h4>Qu'est-ce qu'un Bureau Bench exactement ?</h4>
-          <p>Un Bureau Bench est un système de postes de travail partagés où plusieurs collaborateurs (2, 4 ou 6) travaillent sur des bureaux connectés partageant une structure métallique commune et une gestion centralisée des câbles. Cette solution modulable est idéale pour les open spaces et les environnements collaboratifs au Maroc.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Qu'est-ce qu'un Bureau Bench exactement ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Un système de postes de travail partagés où 2, 4 ou 6 collaborateurs travaillent sur des bureaux connectés partageant une structure métallique commune et une gestion centralisée des câbles.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quelles configurations de Bureau Bench sont disponibles chez Kwesk ?</h4>
-          <p>Nous proposons trois configurations principales d'ensemble bureau bench : 2 postes (240 cm), 4 postes (480 cm) et 6 postes (720 cm). Chaque poste individuel mesure 120 x 60 cm. Des configurations personnalisées sont possibles pour des projets spécifiques d'aménagement de bureau.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quelles configurations disponibles ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">2 postes (240 cm), 4 postes (480 cm) et 6 postes (720 cm). Chaque poste individuel mesure 120 x 60 cm. Configurations personnalisées possibles pour <a href="/amenagement-de-bureau" class="text-[#8b8b4b] hover:underline">projets spécifiques</a>.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quelle est la différence de prix entre un Bureau Bench et des bureaux individuels ?</h4>
-          <p>Le Bureau Bench permet une économie de 30 à 40% par poste comparé à des bureaux opératifs individuels équivalents. Cette économie provient de la structure partagée, de la gestion centralisée des câbles et de l'installation simplifiée. Contactez-nous pour un devis précis selon votre configuration.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Différence de prix vs bureaux individuels ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Économie de 30 à 40% par poste comparé à des <a href="/bureaux/operatif" class="text-[#8b8b4b] hover:underline">bureaux opératifs</a> individuels équivalents grâce à la structure partagée et l'installation simplifiée.</p>
         </div>
-        <div class="faq-item">
-          <h4>Peut-on ajouter des écrans de séparation entre les postes du Bureau Bench ?</h4>
-          <p>Absolument. Notre bureau ensemble peut être équipé d'écrans de séparation acoustiques en tissu ou en plexi transparent. Ces écrans, disponibles en hauteur 40 ou 60 cm, offrent de la privacy tout en conservant les avantages collaboratifs du Bureau Bench.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Peut-on ajouter des écrans de séparation ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Absolument. Écrans acoustiques en tissu ou plexi transparent. Hauteur 40 ou 60 cm pour privacy tout en conservant les avantages collaboratifs.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quelle est la taille standard par personne sur un Bureau Bench ?</h4>
-          <p>Chaque poste de travail sur notre Bureau Bench mesure 120 x 60 cm, offrant un espace confortable conforme aux standards ergonomiques. La hauteur standard est de 75 cm. Cette dimension garantit le confort même pour des journées de travail prolongées.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quelle taille standard par personne ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">120 x 60 cm par poste, conforme aux standards ergonomiques. Hauteur standard 75 cm. Confort garanti même pour journées prolongées.</p>
         </div>
-        <div class="faq-item">
-          <h4>La gestion des câbles est-elle incluse dans le Bureau Bench ?</h4>
-          <p>Oui, tous nos ensembles bureau bench incluent un système complet de gestion des câbles intégré à la structure. Les câbles passent verticalement dans les pieds métalliques et horizontalement sous le plateau, avec des trappes d'accès facilitant les branchements et modifications.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">La gestion des câbles est-elle incluse ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Oui, système complet intégré. Câbles passant verticalement dans les pieds et horizontalement sous plateau avec trappes d'accès.</p>
         </div>
-        <div class="faq-item">
-          <h4>Peut-on modifier la configuration du Bureau Bench après installation ?</h4>
-          <p>La modularité est un avantage majeur du Bureau Bench. Vous pouvez ajouter des postes supplémentaires, retirer des sections, ou reconfigurer votre installation selon l'évolution de vos besoins. Cette flexibilité en fait un investissement intelligent pour les entreprises en croissance.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Peut-on modifier la configuration après installation ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">La modularité est un avantage majeur. Ajoutez des postes, retirez des sections ou reconfigurez selon l'évolution de vos besoins.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quelle garantie est fournie avec le Bureau Bench Kwesk ?</h4>
-          <p>Tous nos bureaux bench bénéficient d'une garantie de 5 ans sur la structure métallique, témoignant de notre confiance dans la qualité de nos produits. Le plateau mélaminé est garanti 2 ans contre les défauts de fabrication.</p>
-        </div>
-        <div class="faq-item">
-          <h4>La livraison et l'installation sont-elles comprises ?</h4>
-          <p>Nous livrons et installons nos ensembles bureau bench dans tout le Maroc. Nos équipes professionnelles assurent le montage complet, le raccordement de la gestion des câbles, et la mise en place selon votre plan d'aménagement. Les coûts de livraison et installation sont détaillés dans votre devis personnalisé.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quelle garantie est fournie ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">5 ans sur la structure métallique. Plateau mélaminé garanti 2 ans contre défauts de fabrication.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Conclusion -->
-  <section class="conclusion-section">
-    <div class="content-container">
-      <div class="conclusion-content">
-        <h2>Optimisez vos espaces de travail avec le Bureau Bench Kwesk</h2>
-        <p>Le Bureau Bench représente la solution idéale pour les entreprises marocaines qui cherchent à combiner économie, efficacité spatiale et collaboration. Depuis notre showroom de Casablanca, nous équipons startups, PME, call centers et espaces de coworking avec des solutions modulables et professionnelles.</p>
-        <p>Visitez notre collection complète de <a href="/bureaux">bureaux professionnels</a> ou contactez nos experts dès aujourd'hui pour transformer vos espaces de travail.</p>
-        <div class="conclusion-contact">
-          <p><strong>Kwesk - Votre partenaire mobilier de bureau depuis 2008</strong></p>
-          <p>Anfa Place, Tour Ouest, Niveau 1, Casablanca</p>
-          <p>Tel: <a href="tel:+212520241637">+212 5 20 24 16 37</a> | Mobile: <a href="tel:+212661481616">+212 6 61 48 16 16</a></p>
-          <p><a href="mailto:contact@kwesk.com">contact@kwesk.com</a></p>
-        </div>
-      </div>
+  <section class="py-16 bg-stone-900">
+    <div class="max-w-4xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-2xl font-bold text-white mb-6">Optimisez vos espaces de travail avec le Bureau Bench Kwesk</h2>
+      <p class="text-stone-400 leading-relaxed mb-8">Le Bureau Bench représente la solution idéale pour les entreprises marocaines qui cherchent à combiner économie, efficacité spatiale et collaboration. Depuis notre showroom de Casablanca, nous équipons startups, PME, call centers et espaces de coworking.</p>
+      <p class="text-stone-400 leading-relaxed mb-8">Visitez notre <a href="/bureaux" class="text-[#8b8b4b] hover:underline">collection complète de bureaux professionnels</a> ou contactez nos experts dès aujourd'hui pour transformer vos espaces de travail.</p>
+      <p class="text-stone-500 text-sm">
+        <strong class="text-stone-400">Kwesk - Votre partenaire mobilier de bureau depuis 2008</strong><br>
+        Anfa Place, Tour Ouest, Niveau 1, Casablanca<br>
+        <a href="tel:+212520241637" class="text-[#8b8b4b] hover:underline">+212 5 20 24 16 37</a> | <a href="tel:+212661481616" class="text-[#8b8b4b] hover:underline">+212 6 61 48 16 16</a> | <a href="mailto:contact@kwesk.com" class="text-[#8b8b4b] hover:underline">contact@kwesk.com</a>
+      </p>
     </div>
   </section>
 
   <AmCTA />
 </Layout>
-
-<style>
-  /* Content Sections */
-  .content-section { padding: 80px 0; }
-  .content-section.bg-stone { background: #fafaf9; }
-  .content-section.bg-dark { background: #1c1917; }
-  .content-container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
-  
-  .content-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
-  .content-left { position: sticky; top: 120px; }
-  
-  .content-label { 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    letter-spacing: 3px; 
-    color: #8b8b4b; 
-    display: block; 
-    margin-bottom: 16px; 
-  }
-  .content-label.light { color: #8b8b4b; }
-  
-  .content-title { 
-    font-size: 28px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    line-height: 1.3; 
-  }
-  .content-title.light { color: white; }
-  
-  .content-right p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
-    margin-bottom: 20px;
-  }
-  .content-right p.light { color: #a8a29e; }
-  .content-right p:last-child { margin-bottom: 0; }
-
-  /* Sub Sections */
-  .sub-section { margin-top: 32px; padding-top: 32px; border-top: 1px solid #e7e5e4; }
-  .sub-section h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-
-  /* Advantages List */
-  .advantages-list { display: flex; flex-direction: column; gap: 32px; }
-  .advantage-item { padding-bottom: 32px; border-bottom: 1px solid #e7e5e4; }
-  .advantage-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .advantage-item h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-  .advantage-item p { font-size: 15px; line-height: 1.8; color: #57534e; margin: 0; }
-
-  /* Config List */
-  .config-list { display: flex; flex-direction: column; gap: 40px; }
-  .config-item { padding-bottom: 40px; border-bottom: 1px solid #e7e5e4; }
-  .config-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .config-item h3 { font-size: 20px; font-weight: 700; color: #1c1917; margin-bottom: 8px; }
-  .config-dimensions { font-size: 14px; color: #8b8b4b; font-weight: 600; margin-bottom: 16px !important; }
-  .config-item > p { font-size: 15px; line-height: 1.8; color: #57534e; }
-  .applications { margin-top: 20px; background: #fafaf9; padding: 20px; }
-  .applications h4 { font-size: 14px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-  .applications ul { list-style: none; padding: 0; margin: 0; }
-  .applications li { font-size: 14px; color: #57534e; padding: 6px 0; padding-left: 20px; position: relative; }
-  .applications li::before { content: "→"; position: absolute; left: 0; color: #8b8b4b; }
-
-  /* Tech Section */
-  .tech-section { margin-bottom: 32px; }
-  .tech-section:last-child { margin-bottom: 0; }
-  .tech-section h3 { font-size: 18px; font-weight: 700; color: white; margin-bottom: 12px; }
-  .tech-section h3.light { color: white; }
-  .tech-section p { font-size: 15px; line-height: 1.8; color: #a8a29e; margin-bottom: 16px; }
-  .tech-section p.light { color: #a8a29e; }
-  .tech-list { list-style: none; padding: 0; margin: 0; }
-  .tech-list li { font-size: 14px; color: #a8a29e; padding: 8px 0; padding-left: 20px; position: relative; border-bottom: 1px solid #292524; }
-  .tech-list li:last-child { border-bottom: none; }
-  .tech-list li::before { content: "•"; position: absolute; left: 0; color: #8b8b4b; }
-
-  /* Accessories Grid */
-  .accessories-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .accessory-card { background: #fafaf9; padding: 32px; border: 1px solid #e7e5e4; }
-  .accessory-card h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-  .accessory-card p { font-size: 14px; line-height: 1.7; color: #57534e; margin-bottom: 16px; }
-  .accessory-card ul { list-style: none; padding: 0; margin: 0; }
-  .accessory-card li { font-size: 13px; color: #78716c; padding: 4px 0; padding-left: 16px; position: relative; }
-  .accessory-card li::before { content: "–"; position: absolute; left: 0; color: #8b8b4b; }
-
-  /* Sectors List */
-  .sectors-list { display: flex; flex-direction: column; gap: 32px; }
-  .sector-item { padding-bottom: 32px; border-bottom: 1px solid #e7e5e4; }
-  .sector-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .sector-item h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-  .sector-item p { font-size: 15px; line-height: 1.8; color: #57534e; margin: 0; }
-
-  /* Comparison */
-  .comparison-list { display: flex; flex-direction: column; gap: 40px; }
-  .comparison-item { padding-bottom: 40px; border-bottom: 1px solid #e7e5e4; }
-  .comparison-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .comparison-item h3 { font-size: 20px; font-weight: 700; color: #1c1917; margin-bottom: 20px; }
-  .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px; }
-  .comparison-col h4 { font-size: 14px; font-weight: 700; color: #8b8b4b; margin-bottom: 12px; }
-  .comparison-col ul { list-style: none; padding: 0; margin: 0; }
-  .comparison-col li { font-size: 14px; color: #57534e; padding: 6px 0; padding-left: 16px; position: relative; }
-  .comparison-col li::before { content: "✓"; position: absolute; left: 0; color: #8b8b4b; font-size: 12px; }
-  .comparison-verdict { font-size: 14px; color: #1c1917; font-weight: 500; background: #fafaf9; padding: 16px; border-left: 3px solid #8b8b4b; margin: 0; }
-
-  /* Solution Section */
-  .solution-section { margin-top: 32px; }
-  .solution-section h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 16px; }
-  .solution-section ul { list-style: none; padding: 0; margin: 0; }
-  .solution-section li { font-size: 14px; color: #57534e; padding: 8px 0; padding-left: 20px; position: relative; border-bottom: 1px solid #e7e5e4; }
-  .solution-section li:last-child { border-bottom: none; }
-  .solution-section li::before { content: "→"; position: absolute; left: 0; color: #8b8b4b; }
-
-  /* Why List */
-  .why-list { display: flex; flex-direction: column; gap: 32px; }
-  .why-item { padding-bottom: 32px; border-bottom: 1px solid #e7e5e4; }
-  .why-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .why-item h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-  .why-item p { font-size: 15px; line-height: 1.8; color: #57534e; margin: 0; }
-  .why-item ul { list-style: none; padding: 0; margin: 0; }
-  .why-item li { font-size: 14px; color: #57534e; padding: 6px 0; padding-left: 20px; position: relative; }
-  .why-item li::before { content: "✓"; position: absolute; left: 0; color: #8b8b4b; }
-
-  /* Contact Section */
-  .contact-section { padding: 80px 0; background: white; }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-  .contact-left p { font-size: 15px; line-height: 1.8; color: #57534e; margin-top: 20px; }
-  .contact-info-card { background: #fafaf9; padding: 40px; border: 1px solid #e7e5e4; }
-  .contact-info-card h4 { font-size: 20px; font-weight: 700; color: #1c1917; margin-bottom: 20px; }
-  .contact-info-card ul { list-style: none; padding: 0; margin: 0 0 24px 0; }
-  .contact-info-card li { font-size: 14px; color: #57534e; padding: 12px 0; border-bottom: 1px solid #e7e5e4; }
-  .contact-info-card li:last-child { border-bottom: none; }
-  .contact-info-card a { color: #8b8b4b; text-decoration: none; }
-  .contact-info-card a:hover { text-decoration: underline; }
-  .contact-cta { 
-    display: inline-block; 
-    padding: 14px 32px; 
-    background: #8b8b4b; 
-    color: white; 
-    text-decoration: none; 
-    font-size: 13px; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    transition: background 0.3s; 
-  }
-  .contact-cta:hover { background: #1c1917; }
-
-  /* Config Steps */
-  .config-steps { list-style: none; padding: 0; margin: 20px 0 0 0; counter-reset: step; }
-  .config-steps li { font-size: 15px; color: #57534e; padding: 16px 0; padding-left: 50px; position: relative; border-bottom: 1px solid #e7e5e4; counter-increment: step; }
-  .config-steps li:last-child { border-bottom: none; }
-  .config-steps li::before { 
-    content: counter(step); 
-    position: absolute; 
-    left: 0; 
-    top: 16px;
-    width: 32px; 
-    height: 32px; 
-    background: #8b8b4b; 
-    color: white; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-size: 14px; 
-    font-weight: 700; 
-  }
-
-  /* FAQ Section */
-  .faq-section { padding: 80px 0; background: #fafaf9; }
-  .faq-header { text-align: center; margin-bottom: 60px; }
-  .faq-header .content-title { max-width: 600px; margin: 0 auto; }
-  .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .faq-item { background: white; padding: 32px; border: 1px solid #e7e5e4; }
-  .faq-item h4 { font-size: 16px; font-weight: 700; color: #1c1917; margin-bottom: 12px; line-height: 1.4; }
-  .faq-item p { font-size: 14px; line-height: 1.7; color: #57534e; margin: 0; }
-
-  /* Conclusion Section */
-  .conclusion-section { padding: 80px 0; background: #1c1917; }
-  .conclusion-content { max-width: 800px; margin: 0 auto; text-align: center; }
-  .conclusion-content h2 { font-size: 28px; font-weight: 700; color: white; margin-bottom: 24px; }
-  .conclusion-content > p { font-size: 15px; line-height: 1.8; color: #a8a29e; margin-bottom: 16px; }
-  .conclusion-content a { color: #8b8b4b; }
-  .conclusion-contact { margin-top: 40px; padding-top: 40px; border-top: 1px solid #292524; }
-  .conclusion-contact p { font-size: 14px; color: #a8a29e; margin: 8px 0; }
-  .conclusion-contact a { color: #8b8b4b; text-decoration: none; }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .accessories-grid { grid-template-columns: 1fr; }
-    .faq-grid { grid-template-columns: 1fr; }
-    .comparison-grid { grid-template-columns: 1fr; }
-  }
-  
-  @media (max-width: 900px) {
-    .content-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-    .content-left { position: static; }
-  }
-  
-  @media (max-width: 768px) { 
-    .content-container { padding: 0 20px; }
-    .content-section, .contact-section, .faq-section, .conclusion-section { padding: 60px 0; }
-    .content-title { font-size: 24px; }
-  }
-</style>
