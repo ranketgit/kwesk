@@ -1,15 +1,45 @@
 ---
 // pages/bureaux.astro
 import Layout from '../layouts/Layout.astro';
-import CategoryHeader from '../components/CategoryHeader.astro';
-import ProductCardSimple from '../components/ProductCardSimple.astro';
 import AmCTA from '../components/AmCTA.astro';
 
-const products = [
-  { name: "EXECUTIVE PRO", type: "Bureau de Direction", image: "/bureaux/dr1.jpg", href: "/bureaux/direction" },
-  { name: "OPTIMA 140", type: "Bureau Opératif", image: "/bureaux/op1.jpg", href: "/bureaux/operatif" },
-  { name: "ACTIVE DESK", type: "Bureau Réglable", image: "/bureaux/rg1.jpg", href: "/bureaux/reglables" },
-  { name: "TEAM BENCH", type: "Bureau Bench", image: "/bureaux/bn1.jpg", href: "/bureaux/bench" },
+const bureauTypes = [
+  { 
+    name: "Bureau de Direction", 
+    slug: "direction",
+    image: "/bureaux/dr1.jpg", 
+    href: "/bureaux/direction",
+    label: "PRESTIGE",
+    description: "Les <a href=\"/bureaux/direction\">bureaux de direction</a> incarnent l'excellence et le professionnalisme. Conçus pour les cadres dirigeants et les espaces de management, ces bureaux entreprise offrent des plateaux spacieux de 180 à 220 cm avec des finitions premium. Leur design soigné reflète le standing de votre organisation tout en intégrant des solutions de rangement et de gestion des câbles pour un environnement de travail impeccable.",
+    features: ["Plateaux 180-220 cm", "Finitions premium", "Gestion des câbles", "Garantie 5 ans"]
+  },
+  { 
+    name: "Bureau Opératif", 
+    slug: "operatif",
+    image: "/bureaux/op1.jpg", 
+    href: "/bureaux/operatif",
+    label: "PERFORMANCE",
+    description: "Les <a href=\"/bureaux/operatif\">bureaux opératifs</a> constituent le cœur de votre agencement bureau entreprise. Robustes et fonctionnels, ces postes de travail de 120 à 160 cm sont parfaits pour équiper vos équipes administratives et commerciales. Leur excellent rapport qualité-prix en fait la solution idéale pour les projets d'aménagement à grande échelle dans les entreprises marocaines.",
+    features: ["Dimensions 120-160 cm", "Structure robuste", "Excellent rapport qualité-prix", "Garantie 3 ans"]
+  },
+  { 
+    name: "Bureau Réglable", 
+    slug: "reglables",
+    image: "/bureaux/rg1.jpg", 
+    href: "/bureaux/reglables",
+    label: "ERGONOMIE",
+    description: "Les <a href=\"/bureaux/reglables\">bureaux réglables</a> représentent l'avenir du bureau de travail entreprise. Ces postes assis-debout favorisent la santé et la productivité de vos collaborateurs grâce à leur mécanisme électrique ou manuel permettant d'alterner les positions tout au long de la journée. Un investissement stratégique pour les entreprises soucieuses du bien-être de leurs équipes.",
+    features: ["Réglage 65-130 cm", "Moteur électrique silencieux", "Mémoire 4 positions", "Garantie 5 ans"]
+  },
+  { 
+    name: "Bureau Bench", 
+    slug: "bench",
+    image: "/bureaux/bn1.jpg", 
+    href: "/bureaux/bench",
+    label: "COLLABORATION",
+    description: "Les <a href=\"/bureaux/bench\">bureaux bench</a> ou Team Bench optimisent l'espace en regroupant 2 à 8 postes de travail sur une structure modulaire. Parfaits pour les centres d'appels, les équipes commerciales ou les startups au Maroc, ces configurations favorisent la collaboration tout en réduisant les coûts d'aménagement bureau entreprise.",
+    features: ["Configuration 2-8 postes", "Structure partagée", "Économie 30-40%", "Garantie 5 ans"]
+  }
 ];
 ---
 
@@ -17,282 +47,236 @@ const products = [
   title="Bureau Entreprise Maroc | Solutions Complètes | Kwesk" 
   description="Découvrez notre collection de bureau entreprise au Maroc : direction, opératif, réglable, bench. Solutions complètes d'aménagement. Devis gratuit !"
 >
-  <CategoryHeader 
-    title="Bureau Entreprise au Maroc : Solutions Professionnelles et Ergonomiques" 
-    description="Vous recherchez un bureau entreprise adapté aux besoins de vos équipes au Maroc ? Kwesk, expert en mobilier professionnel depuis 2008, vous propose une gamme complète de solutions pour l'aménagement de bureau de votre entreprise."
-    image="/home-categories/desk.jpg"
-  />
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/home-categories/desk.jpg" alt="Bureau Entreprise Maroc" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-label">MOBILIER PROFESSIONNEL</span>
+      <h1>Bureau Entreprise au Maroc : Solutions Professionnelles et Ergonomiques</h1>
+      <p>Vous recherchez un bureau entreprise adapté aux besoins de vos équipes au Maroc ? Kwesk, expert en mobilier professionnel depuis 2008, vous propose une gamme complète de solutions pour l'<a href="/amenagement-de-bureau">aménagement de bureau</a> de votre entreprise.</p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn-primary">Demander un Devis</a>
+        <a href="#collection" class="btn-secondary">Découvrir la Collection</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Products Grid -->
-  <section class="product-section">
-    <div class="product-container">
-      <div class="product-grid">
-        {products.map(p => <ProductCardSimple {...p} />)}
+  <!-- Quick Stats -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Gammes de Bureaux</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">2008</span>
+        <span class="stat-label">Depuis</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">5 ans</span>
+        <span class="stat-label">Garantie Structure</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">BIFMA</span>
+        <span class="stat-label">Certifié</span>
       </div>
     </div>
   </section>
 
   <!-- Introduction -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">KWESK MAROC</span>
-          <h2 class="content-title">Notre Expertise Bureau Entreprise</h2>
-        </div>
-        <div class="content-right">
-          <p>Que vous équipiez des espaces de direction, des open spaces collaboratifs ou des postes de travail ergonomiques, notre collection de bureau professionnel répond aux exigences les plus strictes en termes de qualité, de confort et de design. Basés à Casablanca, nous accompagnons les entreprises marocaines dans leurs projets d'aménagement bureau entreprise avec des produits certifiés BIFMA 2011 et EN 1335 2016.</p>
-        </div>
+  <section class="intro-section">
+    <div class="intro-container">
+      <div class="intro-content">
+        <span class="section-label">NOTRE EXPERTISE</span>
+        <h2>Notre Collection Complète de Bureau Entreprise</h2>
+        <p>Kwesk vous offre quatre catégories de bureau pour entreprise soigneusement conçues pour répondre aux différents besoins organisationnels et budgétaires. Chaque gamme a été développée en tenant compte des spécificités du marché marocain et des standards internationaux de qualité.</p>
+        <p>Que vous équipiez des espaces de direction, des open spaces collaboratifs ou des postes de travail ergonomiques, notre collection de bureau professionnel répond aux exigences les plus strictes en termes de qualité, de confort et de design. Basés à Casablanca, nous accompagnons les entreprises marocaines dans leurs projets d'aménagement bureau entreprise avec des produits certifiés BIFMA 2011 et EN 1335 2016.</p>
       </div>
     </div>
   </section>
 
-  <!-- Collection Complète -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">NOTRE GAMME</span>
-          <h2 class="content-title">Notre Collection Complète de Bureau Entreprise</h2>
+  <!-- Bureau Types - Alternating Layout -->
+  <section class="collection-section" id="collection">
+    {bureauTypes.map((bureau, index) => (
+      <div class={`bureau-block ${index % 2 === 1 ? 'reversed' : ''}`}>
+        <div class="bureau-image">
+          <a href={bureau.href}>
+            <img src={bureau.image} alt={bureau.name} />
+            <div class="image-overlay">
+              <span>Voir la gamme →</span>
+            </div>
+          </a>
         </div>
-        <div class="content-right">
-          <p>Kwesk vous offre quatre catégories de bureau pour entreprise soigneusement conçues pour répondre aux différents besoins organisationnels et budgétaires. Chaque gamme a été développée en tenant compte des spécificités du marché marocain et des standards internationaux de qualité. Notre expertise en bureau maroc nous permet de proposer des solutions qui allient esthétique contemporaine, fonctionnalité optimale et durabilité exceptionnelle.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bureaux de Direction -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">DIRECTION</span>
-          <h3 class="content-title">Bureaux de Direction : Prestige et Fonctionnalité</h3>
-        </div>
-        <div class="content-right">
-          <p>Les bureaux de direction incarnent l'excellence et le professionnalisme. Conçus pour les cadres dirigeants et les espaces de management, ces bureaux entreprise offrent des plateaux spacieux de 180 à 220 cm avec des finitions premium. Leur design soigné reflète le standing de votre organisation tout en intégrant des solutions de rangement et de gestion des câbles pour un environnement de travail impeccable.</p>
+        <div class="bureau-content">
+          <span class="bureau-label">{bureau.label}</span>
+          <h2><a href={bureau.href}>{bureau.name}</a></h2>
+          <p set:html={bureau.description}></p>
+          <ul class="bureau-features">
+            {bureau.features.map(feature => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+          <a href={bureau.href} class="bureau-cta">Découvrir les {bureau.name}s →</a>
         </div>
       </div>
-    </div>
+    ))}
   </section>
 
-  <!-- Bureaux Opératifs -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">OPÉRATIF</span>
-          <h3 class="content-title">Bureaux Opératifs : Performance au Quotidien</h3>
+ <!-- Solutions Complètes -->
+<section class="py-24 bg-stone-900">
+  <div class="max-w-7xl mx-auto px-6 lg:px-16">
+    <div class="text-center mb-16">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">ÉCOSYSTÈME COMPLET</span>
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Solutions Complètes pour Votre Aménagement Bureau Entreprise</h2>
+      <p class="text-base text-stone-400 max-w-2xl mx-auto">Au-delà du simple bureau professionnel, Kwesk vous propose un écosystème complet pour créer des environnements de travail performants et confortables.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <a href="/chaises" class="group bg-stone-800 p-10 hover:bg-stone-700 transition-all duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 text-[#8b8b4b] mb-6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
         </div>
-        <div class="content-right">
-          <p>Les bureaux opératifs constituent le cœur de votre agencement bureau entreprise. Robustes et fonctionnels, ces postes de travail de 120 à 160 cm sont parfaits pour équiper vos équipes administratives et commerciales. Leur excellent rapport qualité-prix en fait la solution idéale pour les projets d'aménagement à grande échelle dans les entreprises marocaines.</p>
+        <h3 class="text-xl font-bold text-white mb-3">Chaises Professionnelles</h3>
+        <p class="text-sm text-stone-400 leading-relaxed mb-5">Notre gamme de <strong class="text-stone-300">chaises</strong> professionnelles certifiées EN 1335 2016 garantit un confort optimal. Des modèles opératifs aux fauteuils de direction.</p>
+        <span class="text-xs font-semibold text-[#8b8b4b] uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-block">Voir les chaises →</span>
+      </a>
+
+      <a href="/salles-reunion" class="group bg-stone-800 p-10 hover:bg-stone-700 transition-all duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 text-[#8b8b4b] mb-6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
         </div>
+        <h3 class="text-xl font-bold text-white mb-3">Salles de Réunion</h3>
+        <p class="text-sm text-stone-400 leading-relaxed mb-5">Complétez votre bureau avec nos <strong class="text-stone-300">salles de réunion</strong> équipées : <span class="text-[#8b8b4b] hover:underline">tables de réunion</span>, <span class="text-[#8b8b4b] hover:underline">solutions média</span> et <span class="text-[#8b8b4b] hover:underline">rangements</span>.</p>
+        <span class="text-xs font-semibold text-[#8b8b4b] uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-block">Voir les solutions →</span>
+      </a>
+
+      <a href="/mobilier-industriel" class="group bg-stone-800 p-10 hover:bg-stone-700 transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+        <div class="w-12 h-12 text-[#8b8b4b] mb-6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Mobilier Industriel</h3>
+        <p class="text-sm text-stone-400 leading-relaxed mb-5">Pour les espaces communs : <span class="text-[#8b8b4b] hover:underline">tables de cantine</span>, <span class="text-[#8b8b4b] hover:underline">casiers vestiaire</span> et <span class="text-[#8b8b4b] hover:underline">armoires de rangement</span>.</p>
+        <span class="text-xs font-semibold text-[#8b8b4b] uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-block">Voir le mobilier →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Why Kwesk -->
+  <section class="why-section">
+    <div class="why-container">
+      <div class="why-content">
+        <span class="section-label">POURQUOI KWESK</span>
+        <h2>Votre Partenaire Bureau Entreprise au Maroc</h2>
+        <p>Depuis 2008, Kwesk est un acteur majeur du bureau professionnel au Maroc. Notre connaissance approfondie du marché marocain, combinée à notre respect des normes internationales les plus strictes (BIFMA 2011 et EN 1335 2016), nous permet de proposer des produits parfaitement adaptés aux besoins locaux avec une qualité mondiale.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Bureaux Réglables -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">RÉGLABLE</span>
-          <h3 class="content-title">Bureaux Réglables : Innovation Ergonomique</h3>
-        </div>
-        <div class="content-right">
-          <p>Les bureaux réglables représentent l'avenir du bureau de travail entreprise. Ces postes assis-debout favorisent la santé et la productivité de vos collaborateurs grâce à leur mécanisme électrique ou manuel permettant d'alterner les positions tout au long de la journée. Un investissement stratégique pour les entreprises soucieuses du bien-être de leurs équipes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bureaux Bench -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">BENCH</span>
-          <h3 class="content-title">Bureaux Bench : Optimisation des Espaces</h3>
-        </div>
-        <div class="content-right">
-          <p>Les bureaux bench ou Team Bench optimisent l'espace en regroupant 2 à 8 postes de travail sur une structure modulaire. Parfaits pour les centres d'appels, les équipes commerciales ou les startups au Maroc, ces configurations favorisent la collaboration tout en réduisant les coûts d'aménagement bureau entreprise.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Solutions Complètes -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">AMÉNAGEMENT</span>
-          <h2 class="content-title">Solutions Complètes pour Votre Aménagement Bureau Entreprise</h2>
-        </div>
-        <div class="content-right">
-          <p>Au-delà du simple bureau professionnel, Kwesk vous propose un écosystème complet pour créer des environnements de travail performants et confortables. Notre approche globale de l'aménagement de bureau intègre tous les éléments essentiels à la productivité de vos équipes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Cards -->
-  <section class="services-section">
-    <div class="content-container">
-      <div class="services-grid">
-        <div class="service-card">
-          <h4>Sièges et Chaises Professionnelles</h4>
-          <p>Chaque bureau entreprise nécessite un siège ergonomique adapté. Notre gamme de chaises professionnelles certifiées EN 1335 2016 garantit un confort optimal pendant les longues journées de travail. Des modèles opératifs aux fauteuils de direction, nous offrons des solutions pour chaque poste et chaque budget.</p>
-        </div>
-        <div class="service-card">
-          <h4>Espaces de Collaboration et Réunion</h4>
-          <p>Complétez votre bureau maroc avec nos salles de réunion équipées. Nous proposons des tables de réunion modulaires, des solutions média pour vos présentations et des rangements adaptés pour créer des espaces collaboratifs inspirants.</p>
-        </div>
-        <div class="service-card">
-          <h4>Mobilier Complémentaire pour Entreprises</h4>
-          <p>Pour les environnements industriels et les espaces communs, découvrez notre mobilier industriel incluant des tables de cantine, des casiers vestiaire et des armoires de rangement robustes et durables.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pourquoi Choisir Kwesk -->
-  <section class="content-section bg-dark">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label light">KWESK</span>
-          <h2 class="content-title light">Pourquoi Choisir Kwesk pour Votre Bureau Entreprise au Maroc</h2>
-        </div>
-        <div class="content-right">
-          <p class="light">Depuis 2008, Kwesk est un acteur majeur du bureau professionnel au Maroc. Notre connaissance approfondie du marché marocain, combinée à notre respect des normes internationales les plus strictes (BIFMA 2011 et EN 1335 2016), nous permet de proposer des produits parfaitement adaptés aux besoins locaux avec une qualité mondiale.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Avantages -->
-  <section class="advantages-section">
-    <div class="content-container">
-      <div class="advantages-grid">
-        <div class="advantage-card">
-          <div class="advantage-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number">01</div>
           <h4>Showroom à Casablanca</h4>
-          <p>Visitez notre showroom situé à Anfa Place, Tour Ouest, Niveau 1, à Casablanca pour découvrir notre collection complète de bureau entreprise. Nos experts vous accueillent pour vous conseiller sur votre projet d'aménagement bureau entreprise et vous permettre de tester nos produits avant de prendre votre décision.</p>
+          <p>Visitez notre showroom à Anfa Place, Tour Ouest, Niveau 1. Testez nos produits avant de décider.</p>
         </div>
-        <div class="advantage-card">
-          <div class="advantage-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h4>Accompagnement de A à Z</h4>
-          <p>Notre service ne s'arrête pas à la vente. Nous vous accompagnons depuis l'audit de vos besoins jusqu'à l'installation finale de votre bureau pour entreprise, en passant par la conception des plans d'aménagement. Notre équipe assure également le service après-vente pour garantir votre satisfaction à long terme.</p>
+        <div class="why-card">
+          <div class="why-number">02</div>
+          <h4>Accompagnement A à Z</h4>
+          <p>De l'audit des besoins à l'installation finale, notre équipe vous accompagne à chaque étape.</p>
         </div>
-        <div class="advantage-card">
-          <div class="advantage-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-            </svg>
-          </div>
-          <h4>Personnalisation et Solutions Sur Mesure</h4>
-          <p>Chaque entreprise a des besoins spécifiques. Nos solutions de bureau de travail entreprise peuvent être personnalisées en termes de dimensions, de finitions et de configurations pour s'adapter parfaitement à vos espaces et à votre image de marque.</p>
+        <div class="why-card">
+          <div class="why-number">03</div>
+          <h4>Solutions Sur Mesure</h4>
+          <p>Dimensions, finitions, configurations : personnalisez selon vos espaces et votre image de marque.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">04</div>
+          <h4>Service Après-Vente</h4>
+          <p>Garantie jusqu'à 5 ans et support réactif pour votre satisfaction à long terme.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Tendances -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">TENDANCES</span>
-          <h2 class="content-title">Tendances et Meilleures Pratiques en Aménagement Bureau Entreprise</h2>
+  <section class="trends-section">
+    <div class="trends-container">
+      <div class="trends-header">
+        <span class="section-label">TENDANCES</span>
+        <h2>Meilleures Pratiques en Aménagement Bureau Entreprise</h2>
+      </div>
+      <div class="trends-grid">
+        <div class="trend-card">
+          <h4>L'Ergonomie au Cœur de la Productivité</h4>
+          <p>L'ergonomie n'est plus une option mais une nécessité. Les <a href="/bureaux/reglables">bureaux réglables</a> et les <a href="/chaises">chaises professionnelles</a> certifiées réduisent les troubles musculo-squelettiques et augmentent la concentration.</p>
         </div>
-        <div class="content-right">
-          <div class="tendances-list">
-            <div class="tendance-item">
-              <h4>L'Ergonomie au Cœur de la Productivité</h4>
-              <p>L'ergonomie n'est plus une option mais une nécessité pour tout bureau entreprise moderne. Les bureaux réglables et les chaises professionnelles certifiées réduisent les troubles musculo-squelettiques et augmentent la concentration. Nos produits respectent les recommandations ergonomiques internationales pour garantir le bien-être de vos collaborateurs au Maroc.</p>
-            </div>
-            <div class="tendance-item">
-              <h4>Flexibilité et Modularité</h4>
-              <p>Les espaces de travail évoluent constamment. Nos bureaux bench modulaires et nos solutions d'aménagement de bureau permettent de reconfigurer facilement vos espaces selon vos besoins changeants. Cette flexibilité représente un avantage économique majeur pour les entreprises en croissance.</p>
-            </div>
-            <div class="tendance-item">
-              <h4>Optimisation de l'Espace</h4>
-              <p>Dans un contexte où l'immobilier professionnel coûte cher, notamment à Casablanca, l'optimisation de chaque mètre carré devient cruciale. Les bureaux opératifs compacts et les configurations bench maximisent votre capacité d'accueil sans compromettre le confort.</p>
-            </div>
-            <div class="tendance-item">
-              <h4>Design et Image d'Entreprise</h4>
-              <p>Votre bureau professionnel reflète votre culture d'entreprise. Nos bureaux de direction aux finitions soignées et nos gammes contemporaines contribuent à créer une image professionnelle forte auprès de vos clients et partenaires.</p>
-            </div>
-          </div>
+        <div class="trend-card">
+          <h4>Flexibilité et Modularité</h4>
+          <p>Les espaces évoluent constamment. Nos <a href="/bureaux/bench">bureaux bench</a> modulaires et nos solutions d'<a href="/amenagement-de-bureau">aménagement de bureau</a> permettent de reconfigurer facilement vos espaces.</p>
+        </div>
+        <div class="trend-card">
+          <h4>Optimisation de l'Espace</h4>
+          <p>L'immobilier coûte cher à Casablanca. Les <a href="/bureaux/operatif">bureaux opératifs</a> compacts et les configurations bench maximisent votre capacité d'accueil.</p>
+        </div>
+        <div class="trend-card">
+          <h4>Design et Image</h4>
+          <p>Votre bureau reflète votre culture d'entreprise. Nos <a href="/bureaux/direction">bureaux de direction</a> aux finitions soignées créent une image professionnelle forte.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Applications par Secteur -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">SECTEURS</span>
-          <h2 class="content-title">Applications par Secteur d'Activité</h2>
+  <!-- Secteurs -->
+  <section class="sectors-section">
+    <div class="sectors-container">
+      <div class="sectors-left">
+        <span class="section-label">SECTEURS</span>
+        <h2>Applications par Secteur d'Activité</h2>
+        <p>Nos solutions s'adaptent à tous les secteurs d'activité au Maroc.</p>
+      </div>
+      <div class="sectors-right">
+        <div class="sector-item">
+          <h4>Secteur Tertiaire et Administratif</h4>
+          <p>Cabinets d'avocats, sociétés de consulting et administrations trouvent dans nos <a href="/bureaux/operatif">bureaux opératifs</a> et <a href="/bureaux/direction">bureaux de direction</a> les solutions idéales.</p>
         </div>
-        <div class="content-right">
-          <div class="secteurs-list">
-            <div class="secteur-item">
-              <h4>Bureaux pour Secteur Tertiaire et Administratif</h4>
-              <p>Les entreprises de services, cabinets d'avocats, sociétés de consulting et administrations trouvent dans nos bureaux opératifs et bureaux de direction les solutions idéales pour créer des environnements professionnels élégants et fonctionnels.</p>
-            </div>
-            <div class="secteur-item">
-              <h4>Solutions pour Centres d'Appels et Back Offices</h4>
-              <p>Les centres de contact et services clients au Maroc bénéficient de nos configurations bureaux bench permettant de concentrer de nombreux postes dans un espace optimisé, avec une excellente gestion des câbles et une acoustique étudiée.</p>
-            </div>
-            <div class="secteur-item">
-              <h4>Aménagement pour Startups et Espaces de Coworking</h4>
-              <p>Les jeunes entreprises et espaces collaboratifs privilégient nos solutions modulaires combinant bureaux bench, bureaux réglables et tables de réunion flexibles pour créer des environnements dynamiques et évolutifs.</p>
-            </div>
-            <div class="secteur-item">
-              <h4>Mobilier pour Industries et Ateliers</h4>
-              <p>Au-delà du bureau entreprise classique, nos solutions de mobilier industriel, casiers vestiaire et armoires de rangement équipent les zones administratives et espaces communs des sites industriels.</p>
-            </div>
-          </div>
+        <div class="sector-item">
+          <h4>Centres d'Appels et Back Offices</h4>
+          <p>Nos configurations <a href="/bureaux/bench">bureaux bench</a> permettent de concentrer de nombreux postes avec une excellente gestion des câbles.</p>
+        </div>
+        <div class="sector-item">
+          <h4>Startups et Coworking</h4>
+          <p>Solutions modulaires combinant <a href="/bureaux/bench">bureaux bench</a>, <a href="/bureaux/reglables">bureaux réglables</a> et <a href="/reunion/tables">tables de réunion</a> flexibles.</p>
+        </div>
+        <div class="sector-item">
+          <h4>Industries et Ateliers</h4>
+          <p>Notre <a href="/mobilier-industriel">mobilier industriel</a>, <a href="/industrie/casiers-vestiaire">casiers vestiaire</a> et <a href="/industrie/armoires-rangement">armoires de rangement</a> équipent vos espaces communs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="content-container">
-      <div class="contact-grid">
-        <div class="contact-left">
-          <span class="content-label">CONTACT</span>
-          <h2 class="content-title">Demandez Votre Devis Gratuit pour Votre Bureau Entreprise</h2>
-          <p>Vous avez un projet d'aménagement bureau entreprise au Maroc ? Kwesk vous accompagne avec une approche personnalisée et professionnelle. Contactez-nous dès aujourd'hui pour recevoir votre devis gratuit et bénéficier des conseils de nos experts.</p>
-        </div>
-        <div class="contact-right">
-          <div class="contact-info-card">
-            <h4>Nos Coordonnées</h4>
-            <ul>
-              <li><strong>Showroom :</strong> Anfa Place, Tour Ouest, Niveau 1, Casablanca</li>
-              <li><strong>Téléphone :</strong> <a href="tel:+212520241637">+212 5 20 24 16 37</a></li>
-              <li><strong>Mobile :</strong> <a href="tel:+212661481616">+212 6 61 48 16 16</a></li>
-              <li><strong>Email :</strong> <a href="mailto:contact@kwesk.com">contact@kwesk.com</a></li>
-            </ul>
-            <p class="contact-note">Notre équipe est à votre disposition pour étudier vos besoins, vous présenter nos gammes de bureau professionnel et élaborer une proposition adaptée à votre budget et vos contraintes. Visitez notre showroom à Casablanca pour découvrir la qualité de nos produits et imaginer votre futur environnement de travail.</p>
-            <a href="/contact" class="contact-cta">Demander un Devis</a>
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <div class="cta-content">
+        <h2>Demandez Votre Devis Gratuit</h2>
+        <p>Vous avez un projet d'aménagement bureau entreprise au Maroc ? Kwesk vous accompagne avec une approche personnalisée et professionnelle.</p>
+        <div class="cta-contact">
+          <div class="cta-info">
+            <p><strong>Showroom :</strong> Anfa Place, Tour Ouest, Niveau 1, Casablanca</p>
+            <p><strong>Téléphone :</strong> <a href="tel:+212520241637">+212 5 20 24 16 37</a></p>
+            <p><strong>Mobile :</strong> <a href="tel:+212661481616">+212 6 61 48 16 16</a></p>
+            <p><strong>Email :</strong> <a href="mailto:contact@kwesk.com">contact@kwesk.com</a></p>
           </div>
+          <a href="/contact" class="cta-btn">Demander un Devis Gratuit</a>
         </div>
       </div>
     </div>
@@ -300,39 +284,35 @@ const products = [
 
   <!-- FAQ -->
   <section class="faq-section">
-    <div class="content-container">
+    <div class="faq-container">
       <div class="faq-header">
-        <span class="content-label">FAQ</span>
-        <h2 class="content-title">Questions Fréquentes sur les Bureau Entreprise</h2>
+        <span class="section-label">FAQ</span>
+        <h2>Questions Fréquentes</h2>
       </div>
       <div class="faq-grid">
         <div class="faq-item">
-          <h4>Quels sont les délais de livraison pour un bureau entreprise au Maroc ?</h4>
-          <p>Les délais varient selon le modèle et la quantité. Pour nos produits en stock (bureaux opératifs et bureaux bench), comptez 5 à 10 jours ouvrables. Les modèles sur commande comme certains bureaux de direction nécessitent 3 à 6 semaines. Contactez-nous pour un délai précis selon votre projet.</p>
+          <h4>Quels sont les délais de livraison ?</h4>
+          <p>Pour nos produits en stock (<a href="/bureaux/operatif">bureaux opératifs</a> et <a href="/bureaux/bench">bureaux bench</a>), comptez 5 à 10 jours ouvrables. Les <a href="/bureaux/direction">bureaux de direction</a> sur commande nécessitent 3 à 6 semaines.</p>
         </div>
         <div class="faq-item">
-          <h4>Puis-je personnaliser mon bureau entreprise selon mes besoins spécifiques ?</h4>
-          <p>Absolument. Kwesk propose des options de personnalisation pour la plupart de nos gammes de bureau professionnel. Vous pouvez choisir les dimensions, les finitions (bois, stratifié, couleurs), les accessoires (caissons, retours, écrans) et les configurations. Notre équipe d'aménagement de bureau étudie chaque demande pour créer des solutions sur mesure.</p>
+          <h4>Puis-je personnaliser mon bureau ?</h4>
+          <p>Absolument. Dimensions, finitions (bois, stratifié, couleurs), accessoires (caissons, retours, écrans) et configurations sur mesure.</p>
         </div>
         <div class="faq-item">
-          <h4>Quelle garantie offrez-vous sur vos bureaux entreprise ?</h4>
-          <p>Tous nos produits certifiés BIFMA 2011 et EN 1335 2016 bénéficient d'une garantie constructeur. La durée varie selon les gammes : 3 ans pour les bureaux opératifs, 5 ans pour les bureaux de direction et bureaux réglables. Notre service après-vente assure un suivi complet.</p>
+          <h4>Quelle garantie offrez-vous ?</h4>
+          <p>3 ans pour les <a href="/bureaux/operatif">bureaux opératifs</a>, 5 ans pour les <a href="/bureaux/direction">bureaux de direction</a> et <a href="/bureaux/reglables">bureaux réglables</a>. Service après-vente complet.</p>
         </div>
         <div class="faq-item">
-          <h4>Proposez-vous des solutions de financement pour les projets d'aménagement bureau entreprise ?</h4>
-          <p>Oui, nous travaillons avec plusieurs partenaires financiers pour faciliter l'acquisition de bureau entreprise et d'équipements complets. Nous pouvons vous proposer des solutions de leasing, de crédit professionnel ou de paiement échelonné adaptées aux entreprises marocaines. Contactez notre équipe commerciale pour étudier les options disponibles.</p>
+          <h4>Proposez-vous des solutions de financement ?</h4>
+          <p>Oui : leasing, crédit professionnel ou paiement échelonné adaptés aux entreprises marocaines.</p>
         </div>
         <div class="faq-item">
-          <h4>Dois-je acheter séparément les chaises et autres accessoires pour mon bureau professionnel ?</h4>
-          <p>Kwesk propose des packages complets pour votre agencement bureau entreprise. Nous pouvons vous fournir une solution clé en main incluant bureaux, chaises professionnelles, rangements, tables de réunion et tous les accessoires nécessaires. Cette approche globale garantit une cohérence esthétique et souvent de meilleurs tarifs.</p>
+          <h4>Les chaises sont-elles incluses ?</h4>
+          <p>Nous proposons des packages complets : <a href="/bureaux">bureaux</a>, <a href="/chaises">chaises professionnelles</a>, <a href="/reunion/rangement">rangements</a>, <a href="/reunion/tables">tables de réunion</a>.</p>
         </div>
         <div class="faq-item">
-          <h4>Peut-on visiter votre showroom pour voir les bureaux avant de commander ?</h4>
-          <p>Nous vous encourageons vivement à visiter notre showroom à Anfa Place à Casablanca pour découvrir notre collection de bureau maroc. Vous pourrez tester le confort de nos produits, visualiser les finitions disponibles et recevoir des conseils personnalisés de nos experts. Prenez rendez-vous au <a href="tel:+212520241637">+212 5 20 24 16 37</a> pour bénéficier d'un accueil dédié.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Assurez-vous l'installation des bureaux entreprise ?</h4>
-          <p>Oui, Kwesk offre un service d'installation professionnel pour tous les projets d'aménagement bureau entreprise au Maroc. Notre équipe technique assure le montage, l'installation et la mise en service de tous les équipements. Nous veillons à minimiser les perturbations de votre activité en programmant les interventions selon vos contraintes opérationnelles.</p>
+          <h4>Assurez-vous l'installation ?</h4>
+          <p>Oui, service d'installation professionnel pour tous les projets au Maroc. Montage et mise en service inclus.</p>
         </div>
       </div>
     </div>
@@ -342,202 +322,673 @@ const products = [
 </Layout>
 
 <style>
-  /* Product Section */
-  .product-section { padding: 80px 0; background: white; }
-  .product-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
-  .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 30px; }
-
-  /* Content Sections */
-  .content-section { padding: 80px 0; }
-  .content-section.bg-stone { background: #fafaf9; }
-  .content-section.bg-dark { background: #1c1917; }
-  .content-container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
-  
-  .content-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
-  .content-left { position: sticky; top: 120px; }
-  
-  .content-label { 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    letter-spacing: 3px; 
-    color: #8b8b4b; 
-    display: block; 
-    margin-bottom: 16px; 
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
   }
-  .content-label.light { color: #8b8b4b; }
-  
-  .content-title { 
-    font-size: 28px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    line-height: 1.3; 
+  .hero-bg {
+    position: absolute;
+    inset: 0;
   }
-  .content-title.light { color: white; }
-  
-  .content-right p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .content-right p.light { color: #a8a29e; }
-
-  /* Services Section */
-  .services-section { padding: 80px 0; background: #fafaf9; }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-  .service-card { 
-    background: white; 
-    padding: 40px; 
-    border: 1px solid #e7e5e4; 
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(28,25,23,0.9) 0%, rgba(28,25,23,0.5) 100%);
   }
-  .service-card h4 { 
-    font-size: 18px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    margin-bottom: 16px; 
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 60px;
+    text-align: center;
   }
-  .service-card p { 
-    font-size: 14px; 
-    line-height: 1.8; 
-    color: #57534e; 
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #8b8b4b;
+    margin-bottom: 24px;
+    text-transform: uppercase;
   }
-
-  /* Advantages Section */
-  .advantages-section { padding: 80px 0; background: white; }
-  .advantages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-  .advantage-card { padding: 40px; border: 1px solid #e7e5e4; }
-  .advantage-icon { 
-    width: 50px; 
-    height: 50px; 
-    color: #8b8b4b; 
-    margin-bottom: 24px; 
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 24px;
   }
-  .advantage-icon svg { width: 100%; height: 100%; }
-  .advantage-card h4 { 
-    font-size: 18px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    margin-bottom: 16px; 
+  .hero p {
+    font-size: 18px;
+    color: #d6d3d1;
+    line-height: 1.7;
+    margin-bottom: 40px;
   }
-  .advantage-card p { 
-    font-size: 14px; 
-    line-height: 1.8; 
-    color: #57534e; 
+  .hero p a {
+    color: #8b8b4b;
+    text-decoration: underline;
   }
-
-  /* Tendances & Secteurs */
-  .tendances-list, .secteurs-list { display: flex; flex-direction: column; gap: 32px; }
-  .tendance-item, .secteur-item { padding-bottom: 32px; border-bottom: 1px solid #e7e5e4; }
-  .tendance-item:last-child, .secteur-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .tendance-item h4, .secteur-item h4 { 
-    font-size: 18px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    margin-bottom: 12px; 
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
   }
-  .tendance-item p, .secteur-item p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
+  .btn-primary {
+    padding: 16px 32px;
+    background: #8b8b4b;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover {
+    background: white;
+    color: #1c1917;
+  }
+  .btn-secondary {
+    padding: 16px 32px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    background: white;
+    color: #1c1917;
   }
 
-  /* Contact Section */
-  .contact-section { padding: 80px 0; background: white; }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-  .contact-left p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
-    margin-top: 20px; 
+  /* Stats Section */
+  .stats-section {
+    background: #1c1917;
+    padding: 40px 0;
   }
-  .contact-info-card { 
-    background: #fafaf9; 
-    padding: 40px; 
-    border: 1px solid #e7e5e4; 
+  .stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
   }
-  .contact-info-card h4 { 
-    font-size: 20px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    margin-bottom: 20px; 
+  .stat-item {
+    text-align: center;
   }
-  .contact-info-card ul { 
-    list-style: none; 
-    padding: 0; 
-    margin: 0 0 20px 0; 
+  .stat-number {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    color: #8b8b4b;
+    margin-bottom: 8px;
   }
-  .contact-info-card li { 
-    font-size: 14px; 
-    color: #57534e; 
-    padding: 8px 0; 
-    border-bottom: 1px solid #e7e5e4; 
+  .stat-label {
+    font-size: 12px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
-  .contact-info-card li:last-child { border-bottom: none; }
-  .contact-info-card a { 
-    color: #8b8b4b; 
-    text-decoration: none; 
+
+  /* Section Label */
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #8b8b4b;
+    margin-bottom: 16px;
+    text-transform: uppercase;
   }
-  .contact-info-card a:hover { text-decoration: underline; }
-  .contact-note { 
-    font-size: 13px; 
-    line-height: 1.7; 
-    color: #78716c; 
-    margin-bottom: 24px; 
+
+  /* Intro Section */
+  .intro-section {
+    padding: 100px 0;
+    background: white;
   }
-  .contact-cta { 
-    display: inline-block; 
-    padding: 14px 32px; 
-    background: #8b8b4b; 
-    color: white; 
-    text-decoration: none; 
-    font-size: 13px; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    transition: background 0.3s; 
+  .intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
   }
-  .contact-cta:hover { background: #1c1917; }
+  .intro-content {
+    text-align: center;
+  }
+  .intro-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+  .intro-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #57534e;
+    margin-bottom: 20px;
+  }
+
+  /* Collection Section - Alternating Blocks */
+  .collection-section {
+    background: #fafaf9;
+  }
+  .bureau-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+  .bureau-block.reversed {
+    direction: rtl;
+  }
+  .bureau-block.reversed > * {
+    direction: ltr;
+  }
+  .bureau-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .bureau-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .bureau-image:hover img {
+    transform: scale(1.05);
+  }
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(28,25,23,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .bureau-image:hover .image-overlay {
+    opacity: 1;
+  }
+  .image-overlay span {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .bureau-content {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+  }
+  .bureau-block:nth-child(even) .bureau-content {
+    background: #fafaf9;
+  }
+  .bureau-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #8b8b4b;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .bureau-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  .bureau-content h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .bureau-content h2 a:hover {
+    color: #8b8b4b;
+  }
+  .bureau-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+    margin-bottom: 24px;
+  }
+  .bureau-content p :global(a) {
+    color: #8b8b4b;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .bureau-content p :global(a:hover) {
+    text-decoration: underline;
+  }
+  .bureau-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .bureau-features li {
+    font-size: 13px;
+    color: #78716c;
+    padding-left: 20px;
+    position: relative;
+  }
+  .bureau-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b8b4b;
+  }
+  .bureau-cta {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1c1917;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  .bureau-cta:hover {
+    color: #8b8b4b;
+  }
+
+  /* Solutions Section */
+  .solutions-section {
+    padding: 100px 0;
+    background: #1c1917;
+  }
+  .solutions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .solutions-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .solutions-header .section-label {
+    color: #8b8b4b;
+  }
+  .solutions-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .solutions-header p {
+    font-size: 16px;
+    color: #a8a29e;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .solution-card {
+    background: #292524;
+    padding: 40px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: block;
+  }
+  .solution-card:hover {
+    background: #3f3f46;
+    transform: translateY(-4px);
+  }
+  .solution-icon {
+    width: 48px;
+    height: 48px;
+    color: #8b8b4b;
+    margin-bottom: 24px;
+  }
+  .solution-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  .solution-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .solution-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #a8a29e;
+    margin-bottom: 20px;
+  }
+  .solution-card p a,
+  .solution-card p strong {
+    color: #d6d3d1;
+  }
+  .solution-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8b8b4b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Why Section */
+  .why-section {
+    padding: 100px 0;
+    background: white;
+  }
+  .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .why-content {
+    max-width: 700px;
+    margin-bottom: 60px;
+  }
+  .why-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 24px;
+  }
+  .why-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .why-card {
+    padding: 32px;
+    border: 1px solid #e7e5e4;
+  }
+  .why-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #8b8b4b;
+    margin-bottom: 16px;
+  }
+  .why-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 12px;
+  }
+  .why-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #78716c;
+  }
+
+  /* Trends Section */
+  .trends-section {
+    padding: 100px 0;
+    background: #fafaf9;
+  }
+  .trends-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .trends-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .trends-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .trends-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .trend-card {
+    background: white;
+    padding: 40px;
+    border: 1px solid #e7e5e4;
+  }
+  .trend-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 12px;
+  }
+  .trend-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+  .trend-card a {
+    color: #8b8b4b;
+    text-decoration: none;
+  }
+  .trend-card a:hover {
+    text-decoration: underline;
+  }
+
+  /* Sectors Section */
+  .sectors-section {
+    padding: 100px 0;
+    background: white;
+  }
+  .sectors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .sectors-left {
+    position: sticky;
+    top: 120px;
+  }
+  .sectors-left h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 16px;
+  }
+  .sectors-left p {
+    font-size: 16px;
+    color: #57534e;
+  }
+  .sectors-right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .sector-item {
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e7e5e4;
+  }
+  .sector-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .sector-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 12px;
+  }
+  .sector-item p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+  .sector-item a {
+    color: #8b8b4b;
+    text-decoration: none;
+  }
+  .sector-item a:hover {
+    text-decoration: underline;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 100px 0;
+    background: #8b8b4b;
+  }
+  .cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .cta-content {
+    text-align: center;
+  }
+  .cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .cta-content > p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 40px;
+  }
+  .cta-contact {
+    background: white;
+    padding: 40px;
+    text-align: left;
+  }
+  .cta-info {
+    margin-bottom: 24px;
+  }
+  .cta-info p {
+    font-size: 14px;
+    color: #57534e;
+    margin-bottom: 8px;
+  }
+  .cta-info a {
+    color: #8b8b4b;
+    text-decoration: none;
+  }
+  .cta-info a:hover {
+    text-decoration: underline;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #1c1917;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+  }
+  .cta-btn:hover {
+    background: #8b8b4b;
+  }
 
   /* FAQ Section */
-  .faq-section { padding: 80px 0; background: #fafaf9; }
-  .faq-header { text-align: center; margin-bottom: 60px; }
-  .faq-header .content-title { max-width: 600px; margin: 0 auto; }
-  .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-  .faq-item { 
-    background: white; 
-    padding: 32px; 
-    border: 1px solid #e7e5e4; 
+  .faq-section {
+    padding: 100px 0;
+    background: #fafaf9;
   }
-  .faq-item h4 { 
-    font-size: 16px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    margin-bottom: 12px; 
-    line-height: 1.4; 
+  .faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
   }
-  .faq-item p { 
-    font-size: 14px; 
-    line-height: 1.7; 
-    color: #57534e; 
+  .faq-header {
+    text-align: center;
+    margin-bottom: 60px;
   }
-  .faq-item a { color: #8b8b4b; }
+  .faq-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .faq-item {
+    background: white;
+    padding: 32px;
+    border: 1px solid #e7e5e4;
+  }
+  .faq-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 12px;
+  }
+  .faq-item p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #57534e;
+  }
+  .faq-item a {
+    color: #8b8b4b;
+    text-decoration: none;
+  }
+  .faq-item a:hover {
+    text-decoration: underline;
+  }
 
   /* Responsive */
-  @media (max-width: 1100px) { 
-    .product-grid { grid-template-columns: repeat(3, 1fr); }
-    .services-grid, .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 1100px) {
+    .stats-container { grid-template-columns: repeat(2, 1fr); }
+    .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 36px; }
+    .hero-content { padding: 0 24px; }
+    .bureau-block { grid-template-columns: 1fr; }
+    .bureau-block.reversed { direction: ltr; }
+    .bureau-image { height: 400px; }
+    .bureau-content { padding: 60px 40px; }
+    .sectors-container { grid-template-columns: 1fr; gap: 40px; }
+    .sectors-left { position: static; }
+    .trends-grid { grid-template-columns: 1fr; }
     .faq-grid { grid-template-columns: 1fr; }
   }
-  
-  @media (max-width: 900px) {
-    .content-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-    .content-left { position: static; }
-  }
-  
-  @media (max-width: 768px) { 
-    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .product-container, .content-container { padding: 0 20px; }
-    .content-section, .services-section, .advantages-section, .contact-section, .faq-section { padding: 60px 0; }
-    .services-grid, .advantages-grid { grid-template-columns: 1fr; }
-    .content-title { font-size: 24px; }
+
+  @media (max-width: 768px) {
+    .hero { height: auto; min-height: 500px; padding: 120px 0 80px; }
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 16px; }
+    .hero-cta { flex-direction: column; }
+    .stats-container { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 0 24px; }
+    .stat-number { font-size: 28px; }
+    .intro-container, .solutions-container, .why-container, .trends-container, .sectors-container, .cta-container, .faq-container { padding: 0 24px; }
+    .intro-section, .solutions-section, .why-section, .trends-section, .sectors-section, .cta-section, .faq-section { padding: 60px 0; }
+    .intro-content h2, .solutions-header h2, .why-content h2, .trends-header h2, .sectors-left h2, .cta-content h2, .faq-header h2 { font-size: 28px; }
+    .bureau-content { padding: 40px 24px; }
+    .bureau-content h2 { font-size: 24px; }
+    .bureau-features { grid-template-columns: 1fr; }
+    .solutions-grid, .why-grid { grid-template-columns: 1fr; }
   }
 </style>
