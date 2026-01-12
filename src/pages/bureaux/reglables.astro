@@ -1,175 +1,241 @@
 ---
 // pages/bureaux/bureau-assis-debout.astro
 import Layout from '../../layouts/Layout.astro';
-import ProductSimple from '../../components/ProductSimple.astro';
 import AmCTA from '../../components/AmCTA.astro';
-
-const bureau = {
-  heroBg: "/bureaux/rg-hero.jpg",
-  name: "Bureau Assis-Debout : L'Ergonomie Active pour Votre Bien-être au Travail",
-  category: "Bureaux",
-  categoryHref: "/bureaux",
-  description: "Le bureau assis-debout révolutionne l'environnement de travail moderne en permettant d'alterner naturellement entre position assise et debout tout au long de la journée. Cette innovation ergonomique répond aux préoccupations croissantes des entreprises marocaines concernant la santé et le bien-être de leurs collaborateurs. Chez Kwesk, notre gamme complète de bureaux professionnels comprend des bureaux réglables en hauteur électriques conçus pour transformer votre espace de travail en un environnement dynamique et sain. Depuis 2008, nous accompagnons les entreprises à Casablanca et au Maroc dans l'aménagement de bureau ergonomique, en proposant des solutions qui allient performance, santé et productivité. Investir dans un bureau assis debout électrique n'est pas simplement un achat de mobilier, c'est un engagement envers la santé de vos équipes et l'avenir de votre entreprise.",
-  images: [
-    "/bureaux/rg1.jpg",
-    "/bureaux/rg2.jpg",
-    "/bureaux/rg3.jpg"
-  ],
-  features: [
-    "Réglage électrique en hauteur 65-130 cm",
-    "Plateau en mélaminé épaisseur 25mm",
-    "Moteur silencieux double colonne",
-    "Panneau de contrôle avec mémoire 4 positions",
-    "Dimensions: 160x80 cm",
-    "Capacité de charge: 120 kg",
-    "Garantie 5 ans"
-  ],
-  options: [
-    "Plateau en bambou",
-    "Passe-câbles vertical",
-    "Tapis anti-fatigue",
-    "Support moniteur"
-  ]
-};
 ---
 
 <Layout 
   title="Bureau Assis-Debout Électrique | Bien-être au Travail | Kwesk" 
   description="Bureau assis-debout électrique au Maroc. Réglable en hauteur 65-130cm pour votre bien-être. Productivité, santé et ergonomie. Devis gratuit. ☎ +212 5 20 24 16 37"
 >
-  <ProductSimple {...bureau} />
-
-  <!-- Pourquoi le Bureau Assis-Debout est Essentiel -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">SANTÉ</span>
-          <h2 class="content-title">Pourquoi le Bureau Assis-Debout est Essentiel pour la Santé au Travail</h2>
+  <!-- Hero Section -->
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/bureaux/rg-hero.jpg" alt="Bureau Assis-Debout Électrique Maroc" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-2xl">
+        <a href="/bureaux" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+          ← Retour aux Bureaux
+        </a>
+        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">ERGONOMIE ACTIVE</span>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Bureau Assis-Debout : L'Ergonomie Active pour Votre Bien-être au Travail</h1>
+        <p class="text-lg text-stone-300 leading-relaxed mb-8">Le bureau assis-debout révolutionne l'environnement de travail moderne. Faisant partie de notre <a href="/bureaux" class="text-[#8b8b4b] hover:underline">gamme complète de bureaux</a>, il permet d'alterner naturellement entre position assise et debout tout au long de la journée.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis</a>
+          <a href="#bienfaits" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Découvrir les Bienfaits</a>
         </div>
-        <div class="content-right">
-          <div class="sub-section first">
-            <h3>Les Dangers de la Sédentarité au Bureau</h3>
-            <p>La position assise prolongée est devenue l'un des risques sanitaires majeurs du monde professionnel moderne. Les études médicales montrent que rester assis plus de 6 heures par jour augmente significativement les risques de maladies cardiovasculaires, de diabète et de troubles musculosquelettiques. Le bureau réglable en hauteur offre une solution concrète à ce problème en permettant aux employés d'adopter une ergonomie active. Au Maroc, où la culture du travail évolue rapidement, de plus en plus d'entreprises prennent conscience de l'importance d'investir dans le bien-être de leurs collaborateurs pour réduire l'absentéisme et améliorer la performance globale.</p>
-          </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="sub-section">
-            <h3>L'Ergonomie Active : Un Nouveau Paradigme</h3>
-            <p>Contrairement aux bureaux opératifs traditionnels ou aux bureaux de direction fixes, le bureau assis-debout introduit le concept d'ergonomie active. Cette approche reconnaît que le corps humain n'est pas conçu pour la statique mais pour le mouvement. En alternant régulièrement entre position assise et debout, vous stimulez la circulation sanguine, engagez différents groupes musculaires et maintenez votre métabolisme actif. Cette dynamique transforme radicalement l'expérience de travail et contribue à un environnement professionnel plus sain et énergisant.</p>
-          </div>
+  <!-- Quick Stats -->
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">65-130</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">cm Amplitude</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">120 kg</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Capacité Charge</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">5 ans</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Garantie Moteur</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">&lt;50 dB</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Silencieux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Gallery -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">GALERIE</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Bureau Assis-Debout Électrique</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="md:col-span-2 md:row-span-2">
+          <img src="/bureaux/rg1.jpg" alt="Bureau Assis-Debout Configuration" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <img src="/bureaux/rg2.jpg" alt="Bureau Réglable en Hauteur" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <img src="/bureaux/rg3.jpg" alt="Bureau Électrique Ergonomique" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi Essentiel - Image Left -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="relative overflow-hidden">
+      <img src="/bureaux/rg1.jpg" alt="Bureau Assis-Debout Santé" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-stone-50">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">SANTÉ AU TRAVAIL</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Pourquoi le Bureau Assis-Debout est Essentiel</h2>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Les Dangers de la Sédentarité</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">La position assise prolongée augmente significativement les risques de maladies cardiovasculaires, de diabète et de troubles musculosquelettiques. Le bureau réglable en hauteur offre une solution concrète en permettant l'ergonomie active.</p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">L'Ergonomie Active : Un Nouveau Paradigme</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Contrairement aux bureaux opératifs traditionnels ou aux <a href="/bureaux/direction" class="text-[#8b8b4b] hover:underline">bureaux de direction</a> fixes, le bureau assis-debout reconnaît que le corps humain est conçu pour le mouvement. En alternant régulièrement, vous stimulez la circulation et maintenez votre métabolisme actif.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Bienfaits Santé -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">BIENFAITS</span>
-          <h2 class="content-title">Les Bienfaits Santé Prouvés du Bureau Assis-Debout</h2>
+  <section class="py-20 bg-white" id="bienfaits">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">BIENFAITS PROUVÉS</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Les Bienfaits Santé du Bureau Assis-Debout</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <div class="text-4xl font-bold text-[#8b8b4b] mb-4">-54%</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Réduction des Douleurs Dorsales</h3>
+          <p class="text-stone-600 leading-relaxed">Les utilisateurs rapportent une réduction jusqu'à 54% des douleurs dans le haut du dos et la nuque après seulement quelques semaines. L'alternance de positions soulage la pression sur la colonne vertébrale.</p>
         </div>
-        <div class="content-right">
-          <div class="benefits-list">
-            <div class="benefit-item">
-              <h3>Réduction Significative des Douleurs Dorsales et Cervicales</h3>
-              <p>Les lombalgies et douleurs cervicales représentent la première cause d'arrêt de travail au niveau mondial. Le bureau réglable en hauteur permet de soulager la pression sur la colonne vertébrale en alternant les positions. Lorsque vous vous levez, vous décompressez les disques intervertébraux et réduisez la tension sur les muscles du bas du dos. Des recherches indiquent que les utilisateurs de bureaux assis-debout rapportent une réduction jusqu'à 54% des douleurs dans le haut du dos et la nuque après seulement quelques semaines d'utilisation. L'ajustement électrique précis permet de trouver la hauteur optimale pour chaque employé, garantissant une posture correcte qui protège la santé vertébrale à long terme.</p>
-            </div>
 
-            <div class="benefit-item">
-              <h3>Amélioration de la Circulation Sanguine et de l'Oxygénation</h3>
-              <p>La station debout active la pompe musculaire des jambes, favorisant le retour veineux et réduisant les risques de thrombose veineuse. Cette amélioration de la circulation augmente l'oxygénation du cerveau, ce qui se traduit par une meilleure vigilance et une réduction de la fatigue mentale. Les employés qui utilisent un bureau assis debout électrique rapportent moins de sensation de jambes lourdes et de gonflements en fin de journée. Cette meilleure circulation contribue également à réduire les risques cardiovasculaires associés à la sédentarité prolongée, un investissement précieux dans la santé à long terme de vos collaborateurs.</p>
-            </div>
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Amélioration de la Circulation</h3>
+          <p class="text-stone-600 leading-relaxed">La station debout active la pompe musculaire des jambes, favorisant le retour veineux. Meilleure oxygénation du cerveau, moins de jambes lourdes, réduction des risques cardiovasculaires.</p>
+        </div>
 
-            <div class="benefit-item">
-              <h3>Bénéfices Métaboliques et Gestion du Poids</h3>
-              <p>Travailler debout brûle entre 50 et 70 calories supplémentaires par heure comparé à la position assise. Sur une année, cela peut représenter une différence significative dans la gestion du poids. Plus important encore, l'alternance entre position assise et debout aide à réguler la glycémie, particulièrement après les repas. Des études ont démontré que se lever après le déjeuner réduit les pics de sucre dans le sang de 43% en moyenne. Ces bénéfices métaboliques contribuent à la prévention du diabète de type 2 et soutiennent la santé globale de vos équipes. Le bureau réglable devient ainsi un allié quotidien dans la promotion d'un mode de vie plus sain au travail.</p>
-            </div>
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <div class="text-4xl font-bold text-[#8b8b4b] mb-4">50-70</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Calories Supplémentaires/Heure</h3>
+          <p class="text-stone-600 leading-relaxed">Travailler debout brûle 50-70 calories de plus par heure. L'alternance aide aussi à réguler la glycémie : se lever après le déjeuner réduit les pics de sucre de 43% en moyenne.</p>
+        </div>
 
-            <div class="benefit-item">
-              <h3>Augmentation de l'Énergie et Amélioration de l'Humeur</h3>
-              <p>L'un des bénéfices les plus immédiatement perceptibles du bureau assis-debout est l'augmentation du niveau d'énergie. Le mouvement stimule la production d'endorphines et combat la fatigue de l'après-midi qui affecte tant de travailleurs. Les utilisateurs rapportent une meilleure humeur, moins de stress et une sensation générale de bien-être. Cette amélioration de l'état mental contribue à créer un environnement de travail plus positif et à réduire les risques de burn-out. Pour les entreprises qui investissent dans la santé mentale de leurs employés, le bureau réglable en hauteur représente un outil concret et quotidien de soutien au bien-être psychologique.</p>
-            </div>
-          </div>
+        <div class="bg-stone-50 p-8 border-l-4 border-[#8b8b4b]">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Énergie et Humeur Améliorées</h3>
+          <p class="text-stone-600 leading-relaxed">Le mouvement stimule la production d'endorphines et combat la fatigue de l'après-midi. Meilleure humeur, moins de stress, réduction des risques de burn-out.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Impact sur la Productivité -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">PRODUCTIVITÉ</span>
-          <h2 class="content-title">Impact sur la Productivité et la Performance</h2>
+  <!-- Productivité - Image Right -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white order-2 lg:order-1">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">PRODUCTIVITÉ</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Impact sur la Performance</h2>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="font-bold text-stone-900 mb-2">Concentration et Focus Améliorés</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">La capacité à changer de position selon la tâche optimise la concentration. Position debout pour appels et créativité, position assise pour tâches détaillées. Chaque collaborateur optimise son environnement.</p>
         </div>
-        <div class="content-right">
-          <div class="impact-list">
-            <div class="impact-item">
-              <h3>Concentration et Focus Améliorés</h3>
-              <p>La capacité à changer de position selon la nature de la tâche optimise la concentration. Certains employés préfèrent se lever pour les appels téléphoniques ou les réunions virtuelles, ce qui améliore leur présence et leur assertivité. D'autres trouvent que la position debout stimule la créativité et la réflexion stratégique, tandis que les tâches détaillées bénéficient de la stabilité de la position assise. Cette flexibilité permet à chaque collaborateur d'optimiser son environnement de travail selon ses besoins spécifiques et le type d'activité, résultant en une meilleure qualité de travail et une productivité accrue.</p>
-            </div>
 
-            <div class="impact-item">
-              <h3>Réduction de l'Absentéisme et des Coûts de Santé</h3>
-              <p>L'investissement dans des bureaux assis-debout génère un retour mesurable à travers la réduction de l'absentéisme lié aux troubles musculosquelettiques. Les entreprises qui ont adopté cette solution rapportent une diminution significative des arrêts maladie pour douleurs dorsales. Les économies réalisées sur les frais médicaux et les coûts indirects liés à l'absentéisme compensent rapidement l'investissement initial. De plus, les employés en meilleure santé sont plus engagés, plus productifs et contribuent positivement à la culture d'entreprise. C'est un investissement dans le capital humain qui génère des bénéfices tangibles à court et long terme.</p>
-            </div>
-          </div>
+        <div>
+          <h3 class="font-bold text-stone-900 mb-2">Réduction de l'Absentéisme</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Diminution significative des arrêts maladie pour douleurs dorsales. Les études suggèrent 10-20% d'amélioration de la productivité. Meilleure rétention des employés qui se sentent valorisés.</p>
         </div>
       </div>
     </div>
+    <div class="relative overflow-hidden order-1 lg:order-2">
+      <img src="/bureaux/rg2.jpg" alt="Bureau Assis-Debout Productivité" class="w-full h-full object-cover" />
+    </div>
   </section>
 
-  <!-- Comment Fonctionne -->
-  <section class="content-section bg-dark">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label light">TECHNOLOGIE</span>
-          <h2 class="content-title light">Comment Fonctionne un Bureau Assis-Debout Électrique</h2>
-        </div>
-        <div class="content-right">
-          <div class="tech-list">
-            <div class="tech-item">
-              <h3 class="light">Système de Motorisation Double Silencieux</h3>
-              <p class="light">Nos bureaux assis debout électriques sont équipés d'un système de double moteur de technologie européenne garantissant une fiabilité exceptionnelle. Ces moteurs silencieux (moins de 50 dB) assurent un ajustement en douceur sans perturber l'environnement de travail. La vitesse de réglage de 2,5 à 3,5 cm par seconde permet une transition rapide et confortable entre les positions. Le système anti-collision détecte automatiquement les obstacles et arrête le mouvement pour protéger votre équipement et garantir la sécurité. Cette technologie éprouvée offre une durabilité exceptionnelle, soutenue par notre garantie de 5 ans sur la structure et les moteurs.</p>
-            </div>
-
-            <div class="tech-item">
-              <h3 class="light">Panneau de Contrôle Digital avec Mémoires Préréglées</h3>
-              <p class="light">Le panneau de contrôle intuitif transforme l'expérience d'utilisation du bureau réglable. L'écran LED affiche la hauteur exacte en centimètres, permettant un ajustement précis. Les 4 positions mémoires permettent d'enregistrer vos hauteurs idéales pour les différentes positions ou de partager le bureau entre plusieurs utilisateurs. Une simple pression sur le bouton mémorisé ajuste automatiquement le bureau à la hauteur souhaitée, éliminant toute friction dans la transition. Le verrouillage de sécurité enfant prévient les ajustements accidentels. Cette facilité d'utilisation est cruciale car elle encourage l'utilisation régulière du système de réglage, maximisant les bénéfices santé.</p>
-            </div>
-
-            <div class="tech-item">
-              <h3 class="light">Amplitude de Réglage 65-130cm</h3>
-              <p class="light">La plage de réglage de 65 à 130 cm accommode confortablement les utilisateurs de 150 cm à 200 cm de taille. Cette amplitude de 65 cm garantit que chaque employé peut trouver sa position ergonomique optimale, tant assise que debout. La hauteur minimale de 65 cm permet une position assise correcte avec les pieds à plat et les genoux à 90 degrés. La hauteur maximale de 130 cm convient aux personnes les plus grandes en position debout avec les coudes à 90 degrés lors de la frappe. Cette polyvalence fait du bureau assis-debout une solution universelle pour tous les profils de collaborateurs.</p>
-            </div>
+  <!-- Comment ça Fonctionne - Dark Section -->
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">TECHNOLOGIE</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Comment Fonctionne le Bureau Électrique</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">Technologie européenne de pointe pour une fiabilité et un confort exceptionnels.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-stone-800 p-8 hover:bg-stone-700 transition-all">
+          <div class="w-12 h-12 bg-[#8b8b4b] rounded-full flex items-center justify-center mb-6">
+            <span class="text-white font-bold">1</span>
           </div>
+          <h3 class="text-xl font-bold text-white mb-4">Motorisation Double Silencieux</h3>
+          <p class="text-stone-400 text-sm leading-relaxed mb-4">Double moteur technologie européenne, moins de 50 dB. Vitesse 2,5-3,5 cm/seconde. Système anti-collision automatique pour sécurité optimale.</p>
+          <p class="text-[#8b8b4b] text-sm font-semibold">Garantie 5 ans moteur</p>
+        </div>
+
+        <div class="bg-[#8b8b4b] p-8">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6">
+            <span class="text-stone-900 font-bold">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Panneau de Contrôle Digital</h3>
+          <p class="text-white/80 text-sm leading-relaxed mb-4">Écran LED affichant la hauteur exacte. 4 positions mémoires pour vos hauteurs idéales. Verrouillage sécurité enfant. Transition sans friction.</p>
+          <p class="text-white text-sm font-semibold">Simple pression = hauteur parfaite</p>
+        </div>
+
+        <div class="bg-stone-800 p-8 hover:bg-stone-700 transition-all">
+          <div class="w-12 h-12 bg-[#8b8b4b] rounded-full flex items-center justify-center mb-6">
+            <span class="text-white font-bold">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Amplitude 65-130 cm</h3>
+          <p class="text-stone-400 text-sm leading-relaxed mb-4">Convient aux utilisateurs de 150 cm à 200 cm. Position assise pieds à plat, genoux 90°. Position debout coudes à 90° lors de la frappe.</p>
+          <p class="text-[#8b8b4b] text-sm font-semibold">Solution universelle tous profils</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Caractéristiques Techniques -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">SPÉCIFICATIONS</span>
-          <h2 class="content-title">Caractéristiques Techniques et Spécifications</h2>
-        </div>
-        <div class="content-right">
-          <div class="specs-list">
-            <div class="spec-item">
-              <h3>Dimensions et Capacité de Charge</h3>
-              <p>Notre bureau réglable en hauteur standard mesure 160 x 80 cm, la dimension idéale pour la plupart des configurations de travail modernes. Pour les espaces plus restreints, une version compacte de 140 x 70 cm est disponible. Les utilisateurs nécessitant davantage d'espace pour plusieurs écrans peuvent opter pour la version large de 180 x 90 cm. La capacité de charge impressionnante de 120 kg garantit une stabilité parfaite même avec plusieurs moniteurs, ordinateurs et accessoires. La structure à double colonne en acier assure une rigidité exceptionnelle, même à hauteur maximale, éliminant tout balancement lors de la frappe.</p>
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">SPÉCIFICATIONS</span>
+          <h2 class="text-2xl font-bold text-stone-900 mb-8">Caractéristiques Techniques</h2>
+          
+          <div class="space-y-6">
+            <div class="border-l-4 border-[#8b8b4b] pl-6">
+              <h3 class="font-bold text-stone-900 mb-2">Dimensions Disponibles</h3>
+              <ul class="text-sm text-stone-600 space-y-1">
+                <li>• <strong>Standard :</strong> 160 x 80 cm (idéal)</li>
+                <li>• <strong>Compact :</strong> 140 x 70 cm (espaces restreints)</li>
+                <li>• <strong>Large :</strong> 180 x 90 cm (multi-écrans)</li>
+              </ul>
             </div>
+            <div class="border-l-4 border-[#8b8b4b] pl-6">
+              <h3 class="font-bold text-stone-900 mb-2">Capacité et Structure</h3>
+              <ul class="text-sm text-stone-600 space-y-1">
+                <li>• Capacité de charge : 120 kg</li>
+                <li>• Double colonne acier</li>
+                <li>• Rigidité même à hauteur max</li>
+                <li>• Zéro balancement à la frappe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-            <div class="spec-item">
-              <h3>Options de Plateau et Finitions Professionnelles</h3>
-              <p>Le plateau standard en mélaminé de 25-30mm d'épaisseur offre une surface de travail durable et résistante aux rayures et aux taches. Pour une option premium et écologique, le plateau en bambou combine esthétique naturelle et durabilité exceptionnelle. Les finitions modernes s'intègrent harmonieusement dans tous les styles d'aménagement de bureau, des espaces minimalistes contemporains aux bureaux plus traditionnels. Les pieds réglables permettent de compenser les irrégularités du sol, garantissant une surface de travail parfaitement de niveau.</p>
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FINITIONS</span>
+          <h2 class="text-2xl font-bold text-stone-900 mb-8">Plateaux et Options</h2>
+          
+          <div class="space-y-6">
+            <div class="bg-stone-50 p-6">
+              <h3 class="font-bold text-stone-900 mb-2">Plateau Mélaminé Standard</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">25-30mm d'épaisseur, surface durable résistante aux rayures et taches. S'intègre dans tous les styles d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] hover:underline">aménagement de bureau</a>.</p>
+            </div>
+            <div class="bg-stone-50 p-6">
+              <h3 class="font-bold text-stone-900 mb-2">Plateau Bambou Premium</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">Option écologique combinant esthétique naturelle et durabilité exceptionnelle. Pieds réglables pour surfaces de niveau parfait.</p>
             </div>
           </div>
         </div>
@@ -178,133 +244,255 @@ const bureau = {
   </section>
 
   <!-- Électrique vs Manuel -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">COMPARATIF</span>
-          <h2 class="content-title">Bureau Électrique vs Manuel : Quel Choix pour Votre Entreprise</h2>
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">COMPARATIF</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Bureau Électrique vs Manuel</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-[#8b8b4b] p-8 text-white">
+          <span class="inline-block text-xs tracking-wider uppercase bg-white text-stone-900 px-3 py-1 mb-4 font-bold">Recommandé</span>
+          <h3 class="text-2xl font-bold mb-4">Bureau Assis Debout Électrique</h3>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="text-white font-bold">✓</span>
+              <span class="text-white/90">Ajustement par simple pression</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white font-bold">✓</span>
+              <span class="text-white/90">4 mémoires préréglées</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white font-bold">✓</span>
+              <span class="text-white/90">Fonctionnement silencieux </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white font-bold">✓</span>
+              <span class="text-white/90">Encourage transitions fréquentes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white font-bold">✓</span>
+              <span class="text-white/90">Partage multi-utilisateurs facile</span>
+            </li>
+          </ul>
+          <p class="text-white/70 text-sm">Investissement rapidement compensé par l'utilisation accrue et les bénéfices santé supérieurs.</p>
         </div>
-        <div class="content-right">
-          <div class="comparison-list">
-            <div class="comparison-item">
-              <h3>Avantages du Bureau Assis Debout Électrique</h3>
-              <p>Le bureau assis debout électrique offre un confort d'utilisation incomparable. L'ajustement par simple pression d'un bouton encourage les transitions fréquentes, maximisant les bénéfices santé. Les mémoires préréglées éliminent toute estimation, garantissant des hauteurs ergonomiques parfaites à chaque utilisation. Le fonctionnement silencieux préserve la concentration dans les espaces de travail partagés. Pour les postes partagés en rotation, la capacité de mémoriser plusieurs profils utilisateurs est inestimable. L'investissement initial plus élevé est rapidement compensé par l'utilisation accrue et les bénéfices santé supérieurs, en faisant le choix recommandé pour les entreprises engagées dans le bien-être de leurs équipes.</p>
-            </div>
 
-            <div class="comparison-item">
-              <h3>Solution Manuelle : Quand Est-elle Appropriée</h3>
-              <p>Les bureaux réglables manuels à manivelle ou système pneumatique constituent une option pour les budgets plus serrés ou les situations où l'ajustement est peu fréquent. Ils ne nécessitent pas de connexion électrique et offrent une fiabilité mécanique simple. Cependant, l'effort requis pour l'ajustement décourage souvent les changements de position réguliers, réduisant les bénéfices santé. Pour maximiser l'impact sur le bien-être des employés et justifier l'investissement, nous recommandons fortement la version électrique qui garantit une utilisation optimale du système assis-debout.</p>
-            </div>
-          </div>
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-2xl font-bold text-stone-900 mb-4">Solution Manuelle</h3>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="text-stone-400">○</span>
+              <span class="text-stone-600">Manivelle ou système pneumatique</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-stone-400">○</span>
+              <span class="text-stone-600">Budget plus serré</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-stone-400">○</span>
+              <span class="text-stone-600">Pas de connexion électrique requise</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500">✗</span>
+              <span class="text-stone-600">Effort requis pour ajustement</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500">✗</span>
+              <span class="text-stone-600">Décourage les changements fréquents</span>
+            </li>
+          </ul>
+          <p class="text-stone-500 text-sm">Approprié si ajustement peu fréquent. Réduit les bénéfices santé potentiels.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Espace de Travail Ergonomique Complet -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">ERGONOMIE</span>
-          <h2 class="content-title">Créer un Espace de Travail Ergonomique Complet</h2>
+  <!-- Espace Ergonomique Complet - Image Left -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
+    <div class="relative overflow-hidden">
+      <img src="/bureaux/rg3.jpg" alt="Espace Travail Ergonomique" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">ERGONOMIE COMPLÈTE</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-8">Créer un Espace de Travail Optimal</h2>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="font-bold text-stone-900 mb-2">Chaise Ergonomique Complémentaire</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Le bureau assis-debout doit être accompagné d'une <a href="/chaises" class="text-[#8b8b4b] hover:underline">chaise ergonomique</a> de qualité. Nos modèles Gamma 150 (soutien lombaire) ou Exclusive 500 (appui-tête + accoudoirs 4D) complètent parfaitement votre poste.</p>
         </div>
-        <div class="content-right">
-          <div class="ergo-list">
-            <div class="ergo-item">
-              <h3>L'Importance de la Chaise Ergonomique Complémentaire</h3>
-              <p>Le bureau assis-debout doit être accompagné d'une chaise ergonomique de qualité pour les périodes en position assise. Notre gamme comprend des modèles comme le Gamma 150 avec soutien lombaire réglable ou l'Exclusive 500 avec appui-tête et accoudoirs 4D, conçus pour compléter parfaitement votre poste de travail réglable. Une bonne chaise permet une posture optimale en position assise, maximisant le confort durant les phases de travail assis. L'investissement dans un duo bureau réglable + chaise ergonomique représente la fondation d'un poste de travail vraiment sain et confortable.</p>
-            </div>
-
-            <div class="ergo-item">
-              <h3>Supports Moniteurs et Gestion des Câbles</h3>
-              <p>L'ajustement de la hauteur du bureau nécessite une attention particulière à la position des écrans. Un support moniteur réglable permet de maintenir le haut de l'écran au niveau des yeux en position assise et debout. La distance optimale de 50-70 cm entre les yeux et l'écran doit être maintenue dans les deux positions. La gestion des câbles est cruciale pour permettre les mouvements verticaux du bureau sans tension. Nos accessoires de passe-câbles verticaux et goulottes sous le plateau garantissent que tous les câbles ont suffisamment de mou pour accompagner les ajustements sans risque de déconnexion ou d'endommagement.</p>
-            </div>
-
-            <div class="ergo-item">
-              <h3>Tapis Anti-Fatigue et Accessoires Essentiels</h3>
-              <p>Le tapis anti-fatigue est un complément indispensable au bureau assis-debout. Cette surface légèrement rembourrée encourage les micro-mouvements des jambes et réduit la fatigue des pieds et du bas du dos en position debout. Un clavier et une souris ergonomiques complètent le dispositif en préservant la santé des poignets et des avant-bras. L'éclairage approprié, de préférence avec température de couleur ajustable, réduit la fatigue oculaire. Nos conseillers peuvent vous guider dans la création d'un poste de travail ergonomique complet qui optimise santé, confort et productivité.</p>
-            </div>
-          </div>
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="font-bold text-stone-900 mb-2">Supports Moniteurs et Câbles</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Un <a href="/reunion/media" class="text-[#8b8b4b] hover:underline">support moniteur réglable</a> maintient l'écran au niveau des yeux dans les deux positions. Nos passe-câbles verticaux et goulottes garantissent que tous les câbles accompagnent les ajustements.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-stone-900 mb-2">Tapis Anti-Fatigue et Accessoires</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Surface rembourrée encourageant les micro-mouvements, réduisant la fatigue en position debout. Clavier et souris ergonomiques, éclairage à température ajustable complètent le dispositif.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Guide de Transition -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">TRANSITION</span>
-          <h2 class="content-title">Guide de Transition : Comment Adopter le Bureau Assis-Debout</h2>
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">GUIDE PRATIQUE</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Comment Adopter le Bureau Assis-Debout</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">Une période d'adaptation de 2-4 semaines pour des bénéfices durables.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="bg-stone-800 p-8">
+          <h3 class="text-xl font-bold text-white mb-4">Démarrer Progressivement</h3>
+          <ul class="space-y-3 text-sm text-stone-400">
+            <li class="flex items-start gap-2">
+              <span class="text-[#8b8b4b]">1.</span>
+              Commencez par 20-30 min debout/jour
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#8b8b4b]">2.</span>
+              Répartissez en 2-3 sessions courtes
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#8b8b4b]">3.</span>
+              Augmentez de 10-15 min/semaine
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#8b8b4b]">4.</span>
+              Rythme optimal après 3-4 semaines
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#8b8b4b]">5.</span>
+              Alternez toutes les 30-45 min
+            </li>
+          </ul>
         </div>
-        <div class="content-right">
-          <div class="guide-list">
-            <div class="guide-item">
-              <h3>Démarrer Progressivement</h3>
-              <p>L'adoption d'un bureau réglable en hauteur requiert une période d'adaptation physiologique. Commencez par 20-30 minutes de travail debout par jour, généralement réparties en 2-3 sessions courtes. Augmentez progressivement de 10-15 minutes chaque semaine jusqu'à atteindre un équilibre confortable. La plupart des utilisateurs trouvent leur rythme optimal après 3-4 semaines, alternant toutes les 30-45 minutes. Utilisez les mémoires préréglées du panneau de contrôle pour enregistrer vos hauteurs idéales dès le premier jour, éliminant toute approximation lors des transitions futures.</p>
-            </div>
 
-            <div class="guide-item">
-              <h3>Posture Correcte en Position Assise et Debout</h3>
-              <p>En position assise, réglez la hauteur pour que vos pieds reposent à plat, vos genoux et coudes forment des angles de 90 degrés, et le haut de votre écran soit au niveau des yeux. En position debout, le bureau assis-debout doit permettre aux coudes de rester à 90 degrés lors de la frappe, avec les épaules détendues. Ne verrouillez pas vos genoux; gardez-les légèrement fléchis. Répartissez votre poids uniformément sur les deux pieds. Le tapis anti-fatigue encourage naturellement les petits changements de position qui préviennent la raideur.</p>
+        <div class="bg-stone-800 p-8">
+          <h3 class="text-xl font-bold text-white mb-4">Posture Correcte</h3>
+          <div class="space-y-4 text-sm text-stone-400">
+            <div>
+              <strong class="text-white">Position Assise :</strong>
+              <p class="mt-1">Pieds à plat, genoux et coudes à 90°, haut écran au niveau des yeux.</p>
             </div>
-
-            <div class="guide-item">
-              <h3>Erreurs Communes à Éviter</h3>
-              <p>La tendance la plus fréquente est de rester debout trop longtemps lors des premiers jours, causant fatigue et découragement. Respectez la progression graduelle recommandée. Ne négligez pas le réglage de la hauteur de l'écran lors des changements de position; un moniteur mal positionné annule les bénéfices ergonomiques. Évitez de porter des chaussures à talons hauts en position debout, privilégiez des chaussures de soutien confortables. Ne vous découragez pas pendant les 2-3 premières semaines; c'est le temps nécessaire pour que votre corps s'adapte et que les bénéfices deviennent évidents.</p>
+            <div>
+              <strong class="text-white">Position Debout :</strong>
+              <p class="mt-1">Coudes à 90° pour la frappe, épaules détendues, genoux légèrement fléchis, poids réparti uniformément.</p>
             </div>
           </div>
+        </div>
+
+        <div class="bg-stone-800 p-8">
+          <h3 class="text-xl font-bold text-white mb-4">Erreurs à Éviter</h3>
+          <ul class="space-y-3 text-sm text-stone-400">
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">✗</span>
+              Rester debout trop longtemps au début
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">✗</span>
+              Négliger le réglage écran selon position
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">✗</span>
+              Chaussures à talons hauts debout
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">✗</span>
+              Se décourager les 2-3 premières semaines
+            </li>
+          </ul>
+          <p class="text-[#8b8b4b] text-sm mt-4">Le corps a besoin de temps pour s'adapter !</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Retour sur Investissement -->
-  <section class="content-section">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">ROI</span>
-          <h2 class="content-title">Retour sur Investissement et Arguments Économiques</h2>
-        </div>
-        <div class="content-right">
-          <div class="roi-list">
-            <div class="roi-item">
-              <h3>Analyse Coût-Bénéfice pour les Entreprises</h3>
-              <p>L'investissement initial dans des bureaux assis-debout est rapidement compensé par de multiples retours. La réduction de l'absentéisme pour troubles musculosquelettiques génère des économies directes significatives. Les études suggèrent que les améliorations de productivité peuvent atteindre 10-20%, représentant une valeur considérable sur l'année. La rétention des employés s'améliore lorsque ceux-ci se sentent valorisés par l'investissement dans leur bien-être. Le bureau réglable en hauteur contribue à créer une culture d'entreprise moderne et bienveillante qui attire les talents, particulièrement parmi les jeunes professionnels qui priorisent l'équilibre vie professionnelle-santé.</p>
+  <!-- ROI -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">RETOUR SUR INVESTISSEMENT</span>
+          <h2 class="text-3xl font-bold text-stone-900 mb-6">Arguments Économiques pour les Entreprises</h2>
+          
+          <div class="space-y-6">
+            <div class="border-l-4 border-[#8b8b4b] pl-6">
+              <h3 class="font-bold text-stone-900 mb-2">Réduction de l'Absentéisme</h3>
+              <p class="text-sm text-stone-600">Moins d'arrêts pour troubles musculosquelettiques. Économies directes significatives sur les frais médicaux et coûts indirects.</p>
             </div>
-
-            <div class="roi-item">
-              <h3>Mise en Œuvre Progressive : Programmes Pilotes</h3>
-              <p>Pour les entreprises souhaitant gérer leur budget, nous recommandons une approche par programme pilote. Commencez par équiper un département ou un groupe d'employés volontaires avec des bureaux assis debout électriques. Mesurez l'impact sur la satisfaction, l'absentéisme et la productivité sur 3-6 mois. Les résultats positifs justifient naturellement l'extension du programme. Cette approche permet également d'identifier les meilleures pratiques et de développer des formations internes avant le déploiement complet. Nous offrons des consultations ergonomiques gratuites pour vous aider à concevoir et implémenter votre programme de bien-être au bureau.</p>
+            <div class="border-l-4 border-[#8b8b4b] pl-6">
+              <h3 class="font-bold text-stone-900 mb-2">Productivité +10-20%</h3>
+              <p class="text-sm text-stone-600">Les études suggèrent des améliorations de productivité de 10 à 20%. Valeur considérable sur l'année pour toute l'équipe.</p>
+            </div>
+            <div class="border-l-4 border-[#8b8b4b] pl-6">
+              <h3 class="font-bold text-stone-900 mb-2">Attraction et Rétention des Talents</h3>
+              <p class="text-sm text-stone-600">Culture d'entreprise moderne et bienveillante. Particulièrement attractif pour les jeunes professionnels qui priorisent l'équilibre vie-santé.</p>
             </div>
           </div>
+        </div>
+
+        <div class="bg-stone-50 p-8 lg:p-12">
+          <h3 class="text-xl font-bold text-stone-900 mb-6">Programme Pilote Recommandé</h3>
+          <p class="text-stone-600 leading-relaxed mb-6">Pour gérer le budget, commencez par équiper un département ou groupe de volontaires. Mesurez l'impact sur 3-6 mois.</p>
+          
+          <ol class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="w-8 h-8 bg-[#8b8b4b] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+              <div>
+                <strong class="text-stone-900">Équipez un groupe pilote</strong>
+                <p class="text-sm text-stone-600">Département ou employés volontaires</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-8 h-8 bg-[#8b8b4b] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+              <div>
+                <strong class="text-stone-900">Mesurez l'impact</strong>
+                <p class="text-sm text-stone-600">Satisfaction, absentéisme, productivité</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-8 h-8 bg-[#8b8b4b] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+              <div>
+                <strong class="text-stone-900">Étendez le programme</strong>
+                <p class="text-sm text-stone-600">Résultats positifs justifient l'extension</p>
+              </div>
+            </li>
+          </ol>
+          
+          <p class="text-sm text-[#8b8b4b] mt-6 font-semibold">Nous offrons des consultations ergonomiques gratuites pour concevoir votre programme.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Kwesk Partenaire -->
-  <section class="content-section bg-stone">
-    <div class="content-container">
-      <div class="content-grid">
-        <div class="content-left">
-          <span class="content-label">KWESK</span>
-          <h2 class="content-title">Kwesk : Votre Partenaire en Ergonomie depuis 2008</h2>
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div class="lg:sticky lg:top-32 lg:self-start">
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">KWESK</span>
+          <h2 class="text-3xl font-bold text-stone-900 mb-6">Votre Partenaire Ergonomie depuis 2008</h2>
+          <p class="text-stone-600 leading-relaxed">Nous accompagnons les entreprises marocaines dans la création d'environnements de travail sains et productifs.</p>
         </div>
-        <div class="content-right">
-          <div class="partner-list">
-            <div class="partner-item">
-              <h3>Expertise Locale et Engagement Qualité</h3>
-              <p>Depuis 2008, Kwesk accompagne les entreprises marocaines dans la création d'environnements de travail sains et productifs. Notre showroom à Anfa Place, Casablanca, vous permet d'essayer nos bureaux réglables et de constater personnellement la différence. Notre équipe d'experts en ergonomie comprend les défis spécifiques du marché marocain et peut vous conseiller sur les solutions adaptées à votre secteur, votre espace et votre budget. Nous ne vendons pas simplement du mobilier; nous vous accompagnons dans la transformation de votre culture d'entreprise vers plus de bien-être et de performance.</p>
-            </div>
-
-            <div class="partner-item">
-              <h3>Service Complet : Consultation, Installation, Formation</h3>
-              <p>Notre engagement va au-delà de la vente. Nous offrons une consultation ergonomique gratuite pour évaluer vos besoins et concevoir la solution optimale. Notre équipe gère l'installation professionnelle et peut former vos employés aux bonnes pratiques d'utilisation du bureau assis-debout. La garantie de 5 ans sur la structure et les moteurs témoigne de notre confiance dans la qualité de nos produits. Notre service après-vente réactif assure votre tranquillité d'esprit. Contactez-nous au <a href="tel:+212520241637">+212 5 20 24 16 37</a> ou <a href="tel:+212661481616">+212 6 61 48 16 16</a> pour discuter de votre projet de bien-être au bureau.</p>
+        
+        <div class="lg:col-span-2 space-y-8">
+          <div class="border-b border-stone-200 pb-8">
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Expertise Locale et Engagement Qualité</h3>
+            <p class="text-stone-600 leading-relaxed">Notre showroom à Anfa Place, Casablanca, vous permet d'essayer nos bureaux réglables et de constater personnellement la différence. Notre équipe comprend les défis spécifiques du marché marocain et peut vous conseiller sur les solutions adaptées à votre secteur, espace et budget.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-stone-900 mb-4">Service Complet : Consultation, Installation, Formation</h3>
+            <p class="text-stone-600 leading-relaxed mb-4">Consultation ergonomique gratuite pour évaluer vos besoins. Installation professionnelle et formation aux bonnes pratiques d'utilisation. Garantie 5 ans sur structure et moteurs.</p>
+            <div class="grid grid-cols-2 gap-4 text-sm text-stone-600">
+              <span>✓ Consultation ergonomique gratuite</span>
+              <span>✓ Installation professionnelle</span>
+              <span>✓ Formation utilisateurs</span>
+              <span>✓ SAV réactif</span>
             </div>
           </div>
         </div>
@@ -312,75 +500,89 @@ const bureau = {
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="content-container">
-      <div class="contact-content">
-        <h2>Investissez dans le Bien-être de Vos Équipes</h2>
-        <p>Le bureau assis-debout représente bien plus qu'un simple meuble; c'est un investissement dans la santé, le bien-être et la productivité de vos collaborateurs. Dans un marché du travail compétitif au Maroc, les entreprises qui démontrent un engagement authentique envers leurs employés se démarquent et prospèrent. Que vous gériez une startup technologique dynamique, un cabinet de conseil ou une entreprise établie cherchant à moderniser ses espaces, nos bureaux réglables en hauteur offrent une solution éprouvée et durable.</p>
-        <p>Rejoignez les entreprises progressistes qui ont fait le choix du bien-être. Visitez notre showroom à Anfa Place, Tour Ouest, Niveau 1, à Casablanca, ou contactez-nous pour une consultation ergonomique gratuite. Nos experts vous aideront à concevoir un programme de transition vers les bureaux assis debout électriques adapté à votre organisation. Demandez un devis personnalisé et découvrez comment transformer votre espace de travail en environnement de santé et de performance.</p>
+  <!-- CTA Contact -->
+  <section class="py-20 bg-[#8b8b4b]">
+    <div class="max-w-5xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Investissez dans le Bien-être de Vos Équipes</h2>
+      <p class="text-xl text-white/80 mb-8 max-w-3xl mx-auto">Le bureau assis-debout représente bien plus qu'un simple meuble : c'est un investissement dans la santé, le bien-être et la productivité de vos collaborateurs.</p>
+      
+      <div class="bg-white p-8 lg:p-12 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+          <div>
+            <h3 class="font-bold text-stone-900 text-lg mb-4">Consultation Gratuite</h3>
+            <p class="text-sm text-stone-600 mb-4">Nos experts vous aideront à concevoir un programme de transition vers les bureaux assis debout électriques adapté à votre organisation.</p>
+            <ul class="text-sm text-stone-600 space-y-2">
+              <li>→ Évaluation de vos besoins</li>
+              <li>→ Conception solution optimale</li>
+              <li>→ Programme pilote personnalisé</li>
+              <li>→ Formation bonnes pratiques</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-stone-900 text-lg mb-4">Showroom Casablanca</h3>
+            <p class="text-stone-600 mb-2">Anfa Place, Tour Ouest, Niveau 1</p>
+            <p class="text-stone-600 mb-4">Casablanca, Maroc</p>
+            <p class="text-stone-600 mb-2"><strong>Tél :</strong> <a href="tel:+212520241637" class="text-[#8b8b4b] hover:underline">+212 5 20 24 16 37</a></p>
+            <p class="text-stone-600 mb-2"><strong>Mobile :</strong> <a href="tel:+212661481616" class="text-[#8b8b4b] hover:underline">+212 6 61 48 16 16</a></p>
+            <p class="text-stone-600"><strong>Email :</strong> <a href="mailto:contact@kwesk.com" class="text-[#8b8b4b] hover:underline">contact@kwesk.com</a></p>
+          </div>
+        </div>
         
-        <div class="contact-info-box">
-          <h4>Pour une consultation gratuite et un devis personnalisé :</h4>
-          <ul>
-            <li><strong>Showroom :</strong> Anfa Place, Tour Ouest, Niveau 1, Casablanca</li>
-            <li><strong>Téléphone :</strong> <a href="tel:+212520241637">+212 5 20 24 16 37</a></li>
-            <li><strong>Mobile :</strong> <a href="tel:+212661481616">+212 6 61 48 16 16</a></li>
-            <li><strong>Email :</strong> <a href="mailto:contact@kwesk.com">contact@kwesk.com</a></li>
-          </ul>
-          <a href="/contact" class="contact-cta">Demander un Devis Gratuit</a>
+        <div class="text-center">
+          <a href="/contact" class="inline-block px-10 py-4 bg-stone-900 text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all">Demander un Devis Personnalisé</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq-section">
-    <div class="content-container">
-      <div class="faq-header">
-        <span class="content-label">FAQ</span>
-        <h2 class="content-title">Questions Fréquentes sur les Bureaux Assis-Debout</h2>
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900">Questions Fréquentes</h2>
       </div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h4>Quels sont les principaux bienfaits santé d'un bureau assis-debout ?</h4>
-          <p>Le bureau assis-debout offre de multiples bénéfices prouvés : réduction significative des douleurs dorsales et cervicales, amélioration de la circulation sanguine, régulation de la glycémie, augmentation des dépenses caloriques (50-70 calories/heure en position debout), et amélioration de l'énergie et de l'humeur. Les utilisateurs rapportent également une réduction de la fatigue et une meilleure concentration tout au long de la journée.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quels sont les principaux bienfaits santé ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Réduction jusqu'à 54% des douleurs dorsales et cervicales, amélioration de la circulation sanguine, régulation de la glycémie, +50-70 calories/heure brûlées, amélioration de l'énergie et de l'humeur, meilleure concentration.</p>
         </div>
-        <div class="faq-item">
-          <h4>À quelle fréquence dois-je alterner entre position assise et debout ?</h4>
-          <p>Pour maximiser les bénéfices du bureau réglable en hauteur, nous recommandons d'alterner toutes les 30-45 minutes. Commencez progressivement avec 20-30 minutes de station debout par jour, puis augmentez graduellement. L'objectif n'est pas de rester debout toute la journée, mais d'introduire du mouvement et de la variété dans votre posture. Les mémoires préréglées de votre bureau assis debout électrique facilitent ces transitions régulières.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">À quelle fréquence alterner les positions ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Alternez toutes les 30-45 minutes. Commencez par 20-30 min debout/jour puis augmentez progressivement. L'objectif n'est pas de rester debout toute la journée mais d'introduire du mouvement et de la variété.</p>
         </div>
-        <div class="faq-item">
-          <h4>Le bureau assis debout électrique est-il vraiment meilleur que le manuel ?</h4>
-          <p>Oui, le bureau assis debout électrique encourage une utilisation beaucoup plus fréquente grâce à sa facilité d'ajustement par simple pression d'un bouton. Les mémoires préréglées garantissent des hauteurs ergonomiques parfaites à chaque utilisation sans estimation. Le fonctionnement silencieux et sans effort élimine les barrières psychologiques au changement de position. Bien que plus coûteux initialement, il maximise les bénéfices santé et justifie pleinement l'investissement pour les entreprises sérieuses concernant le bien-être de leurs équipes.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Électrique vraiment meilleur que manuel ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Oui, l'électrique encourage une utilisation plus fréquente (simple pression). Mémoires préréglées, fonctionnement silencieux, sans effort. Maximise les bénéfices santé et justifie l'investissement pour les entreprises engagées dans le bien-être.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quelle amplitude de réglage me faut-il pour mon bureau réglable ?</h4>
-          <p>Notre bureau assis-debout offre une amplitude de 65 à 130 cm qui convient à 95% des utilisateurs (tailles de 150cm à 200cm). La hauteur minimale de 65 cm permet une position assise ergonomique pour les personnes de petite taille, tandis que la hauteur maximale de 130 cm accommode les grandes personnes en position debout. Lors de votre consultation gratuite, nous vous aiderons à vérifier que ces dimensions correspondent parfaitement à vos besoins.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quelle amplitude de réglage nécessaire ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Notre amplitude 65-130 cm convient à 95% des utilisateurs (tailles 150-200 cm). 65 cm minimum pour position assise ergonomique, 130 cm maximum pour grandes personnes debout. Consultation gratuite pour vérifier vos besoins.</p>
         </div>
-        <div class="faq-item">
-          <h4>Combien coûte un bureau assis debout électrique et quel est le retour sur investissement ?</h4>
-          <p>Le prix d'un bureau réglable en hauteur électrique représente un investissement dans la santé à long terme de vos employés. Le retour sur investissement se manifeste à travers la réduction de l'absentéisme (moins d'arrêts pour douleurs dorsales), l'amélioration de la productivité (études suggérant 10-20% d'augmentation), et l'amélioration de la rétention des employés. Contactez-nous pour un devis personnalisé adapté à vos besoins spécifiques. Nous offrons également des solutions de financement pour faciliter l'équipement progressif de vos équipes.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Mon mal de dos va-t-il s'améliorer ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Les études montrent une réduction jusqu'à 54% des douleurs après quelques semaines. L'alternance soulage la pression vertébrale et engage différents groupes musculaires. Doit être correctement ajusté et utilisé avec bonne posture.</p>
         </div>
-        <div class="faq-item">
-          <h4>Mon mal de dos va-t-il vraiment s'améliorer avec un bureau assis-debout ?</h4>
-          <p>De nombreuses études démontrent que les utilisateurs de bureaux assis-debout rapportent une réduction jusqu'à 54% des douleurs dans le haut du dos et la nuque après quelques semaines d'utilisation. L'alternance de positions soulage la pression sur la colonne vertébrale et engage différents groupes musculaires. Cependant, le bureau réglable doit être correctement ajusté et utilisé avec une bonne posture pour maximiser les bénéfices. Notre consultation ergonomique gratuite vous guide dans l'optimisation de votre poste de travail complet.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Combien de temps pour s'habituer ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Période d'adaptation de 2-4 semaines. Fatigue musculaire légère les premiers jours (normal, muscles s'adaptent). Commencez progressivement. Après adaptation, la plupart des utilisateurs ne peuvent plus imaginer travailler autrement.</p>
         </div>
-        <div class="faq-item">
-          <h4>Combien de temps faut-il pour s'habituer à travailler avec un bureau assis-debout ?</h4>
-          <p>La période d'adaptation typique est de 2 à 4 semaines. Durant les premiers jours, vous pourriez ressentir une fatigue musculaire légère, particulièrement dans les jambes et le bas du dos – c'est normal car vos muscles s'adaptent. Commencez progressivement avec 20-30 minutes par jour et augmentez graduellement. Utilisez le tapis anti-fatigue fourni en option. Après cette période d'adaptation, la plupart des utilisateurs ne peuvent plus imaginer travailler autrement et ressentent clairement les bénéfices énergétiques du bureau assis debout électrique.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quels accessoires indispensables ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed"><a href="/chaises" class="text-[#8b8b4b] hover:underline">Chaise ergonomique</a> (Gamma 150 ou Exclusive 500), tapis anti-fatigue, <a href="/reunion/media" class="text-[#8b8b4b] hover:underline">support moniteur réglable</a>, et système de gestion de câbles vertical. Nous proposons ces accessoires essentiels.</p>
         </div>
-        <div class="faq-item">
-          <h4>Quels accessoires sont indispensables avec mon bureau réglable en hauteur ?</h4>
-          <p>Pour optimiser votre expérience avec le bureau assis-debout, nous recommandons : une chaise ergonomique de qualité pour les périodes assises (modèles Gamma 150 ou Exclusive 500), un tapis anti-fatigue pour réduire la fatigue en position debout, un support moniteur réglable pour maintenir l'écran à la hauteur correcte dans les deux positions, et un système de gestion de câbles vertical pour accommoder les mouvements du bureau. Nous proposons ces accessoires essentiels pour créer un poste de travail ergonomique complet.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Peut-il supporter plusieurs écrans ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Oui, capacité de 120 kg, largement suffisante pour plusieurs moniteurs, ordinateurs et équipements. Double colonne acier garantit stabilité parfaite même à hauteur maximale. Idéal pour configurations professionnelles exigeantes.</p>
         </div>
-        <div class="faq-item">
-          <h4>Le bureau assis-debout peut-il supporter plusieurs écrans et équipements lourds ?</h4>
-          <p>Absolument. Notre bureau réglable en hauteur offre une capacité de charge impressionnante de 120 kg, largement suffisante pour supporter plusieurs moniteurs, ordinateurs, imprimantes et autres équipements de bureau. La structure à double colonne en acier garantit une stabilité parfaite même à hauteur maximale, éliminant tout balancement lors de la frappe. Le système de motorisation double assure un ajustement fluide même avec une charge importante. Cette robustesse fait du bureau assis debout électrique une solution idéale pour les configurations professionnelles exigeantes.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Quel retour sur investissement ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Réduction absentéisme (moins d'arrêts dorsaux), amélioration productivité (+10-20% selon études), meilleure rétention employés. Contactez-nous pour devis personnalisé et solutions de financement progressif.</p>
         </div>
-        <div class="faq-item">
-          <h4>Offrez-vous des consultations ergonomiques pour aménager nos bureaux ?</h4>
-          <p>Oui, nous offrons des consultations ergonomiques gratuites pour les entreprises au Maroc. Nos experts visitent vos locaux, évaluent vos besoins spécifiques, et conçoivent une solution d'aménagement de bureau ergonomique complète. Nous pouvons vous aider à implémenter un programme de transition vers les bureaux assis-debout, former vos employés aux bonnes pratiques, et même créer un programme pilote pour mesurer l'impact avant un déploiement complet. Contactez-nous au <a href="tel:+212520241637">+212 5 20 24 16 37</a> pour planifier votre consultation gratuite.</p>
+        <div class="bg-white p-8 border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3">Consultations ergonomiques gratuites ?</h4>
+          <p class="text-sm text-stone-600 leading-relaxed">Oui, nos experts visitent vos locaux, évaluent vos besoins et conçoivent une solution d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] hover:underline">aménagement de bureau</a> ergonomique complète. Programme pilote, formation employés inclus. Appelez le <a href="tel:+212520241637" class="text-[#8b8b4b] hover:underline">+212 5 20 24 16 37</a>.</p>
         </div>
       </div>
     </div>
@@ -388,156 +590,3 @@ const bureau = {
 
   <AmCTA />
 </Layout>
-
-<style>
-  /* Content Sections */
-  .content-section { padding: 80px 0; }
-  .content-section.bg-stone { background: #fafaf9; }
-  .content-section.bg-dark { background: #1c1917; }
-  .content-container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
-  
-  .content-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
-  .content-left { position: sticky; top: 120px; }
-  
-  .content-label { 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    letter-spacing: 3px; 
-    color: #8b8b4b; 
-    display: block; 
-    margin-bottom: 16px; 
-  }
-  .content-label.light { color: #8b8b4b; }
-  
-  .content-title { 
-    font-size: 28px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    line-height: 1.3; 
-  }
-  .content-title.light { color: white; }
-  
-  .content-right p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
-    margin-bottom: 20px;
-  }
-  .content-right p.light { color: #a8a29e; }
-
-  /* Sub Sections */
-  .sub-section { margin-top: 32px; padding-top: 32px; border-top: 1px solid #e7e5e4; }
-  .sub-section.first { margin-top: 0; padding-top: 0; border-top: none; }
-  .sub-section h3 { font-size: 18px; font-weight: 700; color: #1c1917; margin-bottom: 12px; }
-
-  /* Generic Lists */
-  .benefits-list, .impact-list, .tech-list, .specs-list, .comparison-list, .ergo-list, .guide-list, .roi-list, .partner-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 32px; 
-  }
-  
-  .benefit-item, .impact-item, .tech-item, .spec-item, .comparison-item, .ergo-item, .guide-item, .roi-item, .partner-item { 
-    padding-bottom: 32px; 
-    border-bottom: 1px solid #e7e5e4; 
-  }
-  .benefit-item:last-child, .impact-item:last-child, .spec-item:last-child, .comparison-item:last-child, 
-  .ergo-item:last-child, .guide-item:last-child, .roi-item:last-child, .partner-item:last-child { 
-    border-bottom: none; 
-    padding-bottom: 0; 
-  }
-  .tech-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .tech-item { border-bottom-color: #292524; }
-  
-  .benefit-item h3, .impact-item h3, .spec-item h3, .comparison-item h3, .ergo-item h3, .guide-item h3, .roi-item h3, .partner-item h3 { 
-    font-size: 18px; 
-    font-weight: 700; 
-    color: #1c1917; 
-    margin-bottom: 12px; 
-  }
-  
-  .tech-item h3, .tech-item h3.light { font-size: 18px; font-weight: 700; color: white; margin-bottom: 12px; }
-  .tech-item p, .tech-item p.light { font-size: 15px; line-height: 1.8; color: #a8a29e; margin: 0; }
-
-  .benefit-item p, .impact-item p, .spec-item p, .comparison-item p, .ergo-item p, .guide-item p, .roi-item p, .partner-item p { 
-    font-size: 15px; 
-    line-height: 1.8; 
-    color: #57534e; 
-    margin: 0; 
-  }
-  .partner-item a { color: #8b8b4b; }
-
-  /* Contact Section */
-  .contact-section { padding: 80px 0; background: #1c1917; }
-  .contact-content { max-width: 800px; margin: 0 auto; text-align: center; }
-  .contact-content h2 { font-size: 28px; font-weight: 700; color: white; margin-bottom: 24px; }
-  .contact-content > p { font-size: 15px; line-height: 1.8; color: #a8a29e; margin-bottom: 16px; }
-  
-  .contact-info-box { 
-    background: #292524; 
-    padding: 40px; 
-    margin-top: 40px; 
-    text-align: left; 
-  }
-  .contact-info-box h4 { 
-    font-size: 18px; 
-    font-weight: 700; 
-    color: white; 
-    margin-bottom: 20px; 
-  }
-  .contact-info-box ul { 
-    list-style: none; 
-    padding: 0; 
-    margin: 0 0 24px 0; 
-  }
-  .contact-info-box li { 
-    font-size: 14px; 
-    color: #a8a29e; 
-    padding: 10px 0; 
-    border-bottom: 1px solid #3f3f46; 
-  }
-  .contact-info-box li:last-child { border-bottom: none; }
-  .contact-info-box a { color: #8b8b4b; text-decoration: none; }
-  .contact-info-box a:hover { text-decoration: underline; }
-  
-  .contact-cta { 
-    display: inline-block; 
-    padding: 14px 32px; 
-    background: #8b8b4b; 
-    color: white; 
-    text-decoration: none; 
-    font-size: 13px; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    transition: background 0.3s; 
-  }
-  .contact-cta:hover { background: white; color: #1c1917; }
-
-  /* FAQ Section */
-  .faq-section { padding: 80px 0; background: #fafaf9; }
-  .faq-header { text-align: center; margin-bottom: 60px; }
-  .faq-header .content-title { max-width: 600px; margin: 0 auto; }
-  .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .faq-item { background: white; padding: 32px; border: 1px solid #e7e5e4; }
-  .faq-item h4 { font-size: 16px; font-weight: 700; color: #1c1917; margin-bottom: 12px; line-height: 1.4; }
-  .faq-item p { font-size: 14px; line-height: 1.7; color: #57534e; margin: 0; }
-  .faq-item a { color: #8b8b4b; }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .faq-grid { grid-template-columns: 1fr; }
-  }
-  
-  @media (max-width: 900px) {
-    .content-grid { grid-template-columns: 1fr; gap: 40px; }
-    .content-left { position: static; }
-  }
-  
-  @media (max-width: 768px) { 
-    .content-container { padding: 0 20px; }
-    .content-section, .contact-section, .faq-section { padding: 60px 0; }
-    .content-title { font-size: 24px; }
-    .contact-info-box { padding: 24px; }
-  }
-</style>
