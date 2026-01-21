@@ -1,0 +1,320 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+// Sort posts: Newest first
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const title = "Blog Mobilier de Bureau | KWESK";
+const description = "Découvrez nos actualités, normes et innovations.";
+
+// Category Data (Matches your screenshot)
+const categories = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>`,
+    title: "Nouveautés",
+    description: "Découvrez les nouvelles chaises de bureau KWESK et les versions récentes."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>`,
+    title: "Normes & Certifications",
+    description: "Explorez les principales normes de qualité, sécurité et confort, les nouveautés et nos certifications."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>`,
+    title: "Innovations",
+    description: "Explorez les dernières innovations et technologies des chaises de bureau KWESK."
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <main class="pt-[100px]"> <section class="blog-hero">
+      <div class="blog-hero__overlay"></div>
+      <div class="container blog-hero__content">
+        <h1>Actualités & Conseils</h1>
+        <p>Expertise et savoir-faire pour vos espaces de travail</p>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div class="container">
+        <div class="intro-header">
+          <div class="intro-left">
+            <span class="intro-label">NOS ACTUALITÉS</span>
+            <h2>Découvrez toutes nos<br/> actualités</h2>
+          </div>
+          <div class="intro-right">
+            <p>
+              KWESK conçoit et fabrique des chaises ergonomiques pour une 
+              utilisation intensive au bureau ou à la maison. Les chaises KWESK 
+              sont certifiées BIFMA et EN1335-1-2-3.
+            </p>
+          </div>
+        </div>
+
+        <div class="categories-grid">
+          {categories.map((cat, index) => (
+            <div class={`category-card ${index !== 2 ? 'border-right' : ''}`}>
+              <div class="cat-icon" set:html={cat.icon}></div>
+              <h3>{cat.title}</h3>
+              <p>{cat.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-list">
+      <div class="container">
+        <h2 class="section-title">Tous les articles</h2>
+        
+        {posts.length === 0 ? (
+          <div class="no-posts">
+            <p>Aucun article trouvé. Ajoutez des fichiers .md dans src/content/blog.</p>
+          </div>
+        ) : (
+          <div class="posts-grid">
+            {posts.map((post) => (
+              <a href={`/blog/${post.slug}`} class="card group">
+                <div class="card__image">
+                  <img src={post.data.image} alt={post.data.title} />
+                  <div class="card__overlay"></div>
+                </div>
+
+                <div class="card__content">
+                  <time datetime={post.data.date.toISOString()}>
+                    {post.data.date.toLocaleDateString('fr-FR', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+                  <h3>{post.data.title}</h3>
+                  <p class="excerpt">{post.data.description}</p>
+                  
+                  <span class="read-more">
+                    Lire l'article
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  /* --- GLOBAL UTILS --- */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  /* --- 1. HERO --- */
+  .blog-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background-color: #1c1917;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /* Add background image if you have one */
+    background-image: url('/blog-hero.png'); 
+    background-size: cover;
+    background-position: center;
+  }
+  .blog-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+  }
+  .blog-hero__content { position: relative; z-index: 2; }
+  .blog-hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; }
+  .blog-hero p { font-size: 1.25rem; opacity: 0.9; }
+
+  /* --- 2. INTRO SECTION (Your Screenshot) --- */
+  .intro-section {
+    padding: 5rem 0;
+    background-color: white;
+  }
+
+  .intro-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: start;
+  }
+
+  .intro-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b8b4b; /* Gold color */
+    margin-bottom: 1rem;
+  }
+
+  .intro-left h2 {
+    font-size: 2.5rem;
+    color: #1c1917;
+    font-weight: 700; /* Bold like screenshot */
+    line-height: 1.1;
+  }
+
+  .intro-right p {
+    color: #57534e;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1.5rem; /* Align visually with title */
+  }
+
+  /* Categories Grid */
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #e7e5e4;
+  }
+
+  .category-card {
+    padding: 2.5rem;
+    background: white;
+  }
+
+  /* Add border right only on desktop for first two items */
+  .category-card.border-right {
+    border-right: 1px solid #e7e5e4;
+  }
+
+  .cat-icon {
+    color: #8b8b4b;
+    margin-bottom: 1.5rem;
+    width: 24px;
+    height: 24px;
+  }
+
+  .category-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1c1917;
+    margin-bottom: 0.75rem;
+  }
+
+  .category-card p {
+    font-size: 0.95rem;
+    color: #57534e;
+    line-height: 1.5;
+  }
+
+  /* --- 3. POSTS LIST --- */
+  .blog-list {
+    padding: 5rem 0;
+    background-color: #fafaf9;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    color: #1c1917;
+    margin-bottom: 3rem;
+    font-weight: 600;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Card Design */
+  .card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover { transform: translateY(-5px); }
+
+  .card__image {
+    position: relative;
+    padding-top: 66%; /* Aspect Ratio */
+    overflow: hidden;
+  }
+  .card__image img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .card:hover .card__image img { transform: scale(1.05); }
+
+  .card__content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card time {
+    font-size: 0.75rem;
+    color: #8b8b4b;
+    margin-bottom: 0.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+    color: #1c1917;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s;
+  }
+  .card:hover h3 { color: #8b8b4b; }
+
+  .excerpt {
+    font-size: 0.95rem;
+    color: #57534e;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .read-more {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #8b8b4b;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s;
+    width: fit-content;
+  }
+  .card:hover .read-more { background-color: #7a7a42; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .intro-header { grid-template-columns: 1fr; gap: 2rem; }
+    .categories-grid { grid-template-columns: 1fr; border: none; gap: 1rem; }
+    .category-card { border: 1px solid #e7e5e4; }
+    .category-card.border-right { border-right: 1px solid #e7e5e4; }
+    .posts-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .posts-grid { grid-template-columns: 1fr; }
+    .blog-hero h1 { font-size: 2.5rem; }
+  }
+</style>
