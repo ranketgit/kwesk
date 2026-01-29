@@ -1,7 +1,8 @@
 ---
+// pages/chaises.astro
 import Layout from '../layouts/Layout.astro';
-import CategoryHeader from '../components/CategoryHeader.astro';
 import ProductCardSimple from '../components/ProductCardSimple.astro';
+import AmCTA from '../components/AmCTA.astro';
 
 const products = [
   { name: "CHALLENGER 175", type: "Chaise Manager", image: "/challenger/ch1.jpg", href: "/challenger" },
@@ -9,14 +10,56 @@ const products = [
   { name: "WINNER 125", type: "Chaise Opérateur", image: "/winner-125/winner-1.jpg", href: "/winner-125" },
   { name: "EXCLUSIVE 500", type: "Chaise Direction", image: "/exclusive/1.jpg", href: "/exclusive" },
 ];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Chaises de Bureau Professionnelles",
+  "description": "Collection complète de chaises de bureau ergonomiques pour entreprises. Certifications BIFMA & EN 1335. Livraison au Maroc.",
+  "url": "https://kwesk.ma/chaises",
+  "provider": {
+    "@type": "Organization",
+    "name": "KWESK",
+    "url": "https://kwesk.ma",
+    "logo": "https://kwesk.ma/kwesk-logo.png",
+    "telephone": "+212-520-241637",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tour Ouest, Niv 1 Anfa Place, bd de la corniche",
+      "addressLocality": "Casablanca",
+      "postalCode": "20180",
+      "addressCountry": "MA"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Chaises de Bureau",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Chaises de Direction" },
+      { "@type": "OfferCatalog", "name": "Chaises Opérateur" },
+      { "@type": "OfferCatalog", "name": "Chaises Visiteur" }
+    ]
+  }
+};
 ---
 
-<Layout title="Chaises de Bureau Professionnelles | Kwesk Maroc" description="Chaises et fauteuils de bureau professionnels. Large choix pour achat et remplacement de fauteuils entreprise. Ergonomie et confort - Kwesk Maroc.">
-  <CategoryHeader 
-    title="Chaises de Bureau" 
-    description="Confort ergonomique et durabilité pour une productivité maximale tout au long de la journée."
-    image="/home-categories/chair.jpg"
-  />
+<Layout 
+  title="Chaises de Bureau Maroc | Ergonomiques & Professionnelles" 
+  description="Collection complète de chaises de bureau ergonomiques pour entreprises. Certifications BIFMA & EN 1335. Livraison au Maroc."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/home-categories/chair.jpg" alt="Chaises de Bureau Maroc" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-label">MOBILIER ERGONOMIQUE</span>
+      <h1>Chaises de Bureau Professionnelles</h1>
+      <p>Confort ergonomique et durabilité pour une productivité maximale tout au long de la journée.</p>
+    </div>
+  </section>
 
   <section class="product-section">
     <div class="product-container">
@@ -25,12 +68,125 @@ const products = [
       </div>
     </div>
   </section>
+
+  <section class="intro-section">
+    <div class="intro-container">
+      <div class="intro-content">
+        <h2>Chaises de Bureau Ergonomiques pour Entreprises au Maroc</h2>
+        <p>Depuis 2008, KWESK conçoit et fabrique des chaises de bureau professionnelles adaptées aux besoins des entreprises marocaines. Notre gamme complète de sièges ergonomiques répond à tous les usages : des chaises opérateur pour vos équipes aux fauteuils direction pour vos espaces de management.</p>
+        <p>Chaque chaise bureau de notre collection intègre des mécanismes ajustables et un soutien lombaire adapté, garantissant confort et productivité pendant les longues journées de travail. Nos modèles sont certifiés selon les normes internationales BIFMA 2011 et EN 1335 2016, assurant durabilité et conformité ergonomique pour une utilisation intensive.</p>
+        <p>Que vous équipiez des bureaux opératifs, des salles de réunion ou des espaces de direction, notre expertise dans l'<a href="/amenagement-de-bureau">aménagement de bureau professionnel</a> vous accompagne dans le choix des sièges ergonomiques adaptés à votre organisation. Livraison dans tout le Maroc : Casablanca, Rabat, Marrakech, Tanger, Fès et toutes les villes du royaume.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="types-section">
+    <div class="types-container">
+      <div class="types-header">
+        <h2>Notre Gamme de Chaises de Bureau : Solutions pour Chaque Besoin</h2>
+      </div>
+      <div class="types-grid">
+        <div class="type-card">
+          <h4>Chaises de Direction & Management</h4>
+          <p>Nos fauteuils direction comme <strong>l'EXCLUSIVE 500</strong> et le <strong>CHALLENGER 175</strong> allient prestige et confort supérieur. Dossier haut, assise large en cuir véritable, mécanismes sophistiqués : ces sièges valorisent vos espaces de direction tout en offrant un soutien optimal lors des longues réunions. Parfaits pour les bureaux de direction et les <a href="/salles-reunion">salles de réunion professionnelles</a>, ils incarnent l'excellence et renforcent votre image corporate.</p>
+        </div>
+        <div class="type-card">
+          <h4>Chaises Opérateur & Postes de Travail</h4>
+          <p>La série <strong>GAMMA</strong> et le modèle <a href="/corpo-100">CORPO 100</a> sont spécifiquement conçus pour l'usage intensif. Ces chaises ergonomiques intègrent des dossiers résille respirants, des mécanismes synchrones qui suivent vos mouvements, et des réglages multiples (hauteur, profondeur d'assise, accoudoirs 3D). Idéales pour les centres d'appels, les <a href="/bureaux/bench">bureaux bench en open space</a>, et tous les postes nécessitant mobilité et adaptabilité tout au long de la journée.</p>
+        </div>
+        <div class="type-card">
+          <h4>Chaises Visiteur & Espaces d'Accueil</h4>
+          <p>Pour vos salles d'attente et espaces d'accueil, nos chaises visiteur combinent design professionnel et confort d'assise. Piètement stable, revêtements durables, empilables pour certains modèles : elles s'intègrent harmonieusement dans vos espaces tout en résistant aux sollicitations quotidiennes. Complétez votre <a href="/amenagement-de-bureau">aménagement intérieur bureau</a> avec nos solutions de <a href="/reunion/rangement">rangement professionnel</a> pour un environnement de travail optimisé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <div class="why-container">
+      <div class="why-header">
+        <h2>Pourquoi Choisir les Chaises de Bureau KWESK ?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h4>Qualité Certifiée & Durabilité Garantie</h4>
+          <p>Nos chaises de bureau professionnel répondent aux certifications internationales les plus exigeantes. La norme BIFMA 2011 garantit la résistance et la sécurité de nos structures, tandis que la certification EN 1335 2016 valide nos standards ergonomiques. Piètements en aluminium, mousses haute densité, mécanismes testés pour des milliers de cycles : chaque composant est sélectionné pour sa performance et sa longévité. Investir dans nos sièges, c'est choisir un mobilier bureau professionnel qui traverse les années sans perdre confort ni fiabilité.</p>
+        </div>
+        <div class="why-card">
+          <h4>Ergonomie & Confort Professionnel</h4>
+          <p>L'ergonomie n'est pas qu'une fonctionnalité, c'est notre priorité. Soutien lombaire ajustable, mécanisme synchrone, réglages personnalisés : nos chaises ergonomiques s'adaptent à chaque morphologie et chaque style de travail. Cette attention au bien-être de vos collaborateurs se traduit directement par une productivité accrue et une réduction significative des troubles musculo-squelettiques. Des postes opératifs aux fauteuils bureau de direction, chaque modèle intègre les dernières avancées en matière d'ergonomie professionnelle.</p>
+        </div>
+        <div class="why-card">
+          <h4>Service Complet au Maroc</h4>
+          <p>KWESK vous accompagne de la sélection à l'installation. Notre équipe commerciale analyse vos besoins, propose les solutions adaptées à votre budget et votre organisation, puis assure la livraison et l'installation dans toute ville du Maroc. Besoin de <a href="/mobilier-industriel">mobilier industriel</a> pour vos ateliers ? De <a href="/bureaux/reglables">bureaux réglables en hauteur</a> pour compléter vos postes de travail ? Notre catalogue complet couvre l'ensemble de vos besoins en aménagement professionnel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AmCTA />
 </Layout>
 
 <style>
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(28,25,23,0.9) 0%, rgba(28,25,23,0.5) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+    text-align: center;
+    color: white;
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #8b8b4b;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .hero p {
+    font-size: 18px;
+    color: #d6d3d1;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Product Grid Section */
   .product-section { 
     padding: 80px 0; 
     background: white; 
+    border-bottom: 1px solid #e7e5e4;
   }
   .product-container { 
     max-width: 1400px; 
@@ -43,19 +199,155 @@ const products = [
     gap: 40px 30px; 
   }
 
-  @media (max-width: 1100px) { 
-    .product-grid {
-      grid-template-columns: repeat(3, 1fr); 
-    }
+  /* Intro Section */
+  .intro-section {
+    padding: 100px 0;
+    background: white;
+  }
+  .intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .intro-content {
+    text-align: center;
+  }
+  .intro-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+  .intro-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #57534e;
+    margin-bottom: 20px;
+  }
+  .intro-content a {
+      color: #8b8b4b;
+      text-decoration: none;
+      font-weight: 600;
+  }
+  .intro-content a:hover {
+      text-decoration: underline;
   }
 
-  @media (max-width: 768px) { 
-    .product-grid { 
-      grid-template-columns: repeat(2, 1fr); 
-      gap: 20px; 
-    }
-    .product-container { 
-      padding: 0 20px; 
-    }
+  /* Types Section */
+  .types-section {
+    padding: 100px 0;
+    background: #fafaf9;
+  }
+  .types-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .types-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .types-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .type-card {
+    background: white;
+    padding: 40px;
+    border: 1px solid #e7e5e4;
+  }
+  .type-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 16px;
+  }
+  .type-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+  .type-card a {
+    color: #8b8b4b;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .type-card a:hover {
+    text-decoration: underline;
+  }
+
+  /* Why Section */
+  .why-section {
+    padding: 100px 0;
+    background: white;
+  }
+  .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .why-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .why-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .why-card {
+    background: #fafaf9;
+    padding: 40px;
+    border: 1px solid #e7e5e4;
+  }
+  .why-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 16px;
+  }
+  .why-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+  .why-card a {
+    color: #8b8b4b;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .why-card a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .types-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 36px; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .types-grid, .why-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { height: auto; padding: 100px 0 60px; }
+    .hero h1 { font-size: 28px; }
+    .product-container, .intro-container, .types-container, .why-container { padding: 0 24px; }
+    .product-section, .intro-section, .types-section, .why-section { padding: 60px 0; }
   }
 </style>

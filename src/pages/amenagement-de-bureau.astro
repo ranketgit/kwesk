@@ -1,198 +1,840 @@
 ---
+// pages/bureaux.astro
 import Layout from '../layouts/Layout.astro';
-import AmHero from '../components/AmHero.astro';
-import AmExpertise from '../components/AmExpertise.astro';
-import AmQuote from '../components/AmQuote.astro';
 import AmCTA from '../components/AmCTA.astro';
-import ChairCard from '../components/ChairCard.astro';
-import citiesData from '../data/city-pages/data.json';
 ---
 
-<Layout title="Aménagement de Bureau Professionnel au Maroc | Kwesk" description="Projets d'aménagement de bureau clés en main. Mobilier de bureaux complet : chaises, fauteuils, plateaux. Agencement professionnel pour entreprises - Kwesk.">
-  
-  <AmHero 
-    title="Expert en<br/>Aménagement de Bureau au Maroc"
-    subtitle="KWESK est votre partenaire de confiance pour l'aménagement de bureau au Maroc. Nous concevons des environnements de travail qui allient design moderne et ergonomie."
-    image="/amenagement-hero.jpg"
-  />
+<Layout 
+  title="Aménagement de Bureau Professionnel au Maroc | KWESK depuis 2008" 
+  description="Expert en aménagement de bureau au Maroc. Mobilier ergonomique certifié BIFMA & EN 1335. Livraison et installation Casablanca, Rabat, Marrakech."
+>
 
-  <section class="seo-bar bg-stone-900 py-4">
-    <div class="max-w-7xl mx-auto px-6">
-      <p class="text-stone-400 text-xs uppercase tracking-[0.2em] text-center">
-        Leader de l'<strong>Aménagement de Bureau au Maroc</strong> — Livraison et Installation à Casablanca, Rabat, Tanger & Marrakech
-      </p>
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/amenagement-hero.jpg" alt="Aménagement de Bureau Maroc" />
+      <div class="hero-overlay"></div>
     </div>
-  </section>
-
-  <AmExpertise />
-
-  <section class="seo-text-top py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-stone-900 mb-6 uppercase tracking-tight">Spécialiste en Aménagement de Bureau au Maroc depuis 2008.</h2>
-      <p class="text-stone-600 leading-relaxed mb-4">
-        Réussir l'<strong>aménagement de bureau au Maroc</strong> selon les normes internationales d'ergonomie est essentiel pour la santé et la productivité de vos collaborateurs. Chez KWESK, nous concevons et réalisons des espaces de travail complets : bureaux, chaises, solutions de rangement et agencement sur mesure adaptés aux besoins spécifiques des entreprises marocaines.
-      </p>
-      <p class="text-stone-600 leading-relaxed">
-        Que vous créiez une nouvelle start-up à Casablanca ou que vous rénoviez un siège social à Rabat, notre expertise en <strong>aménagement de bureau au Maroc</strong> vous garantit un espace optimisé, esthétique et durable.
-      </p>
-    </div>
-  </section>
-
-  <!-- Cities Section -->
-  <section class="py-16 bg-stone-50 border-y border-stone-200">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-2xl font-bold text-stone-900 mb-4 uppercase tracking-tight text-center">
-        Aménagement de Bureau dans Votre Ville
-      </h2>
-      <p class="text-stone-500 text-center mb-12 max-w-2xl mx-auto">
-        KWESK réalise votre aménagement de bureau professionnel partout au Maroc
-      </p>
+    <div class="hero-content">
+      <h1 class="hero-title">Expert en Aménagement de Bureau Professionnel au Maroc</h1>
+      <p class="hero-subtitle">Solutions d'Aménagement depuis 2008</p>
+      <div class="hero-text">
+        <p>KWESK conçoit et fabrique des environnements de travail ergonomiques pour les entreprises marocaines. De la conception à l'installation, nous vous accompagnons dans votre projet d'aménagement de bureau avec mobilier professionnel certifié BIFMA et EN 1335.</p>
+      </div>
       
-      <div id="cities-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {citiesData.map((city, index) => (
-          <a 
-            href={`/amenagement-de-bureau-professionnel-a-${city.slug}`}
-            class:list={[
-              "city-card bg-white p-6 border border-stone-200 hover:border-[#8b8b4b] transition-colors group",
-              { "hidden-city": index >= 4 }
-            ]}
-          >
-            <h3 class="font-bold text-stone-900 mb-2 group-hover:text-[#8b8b4b] transition-colors">
-              {city.city}
-            </h3>
-            <p class="text-stone-500 text-sm line-clamp-2">
-              Aménagement de bureau professionnel à {city.city}
-            </p>
-            <span class="inline-flex items-center gap-1 text-[#8b8b4b] text-sm mt-4">
-              Découvrir
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </a>
-        ))}
+      <div class="hero-bullets">
+        <p><strong>Notre Expertise :</strong></p>
+        <ul>
+            <li>• Mobilier de bureau ergonomique certifié</li>
+            <li>• Fabrication locale robuste et durable</li>
+            <li>• Livraison et installation nationale</li>
+            <li>• Configuration sur-mesure selon vos espaces</li>
+        </ul>
       </div>
 
-      <div class="text-center mt-8">
-        <button 
-          id="show-more-cities" 
-          class="inline-flex items-center gap-2 px-6 py-3 bg-stone-900 text-white text-sm uppercase tracking-wider hover:bg-[#8b8b4b] transition-colors"
-        >
-          Voir toutes les villes
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-          </svg>
-        </button>
+      <div class="hero-cta">
+        <a href="/contact" class="btn-primary">DEMANDER UN DEVIS GRATUIT</a>
+      </div>
+      <p class="hero-footer">Livraison dans tout le Maroc : Casablanca • Rabat • Marrakech • Tanger • Fès</p>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro-container">
+      <div class="intro-content">
+        <h2>Spécialiste en Aménagement de Bureau au Maroc depuis 2008</h2>
+        <p>Réussir l'aménagement de bureau professionnel au Maroc nécessite expertise et qualité. Chez KWESK, nous concevons des espaces de travail complets et ergonomiques adaptés aux besoins spécifiques des entreprises marocaines.</p>
+        <p>Que vous créiez de nouveaux locaux ou rénoviez vos espaces existants, notre expertise en aménagement de bureau garantit des solutions optimisées pour la productivité et le bien-être de vos collaborateurs.</p>
       </div>
     </div>
   </section>
 
-  <section class="solutions-list">
-    <ChairCard
-      title="BUREAUX DE DIRECTION HAUT DE GAMME"
-      description="Pour votre top management, faites confiance à notre expertise en aménagement de bureau au Maroc. Nos bureaux de direction imposent une image de marque forte tout en offrant un confort de travail inégalé pour les longues journées de gestion stratégique."
-      image="/hautgamme.webp"
-      versions={[{ name: "Elite Executive", type: "Direction Pro" }]}
-      imagePosition="right"
-      href="/bureaux"
-    />
-
-    <div class="seo-break bg-stone-50 py-12 border-y border-stone-200">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-xl font-bold text-stone-800 mb-2">Des solutions d'aménagement pour chaque collaborateur</h3>
-            <p class="text-stone-500 text-sm">KWESK : La référence de l'<strong>aménagement de bureau au Maroc</strong> pour les open-spaces et espaces collaboratifs.</p>
+  <section class="why-section">
+    <div class="why-container">
+        <div class="why-header">
+            <h3>Ce qui Distingue KWESK :</h3>
         </div>
-    </div>
-
-    <ChairCard
-      title="POSTES DE TRAVAIL & BENCH"
-      description="Nos solutions bench représentent le futur de l'aménagement de bureau au Maroc. Idéals pour les espaces ouverts, ils permettent de maximiser la densité de collaborateurs sans compromettre leur espace vital ou leur confort acoustique."
-      image="/bureau-bench.webp"
-      versions={[{ name: "Multi-postes Pro", type: "Opératif" }]}
-      imagePosition="left"
-      href="/bureaux"
-    />
-
-    <ChairCard
-      title="BUREAUX ASSIS-DEBOUT ERGONOMIQUES"
-      description="Révolutionnez votre quotidien avec un aménagement de bureau au Maroc innovant. Nos bureaux réglables en hauteur favorisent le mouvement, réduisent les douleurs dorsales et augmentent la productivité de 20%."
-      image="/debout.png"
-      versions={[{ name: "Active Desk", type: "Ergonomie" }]}
-      imagePosition="right"
-      href="/bureaux"
-    />
-
-    <ChairCard
-      title="RANGEMENTS & BIBLIOTHÈQUES"
-      description="Complétez votre aménagement de bureau au Maroc avec des systèmes de rangement robustes. Nos armoires et caissons sont conçus pour s'intégrer parfaitement à nos gammes de bureaux, offrant une unité visuelle à vos locaux."
-      image="/biblio.jpg"
-      versions={[{ name: "Cargo Series", type: "Stockage" }]}
-      imagePosition="left"
-      href="/bureaux"
-    />
-  </section>
-
-  <section class="seo-footer-content py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-12">
-        <div>
-          <h4 class="font-bold text-stone-900 mb-4 uppercase text-sm">Qualité marocaine</h4>
-          <p class="text-stone-600 text-sm leading-relaxed">Nous privilégions une fabrication rigoureuse pour offrir le meilleur rapport qualité/prix en <strong>aménagement de bureau au Maroc</strong>.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <h4>Configuration Sur-Mesure</h4>
+          <p>Adaptation des dimensions de nos bureaux selon vos plans de locaux et contraintes d'espace. Chaque projet d'aménagement bénéficie d'une étude personnalisée pour maximiser l'utilisation de vos mètres carrés disponibles.</p>
         </div>
-        <div>
-          <h4 class="font-bold text-stone-900 mb-4 uppercase text-sm">Accompagnement</h4>
-          <p class="text-stone-600 text-sm leading-relaxed">Nos conseillers vous aident à concevoir votre <strong>aménagement de bureau au Maroc</strong> pour optimiser chaque mètre carré de vos locaux professionnels.</p>
+        <div class="why-card">
+          <h4>Fabrication Marocaine</h4>
+          <p>Mobilier robuste conçu localement pour une durabilité de plus de 10 ans. Notre fabrication assure résistance et qualité, essentielles pour l'usage professionnel intensif.</p>
         </div>
-        <div>
-          <h4 class="font-bold text-stone-900 mb-4 uppercase text-sm">Garantie 5 Ans</h4>
-          <p class="text-stone-600 text-sm leading-relaxed">Investissez sereinement dans votre <strong>aménagement de bureau au Maroc</strong> grâce à notre garantie longue durée sur toutes nos structures.</p>
+        <div class="why-card">
+          <h4>Gestion de Câblage</h4>
+          <p>Intégration de solutions de gestion de câbles dans nos bureaux pour un espace de travail ordonné et professionnel. Finies les installations désordonnées qui nuisent à l'esthétique de vos locaux.</p>
+        </div>
+        <div class="why-card">
+          <h4>Accompagnement Complet</h4>
+          <p>Nos conseillers vous aident à concevoir votre aménagement de bureau pour optimiser chaque espace de vos locaux professionnels, de la consultation initiale à l'installation finale.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <AmQuote />
+  <section class="collection-section">
+    <div class="section-header-wrapper">
+        <h2>Solutions d'Aménagement par Type d'Espace</h2>
+    </div>
+
+    <div class="bureau-block">
+      <div class="bureau-image">
+        <a href="/bureaux/direction">
+          <img src="/bureaux/dr1.jpg" alt="Aménagement Bureaux de Direction" />
+          <div class="image-overlay"><span>Voir la gamme →</span></div>
+        </a>
+      </div>
+      <div class="bureau-content">
+        <h3>Aménagement Bureaux de Direction</h3>
+        <p>Créez des espaces de direction qui incarnent le professionnalisme et l'autorité. Nos <a href="/bureaux/direction">bureaux de direction</a> haut de gamme allient design raffiné et fonctionnalité pour les longues journées de gestion stratégique.</p>
+        
+        <div class="solutions-details">
+            <strong>Solutions Disponibles :</strong>
+            <ul>
+                <li>• Bureaux de direction avec extensions et rangements intégrés</li>
+                <li>• <a href="/exclusive">Fauteuils EXCLUSIVE 500</a> en cuir pour confort premium</li>
+                <li>• Crédences assorties pour rangement élégant</li>
+                <li>• Configuration complète pour espaces exécutifs</li>
+            </ul>
+            <p class="ideal-for"><strong>Idéal pour :</strong> Dirigeants, cadres supérieurs, cabinets professionnels nécessitant image de marque forte</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bureau-block reversed">
+      <div class="bureau-image">
+        <a href="/bureaux/bench">
+          <img src="/bureaux/bn1.jpg" alt="Aménagement Open Space" />
+          <div class="image-overlay"><span>Voir la gamme →</span></div>
+        </a>
+      </div>
+      <div class="bureau-content">
+        <h3>Aménagement Open Space & Espaces Collaboratifs</h3>
+        <p>Maximisez l'utilisation de vos espaces avec nos solutions d'aménagement pour open space modernes. Nos <a href="/bureaux/bench">bureaux bench</a> permettent de créer des zones collaboratives productives tout en préservant l'espace personnel de chaque collaborateur.</p>
+        
+        <div class="solutions-details">
+            <strong>Solutions Disponibles :</strong>
+            <ul>
+                <li>• Bureaux bench multi-postes avec gestion de câbles intégrée</li>
+                <li>• <a href="/gamma">Chaises ergonomiques GAMMA 150</a> pour usage intensif quotidien</li>
+                <li>• Séparateurs et solutions de rangement coordonnées</li>
+                <li>• Configuration modulaire adaptable à vos besoins évolutifs</li>
+            </ul>
+            <p class="ideal-for"><strong>Idéal pour :</strong> Startups, agences créatives, services administratifs, espaces de coworking</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bureau-block">
+      <div class="bureau-image">
+        <a href="/bureaux/operatif">
+          <img src="/bureaux/op1.jpg" alt="Aménagement Postes Opérationnels" />
+          <div class="image-overlay"><span>Voir la gamme →</span></div>
+        </a>
+      </div>
+      <div class="bureau-content">
+        <h3>Aménagement Postes Opérationnels</h3>
+        <p>Équipez vos équipes avec mobilier adapté à l'usage professionnel quotidien. Nos <a href="/bureaux/operatif">bureaux opératifs</a> offrent fonctionnalité et ergonomie pour tous types de postes de travail.</p>
+        
+        <div class="solutions-details">
+            <strong>Solutions Disponibles :</strong>
+            <ul>
+                <li>• Bureaux opératifs avec passage de câbles optimisé</li>
+                <li>• Chaises opérateur certifiées pour usage intensif</li>
+                <li>• Caissons de rangement mobiles</li>
+                <li>• Configuration adaptée aux contraintes d'espace</li>
+            </ul>
+            <p class="ideal-for"><strong>Idéal pour :</strong> Centres d'appels, back-offices, services clients, équipes opérationnelles</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bureau-block reversed">
+      <div class="bureau-image">
+        <a href="/salles-reunion">
+          <img src="/reunion/tables.jpg" alt="Aménagement Salles de Réunion" />
+          <div class="image-overlay"><span>Voir la gamme →</span></div>
+        </a>
+      </div>
+      <div class="bureau-content">
+        <h3>Aménagement Salles de Réunion</h3>
+        <p>Transformez vos espaces de réunion en lieux propices à la collaboration et la décision. Nos <a href="/salles-reunion">solutions pour salles de réunion</a> combinent confort et fonctionnalité professionnelle.</p>
+        
+        <div class="solutions-details">
+            <strong>Solutions Disponibles :</strong>
+            <ul>
+                <li>• <a href="/reunion/tables">Tables de réunion</a> modulaires pour différentes configurations</li>
+                <li>• Chaises visiteur confortables pour sessions prolongées</li>
+                <li>• <a href="/reunion/media">Supports média</a> pour équipements de présentation</li>
+                <li>• <a href="/reunion/rangement">Solutions de rangement</a> professionnelles</li>
+            </ul>
+            <p class="ideal-for"><strong>Idéal pour :</strong> Salles de conseil, espaces de formation, zones de présentation client</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Notre Gamme de Mobilier pour Aménagement de Bureau</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="group bg-stone-800 p-10 hover:bg-stone-700 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-6 border-b border-[#8b8b4b] pb-2 inline-block">Bureaux Professionnels</h3>
+          
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Bureaux de Direction</h4>
+            <p class="text-sm text-stone-400">Bureaux imposants et raffinés pour espaces exécutifs. Matériaux de qualité, dimensions généreuses et rangements intégrés. Design professionnel pour valoriser votre image corporate.</p>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Bureaux Opératifs</h4>
+            <p class="text-sm text-stone-400">Solutions fonctionnelles et compactes pour postes individuels. Optimisation de l'espace tout en offrant surface de travail suffisante pour équipements informatiques et documents.</p>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2"><a href="/bureaux/reglables" class="hover:underline text-[#8b8b4b]">Bureaux Réglables en Hauteur</a></h4>
+            <p class="text-sm text-stone-400">Innovation ergonomique permettant alternance position assise et debout. Solution moderne pour réduire fatigue et améliorer bien-être des collaborateurs sédentaires.</p>
+          </div>
+
+          <div>
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Bureaux Bench</h4>
+            <p class="text-sm text-stone-400">Configurations collaboratives pour open spaces modernes. Gestion de câbles intégrée et possibilité d'ajouter séparateurs acoustiques selon besoins.</p>
+          </div>
+        </div>
+
+        <div class="group bg-stone-800 p-10 hover:bg-stone-700 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-6 border-b border-[#8b8b4b] pb-2 inline-block">Chaises Ergonomiques Certifiées</h3>
+          
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Série GAMMA</h4>
+            <p class="text-sm text-stone-400">Notre best-seller pour aménagement de bureau professionnel. Mécanisme synchrone italien, dossier mesh respirant danois, support lombaire réglable. Certifiée BIFMA 2011 et EN 1335 2016.</p>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Série EXCLUSIVE</h4>
+            <p class="text-sm text-stone-400">Fauteuils de direction en cuir haut de gamme. Dossier enveloppant, assise large et confortable. Pour dirigeants et managers passant longues heures au bureau.</p>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2"><a href="/challenger" class="hover:underline text-[#8b8b4b]">Série CHALLENGER</a></h4>
+            <p class="text-sm text-stone-400">Chaises manager alliant confort et design professionnel. Idéales pour bureaux individuels et salles de réunion nécessitant image soignée.</p>
+          </div>
+
+          <div>
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2"><a href="/corpo-100" class="hover:underline text-[#8b8b4b]">Série CORPO</a></h4>
+            <p class="text-sm text-stone-400">Solutions robustes pour environnements exigeants. Structure renforcée pour usage très intensif dans centres d'appels et espaces opérationnels.</p>
+          </div>
+        </div>
+
+        <div class="group bg-stone-800 p-10 hover:bg-stone-700 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-6 border-b border-[#8b8b4b] pb-2 inline-block">Mobilier Complémentaire</h3>
+          
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Solutions de Rangement</h4>
+            <p class="text-sm text-stone-400">Armoires, caissons mobiles et bibliothèques coordonnés avec nos gammes de bureaux. Organisation optimale de vos espaces professionnels.</p>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Tables de Réunion</h4>
+            <p class="text-sm text-stone-400">Tables professionnelles pour salles de réunion et espaces de conférence. Différentes tailles et configurations disponibles.</p>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2">Supports Média</h4>
+            <p class="text-sm text-stone-400">Équipements pour écrans et matériel de présentation. Complétez l'aménagement de vos salles de réunion avec solutions techniques.</p>
+          </div>
+
+          <div>
+            <h4 class="text-[#8b8b4b] font-bold text-sm uppercase mb-2"><a href="/mobilier-industriel" class="hover:underline text-[#8b8b4b]">Mobilier Industriel</a></h4>
+            <p class="text-sm text-stone-400">Casiers vestiaires, tables de cantine, armoires de rangement. Solutions robustes pour zones techniques et espaces industriels.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="trends-section">
+    <div class="trends-container">
+      <div class="trends-header">
+        <h2>Pourquoi Choisir KWESK pour Votre Aménagement de Bureau</h2>
+      </div>
+      
+      <div class="trends-grid">
+        <div class="trend-card">
+          <h4>Leader de l'Aménagement de Bureau au Maroc depuis 2008</h4>
+          <p>Plus de 15 ans d'expertise dans la conception et fabrication de mobilier professionnel pour entreprises marocaines. Notre expérience couvre tous types d'espaces : bureaux de direction, open spaces, centres d'appels, salles de réunion.</p>
+        </div>
+        
+        <div class="trend-card">
+          <h4>Certifications Internationales</h4>
+          <p>Tous nos sièges respectent les normes les plus exigeantes :</p>
+          <ul class="simple-list">
+             <li>• <strong>BIFMA 2011</strong> : Certification américaine validant résistance, sécurité et durabilité</li>
+             <li>• <strong>EN 1335 2016</strong> : Standard européen pour sièges ergonomiques de bureau</li>
+             <li>• <strong>Composants européens</strong> : Mécanismes italiens, vérins allemands, tissus danois</li>
+          </ul>
+          <p class="mt-2">Ces certifications garantissent investissement durable et conformité aux standards internationaux d'ergonomie.</p>
+        </div>
+        
+        <div class="trend-card">
+          <h4>Qualité Marocaine</h4>
+          <p>Fabrication locale rigoureuse pour offrir meilleur rapport qualité-durabilité en aménagement de bureau au Maroc. Notre mobilier est conçu pour résister à l'usage professionnel intensif pendant plus de 10 ans.</p>
+        </div>
+        
+        <div class="trend-card">
+          <h4>Accompagnement Personnalisé</h4>
+          <p>Nos conseillers vous accompagnent dans la conception de votre aménagement de bureau pour optimiser chaque mètre carré de vos locaux professionnels. De l'analyse de vos besoins à l'installation, nous assurons suivi complet de votre projet.</p>
+        </div>
+        
+        <div class="trend-card">
+          <h4>Garantie 5 Ans</h4>
+          <p>Investissez sereinement dans votre aménagement de bureau grâce à notre garantie longue durée sur toutes structures et mécanismes. Service après-vente réactif basé à Casablanca.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sectors-section bg-white border-t border-stone-200" style="padding: 100px 0;">
+    <div class="sectors-container">
+        <div class="full-width-header" style="margin-bottom: 50px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+             <h2 style="font-size: 36px; font-weight: 700; color: #1c1917; margin-bottom: 20px;">Livraison et Installation</h2>
+             <p style="font-size: 16px; color: #57534e; margin-bottom: 20px;">KWESK assure livraison et installation de votre mobilier de bureau. Nos équipes interviennent dans toutes les villes pour mise en place professionnelle de vos aménagements.</p>
+             <p style="font-size: 16px; color: #1c1917;"><strong>Principales Villes Servies :</strong></p>
+        </div>
+        
+        <div class="cities-grid">
+            <a href="/amenagement-de-bureau-professionnel-a-casablanca" class="city-link">• Aménagement de bureau à Casablanca - Capitale économique du Maroc</a>
+            <a href="/amenagement-de-bureau-professionnel-a-rabat" class="city-link">• Aménagement de bureau à Rabat - Capitale administrative</a>
+            <a href="/amenagement-de-bureau-professionnel-a-marrakech" class="city-link">• Aménagement de bureau à Marrakech - Hub touristique et entrepreneurial</a>
+            <a href="/amenagement-de-bureau-professionnel-a-tanger" class="city-link">• Aménagement de bureau à Tanger - Zone internationale</a>
+            <a href="/amenagement-de-bureau-professionnel-a-fes" class="city-link">• Aménagement de bureau à Fès - Centre culturel</a>
+            <a href="/amenagement-de-bureau-professionnel-a-agadir" class="city-link">• Aménagement de bureau à Agadir - Région Sud</a>
+            <a href="/amenagement-de-bureau-professionnel-a-meknes" class="city-link">• Aménagement de bureau à Meknès - Zone industrielle</a>
+            <a href="/amenagement-de-bureau-professionnel-a-oujda" class="city-link">• Aménagement de bureau à Oujda - Région orientale</a>
+            <a href="/amenagement-de-bureau-professionnel-a-kenitra" class="city-link">• Aménagement de bureau à Kénitra - Zone atlantique</a>
+            <a href="/amenagement-de-bureau-professionnel-a-tetouan" class="city-link">• Aménagement de bureau à Tétouan - Nord du Maroc</a>
+            <a href="/amenagement-de-bureau-professionnel-a-temara" class="city-link">• Aménagement de bureau à Témara - Région Rabat-Salé</a>
+            <a href="/amenagement-de-bureau-professionnel-a-safi" class="city-link">• Aménagement de bureau à Safi - Côte atlantique</a>
+            <a href="/amenagement-de-bureau-professionnel-a-mohammedia" class="city-link">• Aménagement de bureau à Mohammedia - Zone industrielle côtière</a>
+            <a href="/amenagement-de-bureau-professionnel-a-khouribga" class="city-link">• Aménagement de bureau à Khouribga - Centre minier</a>
+            <a href="/amenagement-de-bureau-professionnel-a-el-jadida" class="city-link">• Aménagement de bureau à El Jadida - Ville côtière</a>
+            <a href="/amenagement-de-bureau-professionnel-a-beni-mellal" class="city-link">• Aménagement de bureau à Béni Mellal - Centre agricole</a>
+            <a href="/amenagement-de-bureau-professionnel-a-ait-melloul" class="city-link">• Aménagement de bureau à Aït Melloul - Région Souss</a>
+            <a href="/amenagement-de-bureau-professionnel-a-nador" class="city-link">• Aménagement de bureau à Nador - Oriental Nord</a>
+            <a href="/amenagement-de-bureau-professionnel-a-taza" class="city-link">• Aménagement de bureau à Taza - Carrefour du Maroc</a>
+            <a href="/amenagement-de-bureau-professionnel-a-essaouira" class="city-link">• Aménagement de bureau à Essaouira - Ville côtière Sud</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-container">
+      <div class="cta-content">
+        <h2>Commencez Votre Projet d'Aménagement</h2>
+        <p class="cta-subtitle">Transformez Vos Espaces de Travail avec KWESK</p>
+        <p class="cta-desc">Depuis 2008, KWESK accompagne les entreprises marocaines dans la création d'environnements de travail ergonomiques et durables. Notre expertise en aménagement de bureau combine fabrication locale de qualité et certifications internationales.</p>
+        
+        <div class="cta-engagements">
+            <p><strong>Nos Engagements :</strong></p>
+            <ul>
+                <li>✓ Mobilier certifié BIFMA & EN 1335 pour qualité garantie</li>
+                <li>✓ Fabrication robuste pour durabilité de plus de 10 ans</li>
+                <li>✓ Configuration sur-mesure selon vos espaces</li>
+                <li>✓ Livraison et installation dans tout le Maroc</li>
+                <li>✓ Garantie 5 ans sur structures et mécanismes</li>
+            </ul>
+        </div>
+
+        <div class="cta-contact">
+          <div class="cta-info">
+             <p><strong>Contactez-Nous pour Votre Devis Gratuit</strong></p>
+             <p>📞 +212 5 20 24 16 37</p>
+             <p>📧 <a href="mailto:contact@kwesk.com">contact@kwesk.com</a></p>
+             <p>📍 Showroom : Anfa Place, Tour Ouest Niveau 1, Boulevard de la Corniche, Casablanca</p>
+          </div>
+          <div class="cta-buttons">
+            <a href="/contact" class="cta-btn">DEMANDER UN DEVIS GRATUIT</a>
+            <a href="/chaises" class="cta-btn secondary">VOIR TOUTES NOS CHAISES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <AmCTA />
-
 </Layout>
 
 <style>
-  .solutions-list { background-color: white; }
-  strong { color: #1c1917; font-weight: 700; }
-  
-  /* Hidden cities - visually hidden but crawlable */
-  .hidden-city {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
+  /* GLOBAL LAYOUT STYLES */
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 90vh;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
   }
-  
-  /* When expanded, show all */
-  .cities-expanded .hidden-city {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 1.5rem;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(28,25,23,0.95) 0%, rgba(28,25,23,0.6) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+    text-align: left;
+    color: white;
+  }
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+    color: #8b8b4b;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .hero-text p {
+    font-size: 16px;
+    color: #d6d3d1;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .hero-bullets {
+    margin-bottom: 40px;
+    background: rgba(255,255,255,0.05);
+    padding: 24px;
+    border-left: 3px solid #8b8b4b;
+  }
+  .hero-bullets ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .hero-bullets li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #e7e5e4;
+  }
+  .hero-footer {
+    font-size: 13px;
+    margin-top: 32px;
+    color: #a8a29e;
+  }
+  .btn-primary {
+    padding: 16px 32px;
+    background: #8b8b4b;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background: white;
+    color: #1c1917;
+  }
+
+  /* Intro Section */
+  .intro-section {
+    padding: 100px 0;
+    background: white;
+  }
+  .intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .intro-content {
+    text-align: center;
+  }
+  .intro-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+  .intro-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #57534e;
+    margin-bottom: 20px;
+  }
+
+  /* Why Section (4 cards grid) */
+  .why-section {
+    padding: 100px 0;
+    background: #fafaf9;
+  }
+  .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .why-header {
+      text-align: center;
+      margin-bottom: 40px;
+  }
+  .why-header h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1c1917;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .why-card {
+    padding: 32px;
+    background: white;
+    border: 1px solid #e7e5e4;
+  }
+  .why-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #8b8b4b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .why-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #57534e;
+  }
+
+  /* Collection Section */
+  .collection-section {
+    background: white;
+  }
+  .section-header-wrapper {
+      text-align: center;
+      padding: 80px 20px 40px;
+  }
+  .section-header-wrapper h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .bureau-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+  .bureau-block.reversed {
+    direction: rtl;
+  }
+  .bureau-block.reversed > * {
+    direction: ltr;
+  }
+  .bureau-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .bureau-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .bureau-image:hover img {
+    transform: scale(1.05);
+  }
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(28,25,23,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .bureau-image:hover .image-overlay {
+    opacity: 1;
+  }
+  .image-overlay span {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .bureau-content {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+  }
+  .bureau-block:nth-child(even) .bureau-content {
+    background: #fafaf9;
+  }
+  .bureau-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  .bureau-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+    margin-bottom: 24px;
+  }
+  .bureau-content :global(a) {
+    color: #8b8b4b;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .bureau-content :global(a:hover) {
+    text-decoration: underline;
+  }
+  .solutions-details {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e7e5e4;
+  }
+  .solutions-details ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+  }
+  .solutions-details li {
+      font-size: 14px;
+      color: #78716c;
+      margin-bottom: 8px;
+  }
+  .ideal-for {
+      font-size: 13px;
+      color: #44403c;
+      margin-top: 15px;
+      font-style: italic;
+  }
+
+  /* Trends Section (5 cards flex) */
+  .trends-section {
+    padding: 100px 0;
+    background: #fafaf9;
+  }
+  .trends-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .trends-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .trends-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .trends-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .trend-card {
+    background: white;
+    padding: 40px;
+    border: 1px solid #e7e5e4;
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+  }
+  .trend-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 12px;
+  }
+  .trend-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+  .simple-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+  }
+  .simple-list li {
+      font-size: 14px;
+      color: #57534e;
+      margin-bottom: 5px;
+  }
+  .mt-2 { margin-top: 10px; }
+
+  /* Cities Section */
+  .sectors-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 60px;
+  }
+  .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+  }
+  .city-link {
+      display: block;
+      padding: 10px;
+      background: #fafaf9;
+      color: #57534e;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+  }
+  .city-link:hover {
+      background: #8b8b4b;
+      color: white;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 100px 0;
+    background: #8b8b4b;
+  }
+  .cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .cta-content {
+    text-align: center;
+    color: white;
+  }
+  .cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .cta-subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      opacity: 0.9;
+  }
+  .cta-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+  .cta-engagements {
+      background: rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 40px;
+      text-align: left;
+  }
+  .cta-engagements ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+  }
+  .cta-contact {
+    background: white;
+    padding: 40px;
+    text-align: left;
+    color: #1c1917;
+  }
+  .cta-info {
+    margin-bottom: 24px;
+  }
+  .cta-info p {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .cta-info a {
+      color: #8b8b4b;
+      text-decoration: none;
+  }
+  .cta-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #1c1917;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+  }
+  .cta-btn:hover {
+    background: #8b8b4b;
+  }
+  .cta-btn.secondary {
+      background: transparent;
+      border: 1px solid #1c1917;
+      color: #1c1917;
+  }
+  .cta-btn.secondary:hover {
+      background: #1c1917;
+      color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .trend-card { flex: 0 0 calc(50% - 15px); }
+  }
+
+  @media (max-width: 900px) {
+    .hero-title { font-size: 36px; }
+    .bureau-block { grid-template-columns: 1fr; }
+    .bureau-block.reversed { direction: ltr; }
+    .bureau-image { height: 400px; }
+    .bureau-content { padding: 60px 40px; }
+    .cities-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { height: auto; padding: 120px 0 80px; }
+    .hero-title { font-size: 28px; }
+    .intro-section, .why-section, .collection-section, .trends-section, .cta-section { padding: 60px 0; }
+    .intro-container, .why-container, .trends-container, .cta-container, .sectors-container { padding: 0 24px; }
+    .cta-engagements ul { grid-template-columns: 1fr; }
+    .trend-card { flex: 0 0 100%; }
+    .why-grid { grid-template-columns: 1fr; }
   }
 </style>
-
-<script>
-  const button = document.getElementById('show-more-cities');
-  const grid = document.getElementById('cities-grid');
-  
-  button?.addEventListener('click', () => {
-    grid?.classList.add('cities-expanded');
-    button.style.display = 'none';
-  });
-</script>

@@ -1,11 +1,32 @@
 ---
-import ChairProduct from '../components/ChairProduct.astro';
+// pages/gamma.astro
 import Layout from '../layouts/Layout.astro';
+import ChairProduct from '../components/ChairProduct.astro';
+import AmCTA from '../components/AmCTA.astro';
+
+// 6. SCHEMA MARKUP (Matches brief)
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "GAMMA 150 - Chaise de Bureau Ergonomique",
+  "description": "Chaise ergonomique avec mécanisme synchrone italien, mesh danois, vérin allemand. Certifiée BIFMA & EN 1335.",
+  "image": "https://kwesk.ma/gamma/1.jpg",
+  "brand": { "@type": "Brand", "name": "KWESK" },
+  "sku": "GAMMA-150",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "MAD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://kwesk.ma/gamma"
+  }
+};
 
 const gamma = {
   heroBg: "/gamma/hero.jpg",
-  name: "GAMMA 150",
-  description: "La toute nouvelle Gamma 150 est l'équilibre ultime entre confort, prix et robustesse offert par Kwesk. Cette chaise est le choix parfait pour une utilisation intensive au bureau ou à la maison.",
+  // H1 PAGE TITLE from Brief
+  name: "GAMMA 150 - Chaise de Bureau Ergonomique Professionnelle",
+  // SHORT PRODUCT DESCRIPTION from Brief
+  description: "La GAMMA 150 est l'équilibre parfait entre confort, robustesse et prix pour une utilisation intensive au bureau ou à la maison. Cette chaise bureau ergonomique combine mécanisme synchrone italien L1530, dossier Aero 3D Mesh respirant fabriqué au Danemark, et vérin à gaz double cylindre allemand. Certifiée BIFMA 2011 et EN 1335 2016, c'est le choix idéal pour bureaux professionnels, centres d'appels et télétravail.",
   version: "Gamma 150",
   versionType: "Chaise Opérateur",
   images: [
@@ -15,25 +36,26 @@ const gamma = {
     "/gamma/4.jpg"
   ],
   featuresDiagram: "/gamma/diagram.png",
+  // Standard Features from Brief
   standardFeatures: [
-    "Mécanisme synchronisé plat L1530 (Italie)",
-    "Réglage de la profondeur d'assise",
+    "Mécanisme synchronisé L1530 avec 5 positions de blocage",
+    "Support lombaire réglable pour confort prolongé",
     "Mousse d'assise injectée haute densité 50 mm",
-    "Dossier Anti-allergénique Aero 3D Mesh (Danemark)",
-    "Vérin à gaz double cylindre (Allemagne)",
-    "Support lombaire réglable",
-    "Accoudoirs réglables 3D"
+    "Dossier Aero 3D Mesh anti-allergénique (Danemark)",
+    "Vérin à gaz double cylindre breveté (Allemagne)",
+    "Accoudoirs réglables 3D (hauteur, largeur, profondeur)"
   ],
+  // Options from Brief
   options: [
+    "Mécanisme P2000 (Auto-pondéré)",
     "Appui-tête réglable 3D",
     "Assise rembourrée en tissu 3D",
-    "Dossier 3D Mesh",
-    "Base en aluminium",
-    "Roulettes premium"
+    "Dossier 3D Mesh Premium",
+    "Base en aluminium & Roulettes premium"
   ],
   mechanisms: [
     {
-      name: "L1520",
+      name: "L1530",
       tag: "défaut",
       image: "/winner-125/l1520.png",
       features: [
@@ -50,17 +72,17 @@ const gamma = {
       image: "/gamma/p2000.png",
       features: [
         "Leviers intégrés",
-        "Inclinaison du dossier 19.5° synchronisée avec l'inclinaison de l'assise 7.5°",
+        "Inclinaison dossier 19.5° / assise 7.5°",
         "5 positions de blocage",
-        "Mécanisme auto-pondéré : ajuste automatiquement la tension du dossier selon le poids de l'utilisateur",
-        "Réglage de la profondeur d'assise"
+        "Mécanisme auto-pondéré : ajuste automatiquement la tension selon le poids",
+        "Réglage de la profondeur d'assise inclus"
       ],
       madeIn: "FABRIQUÉ EN ITALIE"
     }
   ],
   gasLift: {
     image: "/winner-125/gaslift.png",
-    description: "La GAMMA 150 est équipée d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur.",
+    description: "La GAMMA 150 est équipée d'un vérin à gaz double cylindre fabriqué en Allemagne. Ce système breveté unique permet une flexibilité latérale si le poids n'est pas centré, offrant stabilité et adaptation naturelle à vos mouvements.",
     madeIn: "FABRIQUÉ EN ALLEMAGNE"
   },
   doubleCylinder: {
@@ -75,13 +97,11 @@ const gamma = {
       image: "/winner-c/mesh.png",
       features: [
         "100% polyester, 330 g/m",
-        "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
-        "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
-        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
-        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
-        "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
+        "Résistance à l'abrasion Martindale 70 000",
+        "Ventilation exceptionnelle pour le climat marocain",
+        "Anti-allergénique et Facile d'entretien",
+        "Inflammabilité - BS EN 1021 1&2"
       ],
-      colors: ["#1a1a1a", "#4a4a4a", "#6b7280", "#0f766e", "#1e40af", "#b91c1c", "#ca8a04", "#16a34a", "#7c3aed"],
       madeIn: "FABRIQUÉ AU DANEMARK"
     },
     {
@@ -89,15 +109,12 @@ const gamma = {
       tag: "optionnel",
       image: "/winner-c/mesh3d.png",
       features: [
-        "Sensation de confort similaire à un dossier en mousse rembourrée",
+        "Sensation similaire à un dossier rembourré",
         "100% polyester, 510 g/m",
-        "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
-        "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
-        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
-        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
-        "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
+        "Résistance à l'abrasion Martindale : 70 000",
+        "Solidité à la lumière 5-7 (EN ISO 105-B02)",
+        "Inflammabilité - Classe Uno UNI 9175 Classe 1 CNBF"
       ],
-      colors: ["#1a1a1a", "#3f3f46", "#78716c", "#0d9488", "#2563eb", "#dc2626", "#d97706", "#22c55e", "#a855f7", "#ec4899", "#06b6d4", "#84cc16"],
       madeIn: "FABRIQUÉ AU DANEMARK"
     },
     {
@@ -107,19 +124,146 @@ const gamma = {
       features: [
         "Extensible multi-directionnel",
         "100% polyester, 540 g/m",
-        "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
-        "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
-        "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
-        "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
-        "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+        "Résistance Martindale 65 000 cycles",
+        "Fabriqué au Maroc",
+        "Inflammabilité - CA TB 117-2013"
       ],
-      colors: ["#1a1a1a", "#3f3f46", "#78716c", "#0d9488", "#2563eb", "#dc2626", "#d97706", "#22c55e"],
       madeIn: "FABRIQUÉ AU MAROC"
     }
   ]
 };
 ---
 
-<Layout title="Gamma | Chaises de Bureau Ergonomiques Professionnelles" description="Série Gamma : chaises de bureau ergonomiques pour entreprises. Choix varié pour achat de fauteuils professionnels. Confort et durabilité - Kwesk Maroc.">
-<ChairProduct {...gamma} />
+<Layout 
+  title="GAMMA 150 | Chaise Bureau Ergonomique Professionnelle Maroc" 
+  description="Chaise bureau ergonomique GAMMA 150. Mécanisme synchrone italien, mesh respirant danois, vérin allemand. Certifiée BIFMA & EN 1335. Devis gratuit."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+  <ChairProduct {...gamma} />
+
+  <section class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-8 lg:px-16">
+      <h2 class="text-3xl font-bold text-stone-900 mb-12 text-center uppercase">Pourquoi Choisir la GAMMA 150 ?</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-stone-50 p-8">
+          <h4 class="text-xl font-bold text-stone-900 mb-4">Confort Ergonomique Supérieur</h4>
+          <p class="text-stone-600 leading-relaxed text-sm">Le mécanisme synchrone italien L1530 synchronise l'inclinaison du dossier (14,5°) avec l'assise pour accompagner naturellement vos mouvements. Le réglage de profondeur d'assise et le support lombaire ajustable s'adaptent à votre morphologie, prévenant les douleurs dorsales lors des longues journées de travail.</p>
+          <p class="text-stone-600 leading-relaxed text-sm mt-4">La mousse d'assise injectée haute densité (50 mm) conserve sa forme et son confort même après des années d'utilisation intensive. Les accoudoirs réglables 3D permettent un positionnement optimal des bras, réduisant les tensions dans les épaules et le cou.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8">
+          <h4 class="text-xl font-bold text-stone-900 mb-4">Respirabilité et Durabilité</h4>
+          <p class="text-stone-600 leading-relaxed text-sm">Le dossier en Aero 3D Mesh danois offre une ventilation exceptionnelle, crucial pour le confort dans le contexte marocain. Ce tissu anti-allergénique 100% polyester résiste à l'abrasion (Martindale 70 000 cycles) et conserve son apparence professionnelle dans le temps. Facile d'entretien et certifié anti-feu BS EN 1021.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8">
+          <h4 class="text-xl font-bold text-stone-900 mb-4">Innovation Technique Allemande</h4>
+          <p class="text-stone-600 leading-relaxed text-sm">Le vérin à gaz double cylindre breveté se compose d'un tube de pression et d'un tube de guidage indépendants. Cette technologie unique permet une flexibilité latérale si le poids n'est pas centré, offrant stabilité et adaptation naturelle à vos mouvements. Testé pour plus de 150 000 cycles, ce système garantit durabilité et fiabilité exceptionnelles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-stone-900 text-white">
+    <div class="max-w-6xl mx-auto px-8 lg:px-16">
+      <h2 class="text-3xl font-bold mb-12 text-center uppercase">Applications Professionnelles</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div>
+          <h4 class="font-bold text-[#8b8b4b] mb-2 uppercase text-sm tracking-wider">Bureaux Opératifs</h4>
+          <p class="text-stone-400 text-sm leading-relaxed">Idéale pour <a href="/amenagement-de-bureau" class="text-white hover:text-[#8b8b4b] underline">aménager des espaces de bureau</a> modernes. S'intègre parfaitement avec nos <a href="/bureaux/bench" class="text-white hover:text-[#8b8b4b] underline">bureaux bench</a> pour créer des zones collaboratives productives.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-[#8b8b4b] mb-2 uppercase text-sm tracking-wider">Centres d'Appels</h4>
+          <p class="text-stone-400 text-sm leading-relaxed">Conçue pour rotation d'équipes et utilisation continue. Le mesh respirant et les certifications BIFMA/EN 1335 garantissent confort et durabilité en usage 24/7.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-[#8b8b4b] mb-2 uppercase text-sm tracking-wider">Télétravail</h4>
+          <p class="text-stone-400 text-sm leading-relaxed">Apportez le confort professionnel à domicile. Parfaite avec nos <a href="/bureaux/reglables" class="text-white hover:text-[#8b8b4b] underline">bureaux réglables en hauteur</a> pour une ergonomie complète.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-[#8b8b4b] mb-2 uppercase text-sm tracking-wider">Salles de Formation</h4>
+          <p class="text-stone-400 text-sm leading-relaxed">Confort optimal pour sessions longues dans vos <a href="/salles-reunion" class="text-white hover:text-[#8b8b4b] underline">salles de réunion</a>. Design neutre s'adaptant à tout environnement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-8 lg:px-16 text-center">
+      <h2 class="text-3xl font-bold text-stone-900 mb-8 uppercase">Certification & Qualité</h2>
+      <div class="space-y-4 text-stone-600">
+        <p><strong>Standards Internationaux :</strong></p>
+        <ul class="inline-block text-left space-y-2 mb-6">
+          <li>• <strong>BIFMA 2011</strong> : Norme américaine validant résistance, sécurité et durabilité</li>
+          <li>• <strong>EN 1335 2016</strong> : Standard européen pour sièges ergonomiques de bureau</li>
+          <li>• <strong>Charge maximale</strong> : 120 kg</li>
+          <li>• <strong>Composants européens</strong> : Mécanisme italien, vérin allemand, mesh danois</li>
+        </ul>
+        <p><strong>Garantie & Service :</strong> Garantie complète sur tous composants. Service après-vente basé à Casablanca. Pièces de rechange disponibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-8 lg:px-16">
+      <h2 class="text-3xl font-bold text-stone-900 mb-12 text-center uppercase">Questions Fréquentes</h2>
+      
+      <div class="space-y-8">
+        <div>
+          <h4 class="font-bold text-stone-900 mb-2">La GAMMA 150 convient-elle à un usage intensif ?</h4>
+          <p class="text-stone-600 text-sm leading-relaxed">Oui, parfaitement. Certifiée BIFMA et EN 1335 pour usage professionnel intensif. Composants européens testés pour plus de 150 000 cycles. Idéale pour centres d'appels et rotation d'équipes.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-stone-900 mb-2">Comment régler la chaise correctement ?</h4>
+          <p class="text-stone-600 text-sm leading-relaxed">Ajustez la hauteur pour que vos pieds soient à plat au sol. Réglez la profondeur d'assise en laissant 2-3 cm entre vos genoux et l'assise. Positionnez le support lombaire pour épouser votre dos. Ajustez les accoudoirs 3D pour que vos épaules soient détendues.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-stone-900 mb-2">Quelle est la différence entre les mécanismes L1530 et P2000 ?</h4>
+          <p class="text-stone-600 text-sm leading-relaxed">Le L1530 (standard) offre inclinaison 14,5° avec réglage manuel de tension. Le P2000 (option) inclut auto-pondération (ajustement automatique au poids), inclinaison augmentée (19,5°/7,5°) et leviers intégrés. Le P2000 est recommandé pour usage très intensif.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-stone-900 mb-2">Livraison au Maroc ?</h4>
+          <p class="text-stone-600 text-sm leading-relaxed">Oui, livraison nationale complète. 3-5 jours pour Casablanca/Rabat, 5-7 jours autres villes. Configurations personnalisées : 7-10 jours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white border-t border-stone-200 text-center">
+    <div class="max-w-6xl mx-auto px-8 lg:px-16">
+      <h2 class="text-2xl font-bold text-stone-900 mb-8 uppercase">Complétez Votre Espace</h2>
+      <p class="text-stone-500 mb-8">Solutions KWESK Complémentaires</p>
+      
+      <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <a href="/bureaux/operatif" class="text-stone-900 hover:text-[#8b8b4b] underline">Bureaux Opératifs</a>
+        <span class="text-stone-300">|</span>
+        <a href="/reunion/rangement" class="text-stone-900 hover:text-[#8b8b4b] underline">Rangement Pro</a>
+        <span class="text-stone-300">|</span>
+        <a href="/mobilier-industriel" class="text-stone-900 hover:text-[#8b8b4b] underline">Mobilier Industriel</a>
+        <span class="text-stone-300">|</span>
+        <a href="/chaises" class="text-stone-900 hover:text-[#8b8b4b] underline">Toutes nos Chaises</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-[#8b8b4b] text-center">
+    <div class="max-w-4xl mx-auto px-8 lg:px-16">
+      <h2 class="text-3xl font-bold text-white mb-6 uppercase">Investissez dans le Confort Professionnel</h2>
+      <p class="text-white/90 text-lg mb-10">La GAMMA 150 offre le meilleur rapport qualité-prix du marché marocain pour chaises ergonomiques professionnelles. Certifications internationales, composants européens premium et conception ergonomique avancée garantissent confort et productivité.</p>
+      
+      <a href="/contact" class="inline-block px-8 py-4 bg-white text-[#8b8b4b] font-bold uppercase tracking-wider hover:bg-stone-900 hover:text-white transition-colors">
+        Demandez votre devis gratuit personnalisé
+      </a>
+      
+      <div class="mt-8 text-white/80 text-sm">
+        <p>📞 +212 5 20 24 16 37 | 📧 contact@kwesk.com</p>
+        <p>📍 Showroom : Anfa Place, Tour Ouest Niv 1, Casablanca</p>
+      </div>
+    </div>
+  </section>
+
+  <AmCTA />
 </Layout>

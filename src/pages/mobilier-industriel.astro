@@ -1,7 +1,8 @@
 ---
+// pages/mobilier-industriel.astro
 import Layout from '../layouts/Layout.astro';
-import CategoryHeader from '../components/CategoryHeader.astro';
 import ProductCardSimple from '../components/ProductCardSimple.astro';
+import AmCTA from '../components/AmCTA.astro';
 
 const products = [
   { 
@@ -25,12 +26,27 @@ const products = [
 ];
 ---
 
-<Layout title="Mobilier Industriel Professionnel au Maroc | Kwesk" description="Mobilier industriel professionnel : vestiaires métalliques, armoires d'atelier, tables de cantine. Solutions robustes pour entreprises et collectivités au Maroc - Kwesk.">
-  <CategoryHeader 
-    title="Mobilier Industriel" 
-    description="Des solutions robustes et durables pour vos espaces industriels, ateliers et collectivités."
-    image="/industrie/casiers-vestiaire/1.webp"
-  />
+<Layout 
+  title="Mobilier Industriel Professionnel au Maroc | Kwesk" 
+  description="Mobilier industriel Professionnel pour usines et ateliers au Maroc. Casiers vestiaire métalliques, tables cantine. Construction acier durable."
+>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/industrie/casiers-vestiaire/1.webp" alt="Mobilier Industriel Maroc" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Mobilier Industriel Professionnel au Maroc</h1>
+      <p class="hero-subtitle">Solutions Durables pour Vos Espaces Industriels</p>
+      <div class="hero-text">
+        <p>Découvrez notre gamme complète de mobilier industriel professionnel conçue pour ateliers, usines, cantines d'entreprise et espaces collectifs au Maroc. Notre mobilier industriel résiste à l'usage intensif quotidien tout en maintenant fonctionnalité et apparence professionnelle dans environnements exigeants.</p>
+      </div>
+      <div class="hero-cta">
+        <a href="/contact" class="btn-primary">DEMANDER UN DEVIS GRATUIT</a>
+      </div>
+    </div>
+  </section>
 
   <section class="product-section">
     <div class="product-container">
@@ -39,21 +55,432 @@ const products = [
       </div>
     </div>
   </section>
+
+  <section class="intro-section">
+    <div class="intro-container">
+      <div class="intro-content">
+        <p>Que vous équipiez un atelier mécanique, une usine de production ou des espaces de restauration collective, nos solutions de mobilier industriel répondent aux contraintes des environnements professionnels les plus exigeants.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="collection-section">
+    <div class="section-header-wrapper">
+        <h2>Détails de la Gamme</h2>
+    </div>
+
+    <div class="bureau-block">
+      <div class="bureau-image">
+        <img src="/industrie/casiers-vestiaire/1.webp" alt="Casiers Vestiaire" />
+      </div>
+      <div class="bureau-content">
+        <h3>Casiers Vestiaire Métalliques</h3>
+        <p>Vestiaires métalliques pour stockage sécurisé des effets personnels et équipements de protection individuelle. Construction en acier durable avec portes renforcées et système d'aération intégré pour hygiène optimale.</p>
+        <div class="solutions-details">
+            <p><strong>Applications :</strong> Usines, ateliers, centres sportifs, établissements scolaires</p>
+            <p><strong>Avantages :</strong> Serrures sécurisées, aération naturelle, personnalisation couleurs</p>
+            <p class="mt-2 text-sm italic">Idéal pour entreprises industrielles nécessitant solutions de rangement conformes aux normes d'hygiène et sécurité au travail.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bureau-block reversed">
+      <div class="bureau-image">
+        <img src="/industrie/casiers-vestiaire/11.webp" alt="Armoires Outils" />
+      </div>
+      <div class="bureau-content">
+        <h3>Armoires Rangement Atelier</h3>
+        <p>Armoires d'atelier professionnelles pour rangement organisé de l'outillage et petites pièces. Construction monobloc en tôle d'acier soudée avec fond perforé permettant configuration personnalisée selon vos besoins d'outillage.</p>
+        <div class="solutions-details">
+            <p><strong>Applications :</strong> Ateliers mécaniques, garages, zones de maintenance</p>
+            <p><strong>Avantages :</strong> Sécurité renforcée, organisation optimale, durabilité industrielle</p>
+            <p class="mt-2 text-sm italic">Parfait pour ateliers nécessitant rangement sécurisé d'outils spécialisés et équipements coûteux.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bureau-block">
+      <div class="bureau-image">
+        <img src="/industrie/tables-cantine/1.jpg" alt="Tables Cantine" />
+      </div>
+      <div class="bureau-content">
+        <h3>Tables Cantine Professionnelles</h3>
+        <p>Tables de restauration collective pour cantines d'entreprise, réfectoires et espaces de pause. Construction avec châssis tube d'acier et plateau stratifié haute résistance supportant usage intensif quotidien.</p>
+        <div class="solutions-details">
+            <p><strong>Applications :</strong> Cantines entreprise, restaurants d'usine, établissements scolaires</p>
+            <p><strong>Avantages :</strong> Facilité nettoyage, optimisation espace, longévité exceptionnelle</p>
+            <p class="mt-2 text-sm italic">Solution complète pour restauration collective avec bancs intégrés maximisant capacité d'accueil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <div class="why-container">
+        <div class="why-header">
+            <h3>Pourquoi Choisir Ce Mobilier Industriel</h3>
+        </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h4>Construction Professionnelle Durable</h4>
+          <p>Notre mobilier industriel professionnel est fabriqué selon standards les plus exigeants pour environnements professionnels. Construction en acier garantit stabilité et résistance aux sollicitations quotidiennes intenses typiques des usines et ateliers. Structures soudées éliminent points faibles des assemblages boulonnés.</p>
+        </div>
+        <div class="why-card">
+          <h4>Adapté aux Environnements Exigeants</h4>
+          <p>Nos solutions de mobilier industriel supportent conditions réelles d'utilisation professionnelle : manipulations fréquentes, charges lourdes, environnements humides ou poussiéreux. Chaque produit est conçu pour maintenir fonctionnalité même dans les environnements les plus exigeants.</p>
+        </div>
+        <div class="why-card">
+          <h4>Hygiène et Facilité d'Entretien</h4>
+          <p>Surfaces métalliques lisses et non poreuses facilitent nettoyage et désinfection. Point crucial pour industries alimentaires, établissements médicaux ou tout environnement où hygiène est prioritaire. Systèmes d'aération intégrés dans vestiaires et armoires évitent accumulation d'humidité et odeurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trends-section bg-stone-900 text-white">
+    <div class="trends-container">
+      <div class="trends-header">
+        <h2 class="text-white">Applications par Secteur</h2>
+      </div>
+      <div class="trends-grid">
+        <div class="trend-card bg-stone-800 border-stone-700">
+          <h4 class="text-white">Usines et Sites Industriels</h4>
+          <p class="text-stone-400">Pour usines de production et sites industriels, notre mobilier professionnel équipe vestiaires, ateliers de maintenance et zones de restauration.</p>
+        </div>
+        <div class="trend-card bg-stone-800 border-stone-700">
+          <h4 class="text-white">Ateliers Mécaniques et Garages</h4>
+          <p class="text-stone-400">Ateliers mécaniques et garages automobile nécessitent mobilier particulièrement résistant. Nos armoires d'atelier permettent organisation méthodique d'outillage.</p>
+        </div>
+        <div class="trend-card bg-stone-800 border-stone-700">
+          <h4 class="text-white">Établissements Scolaires</h4>
+          <p class="text-stone-400">Écoles techniques, centres de formation professionnelle et universités équipent leurs installations avec mobilier industriel résistant à utilisation par nombreux élèves.</p>
+        </div>
+        <div class="trend-card bg-stone-800 border-stone-700">
+          <h4 class="text-white">Restaurants et Hôtellerie</h4>
+          <p class="text-stone-400">Restaurants, hôtels et établissements de restauration collective bénéficient de notre mobilier industriel professionnel dans cuisines, vestiaires personnel et zones techniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sectors-list py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-stone-900 mb-8">Secteurs d'Activité Équipés</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Industrie Manufacturière</span>
+                <span class="text-xs text-stone-500">Vestiaires, armoires atelier, zones de pause</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Automobile</span>
+                <span class="text-xs text-stone-500">Garages, ateliers mécaniques, concessions</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Agroalimentaire</span>
+                <span class="text-xs text-stone-500">Cantines, vestiaires conformes normes hygiène</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Éducation</span>
+                <span class="text-xs text-stone-500">Écoles techniques, universités, centres formation</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Hôtellerie-Restauration</span>
+                <span class="text-xs text-stone-500">Cuisines, vestiaires personnel, réfectoires</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Santé</span>
+                <span class="text-xs text-stone-500">Vestiaires conformes, zones techniques</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Logistique</span>
+                <span class="text-xs text-stone-500">Entrepôts, zones de préparation, espaces collectifs</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Construction</span>
+                <span class="text-xs text-stone-500">Vestiaires chantier, stockage outillage</span>
+            </div>
+            <div class="p-4 border border-stone-100 rounded bg-stone-50">
+                <span class="block font-bold text-[#8b8b4b] mb-1">Services Techniques</span>
+                <span class="text-xs text-stone-500">Ateliers maintenance, zones intervention</span>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <AmCTA />
 </Layout>
 
 <style>
-  .product-section { padding: 80px 0; background: white; }
-  .product-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
-  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 30px; }
-  
-  @media (max-width: 900px) { 
-    .product-grid { grid-template-columns: repeat(2, 1fr); } 
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
   }
-  
-  @media (max-width: 768px) { 
-    .product-section { padding: 60px 0; }
-    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .product-container { padding: 0 20px; }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(28,25,23,0.9) 0%, rgba(28,25,23,0.6) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+    text-align: center;
+    color: white;
+  }
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+    color: #8b8b4b;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .hero-text {
+    font-size: 16px;
+    color: #d6d3d1;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #8b8b4b;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover {
+    background: white;
+    color: #1c1917;
+  }
+
+  /* PRODUCT GRID (Restored) */
+  .product-section { 
+    padding: 80px 0; 
+    background: white; 
+    border-bottom: 1px solid #e7e5e4;
+  }
+  .product-container { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 60px; 
+  }
+  .product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px 30px; 
+  }
+
+  /* INTRO SECTION */
+  .intro-section {
+    padding: 80px 0;
+    background: white;
+  }
+  .intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .intro-content {
+    text-align: center;
+  }
+  .intro-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+
+  /* COLLECTION SECTION (Alternating) */
+  .collection-section {
+    background: #fafaf9;
+  }
+  .section-header-wrapper {
+      text-align: center;
+      padding: 60px 20px 40px;
+  }
+  .section-header-wrapper h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .bureau-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+  }
+  .bureau-block.reversed {
+    direction: rtl;
+  }
+  .bureau-block.reversed > * {
+    direction: ltr;
+  }
+  .bureau-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .bureau-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bureau-content {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+  }
+  .bureau-block:nth-child(even) .bureau-content {
+    background: #fafaf9;
+  }
+  .bureau-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  .bureau-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+    margin-bottom: 24px;
+  }
+  .solutions-details {
+      border-top: 1px solid #e7e5e4;
+      padding-top: 24px;
+  }
+  .solutions-details p {
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #57534e;
+  }
+  .solutions-details strong {
+      color: #1c1917;
+  }
+
+  /* WHY SECTION */
+  .why-section {
+    padding: 100px 0;
+    background: white;
+  }
+  .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .why-header {
+      text-align: center;
+      margin-bottom: 60px;
+  }
+  .why-header h3 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1c1917;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .why-card {
+    padding: 40px;
+    background: #fafaf9;
+    border: 1px solid #e7e5e4;
+  }
+  .why-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #8b8b4b;
+    margin-bottom: 16px;
+  }
+  .why-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+
+  /* TRENDS SECTION (Dark) */
+  .trends-section {
+    padding: 100px 0;
+  }
+  .trends-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .trends-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .trends-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .trends-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .trend-card {
+    padding: 40px;
+  }
+  .trend-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .trend-card p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .trends-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .hero-title { font-size: 36px; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .bureau-block { grid-template-columns: 1fr; }
+    .bureau-block.reversed { direction: ltr; }
+    .bureau-image { height: 400px; }
+    .bureau-content { padding: 60px 40px; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { height: auto; padding: 120px 0 80px; }
+    .hero-title { font-size: 28px; }
+    .intro-section, .why-section, .collection-section, .trends-section, .product-section { padding: 60px 0; }
+    .intro-container, .why-container, .trends-container, .product-container { padding: 0 24px; }
+    .why-grid, .trends-grid { grid-template-columns: 1fr; }
   }
   
   @media (max-width: 480px) { 

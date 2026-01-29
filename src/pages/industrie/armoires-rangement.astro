@@ -1,30 +1,49 @@
 ---
+// pages/industrie/armoires-rangement.astro
 import Layout from '../../layouts/Layout.astro';
+import AmCTA from '../../components/AmCTA.astro';
 
 const images = [
   "/industrie/casiers-vestiaire/11.webp",
 ];
 
 const variants = [
-  { name: "ARMOIRE PERFO", type: "Portes Perforées" },
+  { name: "ARMOIRE PERFORÉE", type: "Portes Perforées" },
   { name: "ARMOIRE VITRÉE", type: "Portes Vitrées" },
 ];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Armoires Rangement Atelier Professionnelles",
+  "description": "Armoires rangement pour atelier et outils. Construction monobloc acier, fond perforé, serrure 3 points. Rangement professionnel.",
+  "image": "https://kwesk.ma/industrie/casiers-vestiaire/11.webp",
+  "brand": { "@type": "Brand", "name": "KWESK" },
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "MAD"
+  }
+};
 ---
 
-<Layout title="Armoires Outils & Rangement | Mobilier Industriel Professionnel - Kwesk" description="Armoires d'atelier à fond perforés par Kwesk. Rangement professionnel pour outillage, industrie et ateliers au Maroc.">
+<Layout 
+  title="Armoires Rangement Atelier Professionnelles | Mobilier Industriel Maroc" 
+  description="Armoires rangement pour atelier et outils. Construction monobloc acier, fond perforé, serrure 3 points. Rangement professionnel."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
   <main>
     
-    <!-- Hero -->
     <section class="hero">
-      <img src="/industrie/casiers-vestiaire/11.webp" alt="Armoires Outils & Rangement" />
+      <img src="/industrie/casiers-vestiaire/11.webp" alt="Armoires Rangement Atelier" />
+      <div class="hero-overlay"></div>
     </section>
 
-    <!-- Product Info -->
     <section class="product">
       <div class="product__container">
         <div class="product__grid">
 
-          <!-- Gallery -->
           <div class="product__gallery">
             <div class="product__main">
               <button class="product__arrow product__arrow--left" id="prevBtn">
@@ -51,162 +70,288 @@ const variants = [
             </div>
           </div>
 
-          <!-- Info -->
           <div class="product__info">
-            <h1 class="product__title">ARMOIRES OUTILS & RANGEMENT</h1>
-            <p class="product__subtitle">Armoire d'atelier perforés pour un rangement de votre outillage</p>
+            <h1 class="product__title">ARMOIRES RANGEMENT ATELIER PROFESSIONNELLES</h1>
+            <p class="product__subtitle">Solution Rangement Sécurisé pour Ateliers et Zones Industrielles</p>
             <p class="product__desc">
-              Pour le rangement ordonné et sécurisé des petites pièces et des outils. Armoires idéal pour l'industrie et les ateliers. Construction monobloc solide en tôle d'acier soudée. Fond perforé sur l'ensemble de la surface. Modèle vendu nue, à équiper selon le besoin.
+              Armoires métalliques professionnelles conçues pour le rangement ordonné et sécurisé de l'outillage et des petites pièces. Construction monobloc solide en tôle d'acier soudée avec fond perforé sur l'ensemble de la surface. Idéales pour ateliers mécaniques, usines et espaces techniques nécessitant organisation optimale et protection renforcée.
             </p>
 
             <div class="product__versions">
               <span class="product__version-label">Versions disponibles</span>
               <div class="product__versions-list">
                 {variants.map((variant) => (
-                  <p class="product__version-name"><strong>{variant.name}</strong> {variant.type}</p>
+                  <p class="product__version-name"><strong>{variant.name}</strong> - {variant.type}</p>
                 ))}
               </div>
             </div>
 
-            <a href="/contact" class="product__btn">DEMANDER UN DEVIS</a>
+            <a href="/contact" class="product__btn">DEMANDER UN DEVIS GRATUIT</a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Standard Features -->
     <section class="features">
       <div class="features__container">
         <h2 class="features__title">CARACTÉRISTIQUES STANDARD</h2>
         <ul class="features__list">
-          <li><span>✓</span> Armoire à fond perforé sur l'ensemble de la surface pour un rangement ordonné</li>
-          <li><span>✓</span> Construction monobloc solide en tôle d'acier soudée</li>
-          <li><span>✓</span> Armoire sécurisé par fermeture à serrure de sûreté trois points à cylindre</li>
-          <li><span>✓</span> Tablettes réglable au pas de 10 mm</li>
-          <li><span>✓</span> Portes au choix : à panneaux perforés ou vitrés</li>
-          <li><span>✓</span> Angle d'ouverture des portes de plus de 200°</li>
+          <li><span>✓</span> Construction monobloc en tôle d'acier soudée pour durabilité maximale</li>
+          <li><span>✓</span> Fond perforé sur l'ensemble de la surface pour rangement personnalisable</li>
+          <li><span>✓</span> Fermeture sécurisée par serrure de sûreté trois points à cylindre</li>
+          <li><span>✓</span> Tablettes réglables au pas de 10 mm pour ajustement précis</li>
+          <li><span>✓</span> Choix de portes : panneaux perforés ou vitrés selon besoins</li>
+          <li><span>✓</span> Angle d'ouverture de plus de 200° pour accès facile</li>
           <li><span>✓</span> Portes renforcées à double paroi</li>
-          <li><span>✓</span> Fermeture par serrure de sûreté trois points à cylindre (livrée avec 2 clés)</li>
+          <li><span>✓</span> 2 clés fournies avec chaque armoire</li>
         </ul>
       </div>
     </section>
 
-    <!-- Specifications -->
     <section class="specs">
       <div class="specs__container">
         <h2 class="specs__title">SPÉCIFICATIONS TECHNIQUES</h2>
         <div class="specs__grid">
           <div class="specs__item">
-            <span class="specs__label">Hauteur disponible</span>
-            <span class="specs__value">1950 mm avec 2 tablettes</span>
+            <span class="specs__label">Hauteur</span>
+            <span class="specs__value">1950 mm avec 2 tablettes incluses</span>
           </div>
           <div class="specs__item">
             <span class="specs__label">Capacité de charge</span>
             <span class="specs__value">80 kg par tablette (uniformément répartie)</span>
           </div>
           <div class="specs__item">
-            <span class="specs__label">Réglage tablettes</span>
-            <span class="specs__value">Au pas de 10 mm</span>
+            <span class="specs__label">Structure</span>
+            <span class="specs__value">Tôle d'acier soudée monobloc</span>
           </div>
           <div class="specs__item">
-            <span class="specs__label">Angle d'ouverture</span>
-            <span class="specs__value">Plus de 200°</span>
+            <span class="specs__label">Réglage</span>
+            <span class="specs__value">Tablettes au pas de 10 mm</span>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="py-20 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-stone-900 mb-8 uppercase text-center">Description du Produit</h2>
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h4 class="text-xl font-bold text-stone-900 mb-4">Construction Robuste pour Usage Industriel</h4>
+              <p class="text-stone-600 leading-relaxed text-sm">Ces armoires rangement atelier sont fabriquées selon standards industriels exigeants. La construction monobloc en tôle d'acier soudée garantit solidité et stabilité en usage intensif quotidien. Contrairement aux armoires assemblées par boulons, notre construction soudée élimine tout risque de desserrage avec le temps.</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-stone-900 mb-4">Sécurité et Protection</h4>
+              <p class="text-stone-600 leading-relaxed text-sm">La sécurité de vos outils et équipements est essentielle. Nos armoires métalliques intègrent fermeture par serrure de sûreté trois points à cylindre, offrant protection optimale contre accès non autorisés. Les portes renforcées à double paroi résistent aux tentatives d'effraction.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-bold text-stone-900 mb-8 uppercase text-center">Avantages Clés</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-stone-50 p-8 border border-stone-200">
+              <h4 class="font-bold text-stone-900 mb-3">Organisation Optimale</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">Le système de fond perforé transforme ces armoires en solutions modulables. Créez votre configuration en ajoutant crochets et porte-outils exactement où nécessaire.</p>
+            </div>
+            <div class="bg-stone-50 p-8 border border-stone-200">
+              <h4 class="font-bold text-stone-900 mb-3">Gain de Productivité</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">Outils organisés et facilement visibles accélèrent significativement les opérations. Plus de temps perdu à chercher le bon équipement.</p>
+            </div>
+            <div class="bg-stone-50 p-8 border border-stone-200">
+              <h4 class="font-bold text-stone-900 mb-3">Durabilité Industrielle</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">Construction monobloc soudée résiste aux vibrations, chocs et conditions difficiles. La tôle d'acier protège le contenu des environnements agressifs.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-20 bg-stone-900 text-white">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold mb-12 text-center uppercase">Applications Professionnelles</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <h4 class="font-bold text-[#8b8b4b] mb-2 text-sm uppercase tracking-wider">Ateliers Mécaniques</h4>
+            <p class="text-stone-400 text-sm leading-relaxed">Idéales pour ateliers nécessitant rangement structuré de multitude d'outils spécialisés. Organisation par type, taille ou fréquence d'utilisation.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-[#8b8b4b] mb-2 text-sm uppercase tracking-wider">Usines & Production</h4>
+            <p class="text-stone-400 text-sm leading-relaxed">Protection de l'outillage contre poussières et dommages. Serrures trois points garantissent que seules personnes autorisées accèdent à outillage spécialisé.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-[#8b8b4b] mb-2 text-sm uppercase tracking-wider">Garages Auto</h4>
+            <p class="text-stone-400 text-sm leading-relaxed">Parfait pour garages automobiles nécessitant stockage organisé. Le système modulable de fond perforé s'adapte à cette diversité.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-[#8b8b4b] mb-2 text-sm uppercase tracking-wider">Écoles Techniques</h4>
+            <p class="text-stone-400 text-sm leading-relaxed">Sécurisez outillage pédagogique coûteux tout en facilitant distribution lors séances pratiques. Option vitrée permet surveillance rapide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-b border-stone-200">
+      <div class="max-w-4xl mx-auto px-8 lg:px-16">
+        <h2 class="text-2xl font-bold text-stone-900 mb-8 text-center uppercase">Versions Disponibles en Détail</h2>
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-2 h-2 mt-2 bg-[#8b8b4b] rounded-full flex-shrink-0"></div>
+            <div>
+              <h4 class="font-bold text-stone-900">Armoire Portes Perforées</h4>
+              <p class="text-stone-600 text-sm">Ventilation naturelle évitant accumulation d'humidité. Visibilité partielle pour identification rapide. Robustesse accrue pour environnements industriels difficiles.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-2 h-2 mt-2 bg-[#8b8b4b] rounded-full flex-shrink-0"></div>
+            <div>
+              <h4 class="font-bold text-stone-900">Armoire Portes Vitrées</h4>
+              <p class="text-stone-600 text-sm">Visibilité totale du contenu sans nécessiter ouverture. Protection renforcée contre poussières et projections. Aspect soigné pour espaces visibles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-stone-50">
+      <div class="max-w-4xl mx-auto px-8 lg:px-16">
+        <h2 class="text-2xl font-bold text-stone-900 mb-8 text-center uppercase">Questions Fréquentes</h2>
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-bold text-stone-900 mb-2">Les armoires sont-elles livrées montées ?</h4>
+            <p class="text-stone-600 text-sm leading-relaxed">Oui, construction monobloc soudée. Aucun montage nécessaire, prêtes à l'utilisation dès réception.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 mb-2">Peut-on ajouter des tablettes supplémentaires ?</h4>
+            <p class="text-stone-600 text-sm leading-relaxed">Livrées avec 2 tablettes standard. Possibilité d'ajouter tablettes selon modèle. Contactez notre service commercial.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 mb-2">Le fond perforé accepte-t-il tous types de crochets ?</h4>
+            <p class="text-stone-600 text-sm leading-relaxed">Compatible avec la plupart des systèmes de crochets et supports standard du marché pour configuration personnalisée.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 mb-2">Quelle différence entre portes perforées et vitrées ?</h4>
+            <p class="text-stone-600 text-sm leading-relaxed">Perforées offrent ventilation naturelle, vitrées donnent visibilité totale. Même niveau de solidité et sécurité pour les deux versions.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 mb-2">Livrez-vous dans tout le Maroc ?</h4>
+            <p class="text-stone-600 text-sm leading-relaxed">Livraison à Casablanca, Rabat, Tanger et Marrakech. Pour autres destinations, contactez notre service commercial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-stone-900 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-4 uppercase">Commandez Vos Armoires Rangement</h2>
+        <p class="text-stone-400 mb-8">Équipez Vos Ateliers avec Qualité KWESK. Nos armoires combinent solidité, sécurité et fonctionnalité.</p>
+        
+        <a href="/contact" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white font-bold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-colors mb-12">
+          Demandez Votre Devis Gratuit
+        </a>
+
+        <div class="border-t border-stone-800 pt-10">
+          <h3 class="text-stone-500 text-xs uppercase tracking-[0.2em] mb-6">Équipement Complémentaire</h3>
+          <div class="flex flex-wrap justify-center gap-6">
+            <a href="/industrie/casiers-vestiaire" class="text-stone-300 hover:text-[#8b8b4b] text-sm border-b border-transparent hover:border-[#8b8b4b] transition-colors pb-1">Casiers Vestiaire</a>
+            <a href="/industrie/tables-cantine" class="text-stone-300 hover:text-[#8b8b4b] text-sm border-b border-transparent hover:border-[#8b8b4b] transition-colors pb-1">Tables Cantine</a>
+            <a href="/bureaux/operatif" class="text-stone-300 hover:text-[#8b8b4b] text-sm border-b border-transparent hover:border-[#8b8b4b] transition-colors pb-1">Bureaux Opératifs</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
+  <AmCTA />
 </Layout>
 
 <style>
+  /* HERO */
   .hero {
     width: 100%;
     height: 50vh;
     min-height: 400px;
+    position: relative;
   }
-
   .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.2) 100%);
+  }
 
+  /* PRODUCT SECTION (Interactivity & Layout) */
   .product {
     padding: 100px 0;
   }
-
   .product__container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 60px;
   }
-
   .product__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
   }
-
   .product__gallery {
     position: relative;
   }
-
   .product__main {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
+    background: #fafaf9;
+    border-radius: 4px;
   }
-
   .product__main img {
     max-width: 100%;
     max-height: 400px;
     object-fit: contain;
+    mix-blend-mode: multiply;
   }
-
   .product__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background: none;
-    border: none;
+    background: white;
+    border: 1px solid #e7e5e4;
+    border-radius: 50%;
     cursor: pointer;
-    color: #a8a29e;
-    transition: color 0.3s ease;
+    color: #78716c;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
   .product__arrow:hover {
     color: #1c1917;
+    border-color: #1c1917;
   }
-
-  .product__arrow--left {
-    left: 0;
-  }
-
-  .product__arrow--right {
-    right: 0;
-  }
-
-  .product__arrow svg {
-    width: 24px;
-    height: 24px;
-  }
-
+  .product__arrow--left { left: 10px; }
+  .product__arrow--right { right: 10px; }
+  .product__arrow svg { width: 20px; height: 20px; }
+  
   .product__thumbs {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 30px;
+    margin-top: 20px;
     flex-wrap: wrap;
   }
-
   .product__thumb {
     width: 70px;
     height: 70px;
@@ -216,146 +361,132 @@ const variants = [
     cursor: pointer;
     transition: border-color 0.3s ease;
   }
-
-  .product__thumb:hover,
-  .product__thumb.active {
+  .product__thumb:hover, .product__thumb.active {
     border-color: #8b8b4b;
   }
-
   .product__thumb img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  .product__info {
-    padding-top: 40px;
-  }
-
+  /* INFO */
+  .product__info { padding-top: 20px; }
   .product__title {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
     color: #1c1917;
+    line-height: 1.2;
+    text-transform: uppercase;
   }
-
   .product__subtitle {
     font-size: 16px;
-    color: #57534e;
+    color: #8b8b4b;
     margin-top: 10px;
+    font-weight: 600;
   }
-
   .product__desc {
     font-size: 15px;
     color: #78716c;
     line-height: 1.8;
     margin-top: 20px;
   }
-
-  .product__versions {
-    margin-top: 40px;
-  }
-
+  .product__versions { margin-top: 30px; }
   .product__version-label {
     display: block;
     font-size: 12px;
     color: #a8a29e;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-
   .product__versions-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }
-
   .product__version-name {
     font-size: 14px;
     color: #1c1917;
   }
-
   .product__btn {
     display: inline-block;
     padding: 16px 40px;
     background-color: #8b8b4b;
     color: white;
     font-size: 13px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     margin-top: 40px;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
   }
-
   .product__btn:hover {
-    opacity: 0.9;
+    background-color: #1c1917;
   }
 
+  /* FEATURES */
   .features {
     padding: 80px 0;
     border-top: 1px solid #e7e5e4;
   }
-
   .features__container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 60px;
   }
-
   .features__title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #1c1917;
     margin-bottom: 30px;
+    text-transform: uppercase;
   }
-
   .features__list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
-
   .features__list li {
     display: flex;
     align-items: flex-start;
     gap: 12px;
     font-size: 14px;
     color: #57534e;
-    line-height: 1.8;
-    margin-bottom: 12px;
+    line-height: 1.6;
   }
-
   .features__list li span {
     color: #8b8b4b;
-    font-weight: 600;
+    font-weight: 700;
   }
 
+  /* SPECS */
   .specs {
     padding: 80px 0;
-    border-top: 1px solid #e7e5e4;
     background: #fafaf9;
+    border-top: 1px solid #e7e5e4;
   }
-
   .specs__container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 60px;
   }
-
   .specs__title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #1c1917;
     margin-bottom: 40px;
+    text-transform: uppercase;
   }
-
   .specs__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
-
   .specs__item {
     display: flex;
     flex-direction: column;
@@ -364,83 +495,28 @@ const variants = [
     background: white;
     border: 1px solid #e7e5e4;
   }
-
   .specs__label {
-    font-size: 12px;
+    font-size: 11px;
     color: #a8a29e;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-
   .specs__value {
-    font-size: 16px;
+    font-size: 15px;
     color: #1c1917;
     font-weight: 600;
   }
 
-  .colors {
-    padding: 80px 0;
-    border-top: 1px solid #e7e5e4;
-  }
-
-  .colors__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .colors__title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1c1917;
-    margin-bottom: 20px;
-  }
-
-  .colors__desc {
-    font-size: 14px;
-    color: #78716c;
-    line-height: 1.7;
-    margin-bottom: 30px;
-  }
-
-  .colors__image {
-    max-width: 100%;
-  }
-
+  /* Responsive */
   @media (max-width: 900px) {
-    .product__container,
-    .features__container,
-    .specs__container,
-    .colors__container {
-      padding: 0 30px;
-    }
-
-    .product__grid {
-      grid-template-columns: 1fr;
-      gap: 50px;
-    }
-
-    .product {
-      padding: 60px 0;
-    }
-
-    .product__title {
-      font-size: 28px;
-    }
-
-    .product__thumbs {
-      gap: 8px;
-    }
-
-    .product__thumb {
-      width: 55px;
-      height: 55px;
-      padding: 6px;
-    }
-
-    .specs__grid {
-      grid-template-columns: 1fr;
-    }
+    .product__container, .features__container, .specs__container { padding: 0 30px; }
+    .product__grid { grid-template-columns: 1fr; gap: 50px; }
+    .product { padding: 60px 0; }
+    .features__list { grid-template-columns: 1fr; }
+    .specs__grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .specs__grid { grid-template-columns: 1fr; }
   }
 </style>
 
