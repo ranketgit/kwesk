@@ -6,7 +6,7 @@ description: "Comment choisir une chaise bureau ergonomique Professionnelle ? Cr
 
 date: "2026-01-22"
 
-image: "/blog/chaise-bureau-ergonomique-professionnelle.webp"
+image: "/chaise-bureau-ergonomique-professionnelle.webp"
 
 meta_title: " Chaise bureau Ergonomique Professionnelle Maroc | KWESK"  
 
