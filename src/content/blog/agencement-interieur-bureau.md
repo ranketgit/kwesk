@@ -6,7 +6,7 @@ description: "Découvrez comment réussir votre agencement intérieur bureau au 
 
 date: "2026-01-22"
 
-image: "agencement-interieur-bureau.webp"
+image: "/agencement-interieur-bureau.webp"
 
 meta_title: "Agencement Intérieur Bureau Maroc 2026 | Guide Complet"
 
