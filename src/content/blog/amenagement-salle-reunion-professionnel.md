@@ -106,7 +106,7 @@ Une salle de réunion bien organisée nécessite des solutions de rangement adap
 
 Pour l'intégration technologique, les [supports d'écrans et solutions média](https://kwesk.ma/reunion/media) facilitent les présentations et la visioconférence, deux éléments devenus incontournables dans le contexte du travail hybride.
 
-## **Technologies et équipements essentiels en 2024-2025**
+## **Technologies et équipements essentiels en 2025-2026**
 
 ### **Intégration technologique pour le travail hybride**
 
@@ -128,7 +128,7 @@ L'acoustique est souvent négligée, pourtant elle conditionne la qualité des �
 
 **Climatisation et ventilation** : Dans les grandes villes marocaines où les températures peuvent être élevées, un système de climatisation réversible adapté aux saisons garantit le confort de vos collaborateurs lors de sessions prolongées.
 
-## **Tendances 2025 pour les salles de réunion au Maroc**
+## **Tendances 2026 pour les salles de réunion au Maroc**
 
 ### **Modularité et flexibilité des espaces**
 
