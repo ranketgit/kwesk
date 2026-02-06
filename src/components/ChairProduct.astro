@@ -10,9 +10,10 @@ interface Mechanism {
 interface Material {
   name: string;
   tag: string;
+  sectionTitle?: string;
   image: string;
   features: string[];
-  colors?: string[]; // Kept interface but won't render circles
+  colors?: string[]; 
   madeIn: string;
 }
 
@@ -23,10 +24,10 @@ interface Props {
   version: string;
   versionType: string;
   images: string[];
-  featuresDiagram: string;
+  featuresDiagram?: string | null;
   standardFeatures: string[];
   options: string[];
-  mechanisms: Mechanism[];
+  mechanisms?: Mechanism[] | null;
   gasLift?: {
     image: string;
     description: string;
@@ -34,7 +35,7 @@ interface Props {
   } | null;
   doubleCylinder?: {
     image: string;
-    diagramImage: string;
+    diagramImage?: string;
     description: string;
   } | null;
   frame?: {
@@ -46,6 +47,7 @@ interface Props {
     features: string[];
   } | null;
   materials: Material[];
+  dimensionsImages?: string[]; // Added this prop
 }
 
 const { 
@@ -63,7 +65,8 @@ const {
   doubleCylinder,
   frame,
   ergonomy,
-  materials
+  materials,
+  dimensionsImages // Destructure here
 } = Astro.props;
 ---
 
@@ -78,7 +81,7 @@ const {
         
         <div class="space-y-6">
           <div class="main-image relative">
-            <img id="mainImage" src={images[0]} alt={name} class="w-full max-w-md mx-auto" />
+            <img id="mainImage" src={images[0]} alt={name} class="w-full max-w-md mx-auto object-contain aspect-square" />
             <button class="nav-btn left-0" onclick="prevImage()">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -90,13 +93,13 @@ const {
               </svg>
             </button>
           </div>
-          <div class="flex justify-center gap-4">
+          <div class="flex justify-center gap-4 flex-wrap">
             {images.map((img, i) => (
               <button 
                 class="thumb-btn p-2 border border-stone-200 rounded hover:border-stone-400 transition-colors"
                 onclick={`setImage(${i})`}
               >
-                <img src={img} alt={`${name} view ${i + 1}`} class="w-16 h-16 object-contain" />
+                <img src={img} alt={`${name} view ${i + 1}`} class="w-12 h-12 lg:w-16 lg:h-16 object-contain" />
               </button>
             ))}
           </div>
@@ -126,45 +129,80 @@ const {
     </div>
   </section>
 
-  <section class="features-diagram py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-8 lg:px-16">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        
-        <div>
-          <img src={featuresDiagram} alt="Features" class="w-full max-w-md" />
-        </div>
-
-        <div class="space-y-8">
+  {featuresDiagram && (
+    <section class="features-diagram py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          
           <div>
-            <h3 class="text-2xl font-bold text-stone-900 mb-4">CARACTÉRISTIQUES STANDARD</h3>
-            <ul class="space-y-2">
-              {standardFeatures.map((f) => (
-                <li class="flex items-start gap-2 text-stone-600 text-sm">
-                  <span style="color: #8b8b4b;">✓</span>
-                  {f}
-                </li>
-              ))}
-            </ul>
+            <img src={featuresDiagram} alt="Features" class="w-full max-w-md object-contain" />
           </div>
 
-          {options.length > 0 && (
+          <div class="space-y-8">
             <div>
-              <h3 class="text-2xl font-bold text-stone-900 mb-4">OPTIONS</h3>
+              <h3 class="text-2xl font-bold text-stone-900 mb-4">CARACTÉRISTIQUES STANDARD</h3>
               <ul class="space-y-2">
-                {options.map((o) => (
+                {standardFeatures.map((f) => (
                   <li class="flex items-start gap-2 text-stone-600 text-sm">
                     <span style="color: #8b8b4b;">✓</span>
-                    {o}
+                    {f}
                   </li>
                 ))}
               </ul>
             </div>
-          )}
-        </div>
 
+            {options.length > 0 && (
+              <div>
+                <h3 class="text-2xl font-bold text-stone-900 mb-4">OPTIONS</h3>
+                <ul class="space-y-2">
+                  {options.map((o) => (
+                    <li class="flex items-start gap-2 text-stone-600 text-sm">
+                      <span style="color: #8b8b4b;">✓</span>
+                      {o}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  )}
+  
+  {!featuresDiagram && standardFeatures.length > 0 && (
+     <section class="features-list py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+         <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-bold text-stone-900 mb-4">CARACTÉRISTIQUES STANDARD</h3>
+              <ul class="space-y-2">
+                {standardFeatures.map((f) => (
+                  <li class="flex items-start gap-2 text-stone-600 text-sm">
+                    <span style="color: #8b8b4b;">✓</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+             {options.length > 0 && (
+              <div>
+                <h3 class="text-2xl font-bold text-stone-900 mb-4">OPTIONS</h3>
+                <ul class="space-y-2">
+                  {options.map((o) => (
+                    <li class="flex items-start gap-2 text-stone-600 text-sm">
+                      <span style="color: #8b8b4b;">✓</span>
+                      {o}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+         </div>
+      </div>
+     </section>
+  )}
 
   {frame && (
     <section class="frame-section py-16 bg-white border-t border-stone-200">
@@ -173,7 +211,7 @@ const {
         
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img src={frame.image} alt="Cadre" class="w-full max-w-sm" />
+            <img src={frame.image} alt="Cadre" class="w-full max-w-sm object-contain" />
           </div>
           <div>
             <p class="text-stone-600 leading-relaxed">{frame.description}</p>
@@ -190,7 +228,7 @@ const {
         
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img src={ergonomy.image} alt="Ergonomie" class="w-full max-w-sm" />
+            <img src={ergonomy.image} alt="Ergonomie" class="w-full max-w-sm object-contain" />
           </div>
           <div>
             <ul class="space-y-2">
@@ -207,7 +245,7 @@ const {
     </section>
   )}
 
-  {mechanisms.length > 0 && (
+  {mechanisms && mechanisms.length > 0 && (
     <section class="mechanisms py-16 bg-white border-t border-stone-200">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <h2 class="text-3xl font-bold text-stone-900 mb-12">MÉCANISMES</h2>
@@ -216,7 +254,7 @@ const {
           {mechanisms.map((mech, i) => (
             <div class={`grid lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div class={i % 2 === 1 ? 'order-1 lg:order-2' : ''}>
-                <img src={mech.image} alt={mech.name} class="w-full max-w-sm" />
+                <img src={mech.image} alt={mech.name} class="w-full max-w-sm object-contain" />
                 <p class="text-xs text-stone-400 mt-2">{mech.madeIn}</p>
               </div>
               <div class={`space-y-4 ${i % 2 === 1 ? 'order-2 lg:order-1' : ''}`}>
@@ -247,7 +285,7 @@ const {
         
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img src={gasLift.image} alt="Vérin à gaz" class="w-full max-w-sm" />
+            <img src={gasLift.image} alt="Vérin à gaz" class="w-full max-w-sm object-contain" />
             <p class="text-xs text-stone-400 mt-2">{gasLift.madeIn}</p>
           </div>
           <div class="space-y-4">
@@ -267,11 +305,13 @@ const {
         
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img src={doubleCylinder.image} alt="Double cylindre" class="w-full max-w-sm" />
+            <img src={doubleCylinder.image} alt="Double cylindre" class="w-full max-w-sm object-contain" />
           </div>
           <div class="space-y-4">
             <p class="text-stone-600 leading-relaxed">{doubleCylinder.description}</p>
-            <img src={doubleCylinder.diagramImage} alt="Diagramme" class="w-full max-w-md" />
+            {doubleCylinder.diagramImage && (
+                 <img src={doubleCylinder.diagramImage} alt="Diagramme" class="w-full max-w-md object-contain" />
+            )}
           </div>
         </div>
       </div>
@@ -281,11 +321,11 @@ const {
   {materials.map((mat, i) => (
     <section class="material py-16 bg-white border-t border-stone-200">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
-        <h2 class="text-3xl font-bold text-stone-900 mb-12">{mat.name.toUpperCase()}</h2>
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">{mat.sectionTitle || mat.name.toUpperCase()}</h2>
         
         <div class={`grid lg:grid-cols-2 gap-12 items-start ${i % 2 === 1 ? '' : ''}`}>
           <div class={i % 2 === 1 ? 'order-1 lg:order-2' : ''}>
-            <img src={mat.image} alt={mat.name} class="w-full max-w-sm rounded-lg" />
+            <img src={mat.image} alt={mat.name} class="w-full max-w-sm rounded-lg object-contain" />
             <p class="text-xs text-stone-400 mt-4">{mat.madeIn}</p>
           </div>
           <div class={`space-y-4 ${i % 2 === 1 ? 'order-2 lg:order-1' : ''}`}>
@@ -308,6 +348,27 @@ const {
       </div>
     </section>
   ))}
+
+  {/* NEW DIMENSIONS SECTION */}
+  {dimensionsImages && dimensionsImages.length > 0 && (
+    <section class="dimensions py-16 bg-white border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+        <h2 class="text-3xl font-bold text-stone-900 mb-12">DIMENSIONS</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          {dimensionsImages.map((img, i) => (
+            <div class="relative w-full">
+              <img 
+                src={img} 
+                alt={`Dimensions ${i + 1}`} 
+                class="w-full h-auto object-contain mx-auto max-w-lg" 
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
 </main>
 

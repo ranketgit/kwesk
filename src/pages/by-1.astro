@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ChairProduct from '../components/ChairProduct.astro';
+
+const by1 = {
+  heroBg: "/by-1/hero.jpg",
+  name: "BY 1",
+  description: "Le BY 1 offre un design raffiné et un confort appréciable, doté d'un dossier haut et d'une mousse injectée haute densité. C'est la solution parfaite pour les bureaux de direction recherchant durabilité et soutien ergonomique à un coût optimisé.",
+  version: "BY 1",
+  versionType: "Fauteuil Président",
+  images: [
+    "/by-1/By1-1.jpg",
+    "/by-1/By1-2.jpg",
+    "/by-1/By1-3.jpg",
+    "/by-1/By1-4.jpg",
+    "/by-1/By1-5.jpg"
+  ],
+  featuresDiagram: "/by-1/features.png",
+  standardFeatures: [
+    "Dossier haut",
+    "Mécanisme asynchrone A200 (Italie)",
+    "Accoudoirs fixes",
+    "Assise et dossier en mousse injectée haute densité 50 mm",
+    "Assise et dossier tapissés en tissu 3D",
+    "Vérin à double cylindre (Allemagne)"
+  ],
+  options: [
+    "Translation de l'assise",
+    "Accoudoirs réglables 3D",
+    "Soutien lombaire ajustable",
+    "Mécanisme asynchrone AX300",
+    "Base en aluminium",
+    "Roulettes premium"
+  ],
+  mechanisms: [
+    {
+      name: "A200",
+      tag: "défaut",
+      image: "/by-1/a200.png",
+      features: [
+        "Dossier fixe",
+        "Ajustement de la hauteur de l’assise"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    },
+    {
+      name: "AX300",
+      tag: "optionnel",
+      image: "/by-1/ax300.png",
+      features: [
+        "Inclinaison dossier asynchrone 16°",
+        "1 position de blocage",
+        "Ajustement manuel de la tension du dossier"
+      ],
+      madeIn: "FABRIQUÉ EN ITALIE"
+    }
+  ],
+  gasLift: {
+    image: "/winner-125/gaslift.png",
+    description: "Le fauteuil BY 1 est équipé d’un vérin fabriqué en Allemagne par le leader mondial des amortisseurs. Il dispose d'un réglage en hauteur variable et absorbe en douceur le poids de l'occupant.",
+    madeIn: "FABRIQUÉ EN ALLEMAGNE"
+  },
+  doubleCylinder: {
+    image: "/by-1/double-cylinder.png",
+    diagramImage: "/gamma/double-cylinder.png",
+    description: "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre des moments de flexion si la charge n'est pas centrée sur l’assise."
+  },
+  materials: [
+    {
+      name: "Tissu 3D",
+      tag: "défaut",
+      sectionTitle: "ASSISE ET DOSSIER TAPISSÉS EN TISSU 3D",
+      image: "/winner-125/3d.png",
+      features: [
+        "Etirement multidirectionnel",
+        "100% polyester, 540 g/ml",
+        "Résistance à l’abrasion Martindale : 85 000 (EN ISO 12947-2)",
+        "Résistance au boulochage échelle 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+        "Résistance à la lumières échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+        "Résistance au frottement échelle 1-5, max. 5, humide/sec : 4-5/4-5 (EN ISO 105x12)",
+        "Inflammabilité : CA TB 117-2013 - BS EN 1021 1&2 Cigarette et allumette"
+      ],
+      madeIn: "FABRIQUÉ AU DANEMARK"
+    }
+  ]
+};
+---
+
+<Layout title="BY 1 | Fauteuil de Direction" description="Le fauteuil de direction BY 1 par Kwesk. Dossier haut, tissu 3D et technologie à double cylindre pour un confort optimal.">
+  <ChairProduct {...by1} />
+</Layout>
