@@ -1,19 +1,24 @@
 ---
-
 const categories = [
-  { title: "Bureaux", image: "/home-categories/desk.jpg", href: "/bureaux" },
+  { 
+    title: "Bureaux", 
+    description: "Gamme complète pour agencement espace travail professionnel : bureaux de direction prestige, bureaux opératifs robustes, bureaux réglables assis-debout, et solutions bench modulaires pour espaces collaboratifs.",
+    image: "/home-categories/desk.jpg", 
+    href: "/bureaux" 
+  },
   {
     title: "Chaises de Bureau",
+    description: "10 modèles de chaises ergonomiques conçus pour utilisation intensive. Conformes aux normes BIFMA 2011 et EN 1335 2016. Solutions pour direction, opérateurs et visiteurs. Garantie 5 ans.",
     image: "/home-categories/chair.jpg",
     href: "/chaises",
   },
   {
     title: "Salles de Réunion",
+    description: "Tables de réunion professionnelles, rangements et supports pour écrans. Solutions complètes pour aménagement salle de réunion et espaces de collaboration.",
     image: "/home-categories/reunion.jpg",
     href: "/salles-reunion",
   },
 ];
-
 ---
 
 <section class="categories">
@@ -26,6 +31,7 @@ const categories = [
         <div class="categories__overlay"></div>
         <div class="categories__card-content">
           <h3 class="categories__card-title">{categories[0].title}</h3>
+          <p class="categories__card-desc">{categories[0].description}</p>
           <span class="categories__card-link">Découvrir</span>
         </div>
       </a>
@@ -36,6 +42,7 @@ const categories = [
           <div class="categories__overlay"></div>
           <div class="categories__card-content">
             <h3 class="categories__card-title">{categories[1].title}</h3>
+            <p class="categories__card-desc">{categories[1].description}</p>
             <span class="categories__card-link">Découvrir</span>
           </div>
         </a>
@@ -45,6 +52,7 @@ const categories = [
           <div class="categories__overlay"></div>
           <div class="categories__card-content">
             <h3 class="categories__card-title">{categories[2].title}</h3>
+            <p class="categories__card-desc">{categories[2].description}</p>
             <span class="categories__card-link">Découvrir</span>
           </div>
         </a>
@@ -105,8 +113,8 @@ const categories = [
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0) 40%,
-      rgba(0, 0, 0, 0.7) 100%
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
     );
     z-index: 1;
     transition: opacity 0.3s ease;
@@ -117,7 +125,7 @@ const categories = [
   }
 
   .categories__card:hover .categories__overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .categories__card-content {
@@ -133,8 +141,16 @@ const categories = [
     font-size: 28px;
     font-weight: 700;
     color: white;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     line-height: 1.2;
+  }
+
+  .categories__card-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 90%;
   }
 
   .categories__card-link {
@@ -174,6 +190,9 @@ const categories = [
     .categories__card-title { 
       font-size: 22px; 
     }
+    .categories__card-desc {
+      display: none; /* Hide description on tablets if space is tight, or remove this line to keep it */
+    }
   }
 
   @media (max-width: 768px) {
@@ -192,7 +211,13 @@ const categories = [
     
     .categories__card--large,
     .categories__right .categories__card {
-      height: 320px;
+      height: auto;
+      min-height: 320px;
+    }
+    
+    .categories__card-desc {
+      display: block; /* Ensure it shows on mobile */
+      font-size: 13px;
     }
   }
 </style>

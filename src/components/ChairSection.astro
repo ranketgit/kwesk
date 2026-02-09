@@ -1,5 +1,4 @@
 ---
-// ChairsSection.astro
 import ChairCard from './ChairCard.astro';
 ---
 
@@ -8,10 +7,9 @@ import ChairCard from './ChairCard.astro';
     NOS CHAISES AU<br/>MAROC
   </h2>
   
-
   <ChairCard
     title="CHALLENGER"
-    description="Le Challenger 175 reste l'une des meilleures options pour les entreprises recherchant une chaise au look corporate avec un excellent niveau de confort, un coût optimisé et une durée de vie de 5 ans en utilisation intensive comme pour toutes les chaises KWESK. Son assise large et profonde et ses nombreux réglages possibles offrent une sensation de confort exceptionnelle même sur de longues périodes d'utilisation."
+    description="Le Challenger 175 reste l'une des meilleures options pour les entreprises recherchant une chaise bureau au look corporate avec un excellent niveau de confort, un coût optimisé et une durée de vie de 5 ans en utilisation intensive comme pour toutes les chaises KWESK. Son assise large et profonde et ses nombreux réglages possibles offrent une sensation de confort exceptionnelle même sur de longues périodes d'utilisation."
     image="/chairs/challenger-chair.png"
     versions={[{ name: "CHALLENGER 175", type: "Chaise Manager" }]}
     imagePosition="right"
@@ -20,13 +18,12 @@ import ChairCard from './ChairCard.astro';
 
   <ChairCard
     title="GAMMA"
-    description="La toute nouvelle Gamma 150 est l'équilibre ultime entre confort, prix et robustesse offert par Kwesk. Cette chaise est le choix parfait pour une utilisation intensive au bureau ou à la maison."
+    description="La toute nouvelle Gamma 150 est l'équilibre ultime entre confort, prix et robustesse offert par KWESK. Cette chaise ergonomique est le choix parfait pour une utilisation intensive au bureau ou à la maison. Certifications BIFMA et EN 1335 garantissent la qualité et la durabilité. Idéale pour bureaux opératifs, centres d'appels et espaces de travail partagés."
     image="/chairs/gamma-chair.jpg"
     versions={[{ name: "Gamma 150", type: "Chaise Opérateur" }]}
     imagePosition="left"
     href="/gamma"
   />
-
 
   <ChairCard
     title="CORPO 100"
@@ -37,9 +34,66 @@ import ChairCard from './ChairCard.astro';
     href="/corpo-100"
   />
 
+  <div class="other-models max-w-6xl mx-auto px-8 lg:px-16 mt-24 pt-16 border-t border-stone-200">
+    <h3 class="text-3xl font-bold text-stone-900 mb-12 text-center">Autres Modèles</h3>
+    
+    <div class="grid md:grid-cols-3 gap-12">
+        <div class="space-y-4">
+            <h4 class="text-lg font-bold text-stone-900 uppercase tracking-wide">Gamme Premium</h4>
+            <ul class="space-y-3">
+                <li>
+                    <a href="/exclusive" class="group flex items-center gap-2 text-stone-600 hover:text-[#8b8b4b] transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span>
+                        <span class="font-medium">EXCLUSIVE 500</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/exclusive-g" class="group flex items-center gap-2 text-stone-600 hover:text-[#8b8b4b] transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span>
+                        <span class="font-medium">EXCLUSIVE G</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-xs text-stone-400 mt-2">Fauteuils de direction haut de gamme</p>
+        </div>
+        
+        <div class="space-y-4">
+            <h4 class="text-lg font-bold text-stone-900 uppercase tracking-wide">Sièges Visiteurs</h4>
+            <ul class="space-y-3">
+                <li>
+                    <a href="/by-1" class="group flex items-center gap-2 text-stone-600 hover:text-[#8b8b4b] transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span>
+                        <span class="font-medium">BY 1 & BY G</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/gamma-c" class="group flex items-center gap-2 text-stone-600 hover:text-[#8b8b4b] transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span>
+                        <span class="font-medium">GAMMA C & CORPO C</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-xs text-stone-400 mt-2">Solutions élégantes pour accueil</p>
+        </div>
 
-
-
-
- 
+        <div class="space-y-4">
+            <h4 class="text-lg font-bold text-stone-900 uppercase tracking-wide">Polyvalent</h4>
+            <ul class="space-y-3">
+                <li>
+                    <a href="/caddy" class="group flex items-center gap-2 text-stone-600 hover:text-[#8b8b4b] transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span>
+                        <span class="font-medium">CADDY 80</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-xs text-stone-400 mt-2">Flexibilité pour espaces multifonctions</p>
+        </div>
+    </div>
+    
+    <div class="mt-16 text-center">
+        <a href="/chaises" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white text-sm font-medium rounded-full hover:bg-stone-900 transition-all transform hover:scale-105">
+            VOIR TOUTE LA GAMME
+        </a>
+    </div>
+  </div>
 </section>

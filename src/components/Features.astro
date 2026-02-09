@@ -14,28 +14,29 @@ const { features = [
   {
     icon: "quality",
     title: "Qualité",
-    description: "Les chaises KWESK sont conformes aux normes BIFMA et EN1335-1-2-3."
+    description: "Les chaises KWESK sont conformes aux normes BIFMA 2011 et EN 1335-1-2-3. Ces certifications internationales garantissent durabilité, sécurité et ergonomie pour utilisation professionnelle intensive."
   },
   {
     icon: "shipping",
     title: "Livraison",
-    description: "Livraison mondiale via notre réseau d'affiliés."
+    description: "Livraison à travers le Maroc via notre réseau d'affiliés. Service professionnel avec installation pour vos projets d'équipement mobilier bureau."
   },
   {
     icon: "warranty",
     title: "Garantie",
-    description: "Les chaises KWESK bénéficient d'une garantie d'au moins 5 ans."
+    description: "Les chaises KWESK bénéficient d'une garantie minimum 5 ans. Couverture complète de la structure et des mécanismes pour utilisation normale en environnement professionnel."
   },
   {
     icon: "service",
     title: "Service Après-Vente",
-    description: "Réparation, maintenance et rénovation via notre réseau d'affiliés."
+    description: "Réparation, maintenance et rénovation via notre réseau d'affiliés. Pièces détachées disponibles. Support technique réactif pour assurer la longévité de votre mobilier."
   }
 ]} = Astro.props;
 ---
 
 <section class="features-section py-20 bg-white">
   <div class="max-w-6xl mx-auto px-8 lg:px-16">
+    <h2 class="text-5xl lg:text-6xl text-center text-stone-900 mb-16">NOS ENGAGEMENTS</h2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
       
       {features.map((feature, i) => (

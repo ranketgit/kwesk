@@ -1,24 +1,24 @@
 ---
 const slides = [
   {
-    image: "/hero-chairs.png",
-    title: "Aménagez Votre<br/> Espace de Travail",
-    subtitle: "Mobilier de bureau professionnel conçu au Maroc pour un confort optimal et une productivité maximale."
-  },
-  {
-    image: "/by100/by100hero.png",
+    image: "/by100/by100hero.png", // Slide 1 Image
     title: "Chaises Ergonomiques<br/> Pour Entreprises",
     subtitle: "Des sièges conçus pour une utilisation intensive, garantis 5 ans et conformes aux normes internationales."
   },
   {
-    image: "/corpo-100/corpohero.jpg",
-    title: "Design & Confort<br/> Au Quotidien",
-    subtitle: "Découvrez notre gamme de mobilier alliant esthétique moderne et ergonomie avancée."
+    image: "/deskhero.jpg", // Slide 2 Image
+    title: "Aménagement Bureau<br/> Professionnel",
+    subtitle: "Solutions complètes pour l'aménagement bureau professionnel au Maroc : mobilier ergonomique certifié, conseils d'agencement et installation."
   },
   {
-    image: "/deskhero.jpg",
-    title: "Solutions Sur Mesure<br/> Pour Votre Bureau",
-    subtitle: "Équipez vos espaces de travail avec du mobilier adapté à vos besoins et à votre budget."
+    image: "/hero-chairs.png", // Slide 3 Image
+    title: "Équipez Vos<br/> Espaces de Travail",
+    subtitle: "Du bureau direction aux solutions open space, mobilier adapté à vos besoins et budget."
+  },
+  {
+    image: "/corpo-100/corpohero.jpg", // Slide 4 Image
+    title: "Qualité et<br/> Innovation",
+    subtitle: "Structures renforcées en alliage d'acier, revêtement air-mesh anti-allergique, mousse haute densité."
   }
 ];
 ---
@@ -35,13 +35,10 @@ const slides = [
 
   <div class="hero__content">
     <div class="hero__container">
+      <h1 class="sr-only">Mobilier de Bureau Professionnel au Maroc</h1>
       {slides.map((slide, index) => (
         <div class={`hero__text ${index === 0 ? 'active' : ''}`} data-index={index}>
-          {index === 0 ? (
-            <h1 class="hero__title" set:html={slide.title}></h1>
-          ) : (
-            <h2 class="hero__title" set:html={slide.title}></h2>
-          )}
+          <h2 class="hero__title" set:html={slide.title}></h2>
           <p class="hero__subtitle">{slide.subtitle}</p>
         </div>
       ))}
@@ -82,18 +79,36 @@ const slides = [
           BUREAU AU<br/>
           MAROC
         </h2>
-        <p class="intro__desc">
-          KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison.
-        </p>
-        <div class="intro__quote">
+        <div class="intro__desc-block space-y-4 text-[#78716c] leading-relaxed mb-8">
+            <p>
+            KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison. Leader des chaises corporate depuis 2008, nous équipons entreprises, administrations et centres d'appels à travers le Maroc.
+            </p>
+            <p>
+            Du mobilier bureau professionnel aux projets d'aménagement espace bureau professionnel, notre expertise fabricant garantit qualité et durabilité. Que vous recherchiez des chaises ergonomiques certifiées, des bureaux direction, ou des configurations complètes pour vos espaces de travail, KWESK vous accompagne avec des produits conçus pour durer.
+            </p>
+        </div>
+        
+        <div class="intro__quote mb-8">
           <span class="intro__quote-mark">"</span>
           <blockquote class="intro__quote-text">
-            Au-delà de la robustesse unanime de tous les produits KWESK, nos ingénieurs concentrent leurs efforts sur l'innovation toujours dans le but d'offrir des mobiliers qui dépassent les attentes des entreprises. Par exemple, nous citons les structures renforcées avec un alliage à base d'acier, notre revêtement air-mesh anti-allergique, notre mousse haute densité et notre plastique antistatique et anti-poussière.
+            Au-delà de la robustesse unanime de tous les produits KWESK, nos ingénieurs concentrent leurs efforts sur l'innovation, toujours dans le but d'offrir des mobiliers qui dépassent les attentes des entreprises. Par exemple, nous citons les structures renforcées avec un alliage à base d'acier, notre revêtement air-mesh anti-allergique, notre mousse haute densité et notre plastique antistatique et anti-poussière.
           </blockquote>
         </div>
-        <div class="intro__author">
+        
+        <div class="intro__author mb-8">
           <p class="intro__author-name">Tarik Benjelloun</p>
           <p class="intro__author-role">Fondateur, PDG de KWESK</p>
+        </div>
+
+        <div class="intro__footer text-[#78716c] text-sm leading-relaxed space-y-6 border-t border-stone-100 pt-6">
+            <p>
+                Nos solutions s'adaptent à chaque type d'espace : de l'aménagement bureau entreprise aux plateaux complets, des salles de réunion aux zones industrielles. Chaque projet d'aménagement intérieur bureau bénéficie de notre savoir-faire en ergonomie et de nos certifications internationales.
+            </p>
+            
+            <a href="/a-propos" class="inline-flex items-center gap-2 text-[#8b8b4b] font-semibold hover:text-stone-900 transition-colors uppercase tracking-wider text-xs group">
+                En savoir plus sur KWESK 
+                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
         </div>
       </div>
     </div>
@@ -257,7 +272,6 @@ const slides = [
   .intro__image img { width: 100%; max-width: 450px; margin: 0 auto; display: block; }
   .intro__label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: #8b8b4b; margin-bottom: 25px; }
   .intro__title { font-size: 48px; font-weight: 700; color: #1c1917; line-height: 1.1; margin-bottom: 25px; }
-  .intro__desc { font-size: 16px; color: #78716c; line-height: 1.8; margin-bottom: 40px; }
   .intro__quote { display: flex; gap: 15px; }
   .intro__quote-mark { font-size: 60px; line-height: 1; color: #8b8b4b; }
   .intro__quote-text { font-size: 15px; color: #57534e; line-height: 1.8; text-align: justify; }
@@ -270,6 +284,7 @@ const slides = [
       right: 50%;
       transform: translateX(50%);
     }
+    .intro__grid { grid-template-columns: 1fr; gap: 60px; }
   }
 </style>
 
