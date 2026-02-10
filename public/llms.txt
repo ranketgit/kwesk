@@ -1,0 +1,93 @@
+# KWESK
+
+> KWESK est un fabricant marocain de mobilier de bureau professionnel et de sieges ergonomiques, fonde en 2008 a Casablanca. Leader du siege professionnel au Maroc, KWESK concoit et fabrique des chaises ergonomiques et du mobilier de bureau pour les entreprises, administrations, etablissements d'enseignement et centres d'appels.
+
+Informations cles :
+- Fonde en 2008 par Tarik Benjelloun
+- Base a Casablanca, Maroc (Anfa Place, Boulevard de la Corniche, Ain Diab)
+- Certifications BIFMA 2011 et EN 1335-1-2-3 2016
+- Garantie minimum de 5 ans
+- Livraison et installation sur tout le Maroc
+
+## Sitemap
+[Sitemap XML](https://kwesk.ma/sitemap-0.xml): Inclut toutes les pages indexables du site.
+
+## Produits - Chaises Ergonomiques
+- [Chaises](https://kwesk.ma/chaises): Gamme complete de sieges ergonomiques professionnels
+- [Challenger 175](https://kwesk.ma/challenger): Siege haut de gamme pour usage intensif
+- [Gamma 150](https://kwesk.ma/gamma): Siege ergonomique polyvalent
+- [Corpo 100](https://kwesk.ma/corpo-100): Siege operatif professionnel
+- [Exclusive 500](https://kwesk.ma/exclusive): Siege direction premium
+- [Exclusive 500/G](https://kwesk.ma/exclusive-g): Variante du siege direction Exclusive
+- [BY 1](https://kwesk.ma/by-1): Siege ergonomique compact
+- [BY 1/G](https://kwesk.ma/by-g): Variante du siege BY 1
+- [Gamma C](https://kwesk.ma/gamma-c): Siege visiteur / reunion Gamma
+- [Corpo C](https://kwesk.ma/corpo-c): Siege visiteur / reunion Corpo
+- [Caddy 80](https://kwesk.ma/caddy): Siege compact et economique
+- [Winner 125](https://kwesk.ma/winner-125): Siege ergonomique Winner
+- [Winner C](https://kwesk.ma/winner-c): Siege visiteur Winner
+
+## Produits - Bureaux
+- [Bureaux](https://kwesk.ma/bureaux): Gamme complete de bureaux professionnels
+- [Bureaux Direction](https://kwesk.ma/bureaux/direction): Bureaux pour dirigeants et cadres
+- [Bureaux Operatifs](https://kwesk.ma/bureaux/operatif): Postes de travail operationnels
+- [Bureaux Bench](https://kwesk.ma/bureaux/bench): Configurations bench pour open space
+- [Bureaux Reglables](https://kwesk.ma/bureaux/reglables): Bureaux assis-debout a hauteur reglable
+
+## Produits - Salles de Reunion
+- [Salles de Reunion](https://kwesk.ma/salles-reunion): Solutions completes pour salles de reunion
+- [Tables de Reunion](https://kwesk.ma/reunion/tables): Tables professionnelles pour reunion
+- [Supports Media](https://kwesk.ma/reunion/media): Supports ecrans et equipements media
+- [Rangement Professionnel](https://kwesk.ma/reunion/rangement): Solutions de rangement
+
+## Produits - Mobilier Industriel
+- [Mobilier Industriel](https://kwesk.ma/mobilier-industriel): Mobilier pour environnements industriels
+- [Tables de Cantine](https://kwesk.ma/industrie/tables-cantine): Tables pour cafeterias et cantines
+- [Casiers Vestiaire](https://kwesk.ma/industrie/casiers-vestiaire): Systemes de casiers et vestiaires
+- [Armoires de Rangement](https://kwesk.ma/industrie/armoires-rangement): Armoires et rangement industriel
+
+## Services
+- [Amenagement de Bureau](https://kwesk.ma/amenagement-de-bureau): Service complet d'amenagement de bureaux professionnels
+
+## Amenagement par Ville
+- [Casablanca](https://kwesk.ma/amenagement-de-bureau-professionnel-a-casablanca)
+- [Rabat](https://kwesk.ma/amenagement-de-bureau-professionnel-a-rabat)
+- [Marrakech](https://kwesk.ma/amenagement-de-bureau-professionnel-a-marrakech)
+- [Tanger](https://kwesk.ma/amenagement-de-bureau-professionnel-a-tanger)
+- [Fes](https://kwesk.ma/amenagement-de-bureau-professionnel-a-fes)
+- [Meknes](https://kwesk.ma/amenagement-de-bureau-professionnel-a-meknes)
+- [Agadir](https://kwesk.ma/amenagement-de-bureau-professionnel-a-agadir)
+- [Oujda](https://kwesk.ma/amenagement-de-bureau-professionnel-a-oujda)
+- [Kenitra](https://kwesk.ma/amenagement-de-bureau-professionnel-a-kenitra)
+- [Tetouan](https://kwesk.ma/amenagement-de-bureau-professionnel-a-tetouan)
+- [Temara](https://kwesk.ma/amenagement-de-bureau-professionnel-a-temara)
+- [Safi](https://kwesk.ma/amenagement-de-bureau-professionnel-a-safi)
+- [Mohammedia](https://kwesk.ma/amenagement-de-bureau-professionnel-a-mohammedia)
+- [El Jadida](https://kwesk.ma/amenagement-de-bureau-professionnel-a-el-jadida)
+- [Nador](https://kwesk.ma/amenagement-de-bureau-professionnel-a-nador)
+- [Beni Mellal](https://kwesk.ma/amenagement-de-bureau-professionnel-a-beni-mellal)
+- [Khouribga](https://kwesk.ma/amenagement-de-bureau-professionnel-a-khouribga)
+- [Essaouira](https://kwesk.ma/amenagement-de-bureau-professionnel-a-essaouira)
+- [Ait Melloul](https://kwesk.ma/amenagement-de-bureau-professionnel-a-ait-melloul)
+- [Taza](https://kwesk.ma/amenagement-de-bureau-professionnel-a-taza)
+
+## Entreprise
+- [A Propos](https://kwesk.ma/a-propos): Decouvrez KWESK, son histoire et sa mission
+- [Contact](https://kwesk.ma/contact): Contactez notre equipe
+- [Blog](https://kwesk.ma/blog): Articles et conseils sur l'amenagement de bureau
+
+## Blog
+- [Agencement Interieur Bureau](https://kwesk.ma/blog/agencement-interieur-bureau): Guide sur l'agencement interieur de bureaux
+- [Amenagement Bureau Open Space](https://kwesk.ma/blog/amenagement-bureau-open-space): Conseils pour amenager un open space
+- [Amenagement Salle de Reunion](https://kwesk.ma/blog/amenagement-salle-reunion-professionnel): Guide d'amenagement de salle de reunion
+- [Chaise Bureau Ergonomique](https://kwesk.ma/blog/chaise-bureau-ergonomique-professionnelle): Guide d'achat chaise ergonomique
+- [Chaise Ergonomique](https://kwesk.ma/blog/chaise-ergonomique): Tout savoir sur les chaises ergonomiques
+
+## Legal
+- [Conditions d'Utilisation](https://kwesk.ma/conditions-utilisation): Conditions generales d'utilisation
+- [Politique de Confidentialite](https://kwesk.ma/politique-de-confidentialite): Politique de protection des donnees
+
+## Contact
+- Email: contact@kwesk.com
+- Telephone: +212 5 20 24 16 37 / +212 6 61 48 16 16
+- Adresse: Anfa Place Tower West, Niveau 1, Boulevard de la Corniche, Ain Diab 20180, Casablanca, Maroc
