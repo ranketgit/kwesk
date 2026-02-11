@@ -1,6 +1,7 @@
 ---
 // pages/industrie/casiers-vestiaire.astro
 import Layout from '../../layouts/Layout.astro';
+import AmCTA from '../../components/AmCTA.astro';
 
 const images = [
   "/industrie/casiers-vestiaire/1.webp",
@@ -10,402 +11,330 @@ const images = [
 ];
 
 const variants = [
-{ name: "VESTIAIRE 1", type: "Bloc Multicases 1 Portes" },
-{ name: "VESTIAIRE 2", type: "Bloc Multicases 2 Portes" },
-  { name: "VESTIAIRE 4", type: "Bloc Multicases 4 Portes" },
-  { name: "VESTIAIRE 6", type: "Bloc Multicases 6 Portes" },
-  { name: "VESTIAIRE 9", type: "Bloc Multicases 9 Portes" },
-  { name: "VESTIAIRE 12", type: "Bloc Multicases 12 Portes" },
-  { name: "VESTIAIRE 16", type: "Bloc Multicases 16 Portes" },
+  { name: "VESTIAIRE 1 PORTE", desc: "Casier individuel grande capacité" },
+  { name: "VESTIAIRE 2 PORTES", desc: "Bloc multicases 2 compartiments" },
+  { name: "VESTIAIRE 4 PORTES", desc: "Configuration compacte 4 cases" },
+  { name: "VESTIAIRE 6 PORTES", desc: "Solution optimisée 6 casiers" },
+  { name: "VESTIAIRE 9 PORTES", desc: "Haute densité 9 compartiments" },
+  { name: "VESTIAIRE 12 PORTES", desc: "Configuration maximale 12 cases" },
+  { name: "VESTIAIRE 16 PORTES", desc: "Solution ultra-compacte 16 casiers" },
 ];
 ---
 
-<Layout title="Casiers Vestiaire | Mobilier Industriel Professionnel - Kwesk" description="Casiers vestiaires métalliques professionnels par Kwesk. Vestiaires robustes pour entreprises, clubs sportifs, écoles et collectivités au Maroc.">
-  <main>
-    
-    <!-- Hero -->
-    <section class="hero">
-      <img src="/industrie/casiers-vestiaire/1.webp" alt="Casiers Vestiaire" />
-    </section>
+<Layout 
+  title="Casiers Vestiaire Métalliques | Vestiaires Professionnels Maroc" 
+  description="Casiers vestiaire métalliques robustes pour entreprises, clubs sportifs, écoles. Construction acier durable, serrures sécurisées. Casablanca, Rabat, Tanger, Marrakech."
+>
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={images[0]} alt="Casiers Vestiaire Métalliques Professionnels" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-3xl">
+        <a href="/mobilier-industriel" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+          ← Retour au Mobilier Industriel
+        </a>
+        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">MOBILIER INDUSTRIEL MAROC</span>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Casiers Vestiaire Métalliques Professionnels</h1>
+        <p class="text-lg text-stone-300 leading-relaxed mb-8">Vestiaires métalliques rigides et prêts à l'emploi. Construction en acier durable avec portes renforcées et aération intégrée. Idéal pour sociétés, clubs sportifs, écoles, universités, magasins, restaurants et entrepôts nécessitant solutions de rangement fiables et hygiéniques.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis Gratuit</a>
+          <a href="#product" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Découvrir</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Product Info -->
-    <section class="product">
-      <div class="product__container">
-        <div class="product__grid">
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Acier</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Construction Robuste</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Aéré</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Ventilation Intégrée</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Sécurisé</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Serrures Incluses</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">1-16 Cases</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Configurations</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <!-- Gallery -->
-          <div class="product__gallery">
-            <div class="product__main">
-              <button class="product__arrow product__arrow--left" id="prevBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
+  <section class="py-20 bg-white" id="product">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <div class="flex flex-col gap-6">
+          <div class="relative bg-stone-50 border border-stone-200 aspect-square flex items-center justify-center overflow-hidden group">
+            <button id="prevBtn" class="absolute left-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            
+            <img id="mainImage" src={images[0]} alt="Casiers Vestiaire" class="w-full h-full object-contain mix-blend-multiply p-8 transition-opacity duration-300" />
+            
+            <button id="nextBtn" class="absolute right-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-4 gap-4">
+            {images.map((img, i) => (
+              <button 
+                class={`thumb-btn aspect-square border bg-stone-50 flex items-center justify-center p-2 transition-all hover:border-[#8b8b4b] ${i === 0 ? 'border-[#8b8b4b]' : 'border-stone-200'}`}
+                data-index={i}
+              >
+                <img src={img} alt={`Vue ${i+1}`} class="w-full h-full object-contain mix-blend-multiply" />
               </button>
-              <img src={images[0]} alt="Casiers Vestiaire" id="mainImage" />
-              <button class="product__arrow product__arrow--right" id="nextBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-            <div class="product__thumbs">
-              {images.map((img, i) => (
-                <button 
-                  class={`product__thumb ${i === 0 ? 'active' : ''}`}
-                  data-index={i}
-                >
-                  <img src={img} alt={`Casiers Vestiaire vue ${i + 1}`} />
-                </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">COLLECTION INDUSTRIELLE</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-6">Casiers Vestiaire Métalliques</h2>
+          
+          <p class="text-stone-600 leading-relaxed mb-8 border-l-4 border-[#1c1917] pl-6">
+            Des vestiaires métalliques rigides et prêts à l'emploi ! Idéal dans les sociétés, clubs sportifs, écoles, universités, magasins, restaurants, entrepôts... Construction en acier durable, beaucoup de variantes d'armoires. Aménagements intérieurs pratiques pour répondre à tous vos besoins de rangement sécurisé.
+          </p>
+
+          <div class="mb-10">
+            <h3 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">Versions Disponibles</h3>
+            <div class="space-y-3">
+              {variants.map((v) => (
+                <div class="flex justify-between items-center group cursor-default">
+                  <div>
+                    <span class="block font-bold text-stone-900 group-hover:text-[#8b8b4b] transition-colors">{v.name}</span>
+                    <span class="text-sm text-stone-500">{v.desc}</span>
+                  </div>
+                  <span class="text-[#8b8b4b] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </div>
               ))}
             </div>
           </div>
 
-          <!-- Info -->
-          <div class="product__info">
-            <h1 class="product__title">CASIERS VESTIAIRE</h1>
-            <p class="product__desc">
-              Des vestiaires métalliques rigides et prêts à l'emploi ! Idéal dans les sociétés, clubs sportifs, écoles, universités, magasins, restaurants, entrepôts... Construction en acier durable, beaucoup de variantes d'armoires. Aménagements intérieurs pratiques pour répondre à tous vos besoins de rangement sécurisé.
-            </p>
-
-            <div class="product__versions">
-              <span class="product__version-label">Versions disponibles</span>
-              <div class="product__versions-list">
-                {variants.map((variant) => (
-                  <p class="product__version-name"><strong>{variant.name}</strong> {variant.type}</p>
-                ))}
-              </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="px-8 py-4 bg-[#1c1917] text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all text-center">
+              Demander un Devis
+            </a>
+            <div class="flex items-center justify-center gap-2 text-sm text-stone-500">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              Disponible sur commande
             </div>
-
-            <a href="/contact" class="product__btn">DEMANDER UN DEVIS</a>
           </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="relative overflow-hidden">
+      <img src={images[3]} alt="Hygiène et Ventilation Vestiaire" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-stone-50">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">QUALITÉ</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Construction Robuste et Durable</h2>
+      <p class="text-stone-600 leading-relaxed mb-6">Nos vestiaires métalliques sont fabriqués en acier robuste garantissant longévité et résistance à l'usage intensif quotidien. La construction monobloc avec portes renforcées résiste aux chocs et manipulations répétées dans environnements collectifs.</p>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Hygiène et Ventilation</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Nos vestiaires métalliques intègrent un système d'aération des portes permettant la circulation d'air naturelle. Cette ventilation évite l'accumulation d'humidité et odeurs, maintenant un environnement sain.</p>
+        </div>
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Finition Durable</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">La finition en peinture époxy cuite au four protège contre corrosion et rayures. Surface métallique lisse facilitant nettoyage et désinfection rapide.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Sécurité des Effets Personnels</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Chaque casier dispose de serrure sécurisée protégeant effets personnels et outils de travail contre vol ou accès non autorisé.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Standard Features -->
-    <section class="features">
-      <div class="features__container">
-        <h2 class="features__title">CARACTÉRISTIQUES STANDARD</h2>
-        <ul class="features__list">
-          <li><span>✓</span> Vestiaire acier robuste à portes renforcées</li>
-          <li><span>✓</span> Hygiénique avec une aération des portes</li>
-          <li><span>✓</span> Disponible en plusieurs couleurs</li>
-          <li><span>✓</span> Serrure sécurisée incluse</li>
-          <li><span>✓</span> Construction en acier durable</li>
-          <li><span>✓</span> Aménagements intérieurs pratiques</li>
-        </ul>
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white order-2 lg:order-1">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">TECHNIQUE</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Caractéristiques Standard</h2>
+      <p class="text-stone-600 leading-relaxed mb-8">Conçus pour répondre aux normes industrielles les plus strictes.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
+          <h3 class="font-bold text-stone-900 mb-2">Acier Robuste</h3>
+          <p class="text-sm text-stone-600">Avec portes renforcées pour durabilité maximale.</p>
+        </div>
+        <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
+          <h3 class="font-bold text-stone-900 mb-2">Aération Active</h3>
+          <p class="text-sm text-stone-600">Aération des portes pour ventilation naturelle et hygiène.</p>
+        </div>
+        <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
+          <h3 class="font-bold text-stone-900 mb-2">Serrure Sécurisée</h3>
+          <p class="text-sm text-stone-600">Incluses pour protection des effets personnels.</p>
+        </div>
+        <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
+          <h3 class="font-bold text-stone-900 mb-2">Aménagements</h3>
+          <p class="text-sm text-stone-600">Intérieurs pratiques avec patères, tablettes et porte-étiquettes.</p>
+        </div>
+        <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
+          <h3 class="font-bold text-stone-900 mb-2">Personnalisation</h3>
+          <p class="text-sm text-stone-600">Couleurs selon identité visuelle de l'établissement.</p>
+        </div>
+        <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
+          <h3 class="font-bold text-stone-900 mb-2">Piétements Stables</h3>
+          <p class="text-sm text-stone-600">Assurant stabilité et facilité de nettoyage sous le meuble.</p>
+        </div>
       </div>
-    </section>
+    </div>
+    <div class="relative overflow-hidden order-1 lg:order-2">
+      <img src={images[1]} alt="Détails Techniques Casiers" class="w-full h-full object-cover" />
+    </div>
+  </section>
 
-    <!-- Custom Color -->
-    <section class="colors">
-      <div class="colors__container">
-        <h2 class="colors__title">COULEURS PERSONNALISÉES</h2>
-        <p class="colors__desc">Large choix de coloris pour les portes et la structure. Personnalisez vos vestiaires selon l'identité visuelle de votre entreprise ou établissement.</p>
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">SECTEURS</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">Applications Professionnelles</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">Nos solutions s'adaptent à tous les environnements de travail.</p>
       </div>
-    </section>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Entreprises et Milieux Industriels</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Pour usines, ateliers et entrepôts. Permet aux employés de stocker équipements de protection individuelle (EPI), vêtements de travail et effets personnels en toute sécurité. Séparation claire entre vêtements de ville et tenues professionnelles respecte normes d'hygiène.</p>
+        </div>
 
-  </main>
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Clubs Sportifs et Installations</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Clubs sportifs, salles de sport et piscines nécessitent casiers vestiaire résistants à humidité et utilisation intensive. Nos vestiaires métalliques avec aération intégrée gèrent parfaitement environnements humides tout en maintenant conditions hygiéniques.</p>
+        </div>
+
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Établissements Scolaires</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Écoles, collèges et universités équipent leurs installations sportives et zones de vestiaires avec mobilier industriel durable. Nos casiers métalliques résistent à utilisation par nombreux élèves tout en maintenant sécurité et organisation.</p>
+        </div>
+
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Restaurants et Commerces</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Restaurants, magasins et commerces doivent fournir vestiaires conformes pour leur personnel. Nos solutions compactes s'intègrent dans espaces arrière-boutique restreints tout en offrant rangement sécurisé réglementaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-2xl font-bold text-stone-900 mb-12">Équipement Complémentaire</h2>
+      <p class="text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto">Complétez l'aménagement de vos espaces collectifs avec notre gamme complète de mobilier bureau professionnel et solutions industrielles.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="/industrie/armoires-rangement" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Armoires Rangement</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Armoires métalliques pour outillage et équipements.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les armoires →</span>
+        </a>
+
+        <a href="/industrie/tables-cantine" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Tables Cantine</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Tables de restauration collective robustes.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les tables →</span>
+        </a>
+
+        <a href="/mobilier-industriel" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Mobilier Industriel</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Gamme complète pour espaces professionnels.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir la gamme →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Questions Fréquentes</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Les casiers sont-ils livrés montés ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Oui, construction monobloc. Prêts à l'utilisation dès réception, aucun montage nécessaire.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Peut-on choisir les couleurs des vestiaires ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Oui, large choix de coloris disponible pour personnaliser selon identité visuelle de votre établissement.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Les serrures sont-elles fournies ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Oui, chaque casier vestiaire inclut serrure sécurisée pour protection effets personnels.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Les vestiaires résistent-ils à l'humidité ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Oui, construction acier avec peinture époxy et aération intégrée gère environnements humides. Idéal pour vestiaires sportifs et piscines.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Livrez-vous dans tout le Maroc ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Livraison à Casablanca, Rabat, Tanger et Marrakech. Pour autres destinations, contactez notre service commercial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AmCTA />
 </Layout>
 
-<style>
-  .hero {
-    width: 100%;
-    height: 50vh;
-    min-height: 400px;
-  }
-
-  .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .product {
-    padding: 100px 0;
-  }
-
-  .product__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .product__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .product__gallery {
-    position: relative;
-  }
-
-  .product__main {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-  }
-
-  .product__main img {
-    max-width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-  }
-
-  .product__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #a8a29e;
-    transition: color 0.3s ease;
-  }
-
-  .product__arrow:hover {
-    color: #1c1917;
-  }
-
-  .product__arrow--left {
-    left: 0;
-  }
-
-  .product__arrow--right {
-    right: 0;
-  }
-
-  .product__arrow svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .product__thumbs {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-  }
-
-  .product__thumb {
-    width: 70px;
-    height: 70px;
-    padding: 8px;
-    border: 1px solid #e7e5e4;
-    background: white;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-  }
-
-  .product__thumb:hover,
-  .product__thumb.active {
-    border-color: #8b8b4b;
-  }
-
-  .product__thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .product__info {
-    padding-top: 40px;
-  }
-
-  .product__title {
-    font-size: 42px;
-    font-weight: 700;
-    color: #1c1917;
-  }
-
-  .product__desc {
-    font-size: 15px;
-    color: #78716c;
-    line-height: 1.8;
-    margin-top: 25px;
-  }
-
-  .product__versions {
-    margin-top: 40px;
-  }
-
-  .product__version-label {
-    display: block;
-    font-size: 12px;
-    color: #a8a29e;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .product__versions-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .product__version-name {
-    font-size: 14px;
-    color: #1c1917;
-  }
-
-  .product__btn {
-    display: inline-block;
-    padding: 16px 40px;
-    background-color: #8b8b4b;
-    color: white;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-    margin-top: 40px;
-    transition: opacity 0.3s ease;
-  }
-
-  .product__btn:hover {
-    opacity: 0.9;
-  }
-
-  .features {
-    padding: 80px 0;
-    border-top: 1px solid #e7e5e4;
-  }
-
-  .features__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .features__title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1c1917;
-    margin-bottom: 30px;
-  }
-
-  .features__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .features__list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 14px;
-    color: #57534e;
-    line-height: 1.8;
-    margin-bottom: 12px;
-  }
-
-  .features__list li span {
-    color: #8b8b4b;
-    font-weight: 600;
-  }
-
-  .colors {
-    padding: 80px 0;
-    border-top: 1px solid #e7e5e4;
-  }
-
-  .colors__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .colors__title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1c1917;
-    margin-bottom: 20px;
-  }
-
-  .colors__desc {
-    font-size: 14px;
-    color: #78716c;
-    line-height: 1.7;
-    margin-bottom: 30px;
-  }
-
-  .colors__image {
-    max-width: 100%;
-  }
-
-  @media (max-width: 900px) {
-    .product__container,
-    .features__container,
-    .colors__container {
-      padding: 0 30px;
-    }
-
-    .product__grid {
-      grid-template-columns: 1fr;
-      gap: 50px;
-    }
-
-    .product {
-      padding: 60px 0;
-    }
-
-    .product__title {
-      font-size: 32px;
-    }
-
-    .product__thumbs {
-      gap: 8px;
-    }
-
-    .product__thumb {
-      width: 55px;
-      height: 55px;
-      padding: 6px;
-    }
-  }
-</style>
-
 <script define:vars={{ images }}>
-  let currentIndex = 0;
-  const allImages = images;
-
   const mainImage = document.getElementById('mainImage');
+  const thumbs = document.querySelectorAll('.thumb-btn');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  const thumbs = document.querySelectorAll('.product__thumb');
+  
+  let currentIndex = 0;
 
   function updateImage(index) {
+    // Fade out
+    mainImage.style.opacity = '0';
+    
+    setTimeout(() => {
+      mainImage.src = images[index];
+      // Fade in
+      mainImage.style.opacity = '1';
+    }, 150);
+
+    thumbs.forEach(t => t.classList.remove('border-[#8b8b4b]'));
+    thumbs.forEach(t => t.classList.add('border-stone-200'));
+    
+    thumbs[index].classList.remove('border-stone-200');
+    thumbs[index].classList.add('border-[#8b8b4b]');
+    
     currentIndex = index;
-    if (mainImage) {
-      mainImage.src = allImages[index];
-    }
-    thumbs.forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === index);
-    });
   }
 
+  thumbs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = parseInt(btn.getAttribute('data-index'));
+      updateImage(index);
+    });
+  });
+
   prevBtn?.addEventListener('click', () => {
-    const newIndex = currentIndex === 0 ? allImages.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     updateImage(newIndex);
   });
 
   nextBtn?.addEventListener('click', () => {
-    const newIndex = currentIndex === allImages.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
     updateImage(newIndex);
-  });
-
-  thumbs.forEach((thumb, i) => {
-    thumb.addEventListener('click', () => {
-      updateImage(i);
-    });
   });
 </script>

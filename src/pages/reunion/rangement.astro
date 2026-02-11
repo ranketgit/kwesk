@@ -1,35 +1,367 @@
 ---
-// pages/rangement/armoire-basse.astro
+// pages/reunion/rangement/armoire-basse.astro
 import Layout from '../../layouts/Layout.astro';
-import ProductSimple from '../../components/ProductSimple.astro';
+import AmCTA from '../../components/AmCTA.astro';
 
-const product = {
-  heroBg: "/reunion/r-hero.jpg",
-  name: "Armoire Basse",
-  category: "Rangement",
-  categoryHref: "/rangement",
-  description: "Armoire basse de rangement, parfaite pour un accès facile aux documents fréquemment utilisés. Peut servir de crédence ou de desserte.",
-  images: [
-    "/reunion/r1.jpg",
-    "/reunion/r2.jpg",
-    "/reunion/r3.jpg"
-  ],
-  features: [
-    "Structure en acier épaisseur 0.8mm",
-    "2 étagères réglables",
-    "Portes coulissantes",
-    "Serrure à clé",
-    "Dimensions: 120x45x75 cm",
-    "Garantie 5 ans"
-  ],
-  options: [
-    "Plateau en mélaminé",
-    "Portes battantes",
-    "Couleurs personnalisées"
-  ]
-};
+const images = [
+  "/reunion/r1.jpg",
+  "/reunion/r2.jpg",
+  "/reunion/r3.jpg",
+  "/reunion/r-hero.jpg"
+];
+
+const variants = [
+  { name: "STANDARD", desc: "Portes Coulissantes - 120x45x75 cm" },
+  { name: "OPTION TOP", desc: "Avec Plateau de Finition Mélaminé" },
+  { name: "OPTION PORTES", desc: "Portes Battantes sur demande" }
+];
 ---
 
-<Layout title="Armoire Basse | Rangement Bureau Professionnel" description="Armoires basses de rangement pour bureaux professionnels. Mobilier de bureaux fonctionnel pour aménagement salles de réunion. Solutions Kwesk Maroc.">
-  <ProductSimple {...product} />
+<Layout 
+  title="Armoire Basse Métallique 120cm | Portes Coulissantes - KWESK" 
+  description="Armoire basse métallique 120x45x75cm. Structure acier 0.8mm, portes coulissantes, 2 étagères réglables. Rangement bureau professionnel. Garantie 5 ans."
+>
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={images[3]} alt="Armoire Basse Métallique Rangement Bureau" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-3xl">
+        <a href="/reunion/rangement" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+          ← Retour aux Rangements
+        </a>
+        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">RANGEMENT PROFESSIONNEL</span>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Armoire Basse Métallique Rangement Bureau</h1>
+        <p class="text-lg text-stone-300 leading-relaxed mb-8">Rangement professionnel accessible et pratique. Armoire basse de rangement, parfaite pour un accès facile aux documents fréquemment utilisés. Peut servir de crédence ou de desserte dans vos espaces professionnels.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis Gratuit</a>
+          <a href="#product" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Découvrir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">0.8 mm</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Structure Acier</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Coulissant</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Système Portes</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">120 cm</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Largeur Standard</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Sécurisé</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Serrure à Clé</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white" id="product">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <div class="flex flex-col gap-6">
+          <div class="relative bg-stone-50 border border-stone-200 aspect-[4/3] flex items-center justify-center overflow-hidden group">
+            <button id="prevBtn" class="absolute left-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            
+            <img id="mainImage" src={images[0]} alt="Armoire basse métallique" class="w-full h-full object-cover transition-opacity duration-300" />
+            
+            <button id="nextBtn" class="absolute right-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-4 gap-4">
+            {images.map((img, i) => (
+              <button 
+                class={`thumb-btn aspect-square border bg-stone-50 flex items-center justify-center p-1 transition-all hover:border-[#8b8b4b] ${i === 0 ? 'border-[#8b8b4b]' : 'border-stone-200'}`}
+                data-index={i}
+              >
+                <img src={img} alt={`Vue ${i+1}`} class="w-full h-full object-cover" />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">RANGEMENT BUREAU</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-6">Armoire Basse Métallique</h2>
+          
+          <p class="text-stone-600 leading-relaxed mb-8 border-l-4 border-[#1c1917] pl-6">
+            Armoire basse métallique supportant un usage quotidien dans les environnements de bureau grâce à sa structure acier. L'épaisseur de 0.8mm représente le standard professionnel. Dimensions 120x45x75 cm offrant une capacité pour rangement de documents fréquemment utilisés avec 2 étagères réglables.
+          </p>
+
+          <div class="mb-10">
+            <h3 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">Configurations</h3>
+            <div class="space-y-3">
+              {variants.map((v, index) => (
+                <div class={`flex justify-between items-center group cursor-default p-3 border hover:border-[#8b8b4b] transition-all ${index === 0 ? 'border-stone-400 bg-stone-50' : 'border-stone-200'}`}>
+                  <div>
+                    <span class="block font-bold text-stone-900">{v.name}</span>
+                    <span class="text-sm text-stone-500">{v.desc}</span>
+                  </div>
+                  {index === 0 && <span class="text-[#8b8b4b] font-bold text-xs uppercase">Recommandé</span>}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="px-8 py-4 bg-[#1c1917] text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all text-center">
+              Demander un Devis
+            </a>
+            <div class="flex items-center justify-center gap-2 text-sm text-stone-500">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              En stock
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white order-2 lg:order-1">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">CARACTÉRISTIQUES</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Conception Robuste & Fonctionnelle</h2>
+      <p class="text-stone-600 leading-relaxed mb-8">Conçue pour durer et faciliter l'organisation au quotidien.</p>
+      
+      <div class="space-y-6">
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Structure Acier 0.8mm</h3>
+          <p class="text-sm text-stone-600">Assurant stabilité et durabilité. Construction solide pour usage professionnel intensif, garantissant un maintien stable du rangement dans le temps.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Portes Coulissantes</h3>
+          <p class="text-sm text-stone-600">Permet l'accès au rangement sans débordement dans l'espace. Idéal pour les couloirs ou derrière un bureau.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">2 Étagères Réglables</h3>
+          <p class="text-sm text-stone-600">Adaptation de la hauteur selon les objets à ranger. Modularité offrant flexibilité dans l'organisation (dossiers, boîtes, fournitures).</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Serrure à Clé</h3>
+          <p class="text-sm text-stone-600">Sécurise le contenu pour protéger documents et fournitures. Contrôle d'accès essentiel pour la confidentialité.</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative overflow-hidden order-1 lg:order-2">
+      <img src={images[1]} alt="Détails Armoire Basse" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">USAGES</span>
+          <h2 class="text-3xl font-bold mb-8">Applications Rangement</h2>
+          
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Pour Salle de Réunion</h3>
+              <p class="text-stone-400 text-sm leading-relaxed">Rangement de documents et fournitures. Format basse de 75 cm maintient perspective visuelle. Peut servir de desserte pour équipements.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Comme Crédence Bureau</h3>
+              <p class="text-stone-400 text-sm leading-relaxed">Surface supplémentaire derrière ou à côté du bureau. Stocke documents actifs tout en libérant l'espace sur le bureau principal.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Séparateur d'Espace</h3>
+              <p class="text-stone-400 text-sm leading-relaxed">Sert de séparateur dans espaces ouverts. Hauteur de 75 cm maintient communication visuelle tout en délimitant les zones de travail.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-stone-800 p-10 border border-stone-700">
+          <h3 class="text-xl font-bold text-[#8b8b4b] mb-6 uppercase tracking-widest">Avantages Clés</h3>
+          <ul class="space-y-6">
+            <li class="flex gap-4">
+              <span class="text-2xl">⚡</span>
+              <div>
+                <h4 class="font-bold text-white">Accès Facile</h4>
+                <p class="text-stone-400 text-sm">Hauteur de 75 cm élimine besoin de se lever ou s'étirer. Documents actifs à portée immédiate.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-2xl">👁️</span>
+              <div>
+                <h4 class="font-bold text-white">Sans Obstruction Visuelle</h4>
+                <p class="text-stone-400 text-sm">Ne bloque pas les lignes de vue comme les armoires hautes. Maintient sensation d'ouverture.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-2xl">📐</span>
+              <div>
+                <h4 class="font-bold text-white">Gain d'Espace</h4>
+                <p class="text-stone-400 text-sm">Portes coulissantes économisent l'espace devant le meuble. Idéal pour les passages.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">PERSONNALISATION</span>
+          <h2 class="text-3xl font-bold text-stone-900 mb-6">Options Disponibles</h2>
+          <div class="space-y-4">
+            <div class="bg-white p-6 border-l-4 border-stone-900 shadow-sm">
+              <h3 class="font-bold text-stone-900">Option Plateau Mélaminé</h3>
+              <p class="text-sm text-stone-600 mt-2">Transforme le dessus de l'armoire en surface de travail utilisable ou décorative (finition bois ou unie).</p>
+            </div>
+            <div class="bg-white p-6 border-l-4 border-stone-900 shadow-sm">
+              <h3 class="font-bold text-stone-900">Option Portes Battantes</h3>
+              <p class="text-sm text-stone-600 mt-2">Alternative aux portes coulissantes si le dégagement devant l'armoire le permet. Ouverture totale.</p>
+            </div>
+            <div class="bg-white p-6 border-l-4 border-stone-900 shadow-sm">
+              <h3 class="font-bold text-stone-900">Couleurs Personnalisées</h3>
+              <p class="text-sm text-stone-600 mt-2">Harmonisation avec le mobilier existant de votre salle de réunion ou bureau.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-6 border-b border-stone-200 pb-4">Guide de Choix : Basse vs Haute</h3>
+          <div class="mb-6">
+            <h4 class="font-bold text-[#8b8b4b] mb-2">Choisir Armoire Basse si :</h4>
+            <ul class="text-sm text-stone-600 space-y-2 list-disc pl-5">
+              <li>Documents fréquemment consultés (accès rapide).</li>
+              <li>Besoin de préserver les perspectives visuelles.</li>
+              <li>Utilisation comme crédence ou desserte envisagée.</li>
+              <li>Manipulation facile depuis une position assise.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 mb-2">Choisir Armoire Haute si :</h4>
+            <ul class="text-sm text-stone-600 space-y-2 list-disc pl-5">
+              <li>Maximiser la capacité de rangement vertical est prioritaire.</li>
+              <li>Stockage de grand volume d'archives.</li>
+              <li>La hauteur sous plafond doit être exploitée.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-2xl font-bold text-stone-900 mb-12">Compléter Votre Rangement</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="/reunion/tables" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Tables de Réunion</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">L'armoire basse s'harmonise parfaitement avec nos tables pour un aménagement complet.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les tables →</span>
+        </a>
+
+        <a href="/reunion/media" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Table Ronde</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Favorise les échanges égalitaires dans une salle équipée de cette armoire basse.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les tables rondes →</span>
+        </a>
+
+        <a href="/gamma" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Chaises Gamma</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Chaises professionnelles certifiées BIFMA pour accompagner votre mobilier.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les chaises →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Questions Fréquentes</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Quelle est la capacité de rangement ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Dimensions 120x45x75 cm avec 2 étagères réglables. Offre capacité pour documents actifs et fournitures bureau fréquemment utilisées.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Portes coulissantes ou battantes ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Portes coulissantes standard conviennent aux espaces restreints sans débordement. Option portes battantes disponible si dégagement suffisant.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Compatible avec dossiers suspendus ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Les 2 étagères réglables permettent adaptation de la hauteur entre étagères pour différents formats de rangement.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Installation nécessaire ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">L'armoire basse métallique structure monobloc arrive prête à l'utilisation. Aucun assemblage complexe requis.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Garantie ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Garantie 5 ans fournie. Couvre structure acier et mécanismes de portes coulissantes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AmCTA />
 </Layout>
+
+<script define:vars={{ images }}>
+  const mainImage = document.getElementById('mainImage');
+  const thumbs = document.querySelectorAll('.thumb-btn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  let currentIndex = 0;
+
+  function updateImage(index) {
+    mainImage.style.opacity = '0';
+    setTimeout(() => {
+      mainImage.src = images[index];
+      mainImage.style.opacity = '1';
+    }, 150);
+
+    thumbs.forEach(t => t.classList.remove('border-[#8b8b4b]'));
+    thumbs.forEach(t => t.classList.add('border-stone-200'));
+    thumbs[index].classList.remove('border-stone-200');
+    thumbs[index].classList.add('border-[#8b8b4b]');
+    currentIndex = index;
+  }
+
+  thumbs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = parseInt(btn.getAttribute('data-index'));
+      updateImage(index);
+    });
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    updateImage(newIndex);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    updateImage(newIndex);
+  });
+</script>

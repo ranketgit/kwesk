@@ -1,6 +1,7 @@
 ---
 // pages/industrie/tables-cantine.astro
 import Layout from '../../layouts/Layout.astro';
+import AmCTA from '../../components/AmCTA.astro';
 
 const images = [
   "/industrie/tables-cantine/1.jpg",
@@ -10,379 +11,332 @@ const images = [
 ];
 ---
 
-<Layout title="Tables Cantine | Mobilier Industriel Professionnel - Kwesk" description="Tables de cantine professionnelles par Kwesk. Mobilier industriel robuste pour espaces de restauration collective, entreprises et collectivités au Maroc.">
-  <main>
-    
-    <!-- Hero -->
-    <section class="hero">
-      <img src="/industrie/tables-cantine/1.jpg" alt="Tables Cantine" />
-    </section>
-
-    <!-- Product Info -->
-    <section class="product">
-      <div class="product__container">
-        <div class="product__grid">
-
-          <!-- Gallery -->
-          <div class="product__gallery">
-            <div class="product__main">
-              <button class="product__arrow product__arrow--left" id="prevBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <img src={images[0]} alt="Table Cantine" id="mainImage" />
-              <button class="product__arrow product__arrow--right" id="nextBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-            <div class="product__thumbs">
-              {images.map((img, i) => (
-                <button 
-                  class={`product__thumb ${i === 0 ? 'active' : ''}`}
-                  data-index={i}
-                >
-                  <img src={img} alt={`Table Cantine vue ${i + 1}`} />
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <!-- Info -->
-          <div class="product__info">
-            <h1 class="product__title">TABLES CANTINE</h1>
-            <p class="product__desc">
-              Optimisez vos espaces de restauration collective avec nos tables de cantine professionnelles. Conçues pour un usage intensif quotidien, elles offrent robustesse et praticité. Leur design fonctionnel facilite l'aménagement flexible de vos espaces tout en garantissant confort et durabilité pour accueillir vos collaborateurs.
-            </p>
-
-            <div class="product__version">
-              <span class="product__version-label">Gamme</span>
-              <p class="product__version-name"><strong>CANTINE PRO</strong> Table avec Bancs Intégrés</p>
-            </div>
-
-            <a href="/contact" class="product__btn">DEMANDER UN DEVIS</a>
-          </div>
-
+<Layout 
+  title="Tables Cantine Professionnelles | Restauration Collective Maroc" 
+  description="Tables de cantine professionnelles par Kwesk. Mobilier industriel robuste pour espaces de restauration collective, entreprises et collectivités au Maroc."
+>
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={images[0]} alt="Tables Cantine Professionnelles" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-3xl">
+        <a href="/mobilier-industriel" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+          ← Retour au Mobilier Industriel
+        </a>
+        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">RESTAURATION COLLECTIVE</span>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Tables Cantine Professionnelles</h1>
+        <p class="text-lg text-stone-300 leading-relaxed mb-8">Mobilier de restauration collective robuste et durable. Conçues pour un usage intensif quotidien, nos tables optimisent vos espaces de restauration d'entreprise, cantines scolaires et réfectoires.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis Gratuit</a>
+          <a href="#product" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Découvrir</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Standard Features -->
-    <section class="features">
-      <div class="features__container">
-        <h2 class="features__title">CARACTÉRISTIQUES STANDARD</h2>
-        <ul class="features__list">
-          <li><span>✓</span> Châssis en tube d'acier robuste</li>
-          <li><span>✓</span> Peinture époxy-polyester haute résistance</li>
-          <li><span>✓</span> Plateau en mélamine ou stratifié</li>
-          <li><span>✓</span> Protections aux pieds en PVC</li>
-          <li><span>✓</span> Structure soudée pour une stabilité maximale</li>
-          <li><span>✓</span> Facile à nettoyer et entretenir</li>
-        </ul>
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Acier</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Châssis Robuste</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Stratifié</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Plateau Résistant</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Soudé</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Structure Monobloc</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">6-8 Pers</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Capacité</span>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Custom Color -->
-    <section class="colors">
-      <div class="colors__container">
-        <h2 class="colors__title">COULEURS PERSONNALISÉES</h2>
-        <p class="colors__desc">Large choix de coloris pour le châssis métallique et le plateau. Personnalisez votre mobilier selon l'identité visuelle de votre entreprise.</p>
+  <section class="py-20 bg-white" id="product">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <div class="flex flex-col gap-6">
+          <div class="relative bg-stone-50 border border-stone-200 aspect-[4/3] flex items-center justify-center overflow-hidden group">
+            <button id="prevBtn" class="absolute left-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            
+            <img id="mainImage" src={images[0]} alt="Table Cantine avec Bancs" class="w-full h-full object-cover transition-opacity duration-300" />
+            
+            <button id="nextBtn" class="absolute right-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-4 gap-4">
+            {images.map((img, i) => (
+              <button 
+                class={`thumb-btn aspect-square border bg-stone-50 flex items-center justify-center p-1 transition-all hover:border-[#8b8b4b] ${i === 0 ? 'border-[#8b8b4b]' : 'border-stone-200'}`}
+                data-index={i}
+              >
+                <img src={img} alt={`Vue ${i+1}`} class="w-full h-full object-cover" />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">CANTINE PRO</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-6">Table avec Bancs Intégrés</h2>
+          
+          <p class="text-stone-600 leading-relaxed mb-8 border-l-4 border-[#1c1917] pl-6">
+            Tables de cantine professionnelles conçues pour un usage intensif quotidien dans les espaces de restauration collective. Construction robuste avec châssis en tube d'acier et plateau en stratifié haute résistance. Optimisez vos espaces de restauration d'entreprise, cantines scolaires, restaurants d'usine et réfectoires.
+          </p>
+
+          <div class="mb-10">
+            <h3 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">Configuration</h3>
+            <div class="flex justify-between items-center group cursor-default p-3 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+              <div>
+                <span class="block font-bold text-stone-900">Modèle Monobloc</span>
+                <span class="text-sm text-stone-500">Table + Assises solidaires pour optimisation d'espace</span>
+              </div>
+              <span class="text-[#8b8b4b] font-bold">Standard</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="px-8 py-4 bg-[#1c1917] text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all text-center">
+              Demander un Devis
+            </a>
+            <div class="flex items-center justify-center gap-2 text-sm text-stone-500">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              Disponible sur commande
+            </div>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="relative overflow-hidden">
+      <img src={images[1]} alt="Construction Robuste Table Cantine" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-stone-50">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">QUALITÉ</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Construction Robuste pour Usage Intensif</h2>
+      <p class="text-stone-600 leading-relaxed mb-6">Nos tables de cantine sont fabriquées selon standards de restauration collective professionnelle. Le châssis en tube d'acier robuste garantit stabilité et résistance aux sollicitations quotidiennes intenses. La structure soudée assure une rigidité maximale.</p>
+      
+      <div class="space-y-6">
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Plateau Haute Performance</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Plateau en stratifié ou mélamine résistant aux taches, aux chocs et à la chaleur modérée. Surface lisse facilitant le nettoyage rapide entre les services.</p>
+        </div>
+        <div class="border-b border-stone-200 pb-6">
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Finition Époxy</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Peinture époxy-polyester haute résistance protégeant la structure métallique contre la corrosion, les rayures et les chocs répétés.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Entretien Simplifié</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Pas de joints ou recoins difficiles d'accès. Surface non poreuse n'absorbant ni liquides ni odeurs pour une hygiène irréprochable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">TECHNIQUE</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Caractéristiques Standard</h2>
+          <p class="text-stone-400 leading-relaxed mb-8">Tout est pensé pour la durabilité et la facilité d'usage dans les environnements collectifs.</p>
+          
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3 text-stone-300">
+              <span class="text-[#8b8b4b] font-bold">✓</span>
+              <span>Châssis tube d'acier robuste pour stabilité maximale</span>
+            </li>
+            <li class="flex items-start gap-3 text-stone-300">
+              <span class="text-[#8b8b4b] font-bold">✓</span>
+              <span>Peinture époxy-polyester haute résistance aux chocs</span>
+            </li>
+            <li class="flex items-start gap-3 text-stone-300">
+              <span class="text-[#8b8b4b] font-bold">✓</span>
+              <span>Plateau stratifié ou mélamine facile à nettoyer</span>
+            </li>
+            <li class="flex items-start gap-3 text-stone-300">
+              <span class="text-[#8b8b4b] font-bold">✓</span>
+              <span>Protections pieds en PVC évitant rayures et bruit</span>
+            </li>
+            <li class="flex items-start gap-3 text-stone-300">
+              <span class="text-[#8b8b4b] font-bold">✓</span>
+              <span>Structure soudée garantissant rigidité long terme</span>
+            </li>
+            <li class="flex items-start gap-3 text-stone-300">
+              <span class="text-[#8b8b4b] font-bold">✓</span>
+              <span>Bancs intégrés optimisant l'utilisation de l'espace</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h3 class="text-xl font-bold text-white mb-6 border-b border-stone-600 pb-4">Avantages Clés</h3>
+          
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-[#8b8b4b] font-bold mb-2">Optimisation de l'Espace</h4>
+              <p class="text-stone-400 text-sm">Configuration avec bancs intégrés maximise capacité d'accueil. Plus besoin de gérer sièges séparés : tout est intégré dans structure compacte.</p>
+            </div>
+            <div>
+              <h4 class="text-[#8b8b4b] font-bold mb-2">Robustesse et Longévité</h4>
+              <p class="text-stone-400 text-sm">Investissement rentable à long terme. Structure soudée élimine points faibles des assemblages boulonnés.</p>
+            </div>
+            <div>
+              <h4 class="text-[#8b8b4b] font-bold mb-2">Personnalisation</h4>
+              <p class="text-stone-400 text-sm">Large gamme de coloris disponible pour châssis métallique et plateau selon identité visuelle de votre établissement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">SECTEURS</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">Applications Professionnelles</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">Solutions adaptées pour tous les lieux de restauration collective.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Cantines d'Entreprise</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Confort et durabilité pour collaborateurs. Configuration avec bancs intégrés optimise espace disponible tout en créant ambiance conviviale propice aux pauses déjeuner.</p>
+        </div>
+
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Établissements Scolaires</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Écoles, collèges et lycées nécessitent mobilier résistant à usage par centaines d'élèves. Structure soudée évite tout risque de basculement accidentel.</p>
+        </div>
+
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Restaurants et Snacks</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Design fonctionnel facilite circulation et service. Facilité de nettoyage essentielle pour rotation clientèle optimale et maintien standards d'hygiène élevés.</p>
+        </div>
+
+        <div class="bg-white p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+          <h3 class="text-xl font-bold text-stone-900 mb-3">Usines et Sites Industriels</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Réfectoires de sites industriels nécessitent mobilier particulièrement robuste. Nos tables supportent environnements exigeants avec nombreux collaborateurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-2xl font-bold text-stone-900 mb-12">Équipement Complémentaire</h2>
+      <p class="text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto">Complétez l'aménagement de vos espaces collectifs avec notre gamme complète.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="/industrie/casiers-vestiaire" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Casiers Vestiaire</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Vestiaires métalliques pour effets personnels.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les casiers →</span>
+        </a>
+
+        <a href="/industrie/armoires-rangement" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Armoires Rangement</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Solutions de stockage sécurisées.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les armoires →</span>
+        </a>
+
+        <a href="/mobilier-industriel" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Mobilier Industriel</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Gamme complète pour espaces professionnels.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir la gamme →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Questions Fréquentes</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Peut-on personnaliser les couleurs ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Oui, large choix de coloris disponible pour châssis et plateau selon identité visuelle.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Le plateau résiste-t-il aux produits de nettoyage ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Oui, stratifié et structure époxy résistent aux détergents standards de restauration collective.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Quelle est la capacité par table ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Configuration bancs intégrés accueille généralement 6 à 8 personnes selon modèle.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Livrez-vous dans tout le Maroc ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Livraison à Casablanca, Rabat, Tanger et Marrakech. Pour autres destinations, contactez notre service commercial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AmCTA />
 </Layout>
 
-<style>
-  .hero {
-    width: 100%;
-    height: 50vh;
-    min-height: 400px;
-  }
-
-  .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .product {
-    padding: 100px 0;
-  }
-
-  .product__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .product__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .product__gallery {
-    position: relative;
-  }
-
-  .product__main {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-  }
-
-  .product__main img {
-    max-width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-  }
-
-  .product__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #a8a29e;
-    transition: color 0.3s ease;
-  }
-
-  .product__arrow:hover {
-    color: #1c1917;
-  }
-
-  .product__arrow--left {
-    left: 0;
-  }
-
-  .product__arrow--right {
-    right: 0;
-  }
-
-  .product__arrow svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .product__thumbs {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 30px;
-  }
-
-  .product__thumb {
-    width: 80px;
-    height: 80px;
-    padding: 10px;
-    border: 1px solid #e7e5e4;
-    background: white;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-  }
-
-  .product__thumb:hover,
-  .product__thumb.active {
-    border-color: #8b8b4b;
-  }
-
-  .product__thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .product__info {
-    padding-top: 40px;
-  }
-
-  .product__title {
-    font-size: 42px;
-    font-weight: 700;
-    color: #1c1917;
-  }
-
-  .product__desc {
-    font-size: 15px;
-    color: #78716c;
-    line-height: 1.8;
-    margin-top: 25px;
-  }
-
-  .product__version {
-    margin-top: 40px;
-  }
-
-  .product__version-label {
-    display: block;
-    font-size: 12px;
-    color: #a8a29e;
-    margin-bottom: 8px;
-  }
-
-  .product__version-name {
-    font-size: 14px;
-    color: #1c1917;
-  }
-
-  .product__btn {
-    display: inline-block;
-    padding: 16px 40px;
-    background-color: #8b8b4b;
-    color: white;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-    margin-top: 40px;
-    transition: opacity 0.3s ease;
-  }
-
-  .product__btn:hover {
-    opacity: 0.9;
-  }
-
-  .features {
-    padding: 80px 0;
-    border-top: 1px solid #e7e5e4;
-  }
-
-  .features__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .features__title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1c1917;
-    margin-bottom: 30px;
-  }
-
-  .features__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .features__list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 14px;
-    color: #57534e;
-    line-height: 1.8;
-    margin-bottom: 12px;
-  }
-
-  .features__list li span {
-    color: #8b8b4b;
-    font-weight: 600;
-  }
-
-  .colors {
-    padding: 80px 0;
-    border-top: 1px solid #e7e5e4;
-  }
-
-  .colors__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .colors__title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1c1917;
-    margin-bottom: 20px;
-  }
-
-  .colors__desc {
-    font-size: 14px;
-    color: #78716c;
-    line-height: 1.7;
-    margin-bottom: 30px;
-  }
-
-  .colors__image {
-    max-width: 100%;
-  }
-
-  @media (max-width: 900px) {
-    .product__container,
-    .features__container,
-    .colors__container {
-      padding: 0 30px;
-    }
-
-    .product__grid {
-      grid-template-columns: 1fr;
-      gap: 50px;
-    }
-
-    .product {
-      padding: 60px 0;
-    }
-
-    .product__title {
-      font-size: 32px;
-    }
-
-    .product__thumbs {
-      gap: 10px;
-    }
-
-    .product__thumb {
-      width: 60px;
-      height: 60px;
-      padding: 8px;
-    }
-  }
-</style>
-
 <script define:vars={{ images }}>
-  let currentIndex = 0;
-  const allImages = images;
-
   const mainImage = document.getElementById('mainImage');
+  const thumbs = document.querySelectorAll('.thumb-btn');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  const thumbs = document.querySelectorAll('.product__thumb');
+  
+  let currentIndex = 0;
 
   function updateImage(index) {
+    // Fade out
+    mainImage.style.opacity = '0';
+    
+    setTimeout(() => {
+      mainImage.src = images[index];
+      // Fade in
+      mainImage.style.opacity = '1';
+    }, 150);
+
+    thumbs.forEach(t => t.classList.remove('border-[#8b8b4b]'));
+    thumbs.forEach(t => t.classList.add('border-stone-200'));
+    
+    thumbs[index].classList.remove('border-stone-200');
+    thumbs[index].classList.add('border-[#8b8b4b]');
+    
     currentIndex = index;
-    if (mainImage) {
-      mainImage.src = allImages[index];
-    }
-    thumbs.forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === index);
-    });
   }
 
+  thumbs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = parseInt(btn.getAttribute('data-index'));
+      updateImage(index);
+    });
+  });
+
   prevBtn?.addEventListener('click', () => {
-    const newIndex = currentIndex === 0 ? allImages.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     updateImage(newIndex);
   });
 
   nextBtn?.addEventListener('click', () => {
-    const newIndex = currentIndex === allImages.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
     updateImage(newIndex);
-  });
-
-  thumbs.forEach((thumb, i) => {
-    thumb.addEventListener('click', () => {
-      updateImage(i);
-    });
   });
 </script>

@@ -1,0 +1,377 @@
+---
+// pages/reunion/tables.astro
+import Layout from '../../layouts/Layout.astro';
+import AmCTA from '../../components/AmCTA.astro';
+
+const images = [
+  "/reunion/mt1.jpg",
+  "/reunion/mt2.jpg",
+  "/reunion/mt3.jpg",
+  "/reunion/mt-hero.jpg"
+];
+
+const rectangularSizes = [
+  { size: "200 cm", cap: "6-8 personnes" },
+  { size: "240 cm", cap: "8-10 personnes (Standard)" },
+  { size: "280 cm", cap: "10-12 personnes" },
+  { size: "320 cm", cap: "12-14 personnes" },
+];
+
+const roundSizes = [
+  { size: "Ø 100 cm", cap: "3-4 personnes" },
+  { size: "Ø 120 cm", cap: "4-5 personnes" },
+  { size: "Ø 140 cm", cap: "5-6 personnes" },
+  { size: "Ø 160 cm", cap: "6-7 personnes" },
+];
+---
+
+<Layout 
+  title="Table de Réunion Professionnelles | 6-12 Personnes - KWESK" 
+  description="Tables de réunion professionnelles 6-12 personnes. Rectangulaires, rondes, ovales. Plateau mélaminé 25mm, passe-câbles intégré. Design moderne."
+>
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={images[3]} alt="Tables de Réunion Professionnelles" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-3xl">
+        <a href="/salles-reunion" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+          ← Retour aux Salles de Réunion
+        </a>
+        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">ESPACES DE COLLABORATION</span>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Tables de Réunion Professionnelles</h1>
+        <p class="text-lg text-stone-300 leading-relaxed mb-8">Design professionnel et élégant pour vos espaces de collaboration. Tables de réunion pour 6 à 12 personnes, idéales pour salles de réunion, open spaces et bureaux collaboratifs.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis Gratuit</a>
+          <a href="#product" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Découvrir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">6-14 Pers</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Capacité</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">25 mm</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Épaisseur Plateau</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">5 Ans</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Garantie</span>
+        </div>
+        <div>
+          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">ISO/EN</span>
+          <span class="text-xs text-stone-400 uppercase tracking-wider">Certifié BIFMA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white" id="product">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <div class="flex flex-col gap-6">
+          <div class="relative bg-stone-50 border border-stone-200 aspect-[4/3] flex items-center justify-center overflow-hidden group">
+            <button id="prevBtn" class="absolute left-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            
+            <img id="mainImage" src={images[0]} alt="Table de Réunion Rectangulaire" class="w-full h-full object-cover transition-opacity duration-300" />
+            
+            <button id="nextBtn" class="absolute right-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-4 gap-4">
+            {images.map((img, i) => (
+              <button 
+                class={`thumb-btn aspect-square border bg-stone-50 flex items-center justify-center p-1 transition-all hover:border-[#8b8b4b] ${i === 0 ? 'border-[#8b8b4b]' : 'border-stone-200'}`}
+                data-index={i}
+              >
+                <img src={img} alt={`Vue ${i+1}`} class="w-full h-full object-cover" />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">GAMME PROFESSIONNELLE</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-6">Tables de Réunion</h2>
+          
+          <p class="text-stone-600 leading-relaxed mb-8 border-l-4 border-[#1c1917] pl-6">
+            Table de réunion pour 6 à 12 personnes selon dimensions choisies. Le plateau en mélaminé épaisseur 25mm offre une surface de travail adaptée aux réunions professionnelles. Structure métallique assure stabilité. Passe-câbles central intégré facilite connexion équipements.
+          </p>
+
+          <div class="mb-10">
+            <h3 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">Formats Disponibles</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center group cursor-default p-3 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+                <div>
+                  <span class="block font-bold text-stone-900">Rectangulaire</span>
+                  <span class="text-sm text-stone-500">Pour réunions structurées (6-14 pers)</span>
+                </div>
+                <span class="text-[#8b8b4b]">Standard</span>
+              </div>
+              <div class="flex justify-between items-center group cursor-default p-3 border border-stone-200 hover:border-[#8b8b4b] transition-all">
+                <div>
+                  <span class="block font-bold text-stone-900">Ronde / Ovale</span>
+                  <span class="text-sm text-stone-500">Pour échanges égalitaires (3-7 pers)</span>
+                </div>
+                <span class="text-[#8b8b4b]">Collaboratif</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="px-8 py-4 bg-[#1c1917] text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all text-center">
+              Demander un Devis
+            </a>
+            <div class="flex items-center justify-center gap-2 text-sm text-stone-500">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              En stock
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-xl font-bold text-stone-900 mb-4 uppercase">Table Rectangulaire</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Pour 6 à 12 personnes. Répond aux besoins de la majorité des salles de réunion professionnelles. Format rectangulaire permet installation le long des murs ou au centre de salle.</p>
+          <ul class="text-sm text-stone-600 space-y-2">
+            <li>• Passe-câbles central intégré</li>
+            <li>• Structure métallique stable</li>
+            <li>• Dimensions standard: 240x120 cm</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-stone-900 mb-4 uppercase">Table Ronde</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Favorisant les échanges égalitaires. Parfaite pour les réunions créatives et les brainstormings. Crée une dynamique collaborative sans hiérarchie spatiale.</p>
+          <ul class="text-sm text-stone-600 space-y-2">
+            <li>• Pied central en acier</li>
+            <li>• Diamètre 100 à 160 cm</li>
+            <li>• Option prise électrique centrale</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-stone-900 mb-4 uppercase">Table Ovale</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Combine avantages du format rectangulaire et de la table ronde. Offre capacité d'accueil du rectangulaire avec dynamique collaborative de la ronde. Convient particulièrement aux salles de réunion direction.</p>
+          <ul class="text-sm text-stone-600 space-y-2">
+            <li>• Adoucit les angles</li>
+            <li>• Efficacité spatiale</li>
+            <li>• Design élégant</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">DIMENSIONS</span>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Guide de Capacité</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">Capacité indiquée représente nombre de personnes assises confortablement.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div>
+          <h3 class="text-lg font-bold text-[#8b8b4b] uppercase mb-6 border-b border-stone-700 pb-2">Tables Rectangulaires</h3>
+          <div class="space-y-4">
+            {rectangularSizes.map((item) => (
+              <div class="flex justify-between items-center py-3 border-b border-stone-800">
+                <span class="font-bold text-lg">{item.size}</span>
+                <span class="text-stone-400 text-sm">{item.cap}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-[#8b8b4b] uppercase mb-6 border-b border-stone-700 pb-2">Tables Rondes</h3>
+          <div class="space-y-4">
+            {roundSizes.map((item) => (
+              <div class="flex justify-between items-center py-3 border-b border-stone-800">
+                <span class="font-bold text-lg">{item.size}</span>
+                <span class="text-stone-400 text-sm">{item.cap}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white order-2 lg:order-1">
+      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">QUALITÉ</span>
+      <h2 class="text-3xl font-bold text-stone-900 mb-6">Caract&eacute;ristiques Techniques</h2>
+      <p class="text-stone-600 leading-relaxed mb-8">Design professionnel et élégant caractérisant nos tables de réunion.</p>
+      
+      <div class="space-y-6">
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Plateau Mélaminé 25mm</h3>
+          <p class="text-sm text-stone-600">Offre rigidité nécessaire pour grandes dimensions sans affaissement. Surface résistante à usage professionnel intensif.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Structure Métallique</h3>
+          <p class="text-sm text-stone-600">Garantit maintien stable même pour grandes dimensions de 240-320 cm. Supporte poids du plateau et équipements.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Passe-Câbles Intégré</h3>
+          <p class="text-sm text-stone-600">Central intégré dans tables rectangulaires. Permet passage discret des câbles électriques et réseau.</p>
+        </div>
+        <div class="border-l-4 border-[#8b8b4b] pl-6">
+          <h3 class="font-bold text-stone-900 mb-2">Options de Personnalisation</h3>
+          <p class="text-sm text-stone-600">Plateau en verre trempé, boîtier de connectique, pieds chromés pour une finition haut de gamme.</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative overflow-hidden order-1 lg:order-2">
+      <img src={images[2]} alt="Détails Table de Réunion" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">APPLICATIONS</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">Pour Tous Vos Espaces</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-2">Salles de Direction</h3>
+          <p class="text-sm text-stone-600">Format rectangulaire 280-320 cm pour conseils d'administration. Option plateau verre et pieds chromés pour le prestige.</p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-2">Open Spaces</h3>
+          <p class="text-sm text-stone-600">Format rectangulaire 200-240 cm permet réunions d'équipe sans monopoliser espace. S'harmonise avec mobilier bureau moderne.</p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-2">Bureaux Collaboratifs</h3>
+          <p class="text-sm text-stone-600">Format ronde favorise échanges informels et brainstormings créatifs. Dimensions modulables.</p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200">
+          <h3 class="text-xl font-bold text-stone-900 mb-2">Conférences</h3>
+          <p class="text-sm text-stone-600">Pour présentations et formations. Structure stable supporte matériel audiovisuel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center">
+      <h2 class="text-2xl font-bold text-stone-900 mb-12">Aménagement Complet</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="/reunion/rangement" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Rangements</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Armoire basse métallique et rangements muraux.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les rangements →</span>
+        </a>
+
+        <a href="/gamma" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Chaises Gamma</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Certifiées BIFMA et EN 1335, confort optimal pour réunions.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir Gamma →</span>
+        </a>
+
+        <a href="/exclusive" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Chaises Exclusive</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Pour salles de réunion direction avec tables haut de gamme.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir Exclusive →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Questions Fréquentes</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Quelle taille pour 8 personnes ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Rectangulaire 240x120 cm (standard). Ronde 140-160 cm diamètre.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Ronde ou Rectangulaire ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Rectangulaire pour réunions structurées et optimisation d'espace. Ronde pour brainstormings et participation égale.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Options de connectique ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Passe-câbles central intégré en standard. Option boîtier de connectique (prises + réseau) disponible.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Installation nécessaire ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Tables arrivent assemblées. Installation consiste à positionner la table. Aucun assemblage complexe requis.</p>
+        </div>
+        <div class="bg-stone-800 p-8 border border-stone-700">
+          <h4 class="font-bold text-white mb-3">Garantie ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Garantie 5 ans couvre plateau mélaminé et structure métallique contre défauts de fabrication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AmCTA />
+</Layout>
+
+<script define:vars={{ images }}>
+  const mainImage = document.getElementById('mainImage');
+  const thumbs = document.querySelectorAll('.thumb-btn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  let currentIndex = 0;
+
+  function updateImage(index) {
+    mainImage.style.opacity = '0';
+    setTimeout(() => {
+      mainImage.src = images[index];
+      mainImage.style.opacity = '1';
+    }, 150);
+
+    thumbs.forEach(t => t.classList.remove('border-[#8b8b4b]'));
+    thumbs.forEach(t => t.classList.add('border-stone-200'));
+    thumbs[index].classList.remove('border-stone-200');
+    thumbs[index].classList.add('border-[#8b8b4b]');
+    currentIndex = index;
+  }
+
+  thumbs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = parseInt(btn.getAttribute('data-index'));
+      updateImage(index);
+    });
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    updateImage(newIndex);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    updateImage(newIndex);
+  });
+</script>

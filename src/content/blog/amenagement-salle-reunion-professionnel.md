@@ -63,7 +63,7 @@ La disposition de votre salle doit répondre à vos besoins spécifiques. Voici 
 
 **Solutions modulables** : Pour les entreprises en croissance ou celles qui organisent différents types de réunions, les [tables modulables permettent d'adapter la configuration selon les besoins](https://www.francebureau.com/actualites/p-blog-comment-amenager-espace-reunion.html). Cette flexibilité devient un atout majeur dans un contexte de travail hybride.
 
-Découvrez notre gamme de [tables de réunion professionnelles](https://kwesk.ma/reunion/tables) conçues pour s'adapter à toutes les configurations.
+Découvrez notre gamme de [tables de réunion professionnelles](https://kwesk.ma/reunion/table-de-reunion) conçues pour s'adapter à toutes les configurations.
 
 ## **Choix du mobilier : critères techniques et ergonomiques**
 
