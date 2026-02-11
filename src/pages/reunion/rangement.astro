@@ -9,12 +9,6 @@ const images = [
   "/reunion/r3.jpg",
   "/reunion/r-hero.jpg"
 ];
-
-const variants = [
-  { name: "STANDARD", desc: "Portes Coulissantes - 120x45x75 cm" },
-  { name: "OPTION TOP", desc: "Avec Plateau de Finition Mélaminé" },
-  { name: "OPTION PORTES", desc: "Portes Battantes sur demande" }
-];
 ---
 
 <Layout 
@@ -24,302 +18,345 @@ const variants = [
   <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
     <div class="absolute inset-0">
       <img src={images[3]} alt="Armoire Basse Métallique Rangement Bureau" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/95 via-stone-900/80 to-stone-900/40"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
-      <div class="max-w-3xl">
-        <a href="/reunion/rangement" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:underline">
+      <div class="max-w-4xl">
+        <a href="/reunion/rangement" class="inline-flex items-center gap-2 text-[#8b8b4b] text-sm mb-6 hover:text-white transition-colors font-medium">
           ← Retour aux Rangements
         </a>
-        <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">RANGEMENT PROFESSIONNEL</span>
-        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Armoire Basse Métallique Rangement Bureau</h1>
-        <p class="text-lg text-stone-300 leading-relaxed mb-8">Rangement professionnel accessible et pratique. Armoire basse de rangement, parfaite pour un accès facile aux documents fréquemment utilisés. Peut servir de crédence ou de desserte dans vos espaces professionnels.</p>
+        <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-4">Armoire Basse Métallique Rangement Bureau</h1>
+        <p class="text-xl text-[#8b8b4b] font-medium mb-6 tracking-wide">Rangement Professionnel Accessible et Pratique</p>
+        
+        <div class="text-lg text-stone-300 leading-relaxed mb-10 space-y-4 max-w-2xl">
+            <p>Armoire basse de rangement, parfaite pour un accès facile aux documents fréquemment utilisés. Cette armoire basse métallique peut servir de crédence ou de desserte dans vos espaces professionnels.</p>
+        </div>
+        
         <div class="flex flex-wrap gap-4">
-          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis Gratuit</a>
-          <a href="#product" class="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Découvrir</a>
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1c1917] transition-all rounded-sm shadow-lg">Demander un Devis Gratuit</a>
+          <a href="#product" class="px-8 py-4 bg-transparent border-2 border-stone-600 text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1c1917] hover:border-white transition-all rounded-sm">Découvrir</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bg-stone-900 py-8">
+  <section class="py-24 bg-white" id="product">
     <div class="max-w-7xl mx-auto px-6 lg:px-16">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">0.8 mm</span>
-          <span class="text-xs text-stone-400 uppercase tracking-wider">Structure Acier</span>
-        </div>
-        <div>
-          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Coulissant</span>
-          <span class="text-xs text-stone-400 uppercase tracking-wider">Système Portes</span>
-        </div>
-        <div>
-          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">120 cm</span>
-          <span class="text-xs text-stone-400 uppercase tracking-wider">Largeur Standard</span>
-        </div>
-        <div>
-          <span class="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">Sécurisé</span>
-          <span class="text-xs text-stone-400 uppercase tracking-wider">Serrure à Clé</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-white" id="product">
-    <div class="max-w-7xl mx-auto px-6 lg:px-16">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         
-        <div class="flex flex-col gap-6">
-          <div class="relative bg-stone-50 border border-stone-200 aspect-[4/3] flex items-center justify-center overflow-hidden group">
-            <button id="prevBtn" class="absolute left-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Previous">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-            </button>
-            
-            <img id="mainImage" src={images[0]} alt="Armoire basse métallique" class="w-full h-full object-cover transition-opacity duration-300" />
-            
-            <button id="nextBtn" class="absolute right-4 z-10 w-10 h-10 bg-white/80 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-sm transition-all opacity-0 group-hover:opacity-100" aria-label="Next">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </button>
-          </div>
-          
-          <div class="grid grid-cols-4 gap-4">
-            {images.map((img, i) => (
-              <button 
-                class={`thumb-btn aspect-square border bg-stone-50 flex items-center justify-center p-1 transition-all hover:border-[#8b8b4b] ${i === 0 ? 'border-[#8b8b4b]' : 'border-stone-200'}`}
-                data-index={i}
-              >
-                <img src={img} alt={`Vue ${i+1}`} class="w-full h-full object-cover" />
-              </button>
-            ))}
-          </div>
+        <div class="flex flex-col gap-6 sticky top-24">
+            <div class="relative bg-stone-50 border border-stone-100 aspect-[4/3] flex items-center justify-center overflow-hidden group shadow-md">
+                <img id="mainImage" src={images[0]} alt="Armoire basse métallique" class="w-full h-full object-cover" />
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+                {images.map((img, i) => (
+                <button class="thumb-btn aspect-square border-2 border-transparent bg-stone-50 p-1 hover:border-[#8b8b4b] transition-all" data-index={i}>
+                    <img src={img} alt={`Vue ${i+1}`} class="w-full h-full object-cover" />
+                </button>
+                ))}
+            </div>
         </div>
-
+        
         <div class="flex flex-col justify-center">
-          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">RANGEMENT BUREAU</span>
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-6">Armoire Basse Métallique</h2>
-          
-          <p class="text-stone-600 leading-relaxed mb-8 border-l-4 border-[#1c1917] pl-6">
-            Armoire basse métallique supportant un usage quotidien dans les environnements de bureau grâce à sa structure acier. L'épaisseur de 0.8mm représente le standard professionnel. Dimensions 120x45x75 cm offrant une capacité pour rangement de documents fréquemment utilisés avec 2 étagères réglables.
-          </p>
-
-          <div class="mb-10">
-            <h3 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">Configurations</h3>
-            <div class="space-y-3">
-              {variants.map((v, index) => (
-                <div class={`flex justify-between items-center group cursor-default p-3 border hover:border-[#8b8b4b] transition-all ${index === 0 ? 'border-stone-400 bg-stone-50' : 'border-stone-200'}`}>
-                  <div>
-                    <span class="block font-bold text-stone-900">{v.name}</span>
-                    <span class="text-sm text-stone-500">{v.desc}</span>
-                  </div>
-                  {index === 0 && <span class="text-[#8b8b4b] font-bold text-xs uppercase">Recommandé</span>}
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-10 pb-4 border-b border-stone-200">Caractéristiques Armoire Basse Métallique</h2>
+            
+            <div class="space-y-10">
+                <div>
+                    <h3 class="text-xl font-bold text-[#1c1917] mb-3 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-[#8b8b4b] block"></span>
+                        Structure en Acier Épaisseur 0.8mm
+                    </h3>
+                    <div class="text-stone-600 leading-relaxed space-y-3 pl-5">
+                        <p>Structure en acier épaisseur 0.8mm assurant stabilité de l'armoire basse. L'acier de 0.8mm d'épaisseur offre construction solide pour usage professionnel. Cette structure métallique garantit maintien stable du rangement dans le temps.</p>
+                        <p>L'armoire basse métallique supporte usage quotidien dans environnements bureau grâce à structure acier. L'épaisseur de 0.8mm représente standard professionnel pour armoires de rangement bureau.</p>
+                    </div>
                 </div>
-              ))}
-            </div>
-          </div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/contact" class="px-8 py-4 bg-[#1c1917] text-white text-sm font-semibold uppercase tracking-wider hover:bg-[#8b8b4b] transition-all text-center">
-              Demander un Devis
-            </a>
-            <div class="flex items-center justify-center gap-2 text-sm text-stone-500">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span>
-              En stock
+                <div>
+                    <h3 class="text-xl font-bold text-[#1c1917] mb-3 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-[#8b8b4b] block"></span>
+                        Portes Coulissantes
+                    </h3>
+                    <div class="text-stone-600 leading-relaxed space-y-3 pl-5">
+                        <p>Portes coulissantes équipant cette armoire basse. Le système de portes coulissantes permet accès au rangement sans débordement dans l'espace. Les portes coulissantes libèrent espace devant l'armoire basse, contrairement aux portes battantes nécessitant dégagement.</p>
+                        <p>Cette caractéristique rend l'armoire basse métallique particulièrement adaptée aux emplacements le long d'un mur ou dans espaces restreints. Les portes coulissantes facilitent utilisation quotidienne du rangement bureau.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-[#1c1917] mb-3 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-[#8b8b4b] block"></span>
+                        2 Étagères Réglables
+                    </h3>
+                    <div class="text-stone-600 leading-relaxed space-y-3 pl-5">
+                        <p>2 étagères réglables à l'intérieur de l'armoire basse. Les étagères réglables permettent adaptation hauteur selon objets à ranger. Cette modularité des étagères offre flexibilité dans organisation du rangement.</p>
+                        <p>Les 2 étagères réglables acceptent différentes hauteurs de dossiers et documents. Chaque étagère supporte poids des archives et fournitures bureau grâce à construction métallique.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-[#1c1917] mb-3 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-[#8b8b4b] block"></span>
+                        Serrure à Clé
+                    </h3>
+                    <div class="text-stone-600 leading-relaxed space-y-3 pl-5">
+                        <p>Serrure à clé équipant l'armoire basse métallique. La serrure à clé sécurise contenu du rangement bureau. Ce système de fermeture protège documents et fournitures stockés dans l'armoire basse.</p>
+                        <p>La serrure permet contrôle d'accès au rangement, essentiel pour documents professionnels. L'armoire basse avec serrure convient aux environnements nécessitant confidentialité.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-
       </div>
+
     </div>
   </section>
 
-  <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-    <div class="flex flex-col justify-center p-12 lg:p-20 bg-white order-2 lg:order-1">
-      <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">CARACTÉRISTIQUES</span>
-      <h2 class="text-3xl font-bold text-stone-900 mb-6">Conception Robuste & Fonctionnelle</h2>
-      <p class="text-stone-600 leading-relaxed mb-8">Conçue pour durer et faciliter l'organisation au quotidien.</p>
-      
-      <div class="space-y-6">
-        <div class="border-l-4 border-[#8b8b4b] pl-6">
-          <h3 class="font-bold text-stone-900 mb-2">Structure Acier 0.8mm</h3>
-          <p class="text-sm text-stone-600">Assurant stabilité et durabilité. Construction solide pour usage professionnel intensif, garantissant un maintien stable du rangement dans le temps.</p>
-        </div>
-        <div class="border-l-4 border-[#8b8b4b] pl-6">
-          <h3 class="font-bold text-stone-900 mb-2">Portes Coulissantes</h3>
-          <p class="text-sm text-stone-600">Permet l'accès au rangement sans débordement dans l'espace. Idéal pour les couloirs ou derrière un bureau.</p>
-        </div>
-        <div class="border-l-4 border-[#8b8b4b] pl-6">
-          <h3 class="font-bold text-stone-900 mb-2">2 Étagères Réglables</h3>
-          <p class="text-sm text-stone-600">Adaptation de la hauteur selon les objets à ranger. Modularité offrant flexibilité dans l'organisation (dossiers, boîtes, fournitures).</p>
-        </div>
-        <div class="border-l-4 border-[#8b8b4b] pl-6">
-          <h3 class="font-bold text-stone-900 mb-2">Serrure à Clé</h3>
-          <p class="text-sm text-stone-600">Sécurise le contenu pour protéger documents et fournitures. Contrôle d'accès essentiel pour la confidentialité.</p>
-        </div>
-      </div>
-    </div>
-    <div class="relative overflow-hidden order-1 lg:order-2">
-      <img src={images[1]} alt="Détails Armoire Basse" class="w-full h-full object-cover" />
-    </div>
-  </section>
-
-  <section class="py-20 bg-stone-900 text-white">
+  <section class="py-24 bg-stone-50 border-y border-stone-200">
     <div class="max-w-7xl mx-auto px-6 lg:px-16">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div>
-          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">USAGES</span>
-          <h2 class="text-3xl font-bold mb-8">Applications Rangement</h2>
-          
-          <div class="space-y-8">
-            <div>
-              <h3 class="text-xl font-bold text-white mb-2">Pour Salle de Réunion</h3>
-              <p class="text-stone-400 text-sm leading-relaxed">Rangement de documents et fournitures. Format basse de 75 cm maintient perspective visuelle. Peut servir de desserte pour équipements.</p>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-white mb-2">Comme Crédence Bureau</h3>
-              <p class="text-stone-400 text-sm leading-relaxed">Surface supplémentaire derrière ou à côté du bureau. Stocke documents actifs tout en libérant l'espace sur le bureau principal.</p>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-white mb-2">Séparateur d'Espace</h3>
-              <p class="text-stone-400 text-sm leading-relaxed">Sert de séparateur dans espaces ouverts. Hauteur de 75 cm maintient communication visuelle tout en délimitant les zones de travail.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-stone-800 p-10 border border-stone-700">
-          <h3 class="text-xl font-bold text-[#8b8b4b] mb-6 uppercase tracking-widest">Avantages Clés</h3>
-          <ul class="space-y-6">
-            <li class="flex gap-4">
-              <span class="text-2xl">⚡</span>
-              <div>
-                <h4 class="font-bold text-white">Accès Facile</h4>
-                <p class="text-stone-400 text-sm">Hauteur de 75 cm élimine besoin de se lever ou s'étirer. Documents actifs à portée immédiate.</p>
-              </div>
-            </li>
-            <li class="flex gap-4">
-              <span class="text-2xl">👁️</span>
-              <div>
-                <h4 class="font-bold text-white">Sans Obstruction Visuelle</h4>
-                <p class="text-stone-400 text-sm">Ne bloque pas les lignes de vue comme les armoires hautes. Maintient sensation d'ouverture.</p>
-              </div>
-            </li>
-            <li class="flex gap-4">
-              <span class="text-2xl">📐</span>
-              <div>
-                <h4 class="font-bold text-white">Gain d'Espace</h4>
-                <p class="text-stone-400 text-sm">Portes coulissantes économisent l'espace devant le meuble. Idéal pour les passages.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="py-20 bg-stone-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-16">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">Dimensions et Capacité</h2>
         
-        <div>
-          <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">PERSONNALISATION</span>
-          <h2 class="text-3xl font-bold text-stone-900 mb-6">Options Disponibles</h2>
-          <div class="space-y-4">
-            <div class="bg-white p-6 border-l-4 border-stone-900 shadow-sm">
-              <h3 class="font-bold text-stone-900">Option Plateau Mélaminé</h3>
-              <p class="text-sm text-stone-600 mt-2">Transforme le dessus de l'armoire en surface de travail utilisable ou décorative (finition bois ou unie).</p>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-10 shadow-sm border border-stone-100">
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-4 uppercase tracking-wider">Dimensions Standard</h3>
+                <div class="text-stone-600 leading-relaxed space-y-4">
+                    <p>Dimensions de l'armoire basse: 120x45x75 cm. Largeur de 120 cm offre capacité rangement substantielle. Profondeur de 45 cm permet installation le long murs sans empiéter excessivement dans espace. Hauteur de 75 cm caractérise format basse, facilitant accès contenu.</p>
+                    <p>Ces dimensions 120x45x75 cm correspondent à taille standard pour armoire basse de bureau professionnel. La hauteur de 75 cm maintient l'armoire en dessous niveau standard des bureaux, permettant utilisation comme crédence.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 border-l-4 border-stone-900 shadow-sm">
-              <h3 class="font-bold text-stone-900">Option Portes Battantes</h3>
-              <p class="text-sm text-stone-600 mt-2">Alternative aux portes coulissantes si le dégagement devant l'armoire le permet. Ouverture totale.</p>
+            <div class="bg-white p-10 shadow-sm border border-stone-100">
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-4 uppercase tracking-wider">Capacité de Rangement</h3>
+                <div class="text-stone-600 leading-relaxed space-y-4">
+                    <p>L'armoire basse métallique avec dimensions 120x45x75 cm offre capacité pour rangement documents fréquemment utilisés. Les 2 étagères réglables permettent organisation verticale du rangement sur hauteur de 75 cm.</p>
+                    <p>Format basse de 75 cm hauteur facilite accès rapide aux documents sans nécessiter manipulation en hauteur. Cette accessibilité rend l'armoire basse particulièrement pratique pour documents consultés régulièrement.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 border-l-4 border-stone-900 shadow-sm">
-              <h3 class="font-bold text-stone-900">Couleurs Personnalisées</h3>
-              <p class="text-sm text-stone-600 mt-2">Harmonisation avec le mobilier existant de votre salle de réunion ou bureau.</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">Options de Personnalisation</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-stone-50 p-8 border border-stone-100 hover:border-[#8b8b4b] transition-all group">
+                <h3 class="text-lg font-bold text-[#1c1917] mb-4 group-hover:text-[#8b8b4b] transition-colors">Option Plateau en Mélaminé</h3>
+                <div class="text-stone-600 text-sm leading-relaxed space-y-3">
+                    <p>Plateau en mélaminé disponible comme option pour cette armoire basse. Le plateau en mélaminé transforme dessus de l'armoire en surface utilisable. Cette option permet utilisation de l'armoire basse métallique comme crédence ou desserte.</p>
+                    <p>Le plateau mélaminé offre surface supplémentaire dans bureau ou salle de réunion. Cette personnalisation maximise fonctionnalité de l'armoire basse dans espace professionnel.</p>
+                </div>
             </div>
-          </div>
+            <div class="bg-stone-50 p-8 border border-stone-100 hover:border-[#8b8b4b] transition-all group">
+                <h3 class="text-lg font-bold text-[#1c1917] mb-4 group-hover:text-[#8b8b4b] transition-colors">Option Portes Battantes</h3>
+                <div class="text-stone-600 text-sm leading-relaxed space-y-3">
+                    <p>Portes battantes disponibles comme alternative aux portes coulissantes standard. Cette option de portes battantes convient aux emplacements où dégagement devant armoire basse est disponible.</p>
+                    <p>Les portes battantes offrent ouverture plus large pour accès simultané aux deux côtés du rangement. Le choix entre portes coulissantes et battantes dépend de configuration de votre espace bureau.</p>
+                </div>
+            </div>
+            <div class="bg-stone-50 p-8 border border-stone-100 hover:border-[#8b8b4b] transition-all group">
+                <h3 class="text-lg font-bold text-[#1c1917] mb-4 group-hover:text-[#8b8b4b] transition-colors">Couleurs Personnalisées</h3>
+                <div class="text-stone-600 text-sm leading-relaxed">
+                    <p>Couleurs personnalisées disponibles pour l'armoire basse métallique. Cette personnalisation permet harmonisation avec mobilier existant de votre salle de réunion ou bureau. Les options de couleurs concernent finition de la structure acier de l'armoire basse.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#1c1917] text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-16 text-center">Applications Rangement Bureau</h2>
+        
+        <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Pour Salle de Réunion</h3>
+                    <div class="text-[#d6d3d1] space-y-3 leading-relaxed">
+                        <p>L'armoire basse métallique équipe salles de réunion pour rangement de documents et fournitures. Format basse de 75 cm maintient perspective visuelle dans salle de réunion. Les portes coulissantes permettent installation le long murs de salle de réunion sans obstruer circulation.</p>
+                        <p>Cette armoire basse stocke documents de réunion, fournitures présentation et équipements fréquemment utilisés. L'accès facile du format basse facilite préparation et rangement pendant réunions.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Comme Crédence Bureau</h3>
+                    <div class="text-[#d6d3d1] space-y-3 leading-relaxed">
+                        <p>Peut servir de crédence dans bureau grâce à hauteur de 75 cm. Avec option plateau mélaminé, l'armoire basse métallique offre surface supplémentaire derrière ou à côté bureau. Cette utilisation comme crédence combine rangement et surface de travail additionnelle.</p>
+                        <p>L'armoire basse crédence stocke documents actifs tout en libérant espace sur bureau principal. Les portes coulissantes facilitent accès au rangement depuis position assise.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Comme Desserte</h3>
+                    <div class="text-[#d6d3d1] space-y-3 leading-relaxed">
+                        <p>Peut servir de desserte selon utilisation choisie. L'armoire basse avec plateau mélaminé fonctionne comme desserte pour équipements ou fournitures. Cette application desserte convient particulièrement en salle de réunion ou espace collectif.</p>
+                        <p>Format de 120x45x75 cm permet utilisation desserte sans encombrement excessif. La structure acier 0.8mm supporte poids d'équipements placés sur plateau.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Séparateur d'Espace</h3>
+                    <div class="text-[#d6d3d1] space-y-3 leading-relaxed">
+                        <p>L'armoire basse métallique sert de séparateur dans espaces ouverts. Hauteur de 75 cm maintient communication visuelle tout en délimitant zones. Cette utilisation séparateur combine rangement et organisation spatiale du bureau.</p>
+                        <p>Les portes coulissantes sur les deux faces permettent accès au rangement depuis zones séparées. L'armoire basse séparateur optimise utilisation d'espace dans configurations bureau ouvert.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        
+        <div class="mb-24">
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">Avantages Armoire Basse</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                    <h3 class="font-bold text-[#1c1917] mb-4 text-lg">Accès Facile aux Documents</h3>
+                    <div class="text-stone-600 text-sm leading-relaxed space-y-3">
+                        <p>Parfaite pour un accès facile aux documents fréquemment utilisés grâce au format basse. Hauteur de 75 cm élimine besoin de se lever ou étirer pour atteindre contenu. Cet accès facilité augmente efficacité dans utilisation quotidienne du rangement bureau.</p>
+                        <p>L'armoire basse maintient documents actifs à portée immédiate depuis position travail. Cette accessibilité distingue armoire basse des armoires hautes nécessitant manipulation en hauteur.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                    <h3 class="font-bold text-[#1c1917] mb-4 text-lg">Rangement Sans Obstruction Visuelle</h3>
+                    <div class="text-stone-600 text-sm leading-relaxed space-y-3">
+                        <p>Format basse de 75 cm préserve perspectives visuelles dans bureau ou salle de réunion. L'armoire basse métallique ne bloque pas lignes de vue comme armoires hautes. Cette caractéristique maintient sensation d'ouverture dans espaces professionnels.</p>
+                        <p>Le rangement basse convient particulièrement aux environnements privilégiant communication visuelle entre collaborateurs. Hauteur réduite permet installation dans davantage d'emplacements sans impact visuel négatif.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                    <h3 class="font-bold text-[#1c1917] mb-4 text-lg">Gain d'Espace avec Portes Coulissantes</h3>
+                    <div class="text-stone-600 text-sm leading-relaxed space-y-3">
+                        <p>Portes coulissantes de l'armoire basse économisent espace devant meuble. Sans débordement de portes battantes, l'armoire basse s'installe dans passages et espaces restreints. Ce gain d'espace maximise utilisation des mètres carrés bureau.</p>
+                        <p>Les portes coulissantes permettent placement de l'armoire basse plus près d'autres meubles ou murs. Cette optimisation d'espace aide configuration efficace du mobilier bureau.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                    <h3 class="font-bold text-[#1c1917] mb-4 text-lg">Sécurité du Rangement</h3>
+                    <div class="text-stone-600 text-sm leading-relaxed space-y-3">
+                        <p>Serrure à clé sécurise contenu de l'armoire basse métallique. Cette sécurisation protège documents confidentiels et fournitures de valeur. La serrure limite accès au rangement aux personnes autorisées.</p>
+                        <p>L'armoire basse avec serrure répond aux besoins de confidentialité dans bureaux partagés ou salles de réunion communes. La structure acier renforce sécurité physique du rangement.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="bg-white p-8 border border-stone-200">
-          <h3 class="text-xl font-bold text-stone-900 mb-6 border-b border-stone-200 pb-4">Guide de Choix : Basse vs Haute</h3>
-          <div class="mb-6">
-            <h4 class="font-bold text-[#8b8b4b] mb-2">Choisir Armoire Basse si :</h4>
-            <ul class="text-sm text-stone-600 space-y-2 list-disc pl-5">
-              <li>Documents fréquemment consultés (accès rapide).</li>
-              <li>Besoin de préserver les perspectives visuelles.</li>
-              <li>Utilisation comme crédence ou desserte envisagée.</li>
-              <li>Manipulation facile depuis une position assise.</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold text-stone-900 mb-2">Choisir Armoire Haute si :</h4>
-            <ul class="text-sm text-stone-600 space-y-2 list-disc pl-5">
-              <li>Maximiser la capacité de rangement vertical est prioritaire.</li>
-              <li>Stockage de grand volume d'archives.</li>
-              <li>La hauteur sous plafond doit être exploitée.</li>
-            </ul>
-          </div>
+        <div class="grid md:grid-cols-12 gap-12 border-t border-stone-200 pt-16">
+            <div class="md:col-span-8">
+                <h2 class="text-2xl font-bold text-[#1c1917] mb-8">Armoire Basse vs Armoire Haute</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-[#8b8b4b] mb-3 uppercase tracking-wide">Quand Choisir Armoire Basse</h3>
+                        <div class="text-stone-600 leading-relaxed space-y-3">
+                            <p>Choisir armoire basse pour documents fréquemment consultés nécessitant accès rapide. Format basse convient quand hauteur réduite préserve perspectives visuelles souhaitées. L'armoire basse s'impose quand utilisation comme crédence ou desserte est envisagée.</p>
+                            <p>Préférer armoire basse dans espaces où débordement portes coulissantes facilite utilisation quotidienne. Format 75 cm hauteur facilite manipulation depuis position assise.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-[#1c1917] mb-3 uppercase tracking-wide">Quand Choisir Armoire Haute</h3>
+                        <div class="text-stone-600 leading-relaxed space-y-3">
+                            <p>Armoire haute convient pour maximiser capacité rangement vertical. Choisir format haut quand stockage de grand volume de documents est prioritaire. Armoire haute utilise pleinement hauteur sous plafond pour rangement.</p>
+                            <p>Le choix entre armoire basse et haute dépend de fréquence d'accès aux documents et contraintes d'espace de votre bureau.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-4">
+                <div class="bg-[#1c1917] p-10 text-white h-full flex flex-col justify-center rounded-lg shadow-xl">
+                    <h2 class="text-2xl font-bold mb-6 text-[#8b8b4b]">Garantie 5 Ans</h2>
+                    <p class="leading-relaxed text-[#d6d3d1]">
+                        Garantie 5 ans fournie avec cette armoire basse métallique. Cette garantie couvre structure acier et mécanismes de portes coulissantes. La période de 5 ans démontre durabilité prévue pour usage professionnel de l'armoire basse.
+                    </p>
+                </div>
+            </div>
         </div>
 
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">Compléter Votre Rangement Salle de Réunion</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-stone-50 border border-stone-100 hover:border-[#8b8b4b] transition-all group">
+                <h3 class="font-bold text-xl mb-4 text-[#1c1917]">Tables de Réunion</h3>
+                <div class="text-stone-600 mb-6 leading-relaxed">
+                    <p>Complétez votre salle de réunion avec nos <a href="/reunion/tables" class="text-[#8b8b4b] underline font-bold hover:text-[#1c1917]">tables de réunion</a>. L'armoire basse métallique s'harmonise avec tables de réunion pour aménagement complet. Le rangement bureau et surfaces de réunion forment ensemble fonctionnel.</p>
+                </div>
+            </div>
+            <div class="p-8 bg-stone-50 border border-stone-100 hover:border-[#8b8b4b] transition-all group">
+                <h3 class="font-bold text-xl mb-4 text-[#1c1917]">Table de Réunion Ronde</h3>
+                <div class="text-stone-600 mb-6 leading-relaxed">
+                    <p>Notre <a href="/reunion/media" class="text-[#8b8b4b] underline font-bold hover:text-[#1c1917]">table de réunion ronde</a> favorise échanges égalitaires dans salle équipée de cette armoire basse. Le mobilier salle réunion intègre rangement et surfaces de travail collaboratif.</p>
+                </div>
+            </div>
+            <div class="p-8 bg-stone-50 border border-stone-100 hover:border-[#8b8b4b] transition-all group">
+                <h3 class="font-bold text-xl mb-4 text-[#1c1917]">Chaises Salle de Réunion</h3>
+                <div class="text-stone-600 mb-6 leading-relaxed space-y-2">
+                    <p>Équipez votre salle avec <a href="/gamma" class="text-[#8b8b4b] underline font-bold hover:text-[#1c1917]">chaises professionnelles GAMMA 150</a> certifiées BIFMA et EN 1335. L'armoire basse métallique complète aménagement avec <a href="/corpo-100" class="text-[#8b8b4b] underline font-bold hover:text-[#1c1917]">chaises CORPO 100</a> pour solution économique.</p>
+                    <p>Pour espaces direction, <a href="/exclusive" class="text-[#8b8b4b] underline font-bold hover:text-[#1c1917]">chaises EXCLUSIVE 500</a> accompagnent cette armoire basse dans configuration haut de gamme.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#1c1917]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Questions Fréquentes Armoire Basse</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-[#292524] p-8 rounded border border-[#44403c]">
+          <h4 class="font-bold text-white mb-4">Quelle est la capacité de rangement de l'armoire basse?</h4>
+          <p class="text-[#d6d3d1] leading-relaxed">L'armoire basse métallique dimensions 120x45x75 cm avec 2 étagères réglables offre capacité pour documents actifs et fournitures bureau fréquemment utilisées. Capacité dépend de configuration des étagères réglables selon hauteur objets rangés.</p>
+        </div>
+        <div class="bg-[#292524] p-8 rounded border border-[#44403c]">
+          <h4 class="font-bold text-white mb-4">Quelles dimensions choisir pour armoire basse?</h4>
+          <p class="text-[#d6d3d1] leading-relaxed">Ces dimensions 120x45x75 cm représentent taille standard pour armoire basse bureau professionnel. Largeur 120 cm offre capacité substantielle, profondeur 45 cm permet installation murale, hauteur 75 cm facilite accès.</p>
+        </div>
+        <div class="bg-[#292524] p-8 rounded border border-[#44403c]">
+          <h4 class="font-bold text-white mb-4">Portes coulissantes ou portes battantes?</h4>
+          <p class="text-[#d6d3d1] leading-relaxed">Portes coulissantes standard conviennent aux emplacements le long murs ou espaces restreints sans débordement. Option portes battantes disponible si dégagement devant armoire basse permet ouverture large pour accès simultané aux deux côtés.</p>
+        </div>
+        <div class="bg-[#292524] p-8 rounded border border-[#44403c]">
+          <h4 class="font-bold text-white mb-4">L'armoire basse est-elle compatible avec dossiers suspendus?</h4>
+          <p class="text-[#d6d3d1] leading-relaxed">Les 2 étagères réglables permettent adaptation configuration pour différents formats de rangement. Hauteur entre étagères ajustable selon besoins de stockage documents.</p>
+        </div>
+        <div class="bg-[#292524] p-8 rounded border border-[#44403c]">
+          <h4 class="font-bold text-white mb-4">Installation de l'armoire basse nécessaire?</h4>
+          <p class="text-[#d6d3d1] leading-relaxed">L'armoire basse métallique structure monobloc arrive prête à utilisation. Installation consiste à positionner l'armoire à emplacement choisi. Aucun assemblage complexe requis pour cette armoire basse.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="py-16 bg-white border-t border-stone-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center">
-      <h2 class="text-2xl font-bold text-stone-900 mb-12">Compléter Votre Rangement</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <a href="/reunion/tables" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
-          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Tables de Réunion</h3>
-          <p class="text-sm text-stone-600 leading-relaxed mb-4">L'armoire basse s'harmonise parfaitement avec nos tables pour un aménagement complet.</p>
-          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les tables →</span>
-        </a>
-
-        <a href="/reunion/media" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
-          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Table Ronde</h3>
-          <p class="text-sm text-stone-600 leading-relaxed mb-4">Favorise les échanges égalitaires dans une salle équipée de cette armoire basse.</p>
-          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les tables rondes →</span>
-        </a>
-
-        <a href="/gamma" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
-          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Chaises Gamma</h3>
-          <p class="text-sm text-stone-600 leading-relaxed mb-4">Chaises professionnelles certifiées BIFMA pour accompagner votre mobilier.</p>
-          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les chaises →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-stone-900">
-    <div class="max-w-7xl mx-auto px-6 lg:px-16">
-      <div class="text-center mb-16">
-        <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">FAQ</span>
-        <h2 class="text-3xl lg:text-4xl font-bold text-white">Questions Fréquentes</h2>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Quelle est la capacité de rangement ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Dimensions 120x45x75 cm avec 2 étagères réglables. Offre capacité pour documents actifs et fournitures bureau fréquemment utilisées.</p>
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-2xl font-bold text-[#1c1917] mb-4">KWESK Mobilier Professionnel</h2>
+        <p class="text-stone-600 mb-8 leading-relaxed">Leader du mobilier bureau depuis 2008, KWESK conçoit solutions pour espaces professionnels. Cette armoire basse métallique illustre notre engagement qualité pour mobilier salle réunion.</p>
+        
+        <div class="mb-8">
+            <span class="font-bold text-[#1c1917] block mb-3 uppercase tracking-widest text-sm">Certifications</span>
+            <ul class="flex justify-center gap-8 text-stone-600">
+                <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span>
+                    BIFMA 2011
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span>
+                    EN 1335 2016
+                </li>
+            </ul>
         </div>
-        <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Portes coulissantes ou battantes ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Portes coulissantes standard conviennent aux espaces restreints sans débordement. Option portes battantes disponible si dégagement suffisant.</p>
-        </div>
-        <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Compatible avec dossiers suspendus ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Les 2 étagères réglables permettent adaptation de la hauteur entre étagères pour différents formats de rangement.</p>
-        </div>
-        <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Installation nécessaire ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">L'armoire basse métallique structure monobloc arrive prête à l'utilisation. Aucun assemblage complexe requis.</p>
-        </div>
-        <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Garantie ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Garantie 5 ans fournie. Couvre structure acier et mécanismes de portes coulissantes.</p>
-        </div>
-      </div>
+        
+        <p class="text-stone-600">
+            Ces certifications attestent standards professionnels de notre mobilier. Découvrez nos <a href="/amenagement-de-bureau" class="text-[#8b8b4b] underline font-bold hover:text-[#1c1917]">solutions complètes d'aménagement de bureau</a>.
+        </p>
     </div>
   </section>
 
@@ -329,11 +366,7 @@ const variants = [
 <script define:vars={{ images }}>
   const mainImage = document.getElementById('mainImage');
   const thumbs = document.querySelectorAll('.thumb-btn');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
   
-  let currentIndex = 0;
-
   function updateImage(index) {
     mainImage.style.opacity = '0';
     setTimeout(() => {
@@ -342,10 +375,7 @@ const variants = [
     }, 150);
 
     thumbs.forEach(t => t.classList.remove('border-[#8b8b4b]'));
-    thumbs.forEach(t => t.classList.add('border-stone-200'));
-    thumbs[index].classList.remove('border-stone-200');
     thumbs[index].classList.add('border-[#8b8b4b]');
-    currentIndex = index;
   }
 
   thumbs.forEach((btn) => {
@@ -353,15 +383,5 @@ const variants = [
       const index = parseInt(btn.getAttribute('data-index'));
       updateImage(index);
     });
-  });
-
-  prevBtn?.addEventListener('click', () => {
-    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-    updateImage(newIndex);
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-    updateImage(newIndex);
   });
 </script>
