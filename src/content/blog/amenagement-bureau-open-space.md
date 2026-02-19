@@ -96,7 +96,7 @@ Pour les postes de direction intégrés à votre open space ou pour les managers
 
 Dans un environnement ouvert où plusieurs personnes partagent le même volume, le rangement joue un rôle crucial dans la lisibilité et le bon fonctionnement de l'espace. Les **caissons mobiles** sont la solution idéale pour chaque poste individuel : compacts, silencieux et déplaçables selon les besoins du jour.
 
-Pour le rangement collectif, privilégiez des armoires ou des étagères positionnées le long des murs. Ces éléments servent à la fois à organiser le matériel commun et à créer des **séparations visuelles naturelles** entre les différentes zones de votre open space. Explorez la gamme de [rangements professionnels proposée par KWESK](https://kwesk.ma/reunion/rangement) pour des solutions adaptées à votre environnement.
+Pour le rangement collectif, privilégiez des armoires ou des étagères positionnées le long des murs. Ces éléments servent à la fois à organiser le matériel commun et à créer des **séparations visuelles naturelles** entre les différentes zones de votre open space. Explorez la gamme de [rangements professionnels proposée par KWESK](https://kwesk.ma/reunion/rangement/armoire-basse) pour des solutions adaptées à votre environnement.
 
 ## Acoustique et environnement : maîtriser le bruit dans votre open space
 

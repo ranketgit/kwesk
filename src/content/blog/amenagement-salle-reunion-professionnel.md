@@ -102,7 +102,7 @@ Nos modèles phares pour les salles de réunion :
 
 ### **Rangements et équipements complémentaires**
 
-Une salle de réunion bien organisée nécessite des solutions de rangement adaptées. Les [armoires professionnelles](https://kwesk.ma/reunion/rangement) permettent de stocker documents, fournitures et équipements sans encombrer l'espace.
+Une salle de réunion bien organisée nécessite des solutions de rangement adaptées. Les [armoires professionnelles](https://kwesk.ma/reunion/rangement/armoire-basse) permettent de stocker documents, fournitures et équipements sans encombrer l'espace.
 
 Pour l'intégration technologique, les [supports d'écrans et solutions média](https://kwesk.ma/reunion/media) facilitent les présentations et la visioconférence, deux éléments devenus incontournables dans le contexte du travail hybride.
 

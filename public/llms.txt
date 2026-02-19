@@ -38,7 +38,7 @@ Informations cles :
 - [Salles de Reunion](https://kwesk.ma/salles-reunion): Solutions completes pour salles de reunion
 - [Tables de Reunion](https://kwesk.ma/reunion/tables): Tables professionnelles pour reunion
 - [Supports Media](https://kwesk.ma/reunion/media): Supports ecrans et equipements media
-- [Rangement Professionnel](https://kwesk.ma/reunion/rangement): Solutions de rangement
+- [Rangement Professionnel](https://kwesk.ma/reunion/rangement/armoire-basse): Solutions de rangement
 
 ## Produits - Mobilier Industriel
 - [Mobilier Industriel](https://kwesk.ma/mobilier-industriel): Mobilier pour environnements industriels
