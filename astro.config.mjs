@@ -11,6 +11,15 @@ export default defineConfig({
   plugins: [tailwindcss()],
 },
 site: "https://kwesk.ma",
+redirects: {
+    // Tables Redirects
+    '/reunion/tables': '/reunion/table-de-reunion',
+    '/reunion/tables/': '/reunion/table-de-reunion',
+
+    // Rangement Redirects
+    '/reunion/rangement': '/reunion/rangement/armoire-basse',
+    '/reunion/rangement/': '/reunion/rangement/armoire-basse',
+  },
 
   integrations: [sitemap(
     {
