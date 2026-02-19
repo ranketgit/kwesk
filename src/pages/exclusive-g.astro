@@ -1,114 +1,587 @@
 ---
 // pages/chaises/exclusive-g.astro
 import Layout from '../layouts/Layout.astro';
-import ChairProduct from '../components/ChairProduct.astro';
 
-const exclusiveG = {
-  heroBg: "/exclusive/exhero.jpg",
-  name: "EXCLUSIVE G",
-  description: "Le fauteuil EXCLUSIVE G offre les mêmes fonctionnalités que le siège président EXCLUSIVE 500. Son repose-bras pivotant pour accueillir vos visiteurs VIP dans votre bureau et vos salles de réunion.",
-  version: "EXCLUSIVE G",
-  versionType: "Fauteuil Opérateur",
-  images: [
-    "/exclusive-g/1.jpg",
-    "/exclusive-g/2.jpg",
-    "/exclusive-g/3.jpg"
-  ],
-  featuresDiagram: "/exclusive-g/diagram.png",
-  standardFeatures: [
-    "Mécanisme synchrone encastré à câbles (Italie)",
-    "Tensionneur auto-gravité",
-    "Repose-bras articulés",
-    "Assise et dossier en mousse injectée haute densité",
-    "Assise et dossier tapissés en tissu 3D (Danemark)",
-    "Structure confort extrême",
-    "Repose-tête souple"
-  ],
-  options: [
-    "Revêtement en simili cuir",
-    "Cuir pleine fleur aniline 100% naturel",
-    "Repose-bras en aluminium noir ou poli",
-    "Base en aluminium noir ou poli",
-    "Repose-bras en cuir",
-    "Base en aluminium noir ou poli",
-    "Roulettes Premium"
-  ],
-  frame: {
-    image: "/exclusive-g/frame.png",
-    description: "Structure articulée légère, fine et robuste permettant d'augmenter les volumes de mousses injectée, de rajouter de larges points d'ancrage et de réguler avec la pression sur le dos."
-  },
-  ergonomy: {
-    image: "/exclusive-g/ergonomy.png",
-    features: [
-      "Inclinaison synchronisée du dossier 18° et de l'assise 11°",
-      "3 positions de blocage",
-      "Soutien optimal de l'épine dorsale",
-      "Soulage les maux de dos",
-      "Ajustement automatique de la tension du dossier",
-      "Repose-bras articulés et synchronisés"
-    ]
-  },
-  mechanisms: [
-    {
-      name: "Mécanisme synchrone encastré",
-      tag: "par défaut",
-      image: "/exclusive-g/mechanism.png",
-      features: [
-        "Manettes de commande à câbles encastrées dans l'assise"
-      ],
-      madeIn: "FABRIQUÉ EN ITALIE"
-    }
-  ],
-  gasLift: {
-    image: "/exclusive-g/gaslift.png",
-    description: "Le fauteuil EXCLUSIVE est équipé d'un vérin fabriqué en Allemagne par le leader mondial des amortisseurs. Il dispose d'un réglage en hauteur variable et absorbe en douceur le poids de l'occupant.",
-    madeIn: "FABRIQUÉ EN ALLEMAGNE"
-  },
-  doubleCylinder: {
-    image: "/exclusive-g/double-cylinder.png",
-    diagramImage: "/exclusive-g/double-cylinder-diagram.png",
-    description: "Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre des mouvements de flexion si la charge n'est pas centrée sur l'assise."
-  },
-  materials: [
-    {
-      name: "Tissu 3D",
-      tag: "par défaut",
-      image: "/exclusive-g/fabric-3d.jpg",
-      sectionTitle: "REVÊTEMENT DOSSIER ET ASSISE EN TISSU 3D",
-      features: [
-        "Étirement multidirectionnel",
-        "100% polyester, 540 g/m",
-        "Résistance à l'abrasion Martindale : 65 000 (EN ISO 12947-2)",
-        "Résistance au boulochage échelle 1-5, max. 5 : 5 (EN ISO 12945-2)",
-        "Résistance à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
-        "Résistance au frottement échelle 1-5, max. 5 - humidité/sec : 4-5/4-5 (EN ISO 105x12)",
-        "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
-      ],
-      colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#1e3a5f", "#1e40af", "#7c2d12", "#b91c1c", "#dc2626", "#f59e0b", "#ca8a04", "#65a30d", "#16a34a", "#0d9488", "#0ea5e9", "#6366f1", "#7c3aed", "#a855f7", "#ec4899"],
-      madeIn: "FABRIQUÉ AU MAROC"
-    },
-    {
-      name: "Simili cuir",
-      tag: "option",
-      image: "/exclusive-g/simili-cuir.jpg",
-      sectionTitle: "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN SIMILI CUIR",
-      features: [],
-      colors: ["#1a1a1a", "#3d3d3d", "#1e3a5f", "#1e40af", "#0f766e", "#065f46", "#166534", "#ca8a04", "#b45309", "#9a3412", "#b91c1c", "#7c2d12", "#78716c", "#0ea5e9", "#6366f1", "#7c3aed"],
-      madeIn: "FABRIQUÉ AU MAROC"
-    },
-    {
-      name: "Cuir pleine fleur aniline 100% naturel",
-      tag: "option",
-      image: "/exclusive-g/leather.jpg",
-      sectionTitle: "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN CUIR",
-      features: [],
-      colors: ["#1a1a1a", "#78716c", "#1e3a5f", "#ca8a04", "#b45309", "#9a3412", "#065f46", "#7c2d12", "#dc2626", "#0d9488", "#1e40af", "#6366f1"],
-      madeIn: "FABRIQUÉ AU MAROC"
-    }
-  ]
-};
+const images = [
+  "/exclusive-g/1.jpg",
+  "/exclusive-g/2.jpg",
+  "/exclusive-g/3.jpg"
+];
+
+const heroBg = "/exclusive/exhero.jpg";
 ---
 
-<Layout title="Exclusive G | Fauteuil de Bureau Cuir Haut de Gamme" description="Fauteuil de bureau Exclusive G en cuir véritable. Idéal pour achat de fauteuils direction. Fabrication Kwesk Maroc, livraison professionnelle.">
-  <ChairProduct {...exclusiveG} />
+<Layout 
+  title="EXCLUSIVE G | Fauteuil Visiteur Direction Cuir Haut de Gamme" 
+  description="Fauteuil visiteur direction EXCLUSIVE G. Cuir haut de gamme, mécanisme synchrone Italien, repose-bras articulé. Bureau direction VIP."
+>
+  <main>
+    
+    <section class="relative w-full h-[50vh] min-h-[400px] pt-[100px] bg-[#1c1917]">
+      <img src={heroBg} alt="EXCLUSIVE G" class="w-full h-full object-cover opacity-60" />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#1c1917]/80 to-transparent"></div>
+    </section>
+
+    <section class="py-16 lg:py-24 bg-white" id="product">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+          <div class="flex flex-col gap-4 lg:gap-6 lg:sticky lg:top-24 mb-8 lg:mb-0">
+            <div class="relative bg-stone-50 border border-stone-100 aspect-[4/3] flex items-center justify-center overflow-hidden group shadow-md">
+                <button id="prevBtn" class="absolute left-2 lg:left-4 z-10 w-8 h-8 lg:w-10 lg:h-10 bg-white/90 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-md transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100" aria-label="Previous">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                
+                <img id="mainImage" src={images[0]} alt="EXCLUSIVE G" class="w-full h-full object-contain transition-opacity duration-300" />
+                
+                <button id="nextBtn" class="absolute right-2 lg:right-4 z-10 w-8 h-8 lg:w-10 lg:h-10 bg-white/90 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-md transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100" aria-label="Next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            <div class="flex justify-center gap-2 lg:gap-4">
+              {images.map((img, i) => (
+                <button 
+                  class={`thumb-btn w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] border-2 bg-stone-50 p-1 hover:border-[#8b8b4b] transition-all ${i === 0 ? 'border-[#8b8b4b]' : 'border-transparent'}`}
+                  data-index={i}
+                >
+                  <img src={img} alt={`EXCLUSIVE G vue ${i + 1}`} class="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div class="pt-4 lg:pt-8">
+            <h1 class="text-4xl lg:text-5xl font-bold text-[#1c1917] mb-8">EXCLUSIVE G</h1>
+            
+            <div class="space-y-6 text-stone-600 leading-relaxed text-lg mb-10">
+              <p>Le fauteuil EXCLUSIVE G est un fauteuil visiteur haut de gamme conçu pour les bureaux de direction et salles de réunion professionnelles. Offrant les mêmes fonctionnalités que le fauteuil de direction EXCLUSIVE 500, ce fauteuil visiteur cuir se distingue par ses repose-bras articulés pivotants pour accueillir vos visiteurs VIP avec élégance.</p>
+              <p>Fauteuil direction cuir professionnel avec mécanisme synchrone Italien encastré, tissu 3D premium Danemark, et finitions haut de gamme. Idéal pour environnements directionnels exigeants nécessitant confort extrême et image prestigieuse.</p>
+            </div>
+
+            <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b] mb-10">
+              <span class="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-2">Version:</span>
+              <p class="text-[#1c1917] font-bold text-lg">EXCLUSIVE G Fauteuil Visiteur Direction</p>
+            </div>
+
+            <a href="/contact" class="inline-block px-10 py-5 bg-[#8b8b4b] text-white font-bold uppercase tracking-widest hover:bg-[#1c1917] transition-all duration-300 shadow-lg hover:-translate-y-1">
+              DEMANDER UN DEVIS GRATUIT
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center uppercase tracking-wide">CARACTÉRISTIQUES STANDARD</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] text-lg mb-4">Mécanisme Premium (Fabriqué en Italie)</h3>
+                <ul class="space-y-3 text-stone-600">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Mécanisme synchrone encastré à câbles</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Tensionneur auto-gravité</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Manettes de commande encastrées dans l'assise</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Technologie Italienne haute performance</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] text-lg mb-4">Repose-bras & Structure</h3>
+                <ul class="space-y-3 text-stone-600">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Repose-bras articulés pivotants</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Structure articulée légère et robuste</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Cadre confort extrême</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Larges points d'ancrage renforcés</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] text-lg mb-4">Assise & Dossier Ergonomiques</h3>
+                <ul class="space-y-3 text-stone-600">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Assise et dossier mousse injectée haute densité</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Tapisserie tissu 3D respirant (Danemark)</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Repose-tête souple intégré</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Confort optimal longues sessions</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] text-lg mb-4">Vérin à Gaz (Fabriqué en Allemagne)</h3>
+                <ul class="space-y-3 text-stone-600">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Leader mondial des amortisseurs</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Réglage hauteur variable</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Absorption douce du poids</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Système breveté double cylindre</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] text-lg mb-4">Qualité KWESK</h3>
+                <ul class="space-y-3 text-stone-600">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Garantie 5 ans utilisation professionnelle</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Composants Européens premium</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Fabrication contrôlée Maroc</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Service après-vente disponible</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center uppercase tracking-wide">OPTIONS PERSONNALISATION</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-stone-50 p-10 border border-stone-100">
+                <h3 class="font-bold text-[#1c1917] text-xl mb-6">Revêtements Haut de Gamme</h3>
+                <ul class="space-y-4 text-stone-600 text-lg">
+                    <li class="flex items-start gap-3"><span class="text-[#8b8b4b] font-bold">✓</span> Simili cuir premium</li>
+                    <li class="flex items-start gap-3"><span class="text-[#8b8b4b] font-bold">✓</span> Cuir pleine fleur aniline 100% naturel</li>
+                    <li class="flex items-start gap-3"><span class="text-[#8b8b4b] font-bold">✓</span> Tissu 3D respirant (standard)</li>
+                </ul>
+            </div>
+            
+            <div class="bg-stone-50 p-10 border border-stone-100">
+                <h3 class="font-bold text-[#1c1917] text-xl mb-6">Finitions Métal</h3>
+                <ul class="space-y-4 text-stone-600 text-lg">
+                    <li class="flex items-start gap-3"><span class="text-[#8b8b4b] font-bold">✓</span> Repose-bras aluminium noir ou poli</li>
+                    <li class="flex items-start gap-3"><span class="text-[#8b8b4b] font-bold">✓</span> Base aluminium noir ou poli</li>
+                    <li class="flex items-start gap-3"><span class="text-[#8b8b4b] font-bold">✓</span> Repose-bras cuir</li>
+                    <li class="flex items-start gap-3"><span class="text-[#8b8b4b] font-bold">✓</span> Roulettes Premium</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-[#1c1917] text-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-white mb-16 text-center uppercase tracking-wide">ERGONOMIE AVANCÉE</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <img src="/exclusive-g/ergonomy.png" alt="Ergonomie" class="w-full h-auto object-contain bg-white/5 p-4 rounded-sm" />
+            </div>
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-[#8b8b4b] mb-6">Mécanisme Synchrone Professionnel</h3>
+                    <ul class="space-y-4 text-[#d6d3d1] text-lg">
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Inclinaison synchronisée dossier 18° et assise 11°</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> 3 positions de blocage multiples</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Soutien optimal épine dorsale</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Soulage maux de dos</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Ajustement automatique tension dossier</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Repose-bras articulés synchronisés</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#8b8b4b] mb-4">Confort Bureau Direction</h3>
+                    <p class="text-[#d6d3d1] text-lg leading-relaxed">
+                        Fauteuil bureau ergonomique entreprise conçu spécifiquement pour usage intensif environnements directionnels. Mousse haute densité maintient confort même après plusieurs heures utilisation.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-16 text-center uppercase tracking-wide">TECHNOLOGIE PREMIUM</h2>
+        
+        <div class="space-y-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold text-[#1c1917] mb-4">Cadre Structure Innovant</h3>
+                    <p class="text-stone-600 text-lg leading-relaxed">Structure articulée légère, fine et robuste permettant d'augmenter volumes de mousses injectées, rajouter larges points d'ancrage et réguler pression sur le dos.</p>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <img src="/exclusive-g/frame.png" alt="Cadre Structure" class="w-full max-w-md object-contain" />
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <img src="/exclusive-g/mechanism.png" alt="Mécanisme" class="w-full max-w-md object-contain" />
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-[#8b8b4b] tracking-widest uppercase mb-2 block">FABRIQUÉ EN ITALIE</span>
+                    <h3 class="text-2xl font-bold text-[#1c1917] mb-4">Mécanisme Synchrone Encastré Italien</h3>
+                    <p class="text-stone-600 text-lg leading-relaxed">Mécanisme synchrone encastré avec manettes de commande à câbles encastrées dans l'assise. Technologie Italienne garantissant durabilité et précision réglages.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="text-xs font-bold text-[#8b8b4b] tracking-widest uppercase mb-2 block">FABRIQUÉ EN ALLEMAGNE</span>
+                    <h3 class="text-2xl font-bold text-[#1c1917] mb-4">Vérin à Gaz Allemand Premium</h3>
+                    <p class="text-stone-600 text-lg leading-relaxed">Vérin fabriqué en Allemagne par leader mondial amortisseurs. Réglage hauteur variable, absorption douce poids occupant. Système breveté double cylindre avec tube pression autoportant permettant mouvements flexion.</p>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <img src="/exclusive-g/gaslift.png" alt="Vérin à gaz" class="w-full max-w-xs object-contain" />
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <img src="/exclusive-g/fabric-3d.jpg" alt="Tissu 3D" class="w-full max-w-md object-cover rounded-sm shadow-md" />
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-[#8b8b4b] tracking-widest uppercase mb-2 block">FABRIQUÉ AU DANEMARK</span>
+                    <h3 class="text-2xl font-bold text-[#1c1917] mb-4">Revêtement Tissu 3D Premium</h3>
+                    <p class="text-stone-600 text-lg mb-4">Tissu 3D haute performance :</p>
+                    <ul class="space-y-3 text-stone-600 text-lg">
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Étirement multidirectionnel</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> 100% polyester, 540 g/m²</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Résistance abrasion Martindale : 65 000 cycles</li>
+                        <li class="flex items-start gap-3"><span class="text-[#8b8b4b]">●</span> Respirabilité optimale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center uppercase tracking-wide">POUR QUI ?</h2>
+        
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-stone-50 p-8 border border-stone-100">
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Bureaux de Direction</h3>
+                <p class="text-stone-600 leading-relaxed">Fauteuil visiteur direction cuir professionnel pour accueillir clients VIP, partenaires et visiteurs importants avec prestige. Repose-bras articulés offrent flexibilité et confort optimal.</p>
+            </div>
+            <div class="bg-stone-50 p-8 border border-stone-100">
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Salles de Réunion Exécutives</h3>
+                <p class="text-stone-600 leading-relaxed">Fauteuil salle réunion professionnel haut de gamme pour réunions direction. Confort extrême maintenu même sessions longues durée.</p>
+            </div>
+            <div class="bg-stone-50 p-8 border border-stone-100">
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Espaces Accueil Prestige</h3>
+                <p class="text-stone-600 leading-relaxed">Mobilier salle conférence maroc représentant image entreprise. Design élégant, finitions soignées, matériaux nobles.</p>
+            </div>
+            <div class="bg-stone-50 p-8 border border-stone-100">
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-4">Cabinets Professionnels</h3>
+                <p class="text-stone-600 leading-relaxed">Fauteuils direction cuir professionnel pour cabinets avocats, notaires, professions libérales exigeant mobilier prestige.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-[#1c1917] text-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-white mb-16 text-center uppercase tracking-wide">POURQUOI CHOISIR EXCLUSIVE G ?</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white text-lg mb-3">Haut de Gamme Authentique</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Fauteuil visiteur haut de gamme avec composants Européens : mécanisme Italien, vérin Allemand, tissu Danois. Qualité irréprochable pour environnements exigeants.</p>
+            </div>
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white text-lg mb-3">Confort Direction Premium</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Même ergonomie que fauteuil direction EXCLUSIVE 500. Mousse injectée haute densité, mécanisme synchrone, repose-tête souple. Confort extrême longues sessions.</p>
+            </div>
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white text-lg mb-3">Repose-bras Articulés Unique</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Repose-bras pivotants permettent accueil flexible visiteurs. Fonctionnalité rare sur fauteuils visiteurs standard.</p>
+            </div>
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white text-lg mb-3">Fabrication Contrôlée</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Assemblage KWESK Maroc avec composants premium Européens. Garantie 5 ans, service après-vente local.</p>
+            </div>
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white text-lg mb-3">Image Professionnelle</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Fauteuil direction haut de gamme reflétant prestige entreprise. Cuir naturel, aluminium poli, finitions luxueuses disponibles.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center uppercase tracking-wide">COMPAREZ EXCLUSIVE G</h2>
+        
+        <div class="overflow-x-auto shadow-xl rounded-sm mb-12">
+            <table class="w-full text-left border-collapse bg-white min-w-[700px]">
+                <thead>
+                    <tr class="bg-[#1c1917] text-white">
+                        <th class="p-6 font-bold text-lg border-b border-stone-700 w-1/4">Caractéristique</th>
+                        <th class="p-6 font-bold text-lg border-b border-stone-700 text-[#8b8b4b] w-1/4">EXCLUSIVE G</th>
+                        <th class="p-6 font-bold text-lg border-b border-stone-700 text-white w-1/4"><a href="/by-g" class="hover:text-[#8b8b4b] transition-colors underline">BY G</a></th>
+                        <th class="p-6 font-bold text-lg border-b border-stone-700 text-white w-1/4"><a href="/corpo-c" class="hover:text-[#8b8b4b] transition-colors underline">CORPO C</a></th>
+                    </tr>
+                </thead>
+                <tbody class="text-stone-600">
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-6 font-bold text-stone-900">Catégorie</td>
+                        <td class="p-6 font-medium">Visiteur VIP Direction</td>
+                        <td class="p-6">Visiteur Élégant</td>
+                        <td class="p-6">Visiteur Standard</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-6 font-bold text-stone-900">Repose-bras</td>
+                        <td class="p-6 font-medium">Articulés pivotants</td>
+                        <td class="p-6">Fixes</td>
+                        <td class="p-6">Fixes</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-6 font-bold text-stone-900">Mécanisme</td>
+                        <td class="p-6 font-medium">Synchrone Italien</td>
+                        <td class="p-6">Non</td>
+                        <td class="p-6">Non</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-6 font-bold text-stone-900">Repose-tête</td>
+                        <td class="p-6 font-medium text-green-600">✓ Intégré</td>
+                        <td class="p-6 text-red-500">✗ Non</td>
+                        <td class="p-6 text-red-500">✗ Non</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-6 font-bold text-stone-900">Cuir naturel</td>
+                        <td class="p-6 font-medium text-green-600">✓ Option</td>
+                        <td class="p-6 text-red-500">✗ Non</td>
+                        <td class="p-6 text-red-500">✗ Non</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-6 font-bold text-stone-900">Usage</td>
+                        <td class="p-6 font-medium">Direction VIP</td>
+                        <td class="p-6">Réunion</td>
+                        <td class="p-6">Opérationnel</td>
+                    </tr>
+                    <tr class="hover:bg-stone-50 transition-colors">
+                        <td class="p-6 font-bold text-stone-900">Garantie</td>
+                        <td class="p-6 font-medium">5 ans</td>
+                        <td class="p-6">5 ans</td>
+                        <td class="p-6">5 ans</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="text-center text-lg text-stone-600">
+            Complétez avec fauteuil direction : <br/>
+            <a href="/exclusive" class="text-[#8b8b4b] font-bold underline hover:text-[#1c1917] transition-colors">EXCLUSIVE 500</a> - Fauteuil direction assorti même gamme
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-16">
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center uppercase tracking-wide">SPÉCIFICATIONS DÉTAILLÉES</h2>
+            
+            <div class="overflow-hidden shadow-sm border border-stone-200 rounded-sm">
+                <table class="w-full text-left border-collapse bg-white">
+                    <thead>
+                        <tr class="bg-[#1c1917] text-white">
+                            <th class="p-5 font-bold border-b border-stone-700 w-1/3 text-lg">Caractéristique</th>
+                            <th class="p-5 font-bold border-b border-stone-700 text-[#8b8b4b] text-lg">EXCLUSIVE G</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-stone-600 text-lg">
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Modèle</td>
+                            <td class="p-5">EXCLUSIVE G Visiteur Direction</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Mécanisme</td>
+                            <td class="p-5">Synchrone encastré Italien</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Tensionneur</td>
+                            <td class="p-5">Auto-gravité</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Repose-bras</td>
+                            <td class="p-5">Articulés pivotants</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Assise</td>
+                            <td class="p-5">Mousse injectée haute densité</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Dossier</td>
+                            <td class="p-5">Mousse haute densité + repose-tête</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Revêtement standard</td>
+                            <td class="p-5">Tissu 3D Danemark 540 g/m²</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Options cuir</td>
+                            <td class="p-5">Simili ou pleine fleur aniline</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Vérin</td>
+                            <td class="p-5">Allemand double cylindre</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Base</td>
+                            <td class="p-5">5 branches (alu noir ou poli)</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Fabriqué</td>
+                            <td class="p-5">Maroc (composants EU)</td>
+                        </tr>
+                        <tr class="hover:bg-stone-50">
+                            <td class="p-5 font-bold text-stone-900">Garantie</td>
+                            <td class="p-5">5 ans professionnel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#1c1917] text-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-white mb-16 text-center uppercase tracking-wide">Commande & Personnalisation</h2>
+        
+        <div class="grid md:grid-cols-3 gap-12 mb-16">
+            <div class="bg-[#292524] p-8 border border-[#44403c] rounded-sm">
+                <h3 class="font-bold text-[#8b8b4b] mb-6 text-xl">Volumes & Tarifs</h3>
+                <ul class="space-y-4 text-[#d6d3d1] text-lg">
+                    <li class="flex items-start gap-3">Unités individuelles disponibles</li>
+                    <li class="flex items-start gap-3">Lots pour bureaux direction (tarifs dégressifs)</li>
+                    <li class="flex items-start gap-3">Projets aménagement complet</li>
+                </ul>
+            </div>
+            
+            <div class="bg-[#292524] p-8 border border-[#44403c] rounded-sm">
+                <h3 class="font-bold text-[#8b8b4b] mb-6 text-xl">Options Personnalisation</h3>
+                <ul class="space-y-4 text-[#d6d3d1] text-lg">
+                    <li class="flex items-start gap-3">Cuir couleur au choix</li>
+                    <li class="flex items-start gap-3">Finitions aluminium poli</li>
+                    <li class="flex items-start gap-3">Repose-bras cuir</li>
+                    <li class="flex items-start gap-3">Roulettes premium</li>
+                </ul>
+            </div>
+
+            <div class="bg-[#292524] p-8 border border-[#44403c] rounded-sm">
+                <h3 class="font-bold text-[#8b8b4b] mb-4 text-xl">Livraison Maroc</h3>
+                <p class="text-[#d6d3d1] leading-relaxed mb-6 text-lg">Livraison installation partout Maroc : Casablanca, Rabat, Marrakech, Tanger.</p>
+                <h3 class="font-bold text-[#8b8b4b] mb-4 text-xl">Délais</h3>
+                <ul class="space-y-4 text-[#d6d3d1] text-lg">
+                    <li class="flex items-start gap-3">Configuration standard : 5-10 jours</li>
+                    <li class="flex items-start gap-3">Personnalisation cuir : 20-25 jours</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="/contact" class="inline-block px-10 py-5 bg-transparent border-2 border-[#8b8b4b] text-[#8b8b4b] font-bold uppercase tracking-widest hover:bg-[#8b8b4b] hover:text-[#1c1917] transition-all rounded-sm">
+                Demander un devis personnalisé
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-6 lg:px-16 text-center">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 uppercase tracking-wide">SOLUTIONS COMPLÉMENTAIRES</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+            <div class="bg-white p-8 border border-stone-100 shadow-sm">
+                <p class="font-bold text-[#1c1917] mb-4 border-b border-stone-200 pb-2">Fauteuil Direction Assorti :</p>
+                <p class="text-stone-600 leading-relaxed text-lg">
+                    <a href="/exclusive" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">EXCLUSIVE 500</a> - Fauteuil direction même gamme pour cohérence visuelle bureau direction
+                </p>
+            </div>
+
+            <div class="bg-white p-8 border border-stone-100 shadow-sm">
+                <p class="font-bold text-[#1c1917] mb-4 border-b border-stone-200 pb-2">Autres Fauteuils Visiteurs :</p>
+                <ul class="space-y-3 text-stone-600 text-lg">
+                    <li><a href="/by-g" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">BY G</a> - Fauteuil visiteur élégant prix accessible</li>
+                    <li><a href="/corpo-c" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">CORPO C</a> - Fauteuil visiteur design moderne</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 border border-stone-100 shadow-sm">
+                <p class="font-bold text-[#1c1917] mb-4 border-b border-stone-200 pb-2">Mobilier Bureau Direction :</p>
+                <p class="text-stone-600 leading-relaxed text-lg">
+                    <a href="/bureaux/direction" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Bureaux Direction</a> - Bureaux prestige assortis
+                </p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white border-t border-stone-200 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-[#1c1917] mb-6 uppercase tracking-wide">CONTACT & DEVIS</h2>
+        <p class="text-xl font-bold text-[#8b8b4b] mb-8">Équipez votre bureau direction avec EXCLUSIVE G</p>
+        
+        <div class="bg-stone-50 p-8 rounded-sm inline-block text-left mb-12 shadow-sm border border-stone-100">
+            <p class="text-[#1c1917] font-bold text-lg mb-4 border-b border-stone-200 pb-2">Contactez experts KWESK pour :</p>
+            <ul class="space-y-4 text-stone-600 text-lg">
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#8b8b4b]"></span> Devis fauteuil visiteur haut de gamme</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#8b8b4b]"></span> Conseil configuration bureau direction</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#8b8b4b]"></span> Échantillons cuir et finitions</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#8b8b4b]"></span> Projet aménagement complet</li>
+            </ul>
+        </div>
+        
+        <div>
+            <a href="/contact" class="inline-block px-10 py-5 bg-[#8b8b4b] text-white font-bold uppercase tracking-widest hover:bg-[#1c1917] transition-all shadow-lg hover:-translate-y-1 rounded-sm">
+                Demander un devis gratuit
+            </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 </Layout>
+
+<style>
+  .thumb-btn {
+    cursor: pointer;
+  }
+</style>
+
+<script define:vars={{ images }}>
+  let currentIndex = 0;
+  const allImages = images;
+
+  const mainImage = document.getElementById('mainImage');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const thumbs = document.querySelectorAll('.thumb-btn');
+
+  function updateImage(index) {
+    currentIndex = index;
+    if (mainImage) {
+      mainImage.style.opacity = '0';
+      setTimeout(() => {
+        mainImage.src = allImages[index];
+        mainImage.style.opacity = '1';
+      }, 150);
+    }
+    thumbs.forEach((thumb, i) => {
+      if (i === index) {
+        thumb.classList.add('border-[#8b8b4b]');
+        thumb.classList.remove('border-transparent');
+      } else {
+        thumb.classList.remove('border-[#8b8b4b]');
+        thumb.classList.add('border-transparent');
+      }
+    });
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === 0 ? allImages.length - 1 : currentIndex - 1;
+    updateImage(newIndex);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === allImages.length - 1 ? 0 : currentIndex + 1;
+    updateImage(newIndex);
+  });
+
+  thumbs.forEach((thumb, i) => {
+    thumb.addEventListener('click', () => {
+      updateImage(i);
+    });
+  });
+</script>

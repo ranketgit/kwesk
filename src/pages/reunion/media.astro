@@ -1,34 +1,383 @@
 ---
-// pages/salles-reunion/table-reunion-ronde.astro
+// pages/reunion/media.astro
 import Layout from '../../layouts/Layout.astro';
-import ProductSimple from '../../components/ProductSimple.astro';
+import AmCTA from '../../components/AmCTA.astro';
 
-const product = {
-  heroBg: "/reunion/ec-hero.jpg",
-  name: "Table de Réunion Ronde",
-  category: "Salles de Réunion",
-  categoryHref: "/salles-reunion",
-  description: "Table de réunion ronde favorisant les échanges égalitaires. Parfaite pour les réunions créatives et les brainstormings.",
-  images: [
-    "/reunion/ec1.jpg",
-    "/reunion/ec2.jpg",
-    "/reunion/ec3.jpg"
-  ],
-  features: [
-    "Plateau rond en mélaminé épaisseur 25mm",
-    "Pied central en acier",
-    "Diamètre: 120 cm (4-5 personnes)",
-    "Disponible en 100, 140 et 160 cm",
-    "Garantie 5 ans"
-  ],
-  options: [
-    "Plateau en verre",
-    "Prise électrique centrale",
-    "Couleurs personnalisées"
-  ]
-};
+const images = [
+  "/reunion/ec1.jpg",
+  "/reunion/ec2.jpg",
+  "/reunion/ec3.jpg",
+  "/reunion/ec-hero.jpg"
+];
 ---
 
-<Layout title="Table de Réunion Ronde | Mobilier de Bureau Kwesk" description="Tables de réunion rondes professionnelles. Mobilier de bureaux pour aménagement salles de réunion. Qualité et design made in Maroc - Kwesk.">
-  <ProductSimple {...product} />
+<Layout 
+  title="Supports Écrans Salle de Réunion Professionnelle | KWESK" 
+  description="Supports écrans professionnels pour salles de réunion : muraux, mobiles, plafond. Installation incluse. Livraison Maroc."
+>
+  <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={images[3]} alt="Écrans & Supports pour Salles de Réunion" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/95 via-stone-900/80 to-stone-900/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-4xl">
+        <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6">Écrans & Supports pour Salles de Réunion</h1>
+        
+        <div class="text-lg text-stone-300 leading-relaxed mb-10 space-y-4 max-w-2xl">
+            <p>Solutions professionnelles de supports d'écrans pour équiper vos salles de réunion. Fixations murales, supports mobiles et installations plafond. Livraison et installation au Maroc.</p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1c1917] transition-all rounded-sm shadow-lg">Demander un devis</a>
+          <a href="/reunion/table-de-reunion" class="px-8 py-4 bg-transparent border-2 border-stone-500 text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1c1917] hover:border-white transition-all rounded-sm">Voir les tables de réunion</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-white" id="product">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        
+        <div class="flex flex-col gap-4 lg:gap-6 lg:sticky lg:top-24 mb-8 lg:mb-0">
+            <div class="relative bg-stone-50 border border-stone-100 aspect-[4/3] flex items-center justify-center overflow-hidden group shadow-md">
+                
+                <button id="prevBtn" class="absolute left-2 lg:left-4 z-10 w-8 h-8 lg:w-10 lg:h-10 bg-white/90 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-md transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100" aria-label="Previous">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                
+                <img id="mainImage" src={images[0]} alt="Supports Écrans" class="w-full h-full object-contain transition-opacity duration-300" />
+                
+                <button id="nextBtn" class="absolute right-2 lg:right-4 z-10 w-8 h-8 lg:w-10 lg:h-10 bg-white/90 hover:bg-[#8b8b4b] hover:text-white flex items-center justify-center rounded-full shadow-md transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100" aria-label="Next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-4 gap-2 lg:gap-4">
+                {images.map((img, i) => (
+                <button class={`thumb-btn aspect-square border-2 bg-stone-50 p-1 hover:border-[#8b8b4b] transition-all ${i === 0 ? 'border-[#8b8b4b]' : 'border-transparent'}`} data-index={i}>
+                    <img src={img} alt={`Vue ${i+1}`} class="w-full h-full object-cover" />
+                </button>
+                ))}
+            </div>
+        </div>
+        
+        <div class="flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-10 pb-4 border-b border-stone-200">Section Produits</h2>
+            
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-xl font-bold text-[#1c1917] mb-3 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-[#8b8b4b] block"></span>
+                        Support Mural pour Écran
+                    </h3>
+                    <div class="text-stone-600 leading-relaxed pl-5 space-y-4">
+                        <p><strong class="text-stone-900">Description courte:</strong> Fixation murale discrète et sécurisée pour écrans de présentation. Inclinaison et rotation réglables.</p>
+                        <div>
+                            <p class="font-bold text-stone-900 mb-2">Caractéristiques:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Compatible VESA 200x200 à 600x400mm</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Charge max: 50kg</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Inclinaison ajustable -15° / +15°</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Rotation 180°</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Gestion câbles intégrée</li>
+                            </ul>
+                        </div>
+                        <p><strong class="text-stone-900">Applications:</strong> Salles de réunion permanentes, bureaux direction, espaces de présentation.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-[#1c1917] mb-3 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-[#8b8b4b] block"></span>
+                        Support Mobile sur Pied
+                    </h3>
+                    <div class="text-stone-600 leading-relaxed pl-5 space-y-4">
+                        <p><strong class="text-stone-900">Description courte:</strong> Solution flexible pour salles multifonctions. Roulettes avec freins pour déplacement facile et stabilité.</p>
+                        <div>
+                            <p class="font-bold text-stone-900 mb-2">Caractéristiques:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Hauteur réglable 120-180cm</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Roulettes avec freins</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Compatible écrans 32" à 75"</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Plateau accessoires</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Passage câbles vertical</li>
+                            </ul>
+                        </div>
+                        <p><strong class="text-stone-900">Applications:</strong> Salles de formation, espaces collaboratifs, salles polyvalentes.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-[#1c1917] mb-3 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-[#8b8b4b] block"></span>
+                        Support Plafond
+                    </h3>
+                    <div class="text-stone-600 leading-relaxed pl-5 space-y-4">
+                        <p><strong class="text-stone-900">Description courte:</strong> Installation professionnelle pour vidéoprojecteurs et écrans suspendus. Ajustements précis pour projection optimale.</p>
+                        <div>
+                            <p class="font-bold text-stone-900 mb-2">Caractéristiques:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Bras ajustable</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Rotation 360°</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Compatible vidéoprojecteurs standards</li>
+                                <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Installation incluse</li>
+                            </ul>
+                        </div>
+                        <p><strong class="text-stone-900">Applications:</strong> Grandes salles de conférence, auditoriums, salles de formation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-stone-50 border-y border-stone-200">
+    <div class="max-w-6xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">Spécifications Techniques</h2>
+        
+        <div class="overflow-x-auto shadow-xl rounded-sm">
+            <table class="w-full text-left border-collapse bg-white min-w-[700px]">
+                <thead>
+                    <tr class="bg-[#1c1917] text-white">
+                        <th class="p-4 lg:p-6 font-bold text-lg border-b border-stone-700">Caractéristique</th>
+                        <th class="p-4 lg:p-6 font-bold text-lg border-b border-stone-700 text-[#8b8b4b]">Support Mural</th>
+                        <th class="p-4 lg:p-6 font-bold text-lg border-b border-stone-700 text-[#8b8b4b]">Support Mobile</th>
+                        <th class="p-4 lg:p-6 font-bold text-lg border-b border-stone-700 text-[#8b8b4b]">Support Plafond</th>
+                    </tr>
+                </thead>
+                <tbody class="text-stone-600">
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-4 lg:p-6 font-bold text-stone-900">Charge max</td>
+                        <td class="p-4 lg:p-6">50kg</td>
+                        <td class="p-4 lg:p-6">40kg</td>
+                        <td class="p-4 lg:p-6">25kg</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-4 lg:p-6 font-bold text-stone-900">Taille écran</td>
+                        <td class="p-4 lg:p-6">32"-75"</td>
+                        <td class="p-4 lg:p-6">32"-75"</td>
+                        <td class="p-4 lg:p-6">Projecteurs</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-4 lg:p-6 font-bold text-stone-900">Réglage hauteur</td>
+                        <td class="p-4 lg:p-6">Non</td>
+                        <td class="p-4 lg:p-6">Oui 120-180cm</td>
+                        <td class="p-4 lg:p-6">Oui</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-4 lg:p-6 font-bold text-stone-900">Rotation</td>
+                        <td class="p-4 lg:p-6">180°</td>
+                        <td class="p-4 lg:p-6">Non</td>
+                        <td class="p-4 lg:p-6">360°</td>
+                    </tr>
+                    <tr class="border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                        <td class="p-4 lg:p-6 font-bold text-stone-900">Installation</td>
+                        <td class="p-4 lg:p-6">Murale</td>
+                        <td class="p-4 lg:p-6">Libre</td>
+                        <td class="p-4 lg:p-6">Plafond</td>
+                    </tr>
+                    <tr class="hover:bg-stone-50 transition-colors">
+                        <td class="p-4 lg:p-6 font-bold text-stone-900">Mobilité</td>
+                        <td class="p-4 lg:p-6">Non</td>
+                        <td class="p-4 lg:p-6">Oui</td>
+                        <td class="p-4 lg:p-6">Non</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            <div>
+                <h2 class="text-3xl font-bold text-[#1c1917] mb-8">Solutions Complètes Salle de Réunion</h2>
+                <p class="text-stone-900 font-bold mb-4">Équipement complet disponible chez KWESK:</p>
+                
+                <p class="text-[#8b8b4b] font-bold mb-2">Mobilier Salle Réunion Professionnel</p>
+                <ul class="space-y-3 mb-6 pl-4 border-l-2 border-[#8b8b4b]">
+                    <li class="text-stone-600"><a href="/reunion/table-de-reunion" class="font-bold text-[#8b8b4b] hover:text-[#1c1917] underline transition-colors">Tables de réunion</a> : Rectangulaires, rondes, ovales 6-12 personnes</li>
+                    <li class="text-stone-600">Supports écrans et média : Gamme complète</li>
+                    <li class="text-stone-600"><a href="/reunion/rangement" class="font-bold text-[#8b8b4b] hover:text-[#1c1917] underline transition-colors">Rangements professionnels</a> : Armoires pour équipements</li>
+                </ul>
+
+                <p class="text-[#8b8b4b] font-bold mb-2">Aménagement Salle de Réunion</p>
+                <p class="text-stone-600 leading-relaxed mb-6">Notre expertise en aménagement salle de réunion vous permet de créer des espaces collaboratifs optimisés avec mobilier salle réunion professionnel adapté à vos besoins.</p>
+                
+                <a href="/salles-reunion" class="inline-flex items-center gap-2 text-[#8b8b4b] font-bold hover:text-[#1c1917] transition-colors uppercase tracking-wider text-sm border-b-2 border-[#8b8b4b] pb-1">
+                    Découvrir toutes nos solutions salles de réunion →
+                </a>
+            </div>
+
+            <div class="bg-stone-50 p-6 lg:p-8 shadow-sm border border-stone-100">
+                <h2 class="text-3xl font-bold text-[#1c1917] mb-8">Options & Personnalisation</h2>
+                
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-stone-900 font-bold mb-3">Finitions Disponibles:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Noir mat (standard)</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Gris aluminium</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Blanc</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-stone-900 font-bold mb-3">Services Inclus:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-stone-600"><span class="text-[#8b8b4b] font-bold">✓</span> Conseil positionnement</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="text-[#8b8b4b] font-bold">✓</span> Installation professionnelle</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="text-[#8b8b4b] font-bold">✓</span> Livraison Maroc</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="text-[#8b8b4b] font-bold">✓</span> Garantie produit</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-stone-900 font-bold mb-3">Options Additionnelles:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Câblage et prises intégrées</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Étude aménagement salle réunion professionnel</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Formation utilisateurs</li>
+                            <li class="flex items-center gap-2 text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-[#1c1917] text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Pourquoi KWESK ?</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white mb-4 text-lg">Qualité</h3>
+                <p class="text-[#d6d3d1] text-sm leading-relaxed">Supports professionnels conformes aux normes de sécurité. Construction robuste pour usage intensif.</p>
+            </div>
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white mb-4 text-lg">Installation</h3>
+                <p class="text-[#d6d3d1] text-sm leading-relaxed">Installation professionnelle incluse partout au Maroc. Techniciens qualifiés.</p>
+            </div>
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white mb-4 text-lg">Service Complet</h3>
+                <p class="text-[#d6d3d1] text-sm leading-relaxed">De l'étude de vos besoins à l'installation finale, accompagnement complet pour aménagement salle conférence.</p>
+            </div>
+            <div class="bg-[#292524] p-8 border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-white mb-4 text-lg">Garantie</h3>
+                <p class="text-[#d6d3d1] text-sm leading-relaxed">Garantie constructeur sur tous nos supports. Service après-vente réactif.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917]">FAQ</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div class="bg-white p-6 lg:p-8 shadow-sm border border-stone-100">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Quel support pour un écran 65 pouces ?</h4>
+          <p class="text-stone-600 leading-relaxed text-sm">Support mural ou mobile selon votre usage. Les deux supportent jusqu'à 75 pouces. Support mural pour installation fixe, mobile pour flexibilité.</p>
+        </div>
+        <div class="bg-white p-6 lg:p-8 shadow-sm border border-stone-100">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">L'installation est-elle incluse ?</h4>
+          <p class="text-stone-600 leading-relaxed text-sm">Oui, installation professionnelle incluse au Maroc pour tout projet d'équipement salle de réunion.</p>
+        </div>
+        <div class="bg-white p-6 lg:p-8 shadow-sm border border-stone-100">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Compatible avec quelle marque d'écrans ?</h4>
+          <p class="text-stone-600 leading-relaxed text-sm">Tous les écrans standards VESA (Samsung, LG, Sony, etc.). Vérifiez les dimensions VESA de votre écran.</p>
+        </div>
+        <div class="bg-white p-6 lg:p-8 shadow-sm border border-stone-100">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Délai de livraison au Maroc ?</h4>
+          <p class="text-stone-600 leading-relaxed text-sm">Livraison sous 5-10 jours ouvrés selon ville. Installation planifiée selon disponibilité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-white border-t border-stone-200 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-[#1c1917] mb-6">Commander</h2>
+        <p class="text-xl font-bold text-[#1c1917] mb-4">Besoin d'équiper votre salle de réunion ?</p>
+        <p class="text-stone-600 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            Nos experts vous conseillent sur les supports adaptés à vos écrans et votre configuration mobilier salle conférence maroc.
+        </p>
+        
+        <div class="bg-stone-50 p-6 lg:p-8 rounded-sm inline-block text-left mb-12 shadow-sm border border-stone-100 w-full sm:w-auto">
+            <p class="text-[#1c1917] font-bold text-lg mb-4 border-b border-stone-200 pb-2">Contact:</p>
+            <ul class="space-y-4">
+                <li class="flex items-center gap-4 text-stone-600">
+                    <span class="w-8 h-8 rounded-full bg-[#8b8b4b] text-white flex items-center justify-center text-sm flex-shrink-0">📞</span> 
+                    <span>Téléphone: +212 5 20 24 16 37 / +212 6 61 48 16 16</span>
+                </li>
+                <li class="flex items-center gap-4 text-stone-600">
+                    <span class="w-8 h-8 rounded-full bg-[#8b8b4b] text-white flex items-center justify-center text-sm flex-shrink-0">✉️</span> 
+                    <span>Email: contact@kwesk.com</span>
+                </li>
+                <li class="flex items-center gap-4 text-stone-600">
+                    <span class="w-8 h-8 rounded-full bg-[#8b8b4b] text-white flex items-center justify-center text-sm flex-shrink-0">📍</span> 
+                    <span>Showroom: Anfa Place, Casablanca</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <a href="/contact" class="inline-block px-10 py-5 bg-[#8b8b4b] text-white font-bold uppercase tracking-widest hover:bg-[#1c1917] transition-colors shadow-lg rounded-sm w-full sm:w-auto">
+                Demander un devis gratuit
+            </a>
+        </div>
+    </div>
+  </section>
+
 </Layout>
+
+<script define:vars={{ images }}>
+  const mainImage = document.getElementById('mainImage');
+  const thumbs = document.querySelectorAll('.thumb-btn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  let currentIndex = 0;
+
+  function updateImage(index) {
+    mainImage.style.opacity = '0';
+    setTimeout(() => {
+      mainImage.src = images[index];
+      mainImage.style.opacity = '1';
+    }, 150);
+
+    thumbs.forEach(t => {
+        t.classList.remove('border-[#8b8b4b]');
+        t.classList.add('border-transparent');
+    });
+    thumbs[index].classList.remove('border-transparent');
+    thumbs[index].classList.add('border-[#8b8b4b]');
+    currentIndex = index;
+  }
+
+  thumbs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = parseInt(btn.getAttribute('data-index'));
+      updateImage(index);
+    });
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    updateImage(newIndex);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    updateImage(newIndex);
+  });
+</script>

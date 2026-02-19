@@ -10,29 +10,30 @@ const images = [
 ];
 ---
 
-<Layout title="Caddy | Chaise de Bureau Formation Professionnelle" description="Chaises de bureau Caddy pour salles de formation. Mobilier professionnel empilable et mobile. Achat de chaises entreprise - Kwesk Maroc.">
+<Layout 
+  title="CADDY 80 | Chaise Formation Professionnelle Maroc - KWESK" 
+  description="Chaise formation CADDY 80 avec tablette rotative. Base 6 roulettes, rangement intégré. Ergonomie optimisée salles formation. Garantie 5 ans. KWESK Maroc."
+>
   <main>
     
-    <!-- Hero -->
     <section class="hero">
       <img src="/caddy/chero.png" alt="CADDY 80" />
+      <div class="absolute inset-0 bg-stone-900/20"></div>
     </section>
 
-    <!-- Product Info -->
     <section class="product">
       <div class="product__container">
         <div class="product__grid">
 
-          <!-- Gallery -->
           <div class="product__gallery">
-            <div class="product__main">
-              <button class="product__arrow product__arrow--left" id="prevBtn">
+            <div class="product__main shadow-sm border border-stone-100 bg-stone-50">
+              <button class="product__arrow product__arrow--left bg-white/90 shadow-md hover:bg-[#8b8b4b] hover:text-white" id="prevBtn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
               </button>
               <img src={images[0]} alt="CADDY 80" id="mainImage" />
-              <button class="product__arrow product__arrow--right" id="nextBtn">
+              <button class="product__arrow product__arrow--right bg-white/90 shadow-md hover:bg-[#8b8b4b] hover:text-white" id="nextBtn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
@@ -50,43 +51,315 @@ const images = [
             </div>
           </div>
 
-          <!-- Info -->
           <div class="product__info">
             <h1 class="product__title">CADDY 80</h1>
-            <p class="product__desc">
-              Les chaises CADDY offrent une ergonomie optimisée pour les sessions de formation. La tablette réglable et les espaces de rangement donnent aux utilisateurs la mobilité de modifier l'agencement de votre espace selon vos besoins. Vous formerez vos équipes avec facilité !
-            </p>
+            
+            <div class="product__desc space-y-4">
+              <p>
+                Les chaises CADDY offrent une ergonomie optimisée pour les sessions de formation professionnelle. La tablette rotative et les espaces de rangement intégrés donnent aux utilisateurs la mobilité de modifier l'agencement de votre espace selon vos besoins.
+              </p>
+              <p>
+                Cette chaise formation avec base 5 branches à 6 roulettes facilite la réorganisation rapide de vos salles de réunion et espaces de formation. Vous formerez vos équipes avec facilité !
+              </p>
+            </div>
 
             <div class="product__version">
-              <span class="product__version-label">Version</span>
+              <span class="product__version-label">Version:</span>
               <p class="product__version-name"><strong>CADDY 80</strong> Chaise Formation</p>
             </div>
 
-            <a href="/contact" class="product__btn">ACHETER</a>
+            <a href="/contact" class="product__btn shadow-lg hover:-translate-y-1 transform transition-all duration-300">ACHETER</a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Standard Features -->
-    <section class="features">
-      <div class="features__container">
-        <h2 class="features__title">CARACTÉRISTIQUES STANDARD</h2>
-        <ul class="features__list">
-          <li><span>✓</span> Tablette rotative</li>
-          <li><span>✓</span> Espace de rangement</li>
-          <li><span>✓</span> Base structure 5 branches à 6 roulettes</li>
-          <li><span>✓</span> Porte-stylo</li>
-        </ul>
+    <section class="py-20 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">CARACTÉRISTIQUES STANDARD</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] mb-4">Tablette & Organisation</h3>
+                <ul class="space-y-3 text-stone-600 text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Tablette rotative pour prise de notes</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Porte-stylo intégré</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Espace de rangement sous assise</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Position ajustable selon besoins</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] mb-4">Mobilité & Structure</h3>
+                <ul class="space-y-3 text-stone-600 text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Base structure 5 branches robuste</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> 6 roulettes pour déplacement fluide</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Rotation complète pour flexibilité</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Stabilité optimale</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] mb-4">Ergonomie & Confort</h3>
+                <ul class="space-y-3 text-stone-600 text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Ergonomie optimisée sessions longues</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Assise confortable utilisation intensive</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Dossier support lombaire</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Conception professionnelle KWESK</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 shadow-sm border-t-4 border-[#8b8b4b]">
+                <h3 class="font-bold text-[#1c1917] mb-4">Qualité Fabricant</h3>
+                <ul class="space-y-3 text-stone-600 text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Garantie 5 ans</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Fabrication contrôlée depuis 2008</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Usage professionnel intensif</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b] font-bold">✓</span> Service après-vente Maroc</li>
+                </ul>
+            </div>
+        </div>
       </div>
     </section>
 
-    <!-- Custom Color -->
+    <section class="py-20 bg-[#1c1917] text-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">APPLICATIONS</h2>
+        
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+            <div>
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-3">Centres de Formation</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Chaise formation professionnelle idéale pour sessions d'apprentissage. Tablette rotative permet prise de notes confortable. Mobilité facilitant réorganisation rapide.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-3">Salles de Réunion</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Chaise salle réunion professionnel adaptée aux longues sessions. Rangement intégré pour documents. Mobilité pour passer de configuration traditionnelle à ateliers collaboratifs.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-3">Espaces Polyvalents</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Solution flexible pour espaces multifonctions. Base 6 roulettes assure déplacements faciles entre zones. Rangement personnel discret sous assise.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-[#8b8b4b] mb-3">Événements & Séminaires</h3>
+                <p class="text-[#d6d3d1] leading-relaxed">Mobilier salle conférence maroc professionnel pour événements. Installation rapide, configuration modulable selon format session.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
     <section class="colors">
-      <div class="colors__container">
+      <div class="colors__container text-center">
         <h2 class="colors__title">COULEURS PERSONNALISÉES</h2>
-        <img src="/caddy/custom-colors.png" alt="Couleurs personnalisées CADDY 80" class="colors__image" />
+        <div class="max-w-2xl mx-auto mb-10 text-stone-600 leading-relaxed text-left bg-stone-50 p-6 border border-stone-200">
+            <p class="font-bold text-[#1c1917] mb-2">Personnalisez votre chaise CADDY :</p>
+            <p class="mb-4">Plusieurs options de couleurs disponibles pour assise et structure. Personnalisation possible selon identité visuelle de votre entreprise.</p>
+            <p><strong class="text-[#1c1917]">Pour commandes volume :</strong> Contactez-nous pour options personnalisation complète.</p>
+        </div>
+        <img src="/caddy/custom-colors.png" alt="Couleurs personnalisées CADDY 80" class="colors__image mx-auto shadow-md border border-stone-100" />
+      </div>
+    </section>
+
+    <section class="py-20 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">POURQUOI CHOISIR CADDY 80 ?</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 border-l-4 border-[#8b8b4b] shadow-sm">
+                <h3 class="font-bold text-[#1c1917] mb-2 text-lg">Ergonomie Formation</h3>
+                <p class="text-stone-600">Ergonomie optimisée spécifiquement pour sessions de formation professionnelle. Confort maintenu même lors de longues sessions d'apprentissage.</p>
+            </div>
+            <div class="bg-white p-6 border-l-4 border-[#8b8b4b] shadow-sm">
+                <h3 class="font-bold text-[#1c1917] mb-2 text-lg">Mobilité Totale</h3>
+                <p class="text-stone-600">6 roulettes + structure 5 branches = déplacement fluide et réorganisation instantanée de votre espace formation.</p>
+            </div>
+            <div class="bg-white p-6 border-l-4 border-[#8b8b4b] shadow-sm">
+                <h3 class="font-bold text-[#1c1917] mb-2 text-lg">Tablette Rotative Pratique</h3>
+                <p class="text-stone-600">Tablette intégrée élimine besoin de tables supplémentaires. Prise de notes facile, porte-stylo intégré.</p>
+            </div>
+            <div class="bg-white p-6 border-l-4 border-[#8b8b4b] shadow-sm">
+                <h3 class="font-bold text-[#1c1917] mb-2 text-lg">Rangement Intégré</h3>
+                <p class="text-stone-600">Espace rangement sous assise garde votre salle de formation ordonnée. Fini les sacs au sol.</p>
+            </div>
+            <div class="bg-white p-6 border-l-4 border-[#8b8b4b] shadow-sm md:col-span-2 text-center">
+                <h3 class="font-bold text-[#1c1917] mb-2 text-lg">Qualité KWESK</h3>
+                <p class="text-stone-600 max-w-3xl mx-auto">Fabricant chaises bureau professionnel depuis 2008. Garantie 5 ans, certifications qualité, service après-vente disponible partout au Maroc.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white border-t border-stone-200">
+        <div class="max-w-4xl mx-auto px-6 lg:px-16">
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-10 text-center">SPÉCIFICATIONS</h2>
+            
+            <div class="overflow-hidden shadow-sm border border-stone-200 rounded-sm">
+                <table class="w-full text-left border-collapse bg-white">
+                    <thead>
+                        <tr class="bg-[#1c1917] text-white">
+                            <th class="p-4 font-bold border-b border-stone-700 w-1/3">Caractéristique</th>
+                            <th class="p-4 font-bold border-b border-stone-700 text-[#8b8b4b]">CADDY 80</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-stone-600 text-sm">
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Modèle</td>
+                            <td class="p-4">CADDY 80</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Type</td>
+                            <td class="p-4">Chaise Formation</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Tablette</td>
+                            <td class="p-4">Rotative avec porte-stylo</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Base</td>
+                            <td class="p-4">5 branches</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Roulettes</td>
+                            <td class="p-4">6 roulettes</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Rangement</td>
+                            <td class="p-4">Sous-assise intégré</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Usage</td>
+                            <td class="p-4">Formation professionnelle</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Garantie</td>
+                            <td class="p-4">5 ans</td>
+                        </tr>
+                        <tr class="hover:bg-stone-50">
+                            <td class="p-4 font-bold text-stone-900">Fabrication</td>
+                            <td class="p-4">KWESK Maroc</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">SOLUTIONS COMPLÉMENTAIRES</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 border border-stone-100 shadow-sm">
+                <p class="font-bold text-[#1c1917] mb-6 border-b border-stone-200 pb-2">Autres Chaises Professionnelles KWESK:</p>
+                <ul class="space-y-4">
+                    <li class="text-stone-600"><a href="/gamma-c" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] transition-colors">GAMMA C</a> - Chaise visiteur polyvalente pour salles d'attente et réunion</li>
+                    <li class="text-stone-600"><a href="/corpo-c" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] transition-colors">CORPO C</a> - Chaise visiteur design moderne</li>
+                    <li class="text-stone-600"><a href="/by-g" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] transition-colors">BY G</a> - Chaise réunion élégante avec accoudoirs</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 border border-stone-100 shadow-sm">
+                <p class="font-bold text-[#1c1917] mb-6 border-b border-stone-200 pb-2">Mobilier Salles de Réunion:</p>
+                <ul class="space-y-4">
+                    <li class="text-stone-600"><a href="/reunion/table-de-reunion" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] transition-colors">Tables de Réunion</a> - Complétez votre espace avec tables professionnelles</li>
+                    <li class="text-stone-600"><a href="/reunion/rangement" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] transition-colors">Rangements Professionnels</a> - Armoires pour équipements et fournitures</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#1c1917] text-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">COMMANDE & LIVRAISON</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-[#292524] p-8 border border-[#44403c]">
+                <h3 class="font-bold text-[#8b8b4b] mb-4">Volumes Disponibles</h3>
+                <ul class="space-y-2 text-[#d6d3d1] text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Unités individuelles</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Lots pour centres de formation (tarifs dégressifs)</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Commandes entreprise personnalisées</li>
+                </ul>
+            </div>
+            
+            <div class="bg-[#292524] p-8 border border-[#44403c]">
+                <h3 class="font-bold text-[#8b8b4b] mb-4">Livraison Maroc</h3>
+                <p class="text-[#d6d3d1] text-sm leading-relaxed mb-6">Livraison dans tout le Maroc : Casablanca, Rabat, Marrakech, Tanger, Fès et toutes villes.</p>
+                
+                <h3 class="font-bold text-[#8b8b4b] mb-4">Délais</h3>
+                <ul class="space-y-2 text-[#d6d3d1] text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Stock standard : 5-10 jours ouvrés</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Personnalisation : 15-20 jours ouvrés</li>
+                </ul>
+            </div>
+
+            <div class="bg-[#292524] p-8 border border-[#44403c]">
+                <h3 class="font-bold text-[#8b8b4b] mb-4">Services</h3>
+                <ul class="space-y-2 text-[#d6d3d1] text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Livraison professionnelle</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Conseil aménagement espace formation</li>
+                    <li class="flex items-start gap-2"><span class="text-[#8b8b4b]">●</span> Installation sur demande (commandes volume)</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6 lg:px-16">
+        <h2 class="text-3xl font-bold text-[#1c1917] mb-12 text-center">FAQ</h2>
+        
+        <div class="space-y-6">
+            <div class="bg-stone-50 p-6 border border-stone-200">
+                <h4 class="font-bold text-[#1c1917] mb-2">La tablette est-elle réglable ?</h4>
+                <p class="text-stone-600 text-sm">Oui, la tablette rotative CADDY s'ajuste selon vos besoins. Position optimale pour prise de notes ou travail sur ordinateur portable.</p>
+            </div>
+            <div class="bg-stone-50 p-6 border border-stone-200">
+                <h4 class="font-bold text-[#1c1917] mb-2">Combien pèse la chaise ?</h4>
+                <p class="text-stone-600 text-sm">La chaise CADDY 80 est conçue pour être mobile tout en restant stable grâce à sa base 5 branches et 6 roulettes.</p>
+            </div>
+            <div class="bg-stone-50 p-6 border border-stone-200">
+                <h4 class="font-bold text-[#1c1917] mb-2">Pour quel usage est-elle conçue ?</h4>
+                <p class="text-stone-600 text-sm">Spécifiquement pour sessions de formation professionnelle, salles de réunion modulables et espaces de travail collaboratifs.</p>
+            </div>
+            <div class="bg-stone-50 p-6 border border-stone-200">
+                <h4 class="font-bold text-[#1c1917] mb-2">Quelle est la garantie ?</h4>
+                <p class="text-stone-600 text-sm">Garantie fabricant 5 ans pour utilisation professionnelle. Service après-vente KWESK disponible au Maroc.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-4xl mx-auto px-6 lg:px-16 text-center">
+        <h2 class="text-4xl font-bold text-[#1c1917] mb-4">DEMANDER UN DEVIS</h2>
+        <p class="font-bold text-[#8b8b4b] text-xl mb-6">Équipez votre espace formation avec CADDY 80</p>
+        <p class="text-stone-600 mb-8">Contactez nos experts KWESK pour :</p>
+        
+        <div class="flex flex-col md:flex-row justify-center gap-12 mb-12 text-left">
+            <div>
+                <ul class="space-y-3 text-stone-600">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Devis personnalisé selon quantité</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Conseil configuration espace</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Options personnalisation couleurs</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#8b8b4b]"></span> Information délais et livraison</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-6 shadow-sm border border-stone-100">
+                <p class="font-bold text-[#1c1917] mb-4 border-b border-stone-200 pb-2">Contact KWESK :</p>
+                <ul class="space-y-3 text-stone-600 text-sm">
+                    <li><strong class="text-[#1c1917]">Téléphone :</strong> +212 5 20 24 16 37 / +212 6 61 48 16 16</li>
+                    <li><strong class="text-[#1c1917]">Email :</strong> contact@kwesk.com</li>
+                    <li><strong class="text-[#1c1917]">Showroom :</strong> Anfa Place, Tour Ouest Niveau 1, Boulevard de la Corniche, Aïn Diab, 20180 Casablanca</li>
+                </ul>
+            </div>
+        </div>
+        
+        <a href="/contact" class="inline-block px-10 py-5 bg-[#8b8b4b] text-white font-bold uppercase tracking-widest hover:bg-[#1c1917] transition-all duration-300 shadow-lg hover:-translate-y-1">
+            Demander un devis gratuit
+        </a>
       </div>
     </section>
 
@@ -95,9 +368,12 @@ const images = [
 
 <style>
   .hero {
+    position: relative;
     width: 100%;
     height: 50vh;
     min-height: 400px;
+    padding-top: 100px; /* Account for fixed header */
+    background-color: #1c1917;
   }
 
   .hero img {
@@ -111,7 +387,7 @@ const images = [
   }
 
   .product__container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 60px;
   }
@@ -137,7 +413,7 @@ const images = [
 
   .product__main img {
     max-width: 100%;
-    max-height: 400px;
+    height: 400px;
     object-fit: contain;
   }
 
@@ -147,28 +423,26 @@ const images = [
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background: none;
     border: none;
     cursor: pointer;
-    color: #a8a29e;
-    transition: color 0.3s ease;
-  }
-
-  .product__arrow:hover {
-    color: #1c1917;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
   }
 
   .product__arrow--left {
-    left: 0;
+    left: 10px;
   }
 
   .product__arrow--right {
-    right: 0;
+    right: 10px;
   }
 
   .product__arrow svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   .product__thumbs {
@@ -182,10 +456,10 @@ const images = [
     width: 80px;
     height: 80px;
     padding: 10px;
-    border: 1px solid #e7e5e4;
-    background: white;
+    border: 2px solid transparent;
+    background: #fafaf9; /* stone-50 */
     cursor: pointer;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .product__thumb:hover,
@@ -200,97 +474,64 @@ const images = [
   }
 
   .product__info {
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .product__title {
     font-size: 42px;
     font-weight: 700;
     color: #1c1917;
+    margin-bottom: 24px;
   }
 
   .product__desc {
-    font-size: 15px;
-    color: #78716c;
+    font-size: 16px;
+    color: #57534e; /* stone-600 */
     line-height: 1.8;
-    margin-top: 25px;
   }
 
   .product__version {
     margin-top: 40px;
+    padding: 20px;
+    background: #fafaf9;
+    border-left: 4px solid #8b8b4b;
   }
 
   .product__version-label {
     display: block;
     font-size: 12px;
-    color: #a8a29e;
+    color: #78716c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 8px;
   }
 
   .product__version-name {
-    font-size: 14px;
+    font-size: 16px;
     color: #1c1917;
   }
 
   .product__btn {
     display: inline-block;
-    padding: 16px 40px;
+    padding: 18px 40px;
     background-color: #8b8b4b;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
     margin-top: 40px;
-    transition: opacity 0.3s ease;
   }
 
   .product__btn:hover {
-    opacity: 0.9;
-  }
-
-  .features {
-    padding: 80px 0;
-    border-top: 1px solid #e7e5e4;
-  }
-
-  .features__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .features__title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1c1917;
-    margin-bottom: 30px;
-  }
-
-  .features__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .features__list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 14px;
-    color: #57534e;
-    line-height: 1.8;
-    margin-bottom: 12px;
-  }
-
-  .features__list li span {
-    color: #8b8b4b;
-    font-weight: 600;
+    background-color: #1c1917;
   }
 
   .colors {
-    padding: 80px 0;
+    padding: 100px 0;
     border-top: 1px solid #e7e5e4;
+    background-color: white;
   }
 
   .colors__container {
@@ -300,19 +541,14 @@ const images = [
   }
 
   .colors__title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: #1c1917;
-    margin-bottom: 40px;
-  }
-
-  .colors__image {
-    max-width: 100%;
+    margin-bottom: 50px;
   }
 
   @media (max-width: 900px) {
     .product__container,
-    .features__container,
     .colors__container {
       padding: 0 30px;
     }
@@ -354,10 +590,20 @@ const images = [
   function updateImage(index) {
     currentIndex = index;
     if (mainImage) {
-      mainImage.src = allImages[index];
+      mainImage.style.opacity = '0';
+      setTimeout(() => {
+        mainImage.src = allImages[index];
+        mainImage.style.opacity = '1';
+      }, 150);
     }
     thumbs.forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === index);
+      if (i === index) {
+        thumb.classList.add('active');
+        thumb.style.borderColor = '#8b8b4b';
+      } else {
+        thumb.classList.remove('active');
+        thumb.style.borderColor = 'transparent';
+      }
     });
   }
 

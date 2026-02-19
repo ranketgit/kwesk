@@ -1,7 +1,6 @@
 ---
 // pages/salles-reunion.astro
 import Layout from '../layouts/Layout.astro';
-import CategoryHeader from '../components/CategoryHeader.astro';
 import ProductCardSimple from '../components/ProductCardSimple.astro';
 
 const products = [
@@ -11,17 +10,249 @@ const products = [
 ];
 ---
 
-<Layout title="Aménagement Salles de Réunion | Mobilier Professionnel" description="Aménagement complet de salles de réunion. Mobilier de bureaux, tables et chaises professionnelles. Solutions clés en main pour entreprises - Kwesk Maroc.">
-  <CategoryHeader 
-    title="Salles de Réunion" 
-    description="Créez des espaces d'échange inspirants avec notre mobilier dédié à la collaboration."
-    image="/home-categories/reunion.jpg"
-  />
+<Layout 
+  title="Mobilier Salle de Réunion Professionnel au Maroc | KWESK" 
+  description="Équipez votre salle de réunion avec le mobilier professionnel KWESK — fabricant marocain depuis 2008. Tables, chaises, rangements. Certifié."
+>
+  <section class="relative pt-[160px] pb-24 bg-[#1c1917] flex items-center justify-center min-h-[55vh] overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/home-categories/reunion.jpg" alt="Salles de Réunion" class="w-full h-full object-cover opacity-30" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#1c1917]/90 via-[#1c1917]/70 to-[#1c1917]"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-3xl md:text-4xl lg:text-[42px] font-bold text-white mb-8 leading-snug">
+            Mobilier de Salle de Réunion Professionnel au Maroc
+        </h1>
+        <h2 class="text-[#8b8b4b] text-xl font-bold mb-6 tracking-wide">Votre Espace de Réunion, Pensé pour la Performance</h2>
+        <p class="text-lg text-[#d6d3d1] leading-relaxed max-w-3xl mx-auto">
+            Chez KWESK, nous concevons et fabriquons au Maroc un mobilier salle réunion professionnel alliant robustesse, design contemporain et fonctionnalité. Chaque pièce est pensée pour accompagner vos collaborateurs, vos clients et vos partenaires dans des espaces de travail à la hauteur de vos ambitions.
+        </p>
+    </div>
+  </section>
 
-  <section class="product-section">
-    <div class="product-container">
-      <div class="product-grid">
+  <section class="py-20 bg-stone-50 border-b border-stone-200">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-16">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
         {products.map(p => <ProductCardSimple {...p} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
+          <img src="/reunion/mt1.jpg" alt="Tables de Réunion" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-[#1c1917] mb-8 flex items-center gap-4">
+            <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+            Des Tables de Réunion pour Toutes les Configurations
+          </h2>
+          <p class="text-stone-600 leading-relaxed text-lg text-justify">
+            Notre catalogue propose une large gamme de <a href="/reunion/table-de-reunion" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">tables de réunion professionnelles</a> adaptées à tous les formats de réunion. Que vous recherchiez une table réunion entreprise Maroc pour vos réunions quotidiennes ou une table conférence professionnelle Maroc pour des événements grande capacité, nos modèles couvrent tous les besoins : ovales pour favoriser l'échange, rectangulaires pour les présentations formelles, modulaires pour les salles évolutives. Chaque table KWESK est fabriquée avec des matériaux de qualité (panneaux haute densité, revêtements mélaminés résistants aux rayures, pieds en métal traité), certifiée aux normes BIFMA et EN1335, garantie 5 ans minimum, avec passages de câbles et prises électriques encastrées pour les environnements connectés.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#1c1917] text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1 space-y-16">
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
+              <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+              Chaises et Sièges Ergonomiques pour Salle de Réunion
+            </h2>
+            <p class="text-[#a8a29e] leading-relaxed text-lg text-justify">
+              Une réunion productive commence par un confort optimal. Chaque <a href="/chaises" class="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">chaise salle réunion professionnel</a> KWESK — disponible en tissu, résille ou cuir  est ergonomique, empilable et conçue pour des sessions longues. Elles complètent naturellement chaque configuration de table et s'harmonisent avec l'esthétique de vos espaces professionnels.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
+              <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+              Rangements et Supports pour Votre Salle de Conférence
+            </h2>
+            <p class="text-[#a8a29e] leading-relaxed text-lg text-justify">
+              Pour un espace de réunion complet, découvrez nos <a href="/reunion/rangement" class="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">rangements pour salle de réunion</a> — armoires, caissons et mobilier de rangement adaptés aux environnements professionnels ainsi que nos <a href="/reunion/media" class="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">supports médias et écrans de conférence</a> pour des présentations fluides et connectées.
+            </p>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 relative aspect-[4/3] overflow-hidden rounded-sm shadow-2xl border border-stone-800">
+          <img src="/home-categories/chair.jpg" alt="Chaises et Sièges" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-stone-50 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative aspect-square overflow-hidden rounded-sm shadow-lg">
+          <img src="/reunion/ec2.jpg" alt="Aménagement Clé en Main" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="space-y-16">
+          <div>
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-6 flex items-center gap-4">
+              <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+              Aménagement Salle de Réunion Clé en Main
+            </h2>
+            <p class="text-stone-600 leading-relaxed text-lg text-justify">
+              KWESK propose un service complet d'aménagement salle réunion professionnel, de la conception de l'espace à la livraison et à l'installation sur site. Que ce soit pour un aménagement bureau entreprise standard ou une configuration sur mesure, notre équipe vous accompagne dans le choix du mobilier adapté à vos besoins, à la superficie de votre salle et à votre charte graphique. Pour aller plus loin, consultez notre service d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement de bureau professionnel</a> dédié aux entreprises de toutes tailles.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-6 flex items-center gap-4">
+              <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+              Fabricant Marocain  Qualité Certifiée, Durabilité Garantie
+            </h2>
+            <div class="text-stone-600 leading-relaxed text-lg text-justify space-y-4">
+              <p>Depuis 2008, KWESK est la référence en bureau professionnel Maroc pour les entreprises, administrations et collectivités. Notre mobilier bureau professionnel Maroc est conçu pour durer plus de 10 ans même dans les environnements les plus exigeants. Notre production locale nous permet de maîtriser chaque étape de la fabrication et d'offrir des délais compétitifs à Casablanca, Rabat, Marrakech, Tanger, Fès et dans toutes les grandes villes du Royaume.</p>
+              <p>Que vous soyez une PME en croissance ou une multinationale, notre équipement salle de réunion s'adapte à votre budget. <a href="/contact" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Obtenir un devis gratuit</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1 space-y-16">
+          <div>
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-6 flex items-center gap-4">
+              <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+              Comment Choisir Votre Mobilier de Salle de Réunion ?
+            </h2>
+            <p class="text-stone-600 leading-relaxed text-lg mb-6">Le choix du mobilier de salle de réunion dépend de quatre facteurs clés :</p>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-4">
+                    <span class="mt-2 w-2 h-2 rounded-full bg-[#8b8b4b] flex-shrink-0"></span>
+                    <span class="text-stone-600 text-lg"><strong class="text-stone-900">La superficie et la forme de la salle</strong>  table ovale pour salle rectangulaire étroite, modulaire pour une salle polyvalente</span>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-2 w-2 h-2 rounded-full bg-[#8b8b4b] flex-shrink-0"></span>
+                    <span class="text-stone-600 text-lg"><strong class="text-stone-900">La capacité d'accueil</strong>   4–8 personnes : table compacte ; 8–20 personnes : table réunion entreprise Maroc grande capacité</span>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-2 w-2 h-2 rounded-full bg-[#8b8b4b] flex-shrink-0"></span>
+                    <span class="text-stone-600 text-lg"><strong class="text-stone-900">La connectivité requise</strong>   passages de câbles, prises électriques encastrées pour les environnements hybrides</span>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-2 w-2 h-2 rounded-full bg-[#8b8b4b] flex-shrink-0"></span>
+                    <span class="text-stone-600 text-lg"><strong class="text-stone-900">Le niveau de standing</strong>   matériaux, finitions, cohérence avec l'identité visuelle de l'entreprise</span>
+                </li>
+            </ul>
+            <p class="text-stone-600 leading-relaxed text-lg text-justify">
+              Nos experts accompagnent chaque projet d'aménagement salle de réunion, de la sélection du mobilier jusqu'à l'installation finale. Consultez notre <a href="/blog/amenagement-salle-reunion-professionnel" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">guide complet d'aménagement de salle de réunion</a> ou <a href="/contact" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">demandez un devis gratuit sous 48h</a>.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-[#1c1917] mb-6 flex items-center gap-4">
+              <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+              Mobilier de Conférence Professionnel au Maroc
+            </h2>
+            <p class="text-stone-600 leading-relaxed text-lg text-justify">
+              KWESK conçoit et livre un mobilier salle conférence Maroc pensé pour les entreprises exigeantes. Tables de conférence professionnelle Maroc grande capacité, chaises empilables, supports médias et rangements — chaque élément est fabriqué localement, certifié BIFMA & EN1335 et garanti pour une utilisation intensive. Découvrez également nos conseils sur l'<a href="/blog/amenagement-bureau-open-space" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement d'un bureau open space</a> pour des espaces de travail cohérents et performants.
+            </p>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 relative aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
+          <img src="/reunion/r1.jpg" alt="Rangements et Supports" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#1c1917] text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div class="relative aspect-square overflow-hidden rounded-sm shadow-2xl border border-stone-800">
+          <img src="/bureau.jpg" alt="Fabricant Marocain" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500" />
+        </div>
+        <div class="space-y-8">
+          <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
+            <span class="w-2 h-8 bg-[#8b8b4b] block flex-shrink-0"></span>
+            KWESK : Fabricant Marocain Certifié depuis 2008
+          </h2>
+          <p class="text-[#a8a29e] leading-relaxed text-lg text-justify">
+            KWESK est l'une des références en mobilier bureau professionnel Maroc, certifiée aux normes BIFMA (international) et EN1335 (européenne). Cette double certification garantit que chaque produit répond aux exigences les plus strictes en matière de solidité, de durabilité et d'ergonomie. Découvrez toute notre gamme de <a href="/bureaux" class="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">mobilier de bureau professionnel</a>.
+          </p>
+          
+          <div class="bg-[#292524] p-8 rounded-lg border border-[#44403c]">
+            <p class="font-bold text-white text-lg mb-4">Ce qui nous distingue :</p>
+            <ul class="space-y-4 pl-2 border-l-4 border-[#8b8b4b] ml-2 mb-6">
+                <li class="text-[#d6d3d1] text-lg pl-4">Fabrication 100% marocaine depuis 2008</li>
+                <li class="text-[#d6d3d1] text-lg pl-4">Certifications BIFMA & EN1335  standards internationaux</li>
+                <li class="text-[#d6d3d1] text-lg pl-4">Garantie 5 ans minimum sur l'ensemble du mobilier</li>
+                <li class="text-[#d6d3d1] text-lg pl-4">Durabilité conçue pour 10+ ans d'utilisation intensive</li>
+            </ul>
+            <p class="text-[#8b8b4b] leading-relaxed text-lg italic font-medium">
+              Un mobilier de salle de réunion KWESK n'est pas un achat  c'est un investissement durable pour votre entreprise.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center max-w-4xl mx-auto pt-16 border-t border-stone-800">
+        <h2 class="text-3xl font-bold text-white mb-6">Livraison et Installation dans Tout le Maroc</h2>
+        <p class="text-[#a8a29e] leading-relaxed text-lg mb-8">
+            Pour tout projet d'aménagement bureau entreprise, KWESK assure la livraison et l'installation de votre mobilier de salle de réunion dans toutes les grandes villes du Maroc. Notre service de vente mobilier bureau Casablanca et dans les autres villes couvre l'ensemble du territoire national :
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 text-lg mb-10">
+            <a href="/amenagement-de-bureau-professionnel-a-casablanca" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Casablanca</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-rabat" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Rabat</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-marrakech" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Marrakech</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-tanger" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Tanger</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-fes" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Fès</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-agadir" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Agadir</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-meknes" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Meknès</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-oujda" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Oujda</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-kenitra" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Kénitra</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-temara" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Témara</a> <span class="text-stone-600">—</span>
+            <a href="/amenagement-de-bureau-professionnel-a-tetouan" class="text-[#8b8b4b] font-bold hover:text-white transition-colors">Tétouan</a>
+        </div>
+        <ul class="flex flex-col sm:flex-row flex-wrap justify-center gap-6">
+            <li class="flex items-center gap-2 text-[#d6d3d1] font-medium"><span class="text-[#8b8b4b]">✓</span> Conseil et conception de l'espace</li>
+            <li class="flex items-center gap-2 text-[#d6d3d1] font-medium"><span class="text-[#8b8b4b]">✓</span> Livraison maîtrisée sur tout le territoire</li>
+            <li class="flex items-center gap-2 text-[#d6d3d1] font-medium"><span class="text-[#8b8b4b]">✓</span> Installation professionnelle sur site</li>
+            <li class="flex items-center gap-2 text-[#d6d3d1] font-medium"><span class="text-[#8b8b4b]">✓</span> <a href="/contact" class="text-[#8b8b4b] hover:text-white underline transition-colors">Devis personnalisé gratuit sous 48h</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-16">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917]">FAQ</h2>
+      </div>
+      
+      <div class="space-y-6">
+        <div class="bg-white p-8 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Q1 — Quel mobilier choisir pour une salle de réunion professionnelle ?</h4>
+          <p class="text-stone-600 leading-relaxed">Pour une salle de réunion professionnelle, choisissez une <a href="/reunion/table-de-reunion" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">table de réunion</a> adaptée à la taille de la pièce et au nombre de participants, une <a href="/chaises" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">chaise salle réunion professionnel</a> ergonomique et un <a href="/reunion/rangement" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">rangement</a> fonctionnel. Optez pour des matériaux certifiés BIFMA pour garantir la longévité du mobilier en entreprise.</p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Q2 — Quelle est la différence entre une table de réunion et une table de conférence ?</h4>
+          <p class="text-stone-600 leading-relaxed">Une table réunion entreprise Maroc est utilisée pour des réunions quotidiennes avec 4 à 12 personnes. Une table conférence professionnelle Maroc est plus grande (jusqu'à 20 personnes ou plus), conçue pour des présentations formelles ou des événements d'entreprise. Les deux peuvent être ovales, rectangulaires ou en tonneau.</p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Q3 — KWESK livre-t-il le mobilier de salle de réunion partout au Maroc ?</h4>
+          <p class="text-stone-600 leading-relaxed">Oui. KWESK assure la livraison et l'installation dans toutes les grandes villes du Maroc : Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, Meknès, et plus. Notre réseau logistique couvre l'ensemble du territoire national pour tout projet d'aménagement salle réunion professionnel.</p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Q4 — Combien coûte l'aménagement d'une salle de réunion au Maroc ?</h4>
+          <p class="text-stone-600 leading-relaxed">Le mobilier de bureau prix Maroc varie selon la superficie, le nombre de postes, les matériaux et le niveau de finition. Notre service d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement de bureau professionnel</a> propose des solutions adaptées à tous les budgets. <a href="/contact" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Contactez-nous</a> pour un devis personnalisé et gratuit sous 48h.</p>
+        </div>
+        <div class="bg-white p-8 border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-[#1c1917] text-lg mb-3">Q5 — Quelle garantie offre KWESK sur son mobilier de salle de réunion ?</h4>
+          <p class="text-stone-600 leading-relaxed">KWESK garantit l'ensemble de son mobilier bureau professionnel Maroc pendant 5 ans minimum. Nos produits sont fabriqués au Maroc, testés aux normes BIFMA et EN1335, et conçus pour une utilisation intensive sur plus de 10 ans. Un service de maintenance et de rénovation est également disponible.</p>
+        </div>
       </div>
     </div>
   </section>
