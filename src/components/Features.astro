@@ -1,7 +1,5 @@
 ---
-// Features.astro
 interface Feature {
-  icon: string;
   title: string;
   description: string;
 }
@@ -12,62 +10,35 @@ interface Props {
 
 const { features = [
   {
-    icon: "quality",
-    title: "Qualité",
-    description: "Les chaises KWESK sont conformes aux normes BIFMA 2011 et EN 1335-1-2-3. Ces certifications internationales garantissent durabilité, sécurité et ergonomie pour utilisation professionnelle intensive."
+    title: "Fabricant Marocain Depuis 2008",
+    description: "KWESK conçoit et fabrique du mobilier bureau professionnel au Maroc depuis plus de 17 ans. Notre expertise de fabricant nous permet de maîtriser la qualité de chaque produit, du choix des matériaux à l'assemblage final."
   },
   {
-    icon: "shipping",
-    title: "Livraison",
-    description: "Livraison à travers le Maroc via notre réseau d'affiliés. Service professionnel avec installation pour vos projets d'équipement mobilier bureau."
+    title: "Certifications Internationales BIFMA et EN 1335",
+    description: "Nos chaises ergonomiques sont certifiées selon les normes BIFMA (Business and Institutional Furniture Manufacturers Association) et EN 1335, les références mondiales en matière de sécurité et de durabilité du mobilier de bureau."
   },
   {
-    icon: "warranty",
-    title: "Garantie",
-    description: "Les chaises KWESK bénéficient d'une garantie minimum 5 ans. Couverture complète de la structure et des mécanismes pour utilisation normale en environnement professionnel."
+    title: "Garantie 5 Ans et Service Après-Vente",
+    description: "Chaque produit KWESK est livré avec une garantie de 5 ans. Notre service après-vente basé à Casablanca intervient rapidement pour toute maintenance ou remplacement de pièce."
   },
   {
-    icon: "service",
-    title: "Service Après-Vente",
-    description: "Réparation, maintenance et rénovation via notre réseau d'affiliés. Pièces détachées disponibles. Support technique réactif pour assurer la longévité de votre mobilier."
+    title: "Livraison et Installation sur Tout le Maroc",
+    description: "Nous assurons la livraison et l'installation de votre mobilier professionnel dans tout le Royaume du Maroc  Casablanca, Rabat, Marrakech, Agadir, Tanger, Fès, Meknès, Oujda et plus encore. Notre équipe logistique prend en charge le transport, le montage et la mise en place dans vos locaux."
   }
 ]} = Astro.props;
 ---
 
-<section class="features-section py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-8 lg:px-16">
-    <h2 class="text-5xl lg:text-6xl text-center text-stone-900 mb-16">NOS ENGAGEMENTS</h2>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-      
+<section class="features-section py-24 bg-[#1c1917]">
+  <div class="max-w-7xl mx-auto px-8 lg:px-16">
+    <h2 class="text-3xl lg:text-5xl text-center font-bold text-white mb-16">Pourquoi Choisir KWESK pour Votre Mobilier de Bureau au Maroc ?</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
       {features.map((feature, i) => (
-        <div class="feature-item text-center" style={`--i: ${i}`}>
-          <div class="feature-icon w-12 h-12 mx-auto mb-4" style="color: #8b8b4b;">
-            {feature.icon === "quality" && (
-              <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
-                <path d="M12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2Z"/>
-              </svg>
-            )}
-            {feature.icon === "shipping" && (
-              <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
-                <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-              </svg>
-            )}
-            {feature.icon === "warranty" && (
-              <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            )}
-            {feature.icon === "service" && (
-              <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
-                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
-              </svg>
-            )}
-          </div>
-          <h3 class="feature-title text-lg font-semibold text-stone-900 mb-2">{feature.title}</h3>
-          <p class="feature-desc text-sm text-stone-500 leading-relaxed">{feature.description}</p>
+        <div class="feature-item bg-[#292524] p-8 border-l-4 border-[#8b8b4b]" style={`--i: ${i}`}>
+          <h3 class="feature-title text-xl font-bold text-white mb-4">{feature.title}</h3>
+          <p class="feature-desc text-[#d6d3d1] leading-relaxed text-justify">{feature.description}</p>
         </div>
       ))}
-
     </div>
   </div>
 </section>
@@ -96,7 +67,7 @@ const { features = [
         }
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0.2 }
   );
 
   document.querySelectorAll('.features-section').forEach((section) => {

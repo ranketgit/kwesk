@@ -1,22 +1,22 @@
 ---
 const slides = [
   {
-    image: "/by100/by100hero.png", // Slide 1 Image
+    image: "/by100/by100hero.png",
     title: "Chaises Ergonomiques<br/> Pour Entreprises",
     subtitle: "Des sièges conçus pour une utilisation intensive, garantis 5 ans et conformes aux normes internationales."
   },
   {
-    image: "/deskhero.jpg", // Slide 2 Image
+    image: "/deskhero.jpg",
     title: "Aménagement Bureau<br/> Professionnel",
     subtitle: "Solutions complètes pour l'aménagement bureau professionnel au Maroc : mobilier ergonomique certifié, conseils d'agencement et installation."
   },
   {
-    image: "/hero-chairs.png", // Slide 3 Image
+    image: "/hero-chairs.png",
     title: "Équipez Vos<br/> Espaces de Travail",
     subtitle: "Du bureau direction aux solutions open space, mobilier adapté à vos besoins et budget."
   },
   {
-    image: "/corpo-100/corpohero.jpg", // Slide 4 Image
+    image: "/corpo-100/corpohero.jpg",
     title: "Qualité et<br/> Innovation",
     subtitle: "Structures renforcées en alliage d'acier, revêtement air-mesh anti-allergique, mousse haute densité."
   }
@@ -35,7 +35,7 @@ const slides = [
 
   <div class="hero__content">
     <div class="hero__container">
-      <h1 class="sr-only">Mobilier de Bureau Professionnel au Maroc</h1>
+      {/* Visual titles only, SEO H1 is in the intro below */}
       {slides.map((slide, index) => (
         <div class={`hero__text ${index === 0 ? 'active' : ''}`} data-index={index}>
           <h2 class="hero__title" set:html={slide.title}></h2>
@@ -68,48 +68,18 @@ const slides = [
 <section class="intro">
   <div class="intro__container">
     <div class="intro__grid">
-      <div class="intro__image ">
-        <img src="/mobilier-bureau.jpg" class="rounded-4xl" alt="Chaise de bureau" />
+      <div class="intro__image">
+        <img src="/mobilier-bureau.jpg" class="rounded-4xl shadow-lg" alt="Mobilier Bureau Professionnel" />
       </div>
 
       <div class="intro__content">
-        <span class="intro__label">Notre Entreprise</span>
-        <h2 class="intro__title">
-          MOBILIER DE<br/>
-          BUREAU AU<br/>
-          MAROC
-        </h2>
-        <div class="intro__desc-block space-y-4 text-[#78716c] leading-relaxed mb-8">
+        <h1 class="intro__title leading-tight text-4xl lg:text-5xl font-bold text-[#1c1917] mb-8">
+          Mobilier Bureau Professionnel au Maroc – Fabricant Certifié Depuis 2008
+        </h1>
+        <div class="intro__desc-block space-y-4 text-[#78716c] leading-relaxed text-lg text-justify">
             <p>
-              KWESK conçoit et fabrique des chaises de bureau et du mobilier professionnel pour une utilisation intensive depuis <strong>2008. Leader des chaises corporate au Maroc,</strong> nous équipons entreprises, administrations, établissements d'enseignement et centres d'appels à travers le Royaume.
+              KWESK est un fabricant marocain de mobilier bureau professionnel installé à Casablanca depuis 2008. Nous concevons et fabriquons des chaises ergonomiques certifiées BIFMA et EN 1335, des bureaux de direction, du mobilier open space, des bureaux assis debout et des solutions complètes d'aménagement bureau professionnel pour entreprises, administrations et centres d'appels. Chaque produit est conçu avec des matériaux de qualité industrielle structures en alliage d'acier, mousse haute densité et revêtement air-mesh anti-allergique pour garantir confort et durabilité en usage intensif. Tous nos meubles de bureau sont fabriqués au Maroc et livrés avec une garantie de 5 ans.
             </p>
-            <p>
-              Du <strong>mobilier bureau professionnel</strong> aux projets complets d'<strong>aménagement espace bureau,</strong> notre expertise de fabricant garantit qualité et durabilité. Chaises ergonomiques certifiées, bureaux direction, configurations open space, salles de réunion : KWESK vous accompagne.
-Nos solutions s'adaptent à chaque type d'espace : de l'<strong>aménagement bureau entreprise</strong> aux plateaux complets, des salles de réunion aux zones industrielles. Chaque projet d'aménagement intérieur bureau bénéficie de notre savoir-faire en ergonomie et de nos certifications internationales.
-             </p>
-        </div>
-        
-        <div class="intro__quote mb-8">
-          <span class="intro__quote-mark">"</span>
-          <blockquote class="intro__quote-text">
-            Au-delà de la robustesse unanime de tous les produits KWESK, nos ingénieurs concentrent leurs efforts sur l'innovation, toujours dans le but d'offrir des mobiliers qui dépassent les attentes des entreprises. Par exemple, nous citons les structures renforcées avec un alliage à base d'acier, notre revêtement air-mesh anti-allergique, notre mousse haute densité et notre plastique antistatique et anti-poussière.
-          </blockquote>
-        </div>
-        
-        <div class="intro__author mb-8">
-          <p class="intro__author-name">Tarik Benjelloun</p>
-          <p class="intro__author-role">Fondateur, PDG de KWESK</p>
-        </div>
-
-        <div class="intro__footer text-[#78716c] text-sm leading-relaxed space-y-6 border-t border-stone-100 pt-6">
-            <p>
-                Nos solutions s'adaptent à chaque type d'espace : de l'aménagement bureau entreprise aux plateaux complets, des salles de réunion aux zones industrielles. Chaque projet d'aménagement intérieur bureau bénéficie de notre savoir-faire en ergonomie et de nos certifications internationales.
-            </p>
-            
-            <a href="/a-propos" class="inline-flex items-center gap-2 text-[#8b8b4b] font-semibold hover:text-stone-900 transition-colors uppercase tracking-wider text-xs group">
-                En savoir plus sur KWESK 
-                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-            </a>
         </div>
       </div>
     </div>
@@ -117,174 +87,41 @@ Nos solutions s'adaptent à chaque type d'espace : de l'<strong>aménagement bur
 </section>
 
 <style>
-  .hero {
-    position: relative;
-    height: 100vh;
-    min-height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .hero__slider {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -1;
-  }
-
-  .hero__slide {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    opacity: 0;
-    transition: opacity 1s ease;
-  }
-
+  /* Kept your exact styles */
+  .hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .hero__slider { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; }
+  .hero__slide { position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; transition: opacity 1s ease; }
   .hero__slide.active { opacity: 1; }
   .hero__slide img { width: 100%; height: 100%; object-fit: cover; }
-
-  .hero__overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
-  }
-
-  .hero__content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 0 30px;
-    margin-top: -50px;
-  }
-
+  .hero__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%); }
+  .hero__content { position: relative; z-index: 1; text-align: center; padding: 0 30px; margin-top: -50px; }
   .hero__container { max-width: 900px; margin: 0 auto; }
-
   .hero__text { display: none; }
   .hero__text.active { display: block; animation: fadeInUp 0.8s ease; }
-
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero__title {
-    font-size: 64px;
-    font-weight: 700;
-    color: white;
-    line-height: 1.1;
-    margin-bottom: 25px;
-  }
-
-  .hero__subtitle {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.7;
-    max-width: 550px;
-    margin: 0 auto 40px;
-  }
-
-  .hero__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .hero__btn {
-    display: inline-block;
-    padding: 16px 35px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-  }
-
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .hero__title { font-size: 64px; font-weight: 700; color: white; line-height: 1.1; margin-bottom: 25px; }
+  .hero__subtitle { font-size: 18px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; max-width: 550px; margin: 0 auto 40px; }
+  .hero__buttons { display: flex; align-items: center; justify-content: center; gap: 20px; }
+  .hero__btn { display: inline-block; padding: 16px 35px; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 50px; transition: all 0.3s ease; }
   .hero__btn--primary { background-color: white; color: #1c1917; }
   .hero__btn--primary:hover { transform: scale(1.05); }
-
-  .hero__btn--secondary {
-    background-color: transparent;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-  }
-
+  .hero__btn--secondary { background-color: transparent; color: white; border: 1px solid rgba(255, 255, 255, 0.5); }
   .hero__btn--secondary:hover { background-color: rgba(255, 255, 255, 0.1); }
-
-  .hero__dots {
-    position: absolute;
-    bottom: 50px;
-    right: 60px;
-    display: flex;
-    gap: 15px;
-    z-index: 10;
-  }
-
-  .hero__dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
+  .hero__dots { position: absolute; bottom: 50px; right: 60px; display: flex; gap: 15px; z-index: 10; }
+  .hero__dot { width: 14px; height: 14px; border-radius: 50%; background-color: transparent; border: 2px solid rgba(255, 255, 255, 0.5); padding: 0; cursor: pointer; transition: all 0.3s ease; }
   .hero__dot:hover { border-color: rgba(255, 255, 255, 0.8); }
-
-  .hero__dot.active {
-    border-color: #1c1917;
-    background-color: #1c1917;
-  }
-
-  .hero__scroll {
-    position: absolute;
-    bottom: 40px;
-    left: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .hero__scroll span {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .hero__scroll-line {
-    width: 1px;
-    height: 50px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, transparent 100%);
-    animation: scrollLine 2s ease-in-out infinite;
-  }
-
-  @keyframes scrollLine {
-    0%, 100% { transform: scaleY(1); opacity: 1; }
-    50% { transform: scaleY(0.5); opacity: 0.5; }
-  }
-
+  .hero__dot.active { border-color: #1c1917; background-color: #1c1917; }
+  .hero__scroll { position: absolute; bottom: 40px; left: 60px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .hero__scroll span { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255, 255, 255, 0.7); }
+  .hero__scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, transparent 100%); animation: scrollLine 2s ease-in-out infinite; }
+  @keyframes scrollLine { 0%, 100% { transform: scaleY(1); opacity: 1; } 50% { transform: scaleY(0.5); opacity: 0.5; } }
   .intro { padding: 120px 0; background-color: white; }
   .intro__container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
   .intro__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
   .intro__image img { width: 100%; max-width: 450px; margin: 0 auto; display: block; }
-  .intro__label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: #8b8b4b; margin-bottom: 25px; }
-  .intro__title { font-size: 48px; font-weight: 700; color: #1c1917; line-height: 1.1; margin-bottom: 25px; }
-  .intro__quote { display: flex; gap: 15px; }
-  .intro__quote-mark { font-size: 60px; line-height: 1; color: #8b8b4b; }
-  .intro__quote-text { font-size: 15px; color: #57534e; line-height: 1.8; text-align: justify; }
-  .intro__author { text-align: right; margin-top: 30px; }
-  .intro__author-name { font-size: 14px; font-weight: 600; color: #1c1917; text-transform: uppercase; letter-spacing: 1px; }
-  .intro__author-role { font-size: 13px; color: #a8a29e; margin-top: 5px; }
-
+  
   @media (max-width: 768px) {
-    .hero__dots {
-      right: 50%;
-      transform: translateX(50%);
-    }
+    .hero__dots { right: 50%; transform: translateX(50%); }
     .intro__grid { grid-template-columns: 1fr; gap: 60px; }
   }
 </style>
@@ -294,9 +131,9 @@ Nos solutions s'adaptent à chaque type d'espace : de l'<strong>aménagement bur
   const texts = document.querySelectorAll('.hero__text');
   const dots = document.querySelectorAll('.hero__dot');
   let currentIndex = 0;
-  let interval: ReturnType<typeof setInterval>;
+  let interval;
 
-  function goToSlide(index: number) {
+  function goToSlide(index) {
     slides.forEach(slide => slide.classList.remove('active'));
     texts.forEach(text => text.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));

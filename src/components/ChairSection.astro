@@ -2,34 +2,40 @@
 import ChairCard from './ChairCard.astro';
 ---
 
-<section class="bg-white py-20">
-  <h2 class="text-5xl lg:text-6xl text-center text-stone-900 mb-8">
-    NOS CHAISES AU<br/>MAROC
-  </h2>
+<section class="bg-stone-50 py-24 border-t border-stone-200">
+  
+  <div class="max-w-4xl mx-auto px-6 lg:px-16 text-center mb-20">
+    <h2 class="text-3xl lg:text-5xl font-bold text-stone-900 mb-8">
+      Chaises Ergonomiques Certifiées pour Entreprises au Maroc
+    </h2>
+    <p class="text-stone-600 text-lg leading-relaxed text-justify">
+      KWESK est le spécialiste des <a href="/chaises" class="text-[#8b8b4b] font-bold hover:text-stone-900 underline transition-colors">chaises de bureau ergonomiques</a> pour une utilisation intensive au Maroc. Nos sièges professionnels sont certifiés BIFMA et conformes à la norme européenne EN 1335, garantissant sécurité, durabilité et confort prolongé. Chaque chaise de bureau professionnel est équipée d'une structure renforcée en alliage d'acier, d'une assise en mousse haute densité et d'un revêtement air-mesh respirant et anti-allergique.
+    </p>
+  </div>
   
   <ChairCard
-    title="CHALLENGER"
-    description="Le Challenger 175 reste l'une des meilleures options pour les entreprises recherchant une chaise bureau au look corporate avec un excellent niveau de confort, un coût optimisé et une durée de vie de 5 ans en utilisation intensive comme pour toutes les chaises KWESK. Son assise large et profonde et ses nombreux réglages possibles offrent une sensation de confort exceptionnelle même sur de longues périodes d'utilisation."
+    title="CHALLENGER – Siège Ergonomique Polyvalent"
+    description="Le modèle CHALLENGER est notre chaise ergonomique polyvalente, adaptée aux bureaux opératifs, aux centres d'appels et aux administrations. Son design favorise un maintien dorsal optimal pendant les journées de travail prolongées."
     image="/chairs/challenger-chair.png"
-    versions={[{ name: "CHALLENGER 175", type: "Chaise Manager" }]}
+    versions={[{ name: "CHALLENGER", type: "Siège Polyvalent" }]}
     imagePosition="right"
     href="/challenger"
   />
 
   <ChairCard
-    title="GAMMA"
-    description="La toute nouvelle Gamma 150 est l'équilibre ultime entre confort, prix et robustesse offert par KWESK. Cette chaise ergonomique est le choix parfait pour une utilisation intensive au bureau ou à la maison. Certifications BIFMA et EN 1335 garantissent la qualité et la durabilité. Idéale pour bureaux opératifs, centres d'appels et espaces de travail partagés."
+    title="GAMMA – Confort Haute Performance"
+    description="La gamme GAMMA offre un confort haute performance avec un dossier en mesh respirant et des réglages multiples. Idéale pour les entreprises recherchant un siège ergonomique durable à un rapport qualité-prix compétitif."
     image="/chairs/gamma-chair.jpg"
-    versions={[{ name: "Gamma 150", type: "Chaise Opérateur" }]}
+    versions={[{ name: "GAMMA", type: "Confort Haute Performance" }]}
     imagePosition="left"
     href="/gamma"
   />
 
   <ChairCard
-    title="CORPO 100"
-    description="Le CORPO 100 offre l'équilibre ultime entre confort et style, conçu pour vous garder productif toute la journée. Son design élégant et son ergonomie supérieure en font un incontournable pour tout espace de travail moderne."
+    title="CORPO 100 – Fauteuil de Direction Premium"
+    description="Le CORPO 100 est notre fauteuil de direction premium, conçu pour les espaces de management. Revêtement cuir synthétique haut de gamme, accoudoirs réglables et mécanisme synchrone pour un confort exceptionnel."
     image="/chairs/corpo-chair.jpg"
-    versions={[{ name: "CORPO 100", type: "Chaise Opérateur" }]}
+    versions={[{ name: "CORPO 100", type: "Fauteuil de Direction" }]}
     imagePosition="right"
     href="/corpo-100"
   />
@@ -54,7 +60,6 @@ import ChairCard from './ChairCard.astro';
                     </a>
                 </li>
             </ul>
-            <p class="text-xs text-stone-400 mt-2">Fauteuils de direction haut de gamme</p>
         </div>
         
         <div class="space-y-4">
@@ -73,7 +78,6 @@ import ChairCard from './ChairCard.astro';
                     </a>
                 </li>
             </ul>
-            <p class="text-xs text-stone-400 mt-2">Solutions élégantes pour accueil</p>
         </div>
 
         <div class="space-y-4">
@@ -86,12 +90,11 @@ import ChairCard from './ChairCard.astro';
                     </a>
                 </li>
             </ul>
-            <p class="text-xs text-stone-400 mt-2">Flexibilité pour espaces multifonctions</p>
         </div>
     </div>
     
     <div class="mt-16 text-center">
-        <a href="/chaises" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white text-sm font-medium rounded-full hover:bg-stone-900 transition-all transform hover:scale-105">
+        <a href="/chaises" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-stone-900 transition-all transform hover:scale-105">
             VOIR TOUTE LA GAMME
         </a>
     </div>

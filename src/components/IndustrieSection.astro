@@ -2,23 +2,29 @@
 import ChairCard from './ChairCard.astro';
 ---
 
-<section class="bg-white py-20">
-  <h2 class="text-5xl lg:text-6xl text-center text-stone-900 mb-16">
-    MOBILIER<br/>INDUSTRIEL
-  </h2>
+<section class="bg-white py-24 border-t border-stone-200">
+  
+  <div class="max-w-4xl mx-auto px-6 lg:px-16 text-center mb-20">
+    <h2 class="text-3xl lg:text-5xl font-bold text-stone-900 mb-8">
+      Mobilier Industriel et Solutions de Rangement
+    </h2>
+    <p class="text-stone-600 text-lg leading-relaxed text-justify">
+      KWESK fabrique également du <a href="/mobilier-industriel" class="text-[#8b8b4b] font-bold hover:text-stone-900 underline transition-colors">mobilier industriel professionnel</a> pour les environnements exigeants. Notre gamme comprend des tables de cantine robustes pour collectivités, des casiers vestiaires métalliques, des armoires de rangement et des solutions de stockage adaptées aux usines et aux établissements publics. Chaque meuble industriel est conçu pour résister à une utilisation intensive et quotidienne.
+    </p>
+  </div>
 
   <ChairCard
-    title="TABLES CANTINE"
-    description="Équipez vos espaces de restauration collective avec nos tables de cantine robustes et fonctionnelles. Conçues pour un usage intensif, elles allient durabilité et facilité d'entretien. Disponibles avec bancs intégrés ou séparés, nos solutions s'adaptent à toutes les configurations d'espace et garantissent un confort optimal pour vos collaborateurs lors de leurs pauses repas."
+    title="Tables de Cantine"
+    description="Solutions robustes pour collectivités et environnements exigeants."
     image="/industrie/tables-cantine/1.jpg"
-    versions={[{ name: "CANTINE PRO", type: "Table avec Bancs" }]}
+    versions={[{ name: "CANTINE PRO", type: "Table Collectivité" }]}
     imagePosition="right"
     href="/industrie/tables-cantine"
   />
 
   <ChairCard
-    title="CASIERS VESTIAIRE"
-    description="Offrez à vos employés un espace de rangement personnel sécurisé avec nos casiers vestiaires métalliques. Robustes et ventilés, ils sont parfaits pour les environnements industriels, les salles de sport ou les vestiaires d'entreprise. Disponibles en plusieurs configurations selon vos besoins."
+    title="Casiers Vestiaires"
+    description="Casiers vestiaires métalliques adaptés aux usines et aux établissements publics."
     image="/industrie/casiers-vestiaire/1.webp"
     versions={[
       { name: "LOCKER 2", type: "Casier Double" },
@@ -29,16 +35,16 @@ import ChairCard from './ChairCard.astro';
   />
 
   <ChairCard
-    title="ARMOIRES & RANGEMENT"
-    description="Optimisez l'organisation de votre atelier avec nos armoires à outils professionnelles. Dotées de fonds perforés pour accrocher vos équipements, de tiroirs compartimentés et d'étagères réglables, elles permettent un accès rapide et ordonné à tous vos outils. Construction en acier renforcé pour durabilité exceptionnelle."
+    title="Armoires de Rangement"
+    description="Armoires de rangement et solutions de stockage industriel conçues pour résister à une utilisation intensive."
     image="/industrie/casiers-vestiaire/11.webp"
-    versions={[{ name: "ATELIER PRO", type: "Armoire à Outils" }]}
+    versions={[{ name: "ATELIER PRO", type: "Armoire Industrielle" }]}
     imagePosition="right"
     href="/industrie/armoires-rangement"
   />
 
   <div class="text-center mt-20">
-     <a href="/mobilier-industriel" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white text-sm font-medium rounded-full hover:bg-stone-900 transition-all transform hover:scale-105">
+     <a href="/mobilier-industriel" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-stone-900 transition-all transform hover:scale-105">
         DÉCOUVRIR LE MOBILIER INDUSTRIEL
      </a>
   </div>

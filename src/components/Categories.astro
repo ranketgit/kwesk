@@ -23,7 +23,12 @@ const categories = [
 
 <section class="categories">
   <div class="categories__container">
-    <h2 class="text-center mb-12 text-6xl">NOS CATÉGORIES</h2>
+    <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl lg:text-5xl font-bold text-[#1c1917] mb-6">Nos Catégories de Mobilier de Bureau Professionnel</h2>
+        <p class="text-stone-600 text-lg leading-relaxed">
+            Chez KWESK, notre gamme de mobilier professionnel couvre tous les besoins de l'espace de travail moderne. Des bureaux de direction aux configurations bench bureau pour open space, en passant par les chaises de bureau professionnel et le mobilier de salle de réunion, chaque produit allie fonctionnalité, ergonomie et design contemporain. Que vous équipiez un siège social, une administration publique ou un centre de formation, nos solutions s'adaptent à votre environnement et à votre budget.
+        </p>
+    </div>
 
     <div class="categories__grid">
       <a href={categories[0].href} class="categories__card categories__card--large rounded-4xl">
@@ -62,162 +67,37 @@ const categories = [
 </section>
 
 <style>
-  .categories {
-    padding: 120px 0;
-    background-color: white;
-  }
-
-  .categories__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .categories__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .categories__right {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .categories__card {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    background-color: #1c1917;
-    text-decoration: none;
-  }
-
-  .categories__card--large {
-    height: 600px;
-  }
-
-  .categories__right .categories__card {
-    height: 288px;
-  }
-
-  .categories__card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  .categories__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
-    z-index: 1;
-    transition: opacity 0.3s ease;
-  }
-
-  .categories__card:hover img {
-    transform: scale(1.1);
-  }
-
-  .categories__card:hover .categories__overlay {
-    opacity: 0.9;
-  }
-
-  .categories__card-content {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    right: 40px;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .categories__card-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 12px;
-    line-height: 1.2;
-  }
-
-  .categories__card-desc {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.5;
-    margin-bottom: 20px;
-    max-width: 90%;
-  }
-
-  .categories__card-link {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
-  }
-
-  .categories__card-link::after {
-    content: "→";
-    transition: transform 0.3s ease;
-  }
-
-  .categories__card:hover .categories__card-link {
-    color: white;
-  }
-
-  .categories__card:hover .categories__card-link::after {
-    transform: translateX(5px);
-  }
+  .categories { padding: 120px 0; background-color: white; border-top: 1px solid #e7e5e4; }
+  .categories__container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+  .categories__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .categories__right { display: flex; flex-direction: column; gap: 24px; }
+  .categories__card { position: relative; display: block; overflow: hidden; background-color: #1c1917; text-decoration: none; }
+  .categories__card--large { height: 600px; }
+  .categories__right .categories__card { height: 288px; }
+  .categories__card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .categories__overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); z-index: 1; transition: opacity 0.3s ease; }
+  .categories__card:hover img { transform: scale(1.1); }
+  .categories__card:hover .categories__overlay { opacity: 0.9; }
+  .categories__card-content { position: absolute; bottom: 40px; left: 40px; right: 40px; z-index: 2; pointer-events: none; }
+  .categories__card-title { font-size: 28px; font-weight: 700; color: white; margin-bottom: 12px; line-height: 1.2; }
+  .categories__card-desc { font-size: 14px; color: rgba(255, 255, 255, 0.9); line-height: 1.5; margin-bottom: 20px; max-width: 90%; }
+  .categories__card-link { font-size: 12px; color: rgba(255, 255, 255, 0.8); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: color 0.3s ease; }
+  .categories__card-link::after { content: "→"; transition: transform 0.3s ease; }
+  .categories__card:hover .categories__card-link { color: white; }
+  .categories__card:hover .categories__card-link::after { transform: translateX(5px); }
 
   @media (max-width: 1024px) {
-    .categories__card--large {
-      height: 500px;
-    }
-    
-    .categories__right .categories__card {
-      height: 238px;
-    }
-    
-    .categories__card-title { 
-      font-size: 22px; 
-    }
-    .categories__card-desc {
-      display: none; /* Hide description on tablets if space is tight, or remove this line to keep it */
-    }
+    .categories__card--large { height: 500px; }
+    .categories__right .categories__card { height: 238px; }
+    .categories__card-title { font-size: 22px; }
+    .categories__card-desc { display: none; }
   }
 
   @media (max-width: 768px) {
-    .categories__container { 
-      padding: 0 24px; 
-    }
-    
-    .categories__grid { 
-      grid-template-columns: 1fr; 
-    }
-    
-    .categories__card-content { 
-      bottom: 24px; 
-      left: 24px; 
-    }
-    
-    .categories__card--large,
-    .categories__right .categories__card {
-      height: auto;
-      min-height: 320px;
-    }
-    
-    .categories__card-desc {
-      display: block; /* Ensure it shows on mobile */
-      font-size: 13px;
-    }
+    .categories__container { padding: 0 24px; }
+    .categories__grid { grid-template-columns: 1fr; }
+    .categories__card-content { bottom: 24px; left: 24px; }
+    .categories__card--large, .categories__right .categories__card { height: auto; min-height: 320px; }
+    .categories__card-desc { display: block; font-size: 13px; }
   }
 </style>

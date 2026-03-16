@@ -2,52 +2,37 @@
 import ChairCard from './ChairCard.astro';
 ---
 
-<section class="bg-white py-20">
-  <h2 class="text-5xl lg:text-6xl text-center text-stone-900 mb-16">
-    NOS BUREAUX AU<br/>MAROC
-  </h2>
+<section class="bg-white py-20 border-t border-stone-200">
 
   <ChairCard
-    title="DIRECTION"
-    description="Nos bureaux de direction allient prestige et fonctionnalité. Conçus avec des matériaux nobles et des finitions soignées, ils affirment le leadership tout en offrant une surface de travail généreuse et ergonomique. Chaque pièce est pensée pour refléter l'image de marque de votre entreprise tout en assurant un confort premium pour vos sessions de travail stratégiques."
+    title="Bureaux de Direction"
+    description="Les bureaux de direction KWESK sont conçus pour les espaces de management exigeants au Maroc. Fabriqués avec des matériaux nobles et des finitions soignées, ils apportent prestige et fonctionnalité à votre espace direction. Plusieurs configurations sont disponibles selon la superficie et le style de vos locaux."
     image="/bureau.jpg"
-    versions={[{ name: "EXECUTIVE PRO", type: "Bureau de Direction" }]}
+    versions={[{ name: "Bureaux de Direction", type: "Executive" }]}
     imagePosition="right"
     href="/bureaux/direction"
   />
 
   <ChairCard
-    title="OPÉRATIF"
-    description="La gamme Opérative de KWESK est la solution idéale pour aménagement bureau de travail et optimisation de la productivité. Ces bureaux professionnels robustes offrent un design épuré qui s'intègre parfaitement dans tout type d'espace. Gestion intelligente des câbles et structure renforcée pour utilisation quotidienne intensive."
+    title="Bureaux Opératifs et Bench"
+    description="Nos bureaux opératifs et configurations bureaux bench pour open space optimisent l'agencement de vos locaux. Pensés pour la collaboration et la productivité, ils intègrent des passages de câbles et des options de cloisonnement pour un agencement bureau professionnel ordonné et fonctionnel."
     image="/deskall.jpg"
-    versions={[{ name: "OPTIMA 140", type: "Bureau Opératif" }]}
+    versions={[{ name: "Bureaux Opératifs & Bench", type: "Open Space" }]}
     imagePosition="left"
-    href="/bureaux/operatif"
+    href="/bureaux"
   />
 
   <ChairCard
-    title="BENCH"
-    description="Favorisez la collaboration avec nos solutions Bench pour aménagement bureau open space. Idéales pour les espaces de travail partagés, ces bureaux permettent de regrouper vos équipes tout en préservant l'espace individuel nécessaire à la concentration. Modulaires et évolutifs, ils s'adaptent à la croissance de votre entreprise et facilitent la communication entre départements."
-    image="/bench.jpg"
-    versions={[
-      { name: "TEAM BENCH 2", type: "Poste Double" },
-      { name: "TEAM BENCH 4", type: "Poste Quadruple" }
-    ]}
-    imagePosition="right"
-    href="/bureaux/bench"
-  />
-
-  <ChairCard
-    title="RÉGLABLES"
-    description="Innovez avec nos bureaux réglables en hauteur. Passant de la position assise à debout en quelques secondes, ils favorisent le bien-être et réduisent la fatigue liée à la sédentarité. Solution moderne pour les entreprises soucieuses de la santé de leurs employés et de l'ergonomie dynamique."
+    title="Bureau Assis Debout au Maroc"
+    description="Le bureau assis debout est devenu un incontournable de l'espace de travail ergonomique. Nos bureaux réglables en hauteur, disponibles en version électrique, permettent d'alterner facilement entre position assise et debout. Cette solution améliore le bien-être des collaborateurs et réduit la fatigue liée aux longues heures de travail. KWESK propose des modèles de bureau électrique adaptés aux entreprises et aux administrations au Maroc."
     image="/reglable.jpg"
-    versions={[{ name: "ACTIVE DESK", type: "Bureau Assis-Debout" }]}
-    imagePosition="left"
+    versions={[{ name: "Bureau Assis Debout", type: "Ergonomique" }]}
+    imagePosition="right"
     href="/bureaux/reglables"
   />
 
   <div class="text-center mt-20">
-     <a href="/bureaux" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white text-sm font-medium rounded-full hover:bg-stone-900 transition-all transform hover:scale-105">
+     <a href="/bureaux" class="inline-block px-8 py-4 bg-[#8b8b4b] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-stone-900 transition-all transform hover:scale-105">
         DÉCOUVRIR TOUS NOS BUREAUX
      </a>
   </div>
