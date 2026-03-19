@@ -10,7 +10,7 @@ image: "/solution-amenagement-bureau.webp"
 
 meta_title: "Solution Aménagement Bureau au Maroc | Guide complet"
 
-meta_description: "Découvrez les meilleures solutions d'aménagement bureau au Maroc : mobilier ergonomique, open space, bureau direction et agencement clé en main. Guide complet."
+meta_description: "Découvrez les meilleures solutions d'aménagement bureau au Maroc : mobilier ergonomique, open space, bureau direction et agencement clé en main."
 
 ---
 
