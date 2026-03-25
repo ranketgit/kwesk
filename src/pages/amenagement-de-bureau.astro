@@ -4,10 +4,86 @@ import Layout from '../layouts/Layout.astro';
 import AmCTA from '../components/AmCTA.astro';
 ---
 
-<Layout 
-  title="Aménagement Bureau Professionnel au Maroc | KWESK" 
-  description="Expert en aménagement de bureau au Maroc depuis 2008. Mobilier professionnel certifié, open space, et salles de réunion. Devis gratuit et installation nationale."
+<Layout
+  title="Aménagement Bureau Maroc | Expert depuis 2008 – KWESK"
+  description="Aménagement bureau Maroc : KWESK conçoit vos espaces de travail sur mesure. Mobilier certifié BIFMA, fabrication locale, livraison dans tout le Maroc."
 >
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "KWESK",
+      "description": "Expert en aménagement bureau Maroc depuis 2008. Mobilier professionnel certifié BIFMA, fabrication locale, livraison et installation dans tout le Maroc.",
+      "url": "https://kwesk.ma/amenagement-de-bureau",
+      "telephone": "+212520241637",
+      "email": "contact@kwesk.com",
+      "foundingDate": "2008",
+      "areaServed": "MA",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Anfa Place, Tour Ouest Niveau 1, Boulevard de la Corniche",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+      },
+      "sameAs": ["https://kwesk.ma"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Aménagement Bureau Maroc",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "KWESK",
+        "url": "https://kwesk.ma"
+      },
+      "serviceType": "Aménagement d'espaces de bureau professionnels",
+      "areaServed": "MA",
+      "description": "Conception et installation d'espaces de travail sur mesure au Maroc : open space, flex office, bureaux de direction, salles de réunion. Mobilier certifié BIFMA, fabrication locale."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que comprend un aménagement bureau Maroc complet ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un aménagement bureau Maroc complet couvre l'ensemble du projet : étude des locaux et élaboration d'un plan d'aménagement bureau professionnel, sélection et fourniture du mobilier (bureaux, chaises ergonomiques, rangements), livraison et installation sur site. Chez KWESK, chaque projet inclut un mobilier certifié BIFMA et EN 1335, fabriqué localement au Maroc pour une durabilité supérieure à 10 ans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment KWESK réalise-t-il un agencement bureau professionnel sur mesure ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Notre processus d'agencement bureau professionnel commence par une visite de vos locaux et l'analyse de vos besoins. Nos conseillers élaborent un plan d'aménagement optimisé, puis configurent le mobilier selon vos dimensions exactes — open space, bureaux individuels, salles de réunion ou espace de direction. La fabrication locale nous permet d'adapter chaque pièce à vos espaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "KWESK livre-t-il le mobilier de bureau dans toutes les villes du Maroc ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, KWESK assure la livraison et l'installation du mobilier de bureau dans tout le Maroc : Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir et toutes les autres villes. Contactez-nous pour obtenir un délai de livraison précis selon votre localisation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre un bureau open space et un aménagement flex office ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un bureau open space organise des postes de travail fixes dans un espace ouvert et collaboratif. Le flex office supprime les postes fixes : les collaborateurs s'installent à n'importe quel bureau disponible selon leur présence — idéal pour les organisations en télétravail partiel. KWESK conçoit les deux types d'aménagement avec des bureaux bench modulaires adaptables."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
 
   <section class="relative pt-[140px] pb-24 lg:pt-[180px] lg:pb-32 bg-[#1c1917] flex items-center min-h-[80vh] overflow-hidden">
     <div class="absolute inset-0">
@@ -22,11 +98,11 @@ import AmCTA from '../components/AmCTA.astro';
         </span>
         
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Expert en Aménagement de Bureau Professionnel au Maroc
+          Aménagement Bureau Maroc : Espaces de Travail Sur Mesure depuis 2008
         </h1>
         
         <p class="text-lg text-[#d6d3d1] leading-relaxed mb-8">
-          KWESK est votre partenaire pour l'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">aménagement bureau professionnel</a> au Maroc. De la conception à l'installation, nous accompagnons les entreprises marocaines dans la création d'espaces de travail ergonomiques et performants  avec un mobilier certifié BIFMA et EN 1335, fabriqué pour durer.
+          KWESK est votre expert en <a href="/amenagement-de-bureau" class="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">aménagement bureau Maroc</a>. De la conception du plan d'aménagement à l'installation complète, nous accompagnons les entreprises marocaines dans la création d'espaces de travail ergonomiques et performants — avec un mobilier certifié BIFMA et EN 1335, fabriqué localement pour durer.
         </p>
         
         <div class="bg-white/5 border-l-4 border-[#8b8b4b] p-6 mb-10 backdrop-blur-sm">
@@ -59,13 +135,13 @@ import AmCTA from '../components/AmCTA.astro';
 
   <section class="py-20 lg:py-24 bg-white border-b border-stone-200">
     <div class="max-w-4xl mx-auto px-6 lg:px-16 text-center">
-      <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-8">Spécialiste en Aménagement de Bureau au Maroc depuis 2008</h2>
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-8">Spécialiste en Aménagement Bureau Maroc depuis 2008</h2>
       <div class="space-y-6 text-lg text-stone-600 leading-relaxed">
         <p>
-          Un aménagement bureau réussi repose sur l'équilibre entre ergonomie, fonctionnalité et esthétique. Chez <a href="/" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">KWESK</a>, nous concevons des espaces de travail complets  du <a href="/bureaux/direction" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureau de direction</a> au <a href="/blog/open-space-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureau open space</a> — adaptés aux besoins spécifiques de chaque entreprise marocaine.
+          Un <strong>aménagement bureau Maroc</strong> réussi repose sur l'équilibre entre ergonomie, fonctionnalité et esthétique. Chez <a href="/" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">KWESK</a>, nous concevons des espaces de travail complets — du <a href="/bureaux/direction" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureau de direction</a> au <a href="/blog/open-space-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureau open space</a> — adaptés aux besoins spécifiques de chaque entreprise marocaine.
         </p>
         <p>
-          Que vous créiez de nouveaux locaux ou rénoviez vos <a href="/blog/amenagement-espace-bureau-professionnel" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">espaces professionnels</a> existants, notre expertise en aménagement de bureau garantit des solutions qui optimisent la productivité et le bien-être de vos collaborateurs. Depuis 2008, nous avons accompagné des centaines d'entreprises dans la transformation de leur environnement de travail.
+          Que vous créiez de nouveaux locaux ou rénoviez vos <a href="/blog/amenagement-espace-bureau-professionnel" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">espaces professionnels</a> existants, notre expertise en <a href="/agencement-bureau-professionnel" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">agencement bureau professionnel</a> garantit des solutions qui optimisent la productivité et le bien-être de vos collaborateurs. Nous élaborons un <a href="/blog/plan-amenagement-bureau-professionnel-au-maroc" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">plan d'aménagement bureau</a> sur mesure et fournissons l'ensemble du <a href="/bureaux" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">mobilier de bureau Maroc</a> nécessaire, de la chaise au rangement. Depuis 2008, nous avons accompagné des centaines d'entreprises dans la transformation de leur environnement de travail.
         </p>
       </div>
     </div>
@@ -148,7 +224,7 @@ import AmCTA from '../components/AmCTA.astro';
             <a href="/bureaux/bench" class="text-[#8b8b4b] font-bold uppercase tracking-wider text-sm block mb-6 hover:text-[#1c1917] transition-colors">Voir la gamme →</a>
             
             <p class="text-stone-600 leading-relaxed mb-8">
-              L'<a href="/blog/amenagement-bureau-open-space" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement bureau open space</a> est devenu incontournable pour les entreprises modernes. Nos <a href="/bureaux/bench" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureaux bench</a> permettent de créer des zones collaboratives productives tout en préservant l'espace personnel de chaque collaborateur — un équilibre essentiel dans tout <a href="/blog/open-space-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement d'open space</a> réussi.
+              L'<a href="/blog/amenagement-bureau-open-space" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement bureau open space</a> est devenu incontournable pour les entreprises modernes. Nos <a href="/bureaux/bench" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureaux bench</a> permettent de créer des zones collaboratives productives tout en préservant l'espace personnel de chaque collaborateur — un équilibre essentiel dans tout <a href="/blog/open-space-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement d'open space</a> réussi. Pour les organisations adoptant le travail hybride, nous proposons également des configurations <strong>flex office</strong> modulaires, adaptées aux postes non attribués et aux espaces de travail partagés.
             </p>
             
             <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
@@ -186,7 +262,7 @@ import AmCTA from '../components/AmCTA.astro';
             <a href="/bureaux/operatif" class="text-[#8b8b4b] font-bold uppercase tracking-wider text-sm block mb-6 hover:text-[#1c1917] transition-colors">Voir la gamme →</a>
             
             <p class="text-stone-600 leading-relaxed mb-8">
-              Équipez vos équipes avec un mobilier adapté à l'usage professionnel quotidien. Nos <a href="/bureaux/operatif" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureaux opératifs</a> offrent fonctionnalité et ergonomie pour tous types de postes de travail, optimisant chaque espace de bureau professionnel.
+              Équipez vos équipes avec un mobilier adapté à l'usage professionnel quotidien. Nos <a href="/bureaux/operatif" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureaux opératifs</a> offrent fonctionnalité et ergonomie pour tous types de postes de travail, optimisant chaque espace de bureau professionnel. Pour les collaborateurs qui alternent entre position assise et debout, nos <a href="/bureaux/reglables" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureaux assis debout Maroc</a> à motorisation électrique constituent la solution ergonomique idéale.
             </p>
             
             <div class="bg-stone-50 p-6 border-l-4 border-[#8b8b4b]">
@@ -331,7 +407,7 @@ import AmCTA from '../components/AmCTA.astro';
 
   <section class="py-20 lg:py-24 bg-stone-50 border-t border-stone-200">
     <div class="max-w-7xl mx-auto px-6 lg:px-16">
-      <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-16 text-center uppercase tracking-wide">Pourquoi Choisir KWESK pour Votre Aménagement de Bureau</h2>
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-16 text-center uppercase tracking-wide">Pourquoi Choisir KWESK pour Votre Aménagement Bureau Maroc</h2>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white p-8 shadow-sm border border-stone-100">
@@ -381,7 +457,7 @@ import AmCTA from '../components/AmCTA.astro';
       <div class="text-center mb-12">
         <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-6">Livraison et Installation</h2>
         <p class="text-lg text-stone-600 mb-6 max-w-3xl mx-auto">
-          KWESK assure la livraison et l'installation de votre mobilier de bureau dans tout le Maroc. Nos équipes interviennent dans toutes les villes pour la mise en place professionnelle de vos aménagements d'espaces de travail.
+          KWESK assure la livraison et l'installation de votre mobilier de bureau dans tout le Maroc. Que vous recherchiez du <strong>mobilier de bureau à Marrakech</strong>, <strong>Rabat</strong>, <strong>Tanger</strong> ou <strong>Agadir</strong>, nos équipes interviennent dans toutes les villes pour la mise en place professionnelle de vos aménagements d'espaces de travail.
         </p>
         <p class="text-xl font-bold text-[#1c1917]">Principales Villes Servies :</p>
       </div>
@@ -488,6 +564,45 @@ import AmCTA from '../components/AmCTA.astro';
         <a href="/chaises" class="px-8 py-5 bg-transparent border-2 border-[#8b8b4b] text-[#8b8b4b] font-bold uppercase tracking-widest hover:bg-[#8b8b4b] hover:text-white transition-all shadow-lg rounded-sm text-sm sm:text-base">
           VOIR TOUTES NOS CHAISES
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 lg:py-24 bg-stone-50 border-t border-stone-200">
+    <div class="max-w-4xl mx-auto px-6 lg:px-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-12 text-center uppercase tracking-wide">Questions Fréquentes — Aménagement Bureau Maroc</h2>
+
+      <div class="space-y-6">
+
+        <div class="bg-white border border-stone-200 shadow-sm p-8">
+          <h3 class="text-xl font-bold text-[#1c1917] mb-4">Qu'est-ce que comprend un aménagement bureau Maroc complet ?</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Un aménagement bureau Maroc complet couvre l'ensemble du projet : étude des locaux et élaboration d'un <a href="/blog/plan-amenagement-bureau-professionnel-au-maroc" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">plan d'aménagement bureau professionnel</a>, sélection et fourniture du mobilier (bureaux, <a href="/chaises" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">chaises ergonomiques</a>, rangements), livraison et installation sur site. Chez KWESK, chaque projet inclut un mobilier certifié BIFMA et EN 1335, fabriqué localement au Maroc pour une durabilité supérieure à 10 ans.
+          </p>
+        </div>
+
+        <div class="bg-white border border-stone-200 shadow-sm p-8">
+          <h3 class="text-xl font-bold text-[#1c1917] mb-4">Comment KWESK réalise-t-il un agencement bureau professionnel sur mesure ?</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Notre processus d'<a href="/agencement-bureau-professionnel" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">agencement bureau professionnel</a> commence par une visite de vos locaux et l'analyse de vos besoins (nombre de postes, types d'espaces, contraintes techniques). Nos conseillers élaborent ensuite un plan d'aménagement optimisé, puis configurent le mobilier selon vos dimensions exactes — open space, bureaux individuels, <a href="/salles-reunion" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">salles de réunion</a> ou espace de direction. La fabrication locale nous permet d'adapter chaque pièce à vos espaces.
+          </p>
+        </div>
+
+        <div class="bg-white border border-stone-200 shadow-sm p-8">
+          <h3 class="text-xl font-bold text-[#1c1917] mb-4">KWESK livre-t-il le mobilier de bureau dans toutes les villes du Maroc ?</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Oui, KWESK assure la livraison et l'installation du mobilier de bureau dans tout le Maroc. Nous intervenons à <a href="/amenagement-de-bureau-professionnel-a-casablanca" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Casablanca</a>, <a href="/amenagement-de-bureau-professionnel-a-rabat" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Rabat</a>, <a href="/amenagement-de-bureau-professionnel-a-marrakech" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Marrakech</a>, <a href="/amenagement-de-bureau-professionnel-a-tanger" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Tanger</a>, <a href="/amenagement-de-bureau-professionnel-a-fes" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Fès</a>, <a href="/amenagement-de-bureau-professionnel-a-agadir" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Agadir</a> et dans toutes les autres villes. Contactez-nous pour obtenir un délai de livraison précis selon votre localisation.
+          </p>
+        </div>
+
+        <div class="bg-white border border-stone-200 shadow-sm p-8">
+          <h3 class="text-xl font-bold text-[#1c1917] mb-4">Quelle est la différence entre un bureau open space et un aménagement flex office ?</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Un <a href="/blog/open-space-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureau open space</a> organise des postes de travail fixes dans un espace ouvert et collaboratif, où chaque collaborateur a son propre poste attitré. Le <strong>flex office</strong>, quant à lui, supprime les postes fixes : les collaborateurs s'installent à n'importe quel bureau disponible selon leur présence — idéal pour les organisations en télétravail partiel. KWESK conçoit les deux types d'aménagement avec des <a href="/bureaux/bench" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">bureaux bench modulaires</a> adaptables à vos besoins évolutifs.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
