@@ -10,20 +10,65 @@ import IndustrieSection from '../components/IndustrieSection.astro';
 import ContactServices from '../components/ContactServices.astro';
 ---
 
-<Layout 
-  title="Mobilier Bureau Professionnel Maroc | Fabricant - KWESK" 
-  description="Fabricant mobilier bureau professionnel au Maroc depuis 2008. Chaises ergonomiques certifiées BIFMA, bureaux direction et aménagement clé en main. Devis gratuit"
+<Layout
+  title="Mobilier de Bureau Maroc | Fabricant Certifié – KWESK"
+  description="Mobilier de bureau Maroc : fabricant certifié BIFMA depuis 2008. Bureaux direction, chaises ergonomiques, aménagement clé en main. — Devis gratuit"
 >
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "KWESK",
+      "description": "Fabricant de mobilier de bureau Maroc depuis 2008. Mobilier professionnel certifié BIFMA, fabrication locale, livraison nationale.",
+      "url": "https://kwesk.ma",
+      "telephone": "+212520241637",
+      "email": "contact@kwesk.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Anfa Place, Tour Ouest Niveau 1, Boulevard de la Corniche",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+      },
+      "foundingDate": "2008",
+      "areaServed": "MA",
+      "priceRange": "$$"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mobilier de Bureau Maroc",
+      "provider": { "@type": "LocalBusiness", "name": "KWESK" },
+      "serviceType": "Fabrication et aménagement de mobilier de bureau professionnel",
+      "areaServed": "MA",
+      "description": "Conception, fabrication et installation de mobilier de bureau professionnel au Maroc : chaises ergonomiques certifiées BIFMA, bureaux de direction, open space, salles de réunion, bureaux assis debout."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Quels types de mobilier de bureau propose KWESK au Maroc ?", "acceptedAnswer": { "@type": "Answer", "text": "KWESK propose une gamme complète de mobilier de bureau Maroc : chaises ergonomiques certifiées BIFMA, bureaux de direction haut de gamme, bureaux opératifs, configurations bench pour open space, bureaux assis debout électriques, mobilier de salle de réunion, tables de cantine, casiers vestiaires métalliques et armoires de rangement. Fabrication sur mesure disponible." } },
+        { "@type": "Question", "name": "Les chaises de bureau KWESK sont-elles certifiées ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, nos chaises ergonomiques sont certifiées selon les normes internationales BIFMA 2011 et EN 1335 2016 — les références mondiales en matière de sécurité et de durabilité du mobilier de bureau professionnel." } },
+        { "@type": "Question", "name": "KWESK livre-t-il le mobilier de bureau dans tout le Maroc ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, nous assurons la livraison et l'installation sur l'ensemble du territoire marocain : Casablanca, Rabat, Marrakech, Agadir, Tanger, Fès, Meknès, Oujda, Nador, Tétouan, Kénitra, El Jadida, Safi et toutes les autres villes." } },
+        { "@type": "Question", "name": "Comment obtenir un devis pour du mobilier de bureau ?", "acceptedAnswer": { "@type": "Answer", "text": "Demandez un devis gratuit via notre page contact ou appelez-nous au +212 5 20 24 16 37. Notre équipe commerciale étudie vos besoins pour une solution personnalisée incluant mobilier et aménagement clé en main." } },
+        { "@type": "Question", "name": "Quelle est la garantie du mobilier KWESK ?", "acceptedAnswer": { "@type": "Answer", "text": "Tous nos produits sont couverts par une garantie de 5 ans sur les défauts de fabrication et les problèmes structurels. Notre service après-vente basé à Casablanca assure les interventions de maintenance partout au Maroc." } },
+        { "@type": "Question", "name": "Quel est le prix du mobilier de bureau au Maroc ?", "acceptedAnswer": { "@type": "Answer", "text": "Les prix varient selon le type de produit, les finitions et les quantités. Les tarifs dépendent des spécifications de votre projet — contactez-nous pour un devis gratuit personnalisé." } },
+        { "@type": "Question", "name": "KWESK propose-t-il un service d'aménagement de bureau ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, KWESK offre un service complet d'aménagement de bureau professionnel : étude des besoins, conception de plans d'implantation, fabrication sur mesure et installation. Open spaces, salles de réunion, espaces d'accueil — partout au Maroc." } }
+      ]
+    }
+  ]
+  </script>
     <Hero />
     <Categories />
     <ChairSection />
     
     <section class="py-24 bg-stone-50 border-t border-stone-200">
         <div class="max-w-5xl mx-auto px-6 lg:px-16 text-center">
-            <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-8">Aménagement Bureau Professionnel Clé en Main</h2>
+            <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-8">Agencement et Aménagement de Bureau Clé en Main</h2>
             <div class="space-y-6 text-lg text-stone-600 leading-relaxed text-justify">
-                <p>Au-delà du mobilier, KWESK propose un service complet d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement de bureau professionnel</a> au Maroc. Nous prenons en charge votre projet de A à Z : étude des besoins, conception des plans d'implantation, fabrication du mobilier sur mesure et installation dans vos locaux. Notre équipe accompagne les entreprises, les administrations et les établissements d'enseignement pour créer des espaces de travail fonctionnels, ergonomiques et esthétiques.</p>
-                <p>Nos solutions d'aménagement couvrent les bureaux individuels, les open spaces, les salles de réunion, les espaces d'accueil et les zones de détente. Chaque projet est adapté à la configuration de vos locaux et aux habitudes de travail de vos équipes, que vous soyez à Casablanca, Rabat, Marrakech, Agadir, Tanger ou dans toute autre ville du Maroc.</p>
+                <p>Au-delà du mobilier, KWESK propose un service complet d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">aménagement et d'agencement de bureau professionnel</a>. Nous prenons en charge votre projet de A à Z : étude des besoins, conception des plans d'implantation, fabrication sur mesure et installation dans vos locaux. Notre équipe accompagne les entreprises, administrations et établissements d'enseignement pour créer des environnements de travail fonctionnels et esthétiques.</p>
+                <p>Nos solutions couvrent les bureaux individuels, les open spaces, les salles de réunion, les espaces d'accueil et les zones de détente. Chaque projet est adapté à vos locaux, que vous soyez à <a href="/amenagement-de-bureau-professionnel-a-casablanca" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Casablanca</a>, <a href="/amenagement-de-bureau-professionnel-a-rabat" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Rabat</a>, <a href="/amenagement-de-bureau-professionnel-a-marrakech" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Marrakech</a>, <a href="/amenagement-de-bureau-professionnel-a-agadir" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Agadir</a>, <a href="/amenagement-de-bureau-professionnel-a-tanger" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Tanger</a>, <a href="/amenagement-de-bureau-professionnel-a-fes" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Fès</a> ou dans toute autre ville du Maroc.</p>
+                <p class="text-center"><a href="/blog/plan-amenagement-bureau-professionnel-au-maroc" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">Consultez notre guide plan d'aménagement →</a></p>
             </div>
         </div>
     </section>
@@ -31,17 +76,17 @@ import ContactServices from '../components/ContactServices.astro';
     <IndustrieSection />
     <DesksSection />
     <Features />
-    <Customers />
+    <Customers title="Nos Clients au Maroc Nous Font Confiance" />
 
     <section class="py-24 bg-white border-t border-stone-200">
         <section class="py-24 bg-white border-t border-stone-200">
             <div class="max-w-4xl mx-auto px-6 lg:px-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-12 text-center">Questions Fréquentes sur le Mobilier Bureau Professionnel</h2>
+                <h2 class="text-3xl lg:text-4xl font-bold text-[#1c1917] mb-12 text-center">Questions Fréquentes sur le Mobilier de Bureau au Maroc</h2>
                 
                 <div class="space-y-4">
                     <div class="faq-item border border-stone-200 bg-stone-50 rounded-sm overflow-hidden">
                         <button class="faq-btn w-full text-left p-6 flex justify-between items-center focus:outline-none hover:bg-stone-100 transition-colors">
-                            <span class="font-bold text-[#1c1917] text-lg pr-8">Q : Quels types de mobilier bureau professionnel propose KWESK ?</span>
+                            <span class="font-bold text-[#1c1917] text-lg pr-8">Q : Quels types de mobilier de bureau propose KWESK au Maroc ?</span>
                             <span class="faq-icon text-[#8b8b4b] transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -50,7 +95,7 @@ import ContactServices from '../components/ContactServices.astro';
                         </button>
                         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                             <div class="p-6 pt-0 border-t border-stone-200 mt-2">
-                                <p class="text-stone-600 leading-relaxed">R : KWESK propose une gamme complète de mobilier bureau professionnel : chaises ergonomiques certifiées BIFMA, bureaux de direction, bureaux opératifs, configurations bench pour open space, bureaux assis debout électriques, mobilier de salle de réunion, tables de cantine, casiers vestiaires et armoires de rangement. Nous fabriquons également du mobilier sur mesure adapté à vos besoins.</p>
+                                <p class="text-stone-600 leading-relaxed">R : KWESK propose une gamme complète de mobilier de bureau Maroc : chaises ergonomiques certifiées BIFMA, bureaux de direction haut de gamme, bureaux opératifs, configurations bench pour open space, bureaux assis debout électriques, mobilier de salle de réunion, tables de cantine, casiers vestiaires métalliques et armoires de rangement. Fabrication sur mesure disponible.</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +111,7 @@ import ContactServices from '../components/ContactServices.astro';
                         </button>
                         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                             <div class="p-6 pt-0 border-t border-stone-200 mt-2">
-                                <p class="text-stone-600 leading-relaxed">R : Oui, nos chaises ergonomiques au Maroc sont certifiées selon les normes internationales BIFMA et EN 1335. Ces certifications garantissent la résistance, la sécurité et la durabilité de nos sièges pour une utilisation intensive en environnement professionnel.</p>
+                                <p class="text-stone-600 leading-relaxed">R : Oui, nos chaises ergonomiques sont certifiées selon les normes internationales BIFMA 2011 et EN 1335 2016 — les références mondiales en matière de sécurité et de durabilité du mobilier de bureau professionnel. Un standard que nous sommes les seuls à proposer parmi les fabricants marocains.</p>
                             </div>
                         </div>
                     </div>
@@ -82,7 +127,7 @@ import ContactServices from '../components/ContactServices.astro';
                         </button>
                         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                             <div class="p-6 pt-0 border-t border-stone-200 mt-2">
-                                <p class="text-stone-600 leading-relaxed">R : Oui, KWESK assure la livraison et l'installation du mobilier professionnel sur l'ensemble du territoire marocain. Nos équipes prennent en charge le transport, le montage et l'agencement dans vos locaux, que vous soyez à Casablanca, Rabat, Marrakech, Agadir, Tanger, Fès ou dans toute autre ville du Maroc.</p>
+                                <p class="text-stone-600 leading-relaxed">R : Oui, nous assurons la livraison et l'installation sur l'ensemble du territoire marocain : Casablanca, Rabat, Marrakech, Agadir, Tanger, Fès, Meknès, Oujda, Nador, Tétouan, Kénitra, El Jadida, Safi et toutes les autres villes. Transport, montage et mise en place inclus.</p>
                             </div>
                         </div>
                     </div>
@@ -98,7 +143,7 @@ import ContactServices from '../components/ContactServices.astro';
                         </button>
                         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                             <div class="p-6 pt-0 border-t border-stone-200 mt-2">
-                                <p class="text-stone-600 leading-relaxed">R : Vous pouvez <a href="/contact" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">demander un devis gratuit</a> directement sur notre page contact ou en nous appelant à Casablanca. Notre équipe commerciale étudie vos besoins, la superficie de vos locaux et votre budget pour vous proposer une solution personnalisée incluant mobilier et aménagement.</p>
+                                <p class="text-stone-600 leading-relaxed">R : Demandez un devis gratuit via notre <a href="/contact" class="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors">page contact</a> ou appelez-nous au +212 5 20 24 16 37. Notre équipe commerciale étudie vos besoins, la superficie de vos locaux et votre budget pour une solution personnalisée incluant mobilier et aménagement clé en main.</p>
                             </div>
                         </div>
                     </div>
@@ -114,14 +159,45 @@ import ContactServices from '../components/ContactServices.astro';
                         </button>
                         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                             <div class="p-6 pt-0 border-t border-stone-200 mt-2">
-                                <p class="text-stone-600 leading-relaxed">R : Tous les produits KWESK sont couverts par une garantie de 5 ans. Cette garantie couvre les défauts de fabrication et les problèmes structurels. Notre service après-vente basé à Casablanca assure les interventions de maintenance et le remplacement des pièces si nécessaire.</p>
+                                <p class="text-stone-600 leading-relaxed">R : Tous nos produits sont couverts par une garantie de 5 ans sur les défauts de fabrication et les problèmes structurels. Notre service après-vente, basé à Casablanca, assure les interventions de maintenance et le remplacement de pièces sur tout le territoire.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-stone-200 bg-stone-50 rounded-sm overflow-hidden">
+                        <button class="faq-btn w-full text-left p-6 flex justify-between items-center focus:outline-none hover:bg-stone-100 transition-colors">
+                            <span class="font-bold text-[#1c1917] text-lg pr-8">Q : Quel est le prix du mobilier de bureau au Maroc ?</span>
+                            <span class="faq-icon text-[#8b8b4b] transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-6 pt-0 border-t border-stone-200 mt-2">
+                                <p class="text-stone-600 leading-relaxed">R : Nos prix varient selon le type de produit, les finitions et les quantités commandées. Chaises ergonomiques, bureaux de direction, bureaux assis debout et mobilier open space sont proposés à des tarifs compétitifs adaptés aux entreprises et administrations. Les prix dépendent des spécifications de votre projet — contactez-nous pour un devis gratuit personnalisé.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-stone-200 bg-stone-50 rounded-sm overflow-hidden">
+                        <button class="faq-btn w-full text-left p-6 flex justify-between items-center focus:outline-none hover:bg-stone-100 transition-colors">
+                            <span class="font-bold text-[#1c1917] text-lg pr-8">Q : KWESK propose-t-il un service d'aménagement de bureau ?</span>
+                            <span class="faq-icon text-[#8b8b4b] transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-6 pt-0 border-t border-stone-200 mt-2">
+                                <p class="text-stone-600 leading-relaxed">R : Oui, nous offrons un service complet d'aménagement de bureau professionnel : étude des besoins, conception de plans d'implantation, fabrication sur mesure et installation dans vos locaux. Bureaux individuels, open spaces, salles de réunion et espaces d'accueil — partout au Maroc.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    
+
         <script is:inline>
             const faqButtons = document.querySelectorAll('.faq-btn');
     
@@ -153,10 +229,10 @@ import ContactServices from '../components/ContactServices.astro';
 
     <section class="py-24 bg-[#1c1917] text-white text-center">
         <div class="max-w-4xl mx-auto px-6 lg:px-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Équipez Vos Bureaux avec KWESK – Devis Gratuit</h2>
-            <p class="text-[#d6d3d1] text-lg leading-relaxed mb-10">Vous recherchez du mobilier bureau professionnel fiable et durable pour équiper vos locaux au Maroc ? Que vous ayez besoin de chaises ergonomiques, de bureaux de direction, d'un bureau assis debout ou d'un aménagement complet d'espace de travail, KWESK vous accompagne. Contactez-nous pour recevoir un devis gratuit personnalisé et découvrir nos solutions de mobilier professionnel certifié.</p>
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Demandez Votre Devis Gratuit – Mobilier Professionnel</h2>
+            <p class="text-[#d6d3d1] text-lg leading-relaxed mb-10">Vous recherchez du mobilier de bureau Maroc fiable et durable ? Chaises ergonomiques, bureaux de direction, bureau assis debout ou aménagement complet — KWESK vous accompagne avec des solutions certifiées et une garantie de 5 ans. Contactez-nous pour un devis gratuit personnalisé.</p>
             <a href="/contact" class="inline-block px-10 py-5 bg-[#8b8b4b] text-white font-bold uppercase tracking-widest hover:bg-white hover:text-[#1c1917] transition-all shadow-lg rounded-sm">
-                DEMANDER UN DEVIS GRATUIT
+                DEMANDER VOTRE DEVIS GRATUIT →
             </a>
         </div>
     </section>

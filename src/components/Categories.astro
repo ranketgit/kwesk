@@ -1,20 +1,23 @@
 ---
 const categories = [
-  { 
-    title: "Bureaux", 
-    description: "Gamme complète pour agencement espace travail professionnel : bureaux de direction prestige, bureaux opératifs robustes, bureaux réglables assis-debout, et solutions bench modulaires pour espaces collaboratifs.",
-    image: "/home-categories/desk.jpg", 
-    href: "/bureaux" 
+  {
+    title: "Bureaux de Direction et Bureaux Opératifs",
+    alt: "Bureaux de direction et opératifs professionnels",
+    description: "Gamme complète pour l'agencement de votre espace de travail : bureaux de direction prestige, bureaux opératifs robustes, bureaux réglables assis-debout électriques et solutions bench modulaires pour espaces collaboratifs.",
+    image: "/home-categories/desk.jpg",
+    href: "/bureaux"
   },
   {
-    title: "Chaises de Bureau",
-    description: "10 modèles de chaises ergonomiques conçus pour utilisation intensive. Conformes aux normes BIFMA 2011 et EN 1335 2016. Solutions pour direction, opérateurs et visiteurs. Garantie 5 ans.",
+    title: "Chaises de Bureau Ergonomiques Certifiées",
+    alt: "Chaises de bureau ergonomiques certifiées BIFMA",
+    description: "10 modèles de chaises de bureau ergonomiques conçus pour une utilisation intensive. Conformes aux normes BIFMA 2011 et EN 1335 2016. Solutions pour direction, opérateurs et visiteurs. Garantie 5 ans.",
     image: "/home-categories/chair.jpg",
     href: "/chaises",
   },
   {
-    title: "Salles de Réunion",
-    description: "Tables de réunion professionnelles, rangements et supports pour écrans. Solutions complètes pour aménagement salle de réunion et espaces de collaboration.",
+    title: "Mobilier de Salle de Réunion",
+    alt: "Table de réunion professionnelle KWESK",
+    description: "Tables de réunion professionnelles, rangements et supports pour écrans. Solutions complètes pour l'aménagement de salle de réunion et espaces de collaboration.",
     image: "/home-categories/reunion.jpg",
     href: "/salles-reunion",
   },
@@ -24,15 +27,15 @@ const categories = [
 <section class="categories">
   <div class="categories__container">
     <div class="max-w-4xl mx-auto text-center mb-16">
-        <h2 class="text-3xl lg:text-5xl font-bold text-[#1c1917] mb-6">Nos Catégories de Mobilier de Bureau Professionnel</h2>
+        <h2 class="text-3xl lg:text-5xl font-bold text-[#1c1917] mb-6">Notre Gamme de Mobilier de Bureau Maroc</h2>
         <p class="text-stone-600 text-lg leading-relaxed">
-            Chez KWESK, notre gamme de mobilier professionnel couvre tous les besoins de l'espace de travail moderne. Des bureaux de direction aux configurations bench bureau pour open space, en passant par les chaises de bureau professionnel et le mobilier de salle de réunion, chaque produit allie fonctionnalité, ergonomie et design contemporain. Que vous équipiez un siège social, une administration publique ou un centre de formation, nos solutions s'adaptent à votre environnement et à votre budget.
+            Notre gamme de mobilier de bureau professionnel couvre tous les besoins de l'espace de travail moderne. Des bureaux de direction aux configurations bench pour open space, en passant par les chaises ergonomiques certifiées et le mobilier de salle de réunion, chaque produit allie fonctionnalité, ergonomie et design contemporain. Nos solutions s'adaptent aux sièges sociaux, administrations publiques, centres d'appels et établissements de formation.
         </p>
     </div>
 
     <div class="categories__grid">
       <a href={categories[0].href} class="categories__card categories__card--large rounded-4xl">
-        <img src={categories[0].image} alt={categories[0].title} />
+        <img src={categories[0].image} alt={categories[0].alt} />
         <div class="categories__overlay"></div>
         <div class="categories__card-content">
           <h3 class="categories__card-title">{categories[0].title}</h3>
@@ -43,7 +46,7 @@ const categories = [
 
       <div class="categories__right">
         <a href={categories[1].href} class="categories__card rounded-4xl">
-          <img src={categories[1].image} alt={categories[1].title} />
+          <img src={categories[1].image} alt={categories[1].alt} />
           <div class="categories__overlay"></div>
           <div class="categories__card-content">
             <h3 class="categories__card-title">{categories[1].title}</h3>
@@ -53,7 +56,7 @@ const categories = [
         </a>
 
         <a href={categories[2].href} class="categories__card rounded-4xl">
-          <img src={categories[2].image} alt={categories[2].title} />
+          <img src={categories[2].image} alt={categories[2].alt} />
           <div class="categories__overlay"></div>
           <div class="categories__card-content">
             <h3 class="categories__card-title">{categories[2].title}</h3>
