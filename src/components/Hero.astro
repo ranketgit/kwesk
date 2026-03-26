@@ -38,7 +38,7 @@ const slides = [
       {/* Visual titles only, SEO H1 is in the intro below */}
       {slides.map((slide, index) => (
         <div class={`hero__text ${index === 0 ? 'active' : ''}`} data-index={index}>
-          <h2 class="hero__title" set:html={slide.title}></h2>
+          <p class="hero__title" set:html={slide.title}></p>
           <p class="hero__subtitle">{slide.subtitle}</p>
         </div>
       ))}
