@@ -6,7 +6,7 @@ description: "Agencement salle de réunion professionnel au Maroc : configuratio
 
 date: "2026-03-31"
 
-image: "/amenagement-salle-reunion-professionnel.webp"
+image: "/agencement-salle-reunion.webp"
 
 meta_title: "Agencement Salle de Réunion au Maroc | Guide Pro 2026"
 
