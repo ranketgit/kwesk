@@ -14,8 +14,6 @@ meta_description: "Agencement salle de réunion professionnel au Maroc : configu
 
 ---
 
-# Agencement Salle de Réunion : Comment Créer un Espace Productif et Professionnel au Maroc
-
 L'agencement salle de réunion est l'un des projets les plus sous-estimés dans les entreprises marocaines. Pourtant, selon une étude Deskeo publiée en 2024, plus de 57 % des salariés jugent leurs réunions peu ou pas efficaces ([GPO Magazine, 2024](https://www.gpomag.fr/la-reunionite-est-elle-un-fleau-pour-la-productivite-des-salaries-francais/)). Et dans beaucoup de cas, le problème ne vient pas du contenu de la réunion, mais de l'espace lui-même.
 
 Un mauvais agencement de salle de réunion cause des problèmes concrets : circulation difficile autour de la table, sièges inconfortables, câbles qui traînent, acoustique médiocre. Le résultat ? Des sessions longues, peu productives, et une image d'entreprise qui en pâtit.
