@@ -4,10 +4,44 @@ import Layout from '../../layouts/Layout.astro';
 import AmCTA from '../../components/AmCTA.astro';
 ---
 
-<Layout 
-  title="Bureau de Direction Luxe Maroc | Qualité Premium Kwesk" 
-  description="Bureau de direction haut de gamme au Maroc. Finitions premium, sur-mesure, design exécutif. Showroom Casablanca. Devis personnalisé. Garantie 5 ans. Kwesk depuis 2008."
+<Layout
+  title="Bureau de Direction au Maroc | Mobilier Haut de Gamme – Kwesk"
+  description="Bureau de direction haut de gamme au Maroc. Mobilier premium certifié BIFMA, ergonomique et moderne. Livraison nationale depuis Casablanca."
 >
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "Bureau de Direction Premium",
+        "description": "Bureau de direction haut de gamme certifié BIFMA et EN 1335. Design exécutif, finitions premium, sur-mesure. Fabriqué au Maroc par KWESK depuis 2008.",
+        "brand": { "@type": "Brand", "name": "KWESK" },
+        "manufacturer": {
+          "@type": "Organization",
+          "name": "KWESK",
+          "url": "https://kwesk.ma",
+          "address": { "@type": "PostalAddress", "addressCountry": "MA" }
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "MAD",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "Organization", "name": "KWESK" }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kwesk.ma" },
+          { "@type": "ListItem", "position": 2, "name": "Bureaux", "item": "https://kwesk.ma/bureaux" },
+          { "@type": "ListItem", "position": 3, "name": "Bureau de Direction", "item": "https://kwesk.ma/bureaux/direction" }
+        ]
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
     <div class="absolute inset-0">
