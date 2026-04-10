@@ -6,83 +6,105 @@ import AmCTA from '../components/AmCTA.astro';
 
 <Layout
   title="Aménagement Bureau Maroc | Expert depuis 2008 – KWESK"
-  description="Aménagement bureau Maroc : KWESK conçoit vos espaces de travail sur mesure. Mobilier certifié BIFMA, fabrication locale, livraison dans tout le Maroc."
+  description="Aménagement bureau Maroc depuis 2008 : mobilier BIFMA certifié, livraison dans tout le Maroc. Demandez votre devis gratuit dès maintenant."
 >
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "KWESK",
-      "description": "Expert en aménagement bureau Maroc depuis 2008. Mobilier professionnel certifié BIFMA, fabrication locale, livraison et installation dans tout le Maroc.",
-      "url": "https://kwesk.ma/amenagement-de-bureau",
-      "telephone": "+212520241637",
-      "email": "contact@kwesk.com",
-      "foundingDate": "2008",
-      "areaServed": "MA",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Anfa Place, Tour Ouest Niveau 1, Boulevard de la Corniche",
-        "addressLocality": "Casablanca",
-        "addressCountry": "MA"
-      },
-      "sameAs": ["https://kwesk.ma"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Aménagement Bureau Maroc",
-      "provider": {
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
         "@type": "LocalBusiness",
         "name": "KWESK",
-        "url": "https://kwesk.ma"
+        "description": "Expert en aménagement bureau Maroc depuis 2008. Mobilier professionnel certifié BIFMA et EN 1335, fabrication locale, livraison et installation dans tout le Maroc.",
+        "url": "https://kwesk.ma",
+        "telephone": "+212520241637",
+        "email": "contact@kwesk.com",
+        "foundingDate": "2008",
+        "areaServed": { "@type": "Country", "name": "Morocco" },
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Anfa Place, Tour Ouest Niveau 1, Boulevard de la Corniche",
+          "addressLocality": "Casablanca",
+          "addressCountry": "MA"
+        },
+        "certifications": ["BIFMA", "EN 1335"],
+        "sameAs": [
+          "https://kwesk.ma",
+          "https://www.facebook.com/kwesk",
+          "https://www.linkedin.com/company/kwesk"
+        ]
       },
-      "serviceType": "Aménagement d'espaces de bureau professionnels",
-      "areaServed": "MA",
-      "description": "Conception et installation d'espaces de travail sur mesure au Maroc : open space, flex office, bureaux de direction, salles de réunion. Mobilier certifié BIFMA, fabrication locale."
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que comprend un aménagement bureau Maroc complet ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Un aménagement bureau Maroc complet couvre l'ensemble du projet : étude des locaux et élaboration d'un plan d'aménagement bureau professionnel, sélection et fourniture du mobilier (bureaux, chaises ergonomiques, rangements), livraison et installation sur site. Chez KWESK, chaque projet inclut un mobilier certifié BIFMA et EN 1335, fabriqué localement au Maroc pour une durabilité supérieure à 10 ans."
-          }
+      {
+        "@type": "Service",
+        "name": "Aménagement Bureau Maroc",
+        "url": "https://kwesk.ma/amenagement-de-bureau",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "KWESK",
+          "url": "https://kwesk.ma"
         },
-        {
-          "@type": "Question",
-          "name": "Comment KWESK réalise-t-il un agencement bureau professionnel sur mesure ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Notre processus d'agencement bureau professionnel commence par une visite de vos locaux et l'analyse de vos besoins. Nos conseillers élaborent un plan d'aménagement optimisé, puis configurent le mobilier selon vos dimensions exactes — open space, bureaux individuels, salles de réunion ou espace de direction. La fabrication locale nous permet d'adapter chaque pièce à vos espaces."
+        "serviceType": "Aménagement d'espaces de bureau professionnels",
+        "areaServed": { "@type": "Country", "name": "Morocco" },
+        "description": "Conception et installation d'espaces de travail sur mesure au Maroc : open space, flex office, bureaux de direction, salles de réunion. Mobilier certifié BIFMA et EN 1335, fabrication locale."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce que comprend un aménagement bureau Maroc complet ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un aménagement bureau Maroc complet couvre l'ensemble du projet : étude des locaux et élaboration d'un plan d'aménagement bureau professionnel, sélection et fourniture du mobilier (bureaux, chaises ergonomiques, rangements), livraison et installation sur site. Chez KWESK, chaque projet inclut un mobilier certifié BIFMA et EN 1335, fabriqué localement au Maroc pour une durabilité supérieure à 10 ans."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment KWESK réalise-t-il un agencement bureau professionnel sur mesure ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Notre processus d'agencement bureau professionnel commence par une visite de vos locaux et l'analyse de vos besoins (nombre de postes, types d'espaces, contraintes techniques). Nos conseillers élaborent ensuite un plan d'aménagement optimisé, puis configurent le mobilier selon vos dimensions exactes — open space, bureaux individuels, salles de réunion ou espace de direction. La fabrication locale nous permet d'adapter chaque pièce à vos espaces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "KWESK livre-t-il le mobilier de bureau dans toutes les villes du Maroc ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, KWESK assure la livraison et l'installation du mobilier de bureau dans tout le Maroc. Nous intervenons à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir et dans toutes les autres villes. Contactez-nous pour obtenir un délai de livraison précis selon votre localisation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la différence entre un bureau open space et un aménagement flex office ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un bureau open space organise des postes de travail fixes dans un espace ouvert et collaboratif, où chaque collaborateur a son propre poste attitré. Le flex office supprime les postes fixes : les collaborateurs s'installent à n'importe quel bureau disponible selon leur présence — idéal pour les organisations en télétravail partiel. KWESK conçoit les deux types d'aménagement avec des bureaux bench modulaires adaptables."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quel est le coût d'un aménagement bureau professionnel au Maroc ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le coût d'un aménagement bureau professionnel au Maroc dépend de plusieurs facteurs : superficie des locaux, nombre de postes, types d'espaces (open space, bureaux de direction, salles de réunion) et qualité du mobilier souhaité. KWESK établit un devis personnalisé et gratuit selon votre projet — contactez-nous avec vos plans ou la superficie de vos locaux pour obtenir une estimation précise."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "KWESK intervient-il pour le réaménagement de bureaux existants ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, KWESK prend en charge aussi bien l'aménagement de nouveaux locaux que le réaménagement de bureaux existants. Que vous souhaitiez moderniser un open space vieillissant, reconfigurer des postes de travail ou remplacer un mobilier usé, notre équipe analyse l'existant et propose une solution sur mesure adaptée à votre budget et à vos contraintes."
+            }
           }
-        },
-        {
-          "@type": "Question",
-          "name": "KWESK livre-t-il le mobilier de bureau dans toutes les villes du Maroc ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, KWESK assure la livraison et l'installation du mobilier de bureau dans tout le Maroc : Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir et toutes les autres villes. Contactez-nous pour obtenir un délai de livraison précis selon votre localisation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle est la différence entre un bureau open space et un aménagement flex office ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Un bureau open space organise des postes de travail fixes dans un espace ouvert et collaboratif. Le flex office supprime les postes fixes : les collaborateurs s'installent à n'importe quel bureau disponible selon leur présence — idéal pour les organisations en télétravail partiel. KWESK conçoit les deux types d'aménagement avec des bureaux bench modulaires adaptables."
-          }
-        }
-      ]
-    }
-  ]
+        ]
+      }
+    ]
+  }
   </script>
 
   <section class="relative pt-[140px] pb-24 lg:pt-[180px] lg:pb-32 bg-[#1c1917] flex items-center min-h-[80vh] overflow-hidden">
