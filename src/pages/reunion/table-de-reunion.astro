@@ -11,23 +11,21 @@ const images = [
 ];
 
 const rectangularSizes = [
-  { size: "200 cm", cap: "6-8 personnes" },
-  { size: "240 cm", cap: "8-10 personnes (Standard)" },
-  { size: "280 cm", cap: "10-12 personnes" },
-  { size: "320 cm", cap: "12-14 personnes" },
+  { cap: "6 personnes",  length: "180 cm", width: "90 cm",  area: "1,62 m²", ideal: "Petites équipes, réunions rapides" },
+  { cap: "8 personnes",  length: "240 cm", width: "120 cm", area: "2,88 m²", ideal: "Équipes standard" },
+  { cap: "10 personnes", length: "280 cm", width: "120 cm", area: "3,36 m²", ideal: "Groupes mixtes, formations" },
+  { cap: "12 personnes", length: "320 cm", width: "120 cm", area: "3,84 m²", ideal: "Conseils d'administration" },
 ];
 
 const roundSizes = [
-  { size: "Ø 100 cm", cap: "3-4 personnes" },
-  { size: "Ø 120 cm", cap: "4-5 personnes" },
-  { size: "Ø 140 cm", cap: "5-6 personnes" },
-  { size: "Ø 160 cm", cap: "6-7 personnes" },
+  { cap: "6 personnes",  diam: "Ø 150 cm", area: "1,77 m²", ideal: "Brainstorming, discussions" },
+  { cap: "10 personnes", diam: "Ø 190 cm", area: "2,84 m²", ideal: "Séminaires, formations" },
 ];
 ---
 
-<Layout 
-  title="Table de Réunion Professionnelles | 6-12 Personnes - KWESK" 
-  description="Tables de réunion professionnelles 6-12 personnes. Rectangulaires, rondes, ovales. Plateau mélaminé 25mm, passe-câbles intégré. Design moderne."
+<Layout
+  title="Tables de Réunion 6-12 Personnes | Maroc – KWESK"
+  description="Tables réunion rectangulaires & rondes, 6 à 12 personnes. Dimensions, matériaux professionnels. Certifiées. Prix devis. Livraison Maroc."
 >
   <section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
     <div class="absolute inset-0">
@@ -40,7 +38,7 @@ const roundSizes = [
           ← Retour aux Salles de Réunion
         </a>
         <span class="inline-block text-xs tracking-[4px] text-[#8b8b4b] mb-4 uppercase">ESPACES DE COLLABORATION</span>
-        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Tables de Réunion Professionnelles</h1>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Tables de Réunion Professionnelles au Maroc | 6 à 12 Personnes</h1>
         <p class="text-lg text-stone-300 leading-relaxed mb-8">Design professionnel et élégant pour vos espaces de collaboration. Tables de réunion pour 6 à 12 personnes, idéales pour salles de réunion, open spaces et bureaux collaboratifs.</p>
         <div class="flex flex-wrap gap-4">
           <a href="/contact" class="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all">Demander un Devis Gratuit</a>
@@ -185,32 +183,121 @@ const roundSizes = [
     <div class="max-w-7xl mx-auto px-6 lg:px-16">
       <div class="text-center mb-16">
         <span class="inline-block text-xs tracking-[3px] text-[#8b8b4b] mb-4 uppercase">DIMENSIONS</span>
-        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Guide de Capacité</h2>
-        <p class="text-stone-400 max-w-2xl mx-auto">Capacité indiquée représente nombre de personnes assises confortablement.</p>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Guide des Dimensions par Capacité</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">Chaque participant a besoin de 60 à 70 cm de largeur. Dimensions hors tout — prévoir 1 m de dégagement autour de la table.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div class="space-y-16">
         <div>
-          <h3 class="text-lg font-bold text-[#8b8b4b] uppercase mb-6 border-b border-stone-700 pb-2">Tables Rectangulaires</h3>
-          <div class="space-y-4">
-            {rectangularSizes.map((item) => (
-              <div class="flex justify-between items-center py-3 border-b border-stone-800">
-                <span class="font-bold text-lg">{item.size}</span>
-                <span class="text-stone-400 text-sm">{item.cap}</span>
-              </div>
-            ))}
+          <h3 class="text-lg font-bold text-[#8b8b4b] uppercase mb-6 border-b border-stone-700 pb-2">Format Rectangulaire</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-stone-700">
+                  <th class="text-left py-3 pr-6 text-stone-400 font-semibold uppercase tracking-wider">Capacité</th>
+                  <th class="text-left py-3 pr-6 text-stone-400 font-semibold uppercase tracking-wider">Longueur</th>
+                  <th class="text-left py-3 pr-6 text-stone-400 font-semibold uppercase tracking-wider">Largeur</th>
+                  <th class="text-left py-3 pr-6 text-stone-400 font-semibold uppercase tracking-wider">Surface</th>
+                  <th class="text-left py-3 text-stone-400 font-semibold uppercase tracking-wider">Idéal pour</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rectangularSizes.map((item) => (
+                  <tr class="border-b border-stone-800 hover:bg-stone-800 transition-colors">
+                    <td class="py-4 pr-6 font-bold text-white">{item.cap}</td>
+                    <td class="py-4 pr-6 text-[#8b8b4b] font-semibold">{item.length}</td>
+                    <td class="py-4 pr-6 text-[#8b8b4b] font-semibold">{item.width}</td>
+                    <td class="py-4 pr-6 text-stone-400">{item.area}</td>
+                    <td class="py-4 text-stone-400">{item.ideal}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
 
         <div>
-          <h3 class="text-lg font-bold text-[#8b8b4b] uppercase mb-6 border-b border-stone-700 pb-2">Tables Rondes</h3>
-          <div class="space-y-4">
-            {roundSizes.map((item) => (
-              <div class="flex justify-between items-center py-3 border-b border-stone-800">
-                <span class="font-bold text-lg">{item.size}</span>
-                <span class="text-stone-400 text-sm">{item.cap}</span>
-              </div>
-            ))}
+          <h3 class="text-lg font-bold text-[#8b8b4b] uppercase mb-6 border-b border-stone-700 pb-2">Format Ronde</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-stone-700">
+                  <th class="text-left py-3 pr-6 text-stone-400 font-semibold uppercase tracking-wider">Capacité</th>
+                  <th class="text-left py-3 pr-6 text-stone-400 font-semibold uppercase tracking-wider">Diamètre</th>
+                  <th class="text-left py-3 pr-6 text-stone-400 font-semibold uppercase tracking-wider">Surface</th>
+                  <th class="text-left py-3 text-stone-400 font-semibold uppercase tracking-wider">Idéal pour</th>
+                </tr>
+              </thead>
+              <tbody>
+                {roundSizes.map((item) => (
+                  <tr class="border-b border-stone-800 hover:bg-stone-800 transition-colors">
+                    <td class="py-4 pr-6 font-bold text-white">{item.cap}</td>
+                    <td class="py-4 pr-6 text-[#8b8b4b] font-semibold">{item.diam}</td>
+                    <td class="py-4 pr-6 text-stone-400">{item.area}</td>
+                    <td class="py-4 text-stone-400">{item.ideal}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment Choisir -->
+  <section class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-5xl mx-auto px-6 lg:px-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-stone-900 mb-4 text-center">Comment Choisir la Bonne Taille ?</h2>
+      <p class="text-stone-500 text-center mb-12 max-w-2xl mx-auto">Chaque participant a besoin de 60 à 70 cm de largeur et 40 à 50 cm de profondeur. Suivez ces étapes pour choisir la bonne dimension.</p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 bg-[#8b8b4b] text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">1</span>
+            <div>
+              <h3 class="font-bold text-stone-900 mb-1">Mesurez votre salle</h3>
+              <p class="text-sm text-stone-600">Notez la longueur et la largeur disponibles. Soustrayez 2 m (1 m de chaque côté) pour l'espace de circulation autour de la table.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 bg-[#8b8b4b] text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">2</span>
+            <div>
+              <h3 class="font-bold text-stone-900 mb-1">Calculez la longueur minimale</h3>
+              <p class="text-sm text-stone-600">Multipliez le nombre de participants par 65 cm. Exemple : 8 personnes × 65 cm = 520 cm ÷ 2 côtés = 260 cm minimum.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 bg-[#8b8b4b] text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">3</span>
+            <div>
+              <h3 class="font-bold text-stone-900 mb-1">Choisissez la forme adaptée</h3>
+              <p class="text-sm text-stone-600">Rectangulaire pour réunions structurées. Ronde pour brainstormings et discussions créatives. Ovale pour un équilibre des deux.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 bg-[#8b8b4b] text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">4</span>
+            <div>
+              <h3 class="font-bold text-stone-900 mb-1">Consultez nos experts</h3>
+              <p class="text-sm text-stone-600">Notre équipe réalise gratuitement un plan d'<a href="/amenagement-de-bureau" class="text-[#8b8b4b] font-bold hover:underline">aménagement complet de bureau</a> incluant votre salle de réunion. <a href="/salles-reunion" class="text-[#8b8b4b] font-bold hover:underline">Découvrez nos solutions salles de réunion.</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 p-8">
+          <h3 class="font-bold text-stone-900 mb-6 text-lg">Exemples Pratiques</h3>
+          <div class="space-y-5">
+            <div class="border-b border-stone-200 pb-4">
+              <p class="font-bold text-stone-900 text-sm mb-1">Équipe de 6 personnes</p>
+              <p class="text-sm text-stone-600">→ Table rectangulaire <strong>180 × 90 cm</strong> minimum. Format ronde Ø 150 cm pour brainstormings.</p>
+            </div>
+            <div class="border-b border-stone-200 pb-4">
+              <p class="font-bold text-stone-900 text-sm mb-1">Conseil d'administration de 12 personnes</p>
+              <p class="text-sm text-stone-600">→ Table rectangulaire <strong>320 × 120 cm</strong> recommandée. Salle minimum 520 × 320 cm.</p>
+            </div>
+            <div>
+              <p class="font-bold text-stone-900 text-sm mb-1">Espace polyvalent (formations + réunions)</p>
+              <p class="text-sm text-stone-600">→ Table ronde <strong>Ø 190 cm</strong> pour 10 personnes. Adaptable à différentes configurations.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -277,25 +364,31 @@ const roundSizes = [
 
   <section class="py-16 bg-white border-t border-stone-200">
     <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center">
-      <h2 class="text-2xl font-bold text-stone-900 mb-12">Aménagement Complet</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <h2 class="text-2xl font-bold text-stone-900 mb-12">Aménagement Complet de Salle de Réunion</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/chaises" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Chaises Professionnelles</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Gamme complète de chaises certifiées BIFMA et EN 1335 pour salles de réunion.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les chaises →</span>
+        </a>
+
         <a href="/reunion/rangement/armoire-basse" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
           <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Rangements</h3>
-          <p class="text-sm text-stone-600 leading-relaxed mb-4">Armoire basse métallique et rangements muraux.</p>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Armoire basse métallique et rangements muraux assortis.</p>
           <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les rangements →</span>
         </a>
 
-        <a href="/gamma" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
-          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Chaises Gamma</h3>
-          <p class="text-sm text-stone-600 leading-relaxed mb-4">Certifiées BIFMA et EN 1335, confort optimal pour réunions.</p>
-          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir Gamma →</span>
+        <a href="/salles-reunion" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Solutions Salles de Réunion</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Vue complète de toutes nos solutions pour espaces de collaboration.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir les solutions →</span>
         </a>
 
-        <a href="/exclusive" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
-          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Chaises Exclusive</h3>
-          <p class="text-sm text-stone-600 leading-relaxed mb-4">Pour salles de réunion direction avec tables haut de gamme.</p>
-          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Voir Exclusive →</span>
+        <a href="/amenagement-de-bureau" class="group bg-stone-50 p-8 border border-stone-200 hover:border-[#8b8b4b] transition-all hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-[#8b8b4b] transition-colors">Aménagement Complet</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-4">Service complet d'aménagement bureau professionnel au Maroc depuis 2008.</p>
+          <span class="text-[#8b8b4b] text-sm font-semibold uppercase tracking-wider">Découvrir →</span>
         </a>
       </div>
     </div>
@@ -310,28 +403,132 @@ const roundSizes = [
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Quelle taille pour 8 personnes ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Rectangulaire 240x120 cm (standard). Ronde 140-160 cm diamètre.</p>
+          <h4 class="font-bold text-white mb-3">Quelles sont les dimensions exactes d'une table de réunion pour 6 personnes ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">180 cm de long sur 90 cm de large en format rectangulaire. Format ronde : Ø 150 cm de diamètre. Chaque personne dispose de 60 à 70 cm de largeur selon les normes ergonomiques.</p>
         </div>
         <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Ronde ou Rectangulaire ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Rectangulaire pour réunions structurées et optimisation d'espace. Ronde pour brainstormings et participation égale.</p>
+          <h4 class="font-bold text-white mb-3">Combien de personnes tiennent autour d'une table de 12 personnes ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Une table 320 × 120 cm accueille confortablement 12 personnes (60–70 cm par personne en largeur). Possible assise de 14 personnes si espace serré.</p>
         </div>
         <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Options de connectique ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Passe-câbles central intégré en standard. Option boîtier de connectique (prises + réseau) disponible.</p>
+          <h4 class="font-bold text-white mb-3">Comment calculer les dimensions de ma table de réunion ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Multipliez le nombre de participants par 65 cm pour obtenir la longueur minimale. Ajoutez 1 mètre d'espace de circulation autour de la table. Consultez nos experts pour un calcul précis.</p>
         </div>
         <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Installation nécessaire ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Tables arrivent assemblées. Installation consiste à positionner la table. Aucun assemblage complexe requis.</p>
+          <h4 class="font-bold text-white mb-3">Quelle est la différence entre table rectangulaire et table ronde ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Table rectangulaire : meilleure pour réunions formelles, présentations, conseils d'administration. Table ronde : encourage la collaboration, réduit la hiérarchie — idéale pour brainstormings.</p>
         </div>
-        <div class="bg-stone-800 p-8 border border-stone-700">
-          <h4 class="font-bold text-white mb-3">Garantie ?</h4>
-          <p class="text-sm text-stone-400 leading-relaxed">Garantie 5 ans couvre plateau mélaminé et structure métallique contre défauts de fabrication.</p>
+        <div class="bg-stone-800 p-8 border border-stone-700 md:col-span-2">
+          <h4 class="font-bold text-white mb-3">Livrez-vous rapidement et dans tout le Maroc ?</h4>
+          <p class="text-sm text-stone-400 leading-relaxed">Oui, livraison partout au Maroc. Tables livrées avec montage sur site inclus pour les commandes importantes. Contactez-nous pour un délai précis selon votre localisation.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Product + FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "Table de Réunion Professionnelle",
+        "description": "Tables de réunion professionnelles rectangulaires et rondes, capacité 6 à 12 personnes, avec dimensions techniques et matériaux certifiés",
+        "brand": { "@type": "Brand", "name": "KWESK" },
+        "image": "https://kwesk.ma/reunion/mt-hero.jpg",
+        "url": "https://kwesk.ma/reunion/table-de-reunion",
+        "material": "Mélamine 25mm, plateau avec passe-câbles intégré",
+        "manufacturer": {
+          "@type": "Organization",
+          "name": "KWESK",
+          "url": "https://kwesk.ma"
+        },
+        "aggregateOffer": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "MAD",
+          "offerCount": 4,
+          "availability": "https://schema.org/InStock",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Table Réunion 6 Personnes",
+              "description": "Dimensions: 180 x 90 cm (rectangulaire). Format ronde: Ø 150 cm.",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "MAD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Table Réunion 8 Personnes",
+              "description": "Dimensions: 240 x 120 cm (rectangulaire)",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "MAD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Table Réunion 10 Personnes",
+              "description": "Dimensions: 280 x 120 cm (rectangulaire). Format ronde: Ø 190 cm.",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "MAD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Table Réunion 12 Personnes",
+              "description": "Dimensions: 320 x 120 cm (rectangulaire)",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "MAD"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quelles sont les dimensions exactes d'une table de réunion pour 6 personnes ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "180 cm de long sur 90 cm de large en format rectangulaire. Format ronde : Ø 150 cm de diamètre. Chaque personne dispose de 60 à 70 cm de largeur selon les normes ergonomiques."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de personnes tiennent autour d'une table de réunion de 12 personnes ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Une table 320 × 120 cm accueille confortablement 12 personnes selon les normes ergonomiques (60–70 cm par personne en largeur). Possible assise de 14 personnes si espace serré."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment calculer les dimensions de ma table de réunion ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multipliez le nombre de participants par 65 cm pour obtenir la longueur minimale. Ajoutez 1 mètre d'espace de circulation autour de la table. Consultez nos experts pour un calcul précis selon votre salle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la différence entre table rectangulaire et table ronde ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Table rectangulaire : meilleure pour réunions formelles, présentations, conseils d'administration. Table ronde : encourage la collaboration, réduit la hiérarchie — idéale pour brainstormings et discussions créatives."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Livrez-vous rapidement et dans tout le Maroc ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, livraison partout au Maroc. Tables livrées avec montage sur site inclus pour les commandes importantes. Contactez-nous pour un délai précis selon votre localisation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <AmCTA />
 </Layout>
