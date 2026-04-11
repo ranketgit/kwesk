@@ -10,7 +10,28 @@ import Customers from '../components/Customers.astro';
 import AboutCta from '../components/about/AboutCta.astro';
 ---
 
-<Layout title="Kwesk Maroc | Fabricant Mobilier de Bureau Professionnel" description="Kwesk, fabricant de mobilier de bureaux au Maroc. Spécialiste aménagement de bureau, fauteuils et chaises professionnels pour entreprises.">
+<Layout title="À Propos de Kwesk | Fabricant Mobilier Bureau depuis 2008" description="Kwesk - fabricant marocain de mobilier de bureau depuis 2008. Certifié BIFMA et EN 1335. Nous concevons et livrons des solutions d'aménagement de qualité au Maroc.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KWESK",
+    "url": "https://kwesk.ma",
+    "logo": "https://kwesk.ma/kwesk-logo.png",
+    "description": "Fabricant marocain de mobilier de bureau certifié depuis 2008",
+    "foundingDate": "2008",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Anfa Place, Tour Ouest, Niveau 1, Boulevard de la Corniche, Ain Diab",
+      "addressLocality": "Casablanca",
+      "postalCode": "20180",
+      "addressCountry": "MA"
+    },
+    "telephone": "+212520241637",
+    "email": "contact@kwesk.com",
+    "areaServed": "MA",
+    "knowsAbout": ["Mobilier de bureau", "Aménagement de bureau", "Ergonomie professionnelle"],
+    "award": ["Certifié BIFMA 2011", "Conforme EN 1335 2016"]
+  })} />
   <main>
     <div class="sticky top-0 h-[70vh] w-full">
       <img 
