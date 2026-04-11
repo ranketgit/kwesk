@@ -8,9 +8,9 @@ date: "2026-01-22"
 
 image: "/agencement-interieur-bureau.webp"
 
-meta_title: "Agencement Intérieur Bureau Maroc 2026 | Guide Complet"
+meta_title: "Agencement Intérieur de Bureau au Maroc | Design & Fonctionnalité"
 
-meta_description: "Découvrez comment réussir votre agencement intérieur bureau au Maroc : tendances 2026, mobilier ergonomique, erreurs à éviter."
+meta_description: "Agencement intérieur optimisé pour bureaux au Maroc. Configuration d'espace, design fonctionnel et ergonomie appliqués à votre environnement professionnel."
 
 ---
 

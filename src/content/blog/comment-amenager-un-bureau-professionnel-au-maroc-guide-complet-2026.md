@@ -8,9 +8,9 @@ date: "2026-02-10"
 
 image: "/comment-amenager-un-bureau-professionnel.webp"
 
-meta_title: "Comment Aménager un Bureau Professionnel au Maroc 2026"
+meta_title: "Comment Aménager un Bureau Professionnel au Maroc | Guide 2026"
 
-meta_description: "Découvrez comment aménager un bureau professionnel : ergonomie, space planning, mobilier adapté. Guide 2026 entreprises Maroc. Conseils experts Kwesk"
+meta_description: "Guide complet 2026 : comment aménager un bureau professionnel au Maroc. Étapes, conseils, normes, mobilier optimisé pour la productivité."
 
 ---
 
