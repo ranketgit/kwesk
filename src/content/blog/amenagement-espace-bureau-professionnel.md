@@ -8,9 +8,9 @@ date: "2026-02-26"
 
 image: "/amenagement-espace-bureau-professionnel.webp"
 
-meta_title: "Aménagement Espace Bureau Professionnel au Maroc | Guide 2026"
+meta_title: "Comment Aménager un Espace Bureau Professionnel au Maroc | Guide Kwesk"
 
-meta_description: "Aménagement espace bureau professionnel au Maroc : ergonomie, zonage, mobilier certifié et conseils pratiques. Guide complet pour réussir votre projet."
+meta_description: "Guide complet pour aménager votre espace bureau professionnel au Maroc. Conseils ergonomie, design, mobilier. De l'expert Kwesk depuis 2008. Devis gratuit."
 
 ---
 
