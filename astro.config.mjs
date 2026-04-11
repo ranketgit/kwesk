@@ -15,6 +15,7 @@ redirects: {
     '/reunion/tables/': '/reunion/table-de-reunion',
     '/reunion/rangement': '/reunion/rangement/armoire-basse',
     '/reunion/rangement/': '/reunion/rangement/armoire-basse',
+    '/amenagement-de-bureau-professionnel-a-temara/': '/amenagement-de-bureau-professionnel-a-temara',
   },
 
   integrations: [sitemap(
