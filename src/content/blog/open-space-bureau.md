@@ -77,6 +77,8 @@ L'[AFNOR](https://www.afnor.org/) recommande une surface minimale de 10 m² par 
 
 ### **Choisir le bon mobilier**
 
+L'[aménagement d'espaces de travail](https://kwesk.ma/amenagement-de-bureau) en open space demande une approche particulière, avec un mobilier adapté à la collaboration intensive.
+
 Le mobilier de bureau professionnel est l'élément central de votre open space. Il doit être fonctionnel, ergonomique et modulable.
 
 Les [bureaux bench](https://kwesk.ma/bureaux/bench) multi-postes sont la solution la plus courante. Ils permettent de regrouper 2, 4 ou 6 collaborateurs sur un même îlot un bureau bench 4 personnes pour les petites équipes, un bureau bench 6 personnes pour les services plus larges  avec gestion de câbles intégrée. Pour les tâches qui nécessitent de varier les postures, les [bureaux assis-debout](https://kwesk.ma/bureaux/reglables) réglables en hauteur réduisent les douleurs dorsales et améliorent la concentration.
