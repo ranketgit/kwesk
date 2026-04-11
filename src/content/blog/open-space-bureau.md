@@ -8,9 +8,9 @@ date: "2026-02-27"
 
 image: "/open-space-bureau.webp"
 
-meta_title: "Open Space Bureau : Guide pour Aménager vos Espaces au Maroc"
+meta_title: "Open Space au Maroc : Guide Aménagement Bureau Professionnel"
 
-meta_description: "Open space bureau : avantages, inconvénients et conseils pour aménager un espace ouvert performant au Maroc. Mobilier, acoustique et zonage."
+meta_description: "Guide complet du Open Space au Maroc. Aménagement de bureaux, ergonomie et design adaptés aux entreprises marocaines. Certifié BIFMA & EN 1335. Devis gratuit."
 
 ---
 
