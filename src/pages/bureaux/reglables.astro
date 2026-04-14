@@ -590,6 +590,23 @@ import AmCTA from '../../components/AmCTA.astro';
 
   <AmCTA />
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Bureaux Assis-Debout Réglables en Hauteur",
+    "description": "Bureaux réglables en hauteur électrique, manuel ou à gaz. Alternance assis-debout pour réduire les douleurs dorsales. Certifiés BIFMA & EN 1335. Livraison Maroc.",
+    "image": "https://kwesk.ma/bureaux/reglables-hero.jpg",
+    "brand": { "@type": "Brand", "name": "KWESK" },
+    "manufacturer": { "@type": "Organization", "name": "KWESK", "url": "https://kwesk.ma" },
+    "offers": {
+      "@type": "Offer",
+      "price": 0,
+      "priceCurrency": "MAD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://kwesk.ma/contact"
+    }
+  })} />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -48,6 +48,22 @@ const schemaData = {
   description="Chaises de bureau ergonomiques et professionnelles certifiées BIFMA. Sièges opérateurs, fauteuils direction. Livraison partout au Maroc. Devis gratuit."
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Chaises de Bureau Ergonomiques Professionnelles",
+    "description": "Chaises de bureau ergonomiques certifiées BIFMA 2011 et EN 1335 2016. Soutien lombaire réglable, mesh respirant anti-allergique, vérin double cylindre allemand. Usage intensif.",
+    "image": "https://kwesk.ma/home-categories/chair.jpg",
+    "brand": { "@type": "Brand", "name": "KWESK" },
+    "manufacturer": { "@type": "Organization", "name": "KWESK", "url": "https://kwesk.ma" },
+    "offers": {
+      "@type": "Offer",
+      "price": 0,
+      "priceCurrency": "MAD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://kwesk.ma/contact"
+    }
+  })} />
 
   <section class="hero">
     <div class="hero-bg">
