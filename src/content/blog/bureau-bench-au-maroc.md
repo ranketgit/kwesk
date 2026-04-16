@@ -84,7 +84,7 @@ Le module 4 postes est la référence dans les open spaces marocains. Il offre l
 
 Configuration typique : 2 postes face à 2 postes, avec une cloison centrale optionnelle. Les dimensions totales varient généralement entre 240 x 120 cm et 320 x 160 cm selon la profondeur des plateaux choisie.
 
-Un bureau bench 4 postes avec caissons est disponible à partir de 5 890 DH chez plusieurs fournisseurs marocains ([Sahara Mobilier](https://www.saharamobilier.com/collections/bureau-open-space)), avec des variations selon les matériaux et les options.
+Un bureau bench 4 postes avec caissons est disponible à partir de 5 890 DH chez plusieurs fournisseurs marocains, avec des variations selon les matériaux et les options.
 
 ### **Bureau bench 6 et 8 postes**
 
