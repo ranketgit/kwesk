@@ -25,6 +25,8 @@ interface CityData {
   content: {
     h1: string;
     longDescription: string;
+    faqs?: Array<{q: string; a: string}>;
+    schema?: Record<string, unknown>;
   };
 }
 
@@ -225,6 +227,28 @@ const { cityData } = Astro.props as { cityData: CityData };
   </section>
 
   <AmQuote />
+
+  {cityData.content.faqs && cityData.content.faqs.length > 0 && (
+    <section class="py-20 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-stone-900 mb-10 uppercase tracking-tight text-center">
+          Questions Fréquentes – Aménagement Bureau à {cityData.city}
+        </h2>
+        <div class="space-y-6">
+          {cityData.content.faqs.map((faq) => (
+            <div class="border-b border-stone-200 pb-6 last:border-0">
+              <h3 class="font-bold text-stone-900 mb-2 text-base">{faq.q}</h3>
+              <p class="text-stone-600 text-sm leading-relaxed" set:html={faq.a} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {cityData.content.schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(cityData.content.schema)} />
+  )}
 
   <AmCTA />
 
