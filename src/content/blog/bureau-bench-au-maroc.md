@@ -46,7 +46,7 @@ Certains modèles permettent aussi des configurations en L ou en U pour s'adapte
 
 ### **1\. Il optimise chaque mètre carré**
 
-À Casablanca, le coût d'aménagement d'un bureau oscille entre 3 500 et 5 000 MAD par mètre carré selon le standing retenu, d'après les données publiées par [Archigram.ma en 2026](https://archigram.ma/cout-damenagement-de-bureau-au-maroc-en-2026-la-grille-tarifaire-complete/). Chaque m² compte.
+À Casablanca, le coût d'aménagement d'un bureau oscille entre 3 500 et 5 000 MAD par mètre carré selon le standing retenu, d'après les données publiées par. Chaque m² compte.
 
 Une configuration bench linéaire permet de réduire la surface occupée par poste de travail d'environ 30 % par rapport à des bureaux individuels. Sur un plateau de 200 m², cela représente une économie significative en loyer et en aménagement.
 
